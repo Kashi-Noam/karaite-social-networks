@@ -1,0 +1,10 @@
+# copyrighted source material - never commit
+*.pdf
+text/
+extraction/text/
+# local junk
+__pycache__/
+*.pyc
+.DS_Store
+~$*
+.~lock*

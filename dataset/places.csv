@@ -1,0 +1,26 @@
+﻿place_id,name_en,name_he,category,num_documents,princeton_name,coordinates,princeton_url,princeton_name_variants
+PL00,Unknown,לא ידוע,document_place,17,,,,
+PL01,Fustat,פוסטאט,document_place,24,Fustat,"30° 0′ 17″ N, 31° 14′ 15″ E",https://geniza.princeton.edu/places/fustat/,"Fusṭāṭ, Miṣr al-Qadīma, פסטאט, فسطاط"
+PL02,Cairo,קהיר,document_place,3,Cairo,"30° 3′ 6″ N, 31° 15′ 41″ E",https://geniza.princeton.edu/places/cairo/,"New Cairo, al-Muʿizziyya, al-Qāhira"
+PL03,Jerusalem,ירושלים,document_place,5,Jerusalem,"31° 46′ 36″ N, 35° 14′ 3″ E",https://geniza.princeton.edu/places/jerusalem/,
+PL04,Ramle,רמלה,document_place,3,al-Ramla,"31° 55′ 38″ N, 34° 51′ 44″ E",https://geniza.princeton.edu/places/al-ramla/,
+PL05,Tyre,צור,document_place,1,Tyre,"33° 16′ 13″ N, 35° 13′ 50″ E",https://geniza.princeton.edu/places/tyre/,"צור, صور"
+PL06,Egypt (region),מצרים (אזור),document_place,6,Egypt (region),,https://geniza.princeton.edu/places/egypt-region/,
+PL07,Palestine (region),ארץ ישראל (אזור),document_place,1,,,,
+PL08,Acre,עכו,gazetteer,0,Acre,"32° 55′ 40″ N, 35° 4′ 54″ E",https://geniza.princeton.edu/places/acre/,"עכו, عكا"
+PL09,Damascus,דמשק,gazetteer,0,Damascus,"33° 30′ 37″ N, 36° 16′ 41″ E",https://geniza.princeton.edu/places/damascus/,"Dimashq, דמשק, חדרך, دمشق"
+PL10,Baghdad,בגדאד,gazetteer,0,Baghdād,"33° 21′ 0″ N, 44° 20′ 24″ E",https://geniza.princeton.edu/places/baghdad/,
+PL11,Aleppo,חלב,gazetteer,0,Aleppo,"36° 13′ 0″ N, 37° 10′ 0″ E",https://geniza.princeton.edu/places/aleppo/,"חלב, צובה, حلب"
+PL12,Basra,בצרה,gazetteer,0,Baṣra,"30° 30′ 54″ N, 47° 48′ 36″ E",https://geniza.princeton.edu/places/basra/,البصرة
+PL13,Tinnis,תניס,gazetteer,0,Tinnīs,"31° 11′ 59″ N, 32° 13′ 59″ E",https://geniza.princeton.edu/places/tinnis/,תניס
+PL14,Ahwaz,אהוואז,gazetteer,0,Ahwāz,"31° 19′ 5″ N, 48° 40′ 14″ E",https://geniza.princeton.edu/places/ahwaz/,Hormshir
+PL15,Tustar (Shustar),תוסתר,gazetteer,0,,,,
+PL16,Byzantium (region),ביזנטיון,gazetteer,0,Byzantium (region),"41° 0′ 23″ N, 28° 58′ 33″ E",https://geniza.princeton.edu/places/byzantium-region/,Bilād al-Rūm
+PL17,Tabaristan,טברסתאן,gazetteer,0,Ṭabaristān,"36° 34′ 37″ N, 52° 55′ 16″ E",https://geniza.princeton.edu/places/tabaristan/,"טברסתאן, طبرستان"
+PL18,Khurasan,ח'וראסאן,gazetteer,0,Khorasan,"35° 36′ 18″ N, 61° 16′ 26″ E",https://geniza.princeton.edu/places/khorasan/,"Khurāsān, خراسان"
+PL19,Qirqisiya,קרקיסיה,gazetteer,0,,,,
+PL20,Shiniz,שיניז,gazetteer,0,,,,
+PL21,Zoar,צוער,gazetteer,0,,,,
+PL22,Ana (Euphrates),ענה,gazetteer,0,,,,
+PL23,Alexandria,אלכסנדריה,gazetteer,0,Alexandria,"31° 12′ 16″ N, 29° 52′ 48″ E",https://geniza.princeton.edu/places/alexandria/,"אלאסכנדריה, נא אמון, الإسكندرية"
+PL24,Beirut,ביירות,gazetteer,0,,,,

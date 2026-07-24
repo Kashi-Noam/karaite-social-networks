@@ -1,0 +1,692 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tom-select/2.0.0-rc.4/css/tom-select.min.css" integrity="sha512-43fHB3GLgZfz8QXl1RPQ8O66oIgv3po9cJ5erMt1c4QISq9dYb195T3vr5ImnJPXuVroKcGBPXBFKETW8jrPNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/tom-select/2.0.0-rc.4/js/tom-select.complete.js" integrity="sha512-jeF9CfnvzDiw9G9xiksVjxR2lib44Gnovvkv+3CgCG6NXCD4gqlA5nDAVW5WjpA+i+/zKsUWV5xNEbW1X/HH0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+
+        
+<center>
+<h1>N4. Karaite-Rabbanite contact network</h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1>N4. Karaite-Rabbanite contact network</h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 900px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 900px;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+                <div id="select-menu" class="card-header">
+                    <div class="row no-gutters">
+                        <div class="col-10 pb-2">
+                            <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="selectNode([value]);"
+                            id="select-node"
+                            placeholder="Select node..."
+                            >
+                                <option selected>Select a Node by ID</option>
+                                
+                                    <option value="Aaron b. Isaac">Aaron b. Isaac</option>
+                                
+                                    <option value="Abraham b. Solomon (Abu Kathir)">Abraham b. Solomon (Abu Kathir)</option>
+                                
+                                    <option value="Eli b. Amram (he-haver)">Eli b. Amram (he-haver)</option>
+                                
+                                    <option value="Eli ha-Kohen ha-parnas b. Ya'ish">Eli ha-Kohen ha-parnas b. Ya'ish</option>
+                                
+                                    <option value="Nahray b. Nissim">Nahray b. Nissim</option>
+                                
+                                    <option value="Aaron b. Semah ha-Kohen">Aaron b. Semah ha-Kohen</option>
+                                
+                                    <option value="Samuel bar Rabbi Moses he-haver">Samuel bar Rabbi Moses he-haver</option>
+                                
+                                    <option value="Abraham (father of Karima)">Abraham (father of Karima)</option>
+                                
+                                    <option value="Jacob b. Hillel b. Awkal">Jacob b. Hillel b. Awkal</option>
+                                
+                                    <option value="Abraham (physician, father of Yehya)">Abraham (physician, father of Yehya)</option>
+                                
+                                    <option value="David ha-Kohen b. Sedaqa ha-Kohen">David ha-Kohen b. Sedaqa ha-Kohen</option>
+                                
+                                    <option value="Hasdai b. Hizkiyahu (nasi)">Hasdai b. Hizkiyahu (nasi)</option>
+                                
+                                    <option value="Isaac ha-Parnas b. Sedaqa">Isaac ha-Parnas b. Sedaqa</option>
+                                
+                                    <option value="Mevorakh b. El'azar b. [...] Yehoshua">Mevorakh b. El'azar b. [...] Yehoshua</option>
+                                
+                                    <option value="Nathan b. Joseph b. Nahorai">Nathan b. Joseph b. Nahorai</option>
+                                
+                                    <option value="Rayyisa bt. Sa'adya">Rayyisa bt. Sa'adya</option>
+                                
+                                    <option value="Sa'adya b. David (father of Rayyisa)">Sa'adya b. David (father of Rayyisa)</option>
+                                
+                                    <option value="Sedaqa ha-Levi b. Efraim">Sedaqa ha-Levi b. Efraim</option>
+                                
+                                    <option value="Yehoshua ha-Kohen b. Sedaqa ha-Kohen">Yehoshua ha-Kohen b. Sedaqa ha-Kohen</option>
+                                
+                                    <option value="Yehya b. Abraham">Yehya b. Abraham</option>
+                                
+                                    <option value="Abraham b. Musallam">Abraham b. Musallam</option>
+                                
+                                    <option value="Levi ha-Levi bar Jacob">Levi ha-Levi bar Jacob</option>
+                                
+                                    <option value="Josiah b. Solomon (nasi)">Josiah b. Solomon (nasi)</option>
+                                
+                                    <option value="Mevorakh b. Israel (heir)">Mevorakh b. Israel (heir)</option>
+                                
+                                    <option value="Samuel b. Yehuda (the orphan)">Samuel b. Yehuda (the orphan)</option>
+                                
+                                    <option value="Umm Samuel bt. Aaron">Umm Samuel bt. Aaron</option>
+                                
+                                    <option value="Abraham ha-Kohen b. Khalaf">Abraham ha-Kohen b. Khalaf</option>
+                                
+                                    <option value="Amaryahu Jehuda (nasi)">Amaryahu Jehuda (nasi)</option>
+                                
+                                    <option value="Isaac bar Azaryahu">Isaac bar Azaryahu</option>
+                                
+                                    <option value="Amram al-Qirqisani">Amram al-Qirqisani</option>
+                                
+                                    <option value="Amram ha-Levi b. Joseph ha-Levi">Amram ha-Levi b. Joseph ha-Levi</option>
+                                
+                                    <option value="Barakat b. Benjamin">Barakat b. Benjamin</option>
+                                
+                                    <option value="Barakat b. Mubarak">Barakat b. Mubarak</option>
+                                
+                                    <option value="Benjamin (father of Hizkiyahu, OS39)">Benjamin (father of Hizkiyahu, OS39)</option>
+                                
+                                    <option value="Nathan ha-Kohen bar Yehai">Nathan ha-Kohen bar Yehai</option>
+                                
+                                    <option value="Benjamin b. Hasson">Benjamin b. Hasson</option>
+                                
+                                    <option value="Shela ha-Kohen bar Rabbi Mevasser">Shela ha-Kohen bar Rabbi Mevasser</option>
+                                
+                                    <option value="Bishr b. Abraham ha-Levi">Bishr b. Abraham ha-Levi</option>
+                                
+                                    <option value="David b. Moses (OS57)">David b. Moses (OS57)</option>
+                                
+                                    <option value="Mansur (father of groom, OS57)">Mansur (father of groom, OS57)</option>
+                                
+                                    <option value="[...] b. Mansur (groom, OS57)">[...] b. Mansur (groom, OS57)</option>
+                                
+                                    <option value="David b. Semah (nasi)">David b. Semah (nasi)</option>
+                                
+                                    <option value="David b. Yesha'ya ha-Melammed">David b. Yesha'ya ha-Melammed</option>
+                                
+                                    <option value="Efraim b. Mevasser b. Solomon">Efraim b. Mevasser b. Solomon</option>
+                                
+                                    <option value="El'azar b. Shemen Tov">El'azar b. Shemen Tov</option>
+                                
+                                    <option value="Eli b. Mu'ammar">Eli b. Mu'ammar</option>
+                                
+                                    <option value="Eli b. Solomon">Eli b. Solomon</option>
+                                
+                                    <option value="Eliyahu b. Halfon">Eliyahu b. Halfon</option>
+                                
+                                    <option value="Hasan b. Moses">Hasan b. Moses</option>
+                                
+                                    <option value="Hizkiyahu b. Benjamin">Hizkiyahu b. Benjamin</option>
+                                
+                                    <option value="Isaac b. Jehuda ha-Levi">Isaac b. Jehuda ha-Levi</option>
+                                
+                                    <option value="Isaac b. Joseph (groom, OS42)">Isaac b. Joseph (groom, OS42)</option>
+                                
+                                    <option value="Isaac b. Yefet">Isaac b. Yefet</option>
+                                
+                                    <option value="Joseph (father of Rivqa)">Joseph (father of Rivqa)</option>
+                                
+                                    <option value="Nathana'el ha-Kohen b. Meshullam">Nathana'el ha-Kohen b. Meshullam</option>
+                                
+                                    <option value="Rivqa bt. Joseph">Rivqa bt. Joseph</option>
+                                
+                                    <option value="Shemarya b. Shemen Tov">Shemarya b. Shemen Tov</option>
+                                
+                                    <option value="Shemen Tov b. Shemarya">Shemen Tov b. Shemarya</option>
+                                
+                                    <option value="[...] b. El'azar b. Halfon">[...] b. El'azar b. Halfon</option>
+                                
+                                    <option value="Jacob b. Fadlan">Jacob b. Fadlan</option>
+                                
+                                    <option value="Joseph (father of Isaac, OS42)">Joseph (father of Isaac, OS42)</option>
+                                
+                                    <option value="Karima bt. Abraham">Karima bt. Abraham</option>
+                                
+                                    <option value="Joseph b. Abraham ha-Kohen">Joseph b. Abraham ha-Kohen</option>
+                                
+                                    <option value="Joseph b. Samuel">Joseph b. Samuel</option>
+                                
+                                    <option value="Karima bt. Hasan">Karima bt. Hasan</option>
+                                
+                                    <option value="Nathana'el ha-Levi b. Rawh">Nathana'el ha-Levi b. Rawh</option>
+                                
+                                    <option value="Sedaqa (groom, OS43)">Sedaqa (groom, OS43)</option>
+                                
+                                    <option value="[...] ha-Kohen b. Joseph">[...] ha-Kohen b. Joseph</option>
+                                
+                                    <option value="Levi ha-Levi bar Joseph">Levi ha-Levi bar Joseph</option>
+                                
+                                    <option value="Shela ha-Kohen b. Sadoq beRabbi [...]">Shela ha-Kohen b. Sadoq beRabbi [...]</option>
+                                
+                                    <option value="Maimon b. Fadl">Maimon b. Fadl</option>
+                                
+                                    <option value="Moses b. Siba'a">Moses b. Siba'a</option>
+                                
+                                    <option value="Mu'ammar b. S[edaqa]">Mu'ammar b. S[edaqa]</option>
+                                
+                                    <option value="Sa'id b. [...] (OS57)">Sa'id b. [...] (OS57)</option>
+                                
+                                    <option value="Sahlawaya b. Hayyim">Sahlawaya b. Hayyim</option>
+                                
+                                    <option value="Sedaqa b. Nahum ha-Kohen">Sedaqa b. Nahum ha-Kohen</option>
+                                
+                                    <option value="Yefet ha-Kohen b. Eli b. Zita">Yefet ha-Kohen b. Eli b. Zita</option>
+                                
+                                    <option value="Mansur b. Mevasser">Mansur b. Mevasser</option>
+                                
+                                    <option value="Mevasser b. Abraham">Mevasser b. Abraham</option>
+                                
+                                    <option value="Mevorakh b. David">Mevorakh b. David</option>
+                                
+                                    <option value="Mevorakh b. Samuel">Mevorakh b. Samuel</option>
+                                
+                                    <option value="Mevorakh b. Yefet">Mevorakh b. Yefet</option>
+                                
+                                    <option value="Mubarak b. Husain">Mubarak b. Husain</option>
+                                
+                                    <option value="Nathan b. Nisan ha-Levi (the scholar)">Nathan b. Nisan ha-Levi (the scholar)</option>
+                                
+                                    <option value="Omar b. Yehoshua">Omar b. Yehoshua</option>
+                                
+                                    <option value="Sarwa bt. Sedaqa">Sarwa bt. Sedaqa</option>
+                                
+                                    <option value="Sedaqa b. Jarir">Sedaqa b. Jarir</option>
+                                
+                                    <option value="Sedaqa b. Zakharya">Sedaqa b. Zakharya</option>
+                                
+                                    <option value="Solomon b. David ha-Kohen (the scholar)">Solomon b. David ha-Kohen (the scholar)</option>
+                                
+                                    <option value="Yehoshua b. Adiya ha-Kohen">Yehoshua b. Adiya ha-Kohen</option>
+                                
+                                    <option value="Yehoshua b. Eli ha-Kohen b. Zita">Yehoshua b. Eli ha-Kohen b. Zita</option>
+                                
+                                    <option value="Samuel b. [...]">Samuel b. [...]</option>
+                                
+                                    <option value="Sedaqa b. Sa'adya">Sedaqa b. Sa'adya</option>
+                                
+                                    <option value="Shela b. Amram al-Qirqisani">Shela b. Amram al-Qirqisani</option>
+                                
+                                    <option value="Solomon b. Adiya b. Menashe (al-Qazzaz)">Solomon b. Adiya b. Menashe (al-Qazzaz)</option>
+                                
+                                    <option value="Solomon b. Musafir">Solomon b. Musafir</option>
+                                
+                                    <option value="Yaman bt. David">Yaman bt. David</option>
+                                
+                                    <option value="Yefet [b. ? Solomon b. Abraham]">Yefet [b. ? Solomon b. Abraham]</option>
+                                
+                                    <option value="Shala [?]">Shala [?]</option>
+                                
+                                    <option value="Sitt-al-Ahl (bride, OS29)">Sitt-al-Ahl (bride, OS29)</option>
+                                
+                                    <option value="Solomon b. Maimon">Solomon b. Maimon</option>
+                                
+                                    <option value="David b. Daniel b. Azarya">David b. Daniel b. Azarya</option>
+                                
+                                    <option value="Nasiya bt. Moses ha-Kohen">Nasiya bt. Moses ha-Kohen</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-2 pb-2">
+                            <button type="button" class="btn btn-primary btn-block" onclick="neighbourhoodHighlight({nodes: []});">Reset Selection</button>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+                  new TomSelect("#select-node",{
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      }
+                  });
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#999999", "font": {"color": "#222222"}, "id": "Aaron b. Isaac", "label": "Aaron b. Isaac", "shape": "dot", "size": 29.53516940756885, "title": "Aaron b. Isaac\nSect: unknown\nRoles: Guarantor (Z01)\nDocuments: Z01\nYears: 1055-1055\nPlaces: Fustat\nSect evidence: guarantor in joint court session (Z01)\nPageRank: 0.0070 | Betweenness: 0.0000\nCommunity: 0"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "Abraham b. Solomon (Abu Kathir)", "label": "Abraham b. Solomon (Abu Kathir)", "shape": "dot", "size": 44.69268872597583, "title": "Abraham b. Solomon (Abu Kathir)\nSect: Rabbanite\nRoles: Trustee (Z01)\nDocuments: Z01\nYears: 1055-1055\nPlaces: Fustat\nSect evidence: Rabbanite communal figure of Fustat (Z01)\nPageRank: 0.0131 | Betweenness: 0.0005\nCommunity: 0"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "Eli b. Amram (he-haver)", "label": "Eli b. Amram (he-haver)", "shape": "dot", "size": 44.69268872597583, "title": "Eli b. Amram (he-haver)\nSect: Rabbanite\nRoles: Judge (Z01)\nDocuments: Z01\nYears: 1055-1055\nPlaces: Fustat\nSect evidence: judge of the Palestinian yeshiva; leader of Palestinian congregation in Fustat (Z01)\nPageRank: 0.0131 | Betweenness: 0.0005\nCommunity: 0"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "Eli ha-Kohen ha-parnas b. Ya\u0027ish", "label": "Eli ha-Kohen ha-parnas b. Ya\u0027ish", "shape": "dot", "size": 44.69268872597583, "title": "Eli ha-Kohen ha-parnas b. Ya\u0027ish\nSect: Rabbanite\nRoles: Trustee (Z01)\nDocuments: Z01\nYears: 1055-1055\nPlaces: Fustat\nSect evidence: well-known Rabbanite parnas of Fustat (Z01)\nPageRank: 0.0131 | Betweenness: 0.0005\nCommunity: 0"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "Nahray b. Nissim", "label": "Nahray b. Nissim", "shape": "dot", "size": 44.69268872597583, "title": "Nahray b. Nissim\nSect: Rabbanite\nRoles: Trustee (Z01)\nDocuments: Z01\nYears: 1055-1055\nPlaces: Fustat\nSect evidence: famous Rabbanite merchant-scholar (Z01)\nPageRank: 0.0131 | Betweenness: 0.0005\nCommunity: 0"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Aaron b. Semah ha-Kohen", "label": "Aaron b. Semah ha-Kohen", "shape": "dot", "size": 26.048274158408184, "title": "Aaron b. Semah ha-Kohen\nSect: Karaite (presumed)\nRoles: WitnessOfAgency (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "Samuel bar Rabbi Moses he-haver", "label": "Samuel bar Rabbi Moses he-haver", "shape": "dot", "size": 158.95469068162592, "title": "Samuel bar Rabbi Moses he-haver\nSect: Rabbanite\nRoles: WitnessOfAgency (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: haver of the yeshiva; Aramaic \u0027bar Rabbi\u0027 (OS13)\nPageRank: 0.0588 | Betweenness: 0.0128\nCommunity: 1"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Abraham (father of Karima)", "label": "Abraham (father of Karima)", "shape": "dot", "size": 27.90710515873291, "title": "Abraham (father of Karima)\nSect: Karaite (presumed)\nRoles: BrideFather (OS42); Agent (OS42)\nDocuments: OS42\nYears: 1050-1050\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0064 | Betweenness: 0.0000\nCommunity: 2"}, {"color": "#e88a8a", "font": {"color": "#222222"}, "id": "Jacob b. Hillel b. Awkal", "label": "Jacob b. Hillel b. Awkal", "shape": "dot", "size": 69.73080266603921, "title": "Jacob b. Hillel b. Awkal\nSect: Rabbanite (probable)\nRoles: WitnessOfAgency (OS42)\nDocuments: OS42\nYears: 1050-1050\nPlaces: Fustat\nSect evidence: of the Ibn Awkal Rabbanite merchant family (OS42)\nPageRank: 0.0231 | Betweenness: 0.0012\nCommunity: 2"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "Abraham (physician, father of Yehya)", "label": "Abraham (physician, father of Yehya)", "shape": "dot", "size": 78.35221974192028, "title": "Abraham (physician, father of Yehya)\nSect: Rabbanite\nRoles: GroomFather (OS56)\nDocuments: OS56\nYears: 1117-1117\nPlaces: Fustat\nSect evidence: father of the Rabbanite groom (OS56)\nPageRank: 0.0265 | Betweenness: 0.0035\nCommunity: 3"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "David ha-Kohen b. Sedaqa ha-Kohen", "label": "David ha-Kohen b. Sedaqa ha-Kohen", "shape": "dot", "size": 26.920650197588373, "title": "David ha-Kohen b. Sedaqa ha-Kohen\nSect: Karaite (presumed)\nRoles: Witness (OS56)\nDocuments: OS56\nYears: 1117-1117\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0060 | Betweenness: 0.0000\nCommunity: 3"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Hasdai b. Hizkiyahu (nasi)", "label": "Hasdai b. Hizkiyahu (nasi)", "shape": "dot", "size": 26.920650197588373, "title": "Hasdai b. Hizkiyahu (nasi)\nSect: Karaite\nRoles: Nasi (OS56)\nDocuments: OS56\nYears: 1117-1117\nPlaces: Fustat\nSect evidence: Karaite nasi of Fustat 1117 (OS56; ch.9)\nPageRank: 0.0060 | Betweenness: 0.0000\nCommunity: 3"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Isaac ha-Parnas b. Sedaqa", "label": "Isaac ha-Parnas b. Sedaqa", "shape": "dot", "size": 26.920650197588373, "title": "Isaac ha-Parnas b. Sedaqa\nSect: Karaite (presumed)\nRoles: WitnessOfAgency (OS56)\nDocuments: OS56\nYears: 1117-1117\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0060 | Betweenness: 0.0000\nCommunity: 3"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Mevorakh b. El\u0027azar b. [...] Yehoshua", "label": "Mevorakh b. El\u0027azar b. [...] Yehoshua", "shape": "dot", "size": 26.920650197588373, "title": "Mevorakh b. El\u0027azar b. [...] Yehoshua\nSect: Karaite (presumed)\nRoles: Witness (OS56)\nDocuments: OS56\nYears: 1117-1117\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0060 | Betweenness: 0.0000\nCommunity: 3"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Nathan b. Joseph b. Nahorai", "label": "Nathan b. Joseph b. Nahorai", "shape": "dot", "size": 26.920650197588373, "title": "Nathan b. Joseph b. Nahorai\nSect: Karaite (presumed)\nRoles: WitnessOfAgency (OS56)\nDocuments: OS56\nYears: 1117-1117\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0060 | Betweenness: 0.0000\nCommunity: 3"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Rayyisa bt. Sa\u0027adya", "label": "Rayyisa bt. Sa\u0027adya", "shape": "dot", "size": 26.920650197588373, "title": "Rayyisa bt. Sa\u0027adya\nSect: Karaite\nRoles: Bride (OS56)\nDocuments: OS56\nYears: 1117-1117\nPlaces: Fustat\nSect evidence: Karaite bride of the mixed ketubba OS56\nPageRank: 0.0060 | Betweenness: 0.0000\nCommunity: 3"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Sa\u0027adya b. David (father of Rayyisa)", "label": "Sa\u0027adya b. David (father of Rayyisa)", "shape": "dot", "size": 26.920650197588373, "title": "Sa\u0027adya b. David (father of Rayyisa)\nSect: Karaite (presumed)\nRoles: BrideFather (OS56)\nDocuments: OS56\nYears: 1117-1117\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0060 | Betweenness: 0.0000\nCommunity: 3"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Sedaqa ha-Levi b. Efraim", "label": "Sedaqa ha-Levi b. Efraim", "shape": "dot", "size": 26.920650197588373, "title": "Sedaqa ha-Levi b. Efraim\nSect: Karaite (presumed)\nRoles: Witness (OS56)\nDocuments: OS56\nYears: 1117-1117\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0060 | Betweenness: 0.0000\nCommunity: 3"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Yehoshua ha-Kohen b. Sedaqa ha-Kohen", "label": "Yehoshua ha-Kohen b. Sedaqa ha-Kohen", "shape": "dot", "size": 26.920650197588373, "title": "Yehoshua ha-Kohen b. Sedaqa ha-Kohen\nSect: Karaite (presumed)\nRoles: Agent (OS56)\nDocuments: OS56\nYears: 1117-1117\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0060 | Betweenness: 0.0000\nCommunity: 3"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "Yehya b. Abraham", "label": "Yehya b. Abraham", "shape": "dot", "size": 78.35221974192028, "title": "Yehya b. Abraham\nSect: Rabbanite\nRoles: Groom (OS56)\nDocuments: OS56\nYears: 1117-1117\nPlaces: Fustat\nSect evidence: Rabbanite groom of the mixed ketubba OS56\nPageRank: 0.0265 | Betweenness: 0.0035\nCommunity: 3"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Abraham b. Musallam", "label": "Abraham b. Musallam", "shape": "dot", "size": 26.712142372809872, "title": "Abraham b. Musallam\nSect: Karaite\nRoles: BrideFather (OS14); Witness (OS43); Scribe (OS43)\nDocuments: OS14, OS43\nYears: 1030-1049\nPlaces: Fustat, Fustat [?]\nSect evidence: professional Karaite scribe; wrote Karaite calendars (OS14, OS43)\nPageRank: 0.0059 | Betweenness: 0.0000\nCommunity: 4"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "Levi ha-Levi bar Jacob", "label": "Levi ha-Levi bar Jacob", "shape": "dot", "size": 103.18976067188423, "title": "Levi ha-Levi bar Jacob\nSect: Rabbanite\nRoles: Witness (OS43)\nDocuments: OS43\nYears: 1030-1030\nPlaces: Fustat [?]\nSect evidence: Aramaic bar; known from Fustat Rabbanite court documents (OS43)\nPageRank: 0.0365 | Betweenness: 0.0041\nCommunity: 4"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Josiah b. Solomon (nasi)", "label": "Josiah b. Solomon (nasi)", "shape": "dot", "size": 29.53516940756885, "title": "Josiah b. Solomon (nasi)\nSect: Karaite\nRoles: Nasi (Z01); Judge (Z01)\nDocuments: Z01\nYears: 1055-1055\nPlaces: Fustat\nSect evidence: Karaite nasi, brother of Hizkiyahu; Aleppo Codex dedication; Zinger 2017\nPageRank: 0.0070 | Betweenness: 0.0000\nCommunity: 0"}, {"color": "#999999", "font": {"color": "#222222"}, "id": "Mevorakh b. Israel (heir)", "label": "Mevorakh b. Israel (heir)", "shape": "dot", "size": 29.53516940756885, "title": "Mevorakh b. Israel (heir)\nSect: unknown\nRoles: Party (Z01)\nDocuments: Z01\nYears: 1055-1055\nPlaces: Fustat\nSect evidence: party in joint court session; family possibly mixed (Z01)\nPageRank: 0.0070 | Betweenness: 0.0000\nCommunity: 0"}, {"color": "#999999", "font": {"color": "#222222"}, "id": "Samuel b. Yehuda (the orphan)", "label": "Samuel b. Yehuda (the orphan)", "shape": "dot", "size": 29.53516940756885, "title": "Samuel b. Yehuda (the orphan)\nSect: unknown\nRoles: Party (Z01)\nDocuments: Z01\nYears: 1055-1055\nPlaces: Fustat\nSect evidence: party in joint court session (Z01)\nPageRank: 0.0070 | Betweenness: 0.0000\nCommunity: 0"}, {"color": "#999999", "font": {"color": "#222222"}, "id": "Umm Samuel bt. Aaron", "label": "Umm Samuel bt. Aaron", "shape": "dot", "size": 29.53516940756885, "title": "Umm Samuel bt. Aaron\nSect: unknown\nRoles: Party (Z01)\nDocuments: Z01\nYears: 1055-1055\nPlaces: Fustat\nSect evidence: party in joint court session (Z01)\nPageRank: 0.0070 | Betweenness: 0.0000\nCommunity: 0"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Abraham ha-Kohen b. Khalaf", "label": "Abraham ha-Kohen b. Khalaf", "shape": "dot", "size": 26.712142372809872, "title": "Abraham ha-Kohen b. Khalaf\nSect: Karaite (presumed)\nRoles: Witness (OS43)\nDocuments: OS43\nYears: 1030-1030\nPlaces: Fustat [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0059 | Betweenness: 0.0000\nCommunity: 4"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Amaryahu Jehuda (nasi)", "label": "Amaryahu Jehuda (nasi)", "shape": "dot", "size": 26.132766476604772, "title": "Amaryahu Jehuda (nasi)\nSect: Karaite\nRoles: Nasi (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: Karaite nasi 1201 (OS26)\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 5"}, {"color": "#e88a8a", "font": {"color": "#222222"}, "id": "Isaac bar Azaryahu", "label": "Isaac bar Azaryahu", "shape": "dot", "size": 147.80170467967767, "title": "Isaac bar Azaryahu\nSect: Rabbanite (probable)\nRoles: Witness (OS26); Scribe (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: cursive script and Aramaic bar (OS26)\nPageRank: 0.0543 | Betweenness: 0.0107\nCommunity: 5"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Amram al-Qirqisani", "label": "Amram al-Qirqisani", "shape": "dot", "size": 26.048274158408184, "title": "Amram al-Qirqisani\nSect: Karaite (presumed)\nRoles: GroomFather (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Amram ha-Levi b. Joseph ha-Levi", "label": "Amram ha-Levi b. Joseph ha-Levi", "shape": "dot", "size": 26.132766476604772, "title": "Amram ha-Levi b. Joseph ha-Levi\nSect: Karaite (presumed)\nRoles: Agent (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 5"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Barakat b. Benjamin", "label": "Barakat b. Benjamin", "shape": "dot", "size": 26.712142372809872, "title": "Barakat b. Benjamin\nSect: Karaite (presumed)\nRoles: Witness (OS43)\nDocuments: OS43\nYears: 1030-1030\nPlaces: Fustat [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0059 | Betweenness: 0.0000\nCommunity: 4"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Barakat b. Mubarak", "label": "Barakat b. Mubarak", "shape": "dot", "size": 26.712142372809872, "title": "Barakat b. Mubarak\nSect: Karaite (presumed)\nRoles: Witness (OS43)\nDocuments: OS43\nYears: 1030-1030\nPlaces: Fustat [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0059 | Betweenness: 0.0000\nCommunity: 4"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Benjamin (father of Hizkiyahu, OS39)", "label": "Benjamin (father of Hizkiyahu, OS39)", "shape": "dot", "size": 25.815920283367596, "title": "Benjamin (father of Hizkiyahu, OS39)\nSect: Karaite (presumed)\nRoles: GroomFather (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#e88a8a", "font": {"color": "#222222"}, "id": "Nathan ha-Kohen bar Yehai", "label": "Nathan ha-Kohen bar Yehai", "shape": "dot", "size": 203.56663468941935, "title": "Nathan ha-Kohen bar Yehai\nSect: Rabbanite (probable)\nRoles: Witness (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: Aramaic bar (OS39)\nPageRank: 0.0766 | Betweenness: 0.0233\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Benjamin b. Hasson", "label": "Benjamin b. Hasson", "shape": "dot", "size": 26.23415725844066, "title": "Benjamin b. Hasson\nSect: Karaite (presumed)\nRoles: Witness (OS29)\nDocuments: OS29\nYears: 1015-1015\nPlaces: Tyre [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 7"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "Shela ha-Kohen bar Rabbi Mevasser", "label": "Shela ha-Kohen bar Rabbi Mevasser", "shape": "dot", "size": 136.64871867772928, "title": "Shela ha-Kohen bar Rabbi Mevasser\nSect: Rabbanite\nRoles: Witness (OS29)\nDocuments: OS29\nYears: 1015-1015\nPlaces: Tyre [?]\nSect evidence: Aramaic elements in name (OS29)\nPageRank: 0.0499 | Betweenness: 0.0087\nCommunity: 7"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Bishr b. Abraham ha-Levi", "label": "Bishr b. Abraham ha-Levi", "shape": "dot", "size": 25.815920283367596, "title": "Bishr b. Abraham ha-Levi\nSect: Karaite (presumed)\nRoles: Witness (OS39, OS41)\nDocuments: OS39, OS41\nYears: 1015-1028\nPlaces: Jerusalem, Ramle\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "David b. Moses (OS57)", "label": "David b. Moses (OS57)", "shape": "dot", "size": 26.608574550464063, "title": "David b. Moses (OS57)\nSect: Karaite (presumed)\nRoles: Witness (OS57)\nDocuments: OS57\nYears: 1035-1035\nPlaces: Fustat [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0058 | Betweenness: 0.0000\nCommunity: 8"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "Mansur (father of groom, OS57)", "label": "Mansur (father of groom, OS57)", "shape": "dot", "size": 89.41983026370976, "title": "Mansur (father of groom, OS57)\nSect: Rabbanite\nRoles: GroomFather (OS57)\nDocuments: OS57\nYears: 1035-1035\nPlaces: Fustat [?]\nSect evidence: father of the Rabbanite groom (OS57)\nPageRank: 0.0310 | Betweenness: 0.0053\nCommunity: 8"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "[...] b. Mansur (groom, OS57)", "label": "[...] b. Mansur (groom, OS57)", "shape": "dot", "size": 89.41983026370976, "title": "[...] b. Mansur (groom, OS57)\nSect: Rabbanite\nRoles: Groom (OS57)\nDocuments: OS57\nYears: 1035-1035\nPlaces: Fustat [?]\nSect evidence: Rabbanite groom of the mixed betrothal OS57\nPageRank: 0.0310 | Betweenness: 0.0053\nCommunity: 8"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "David b. Semah (nasi)", "label": "David b. Semah (nasi)", "shape": "dot", "size": 26.048274158408184, "title": "David b. Semah (nasi)\nSect: Karaite\nRoles: Nasi (OS04, OS05, OS12, OS13); Judge (OS04, OS13)\nDocuments: OS04, OS05, OS12, OS13\nYears: 1041-1051\nPlaces: Fustat\nSect evidence: Karaite nasi of Fustat, late 1030s-early 1050s (ch.9)\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "David b. Yesha\u0027ya ha-Melammed", "label": "David b. Yesha\u0027ya ha-Melammed", "shape": "dot", "size": 26.048274158408184, "title": "David b. Yesha\u0027ya ha-Melammed\nSect: Karaite (presumed)\nRoles: BrideFather (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Efraim b. Mevasser b. Solomon", "label": "Efraim b. Mevasser b. Solomon", "shape": "dot", "size": 26.608574550464063, "title": "Efraim b. Mevasser b. Solomon\nSect: Karaite (presumed)\nRoles: Witness (OS57); Scribe (OS57)\nDocuments: OS57\nYears: 1035-1035\nPlaces: Fustat [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0058 | Betweenness: 0.0000\nCommunity: 8"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "El\u0027azar b. Shemen Tov", "label": "El\u0027azar b. Shemen Tov", "shape": "dot", "size": 26.132766476604772, "title": "El\u0027azar b. Shemen Tov\nSect: Karaite (presumed)\nRoles: Groom (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 5"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Eli b. Mu\u0027ammar", "label": "Eli b. Mu\u0027ammar", "shape": "dot", "size": 25.815920283367596, "title": "Eli b. Mu\u0027ammar\nSect: Karaite (presumed)\nRoles: Witness (OS15, OS39)\nDocuments: OS15, OS39\nYears: 1002-1028\nPlaces: Jerusalem, Palestine [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Eli b. Solomon", "label": "Eli b. Solomon", "shape": "dot", "size": 26.23415725844066, "title": "Eli b. Solomon\nSect: Karaite (presumed)\nRoles: Agent (OS29)\nDocuments: OS29\nYears: 1015-1015\nPlaces: Tyre [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 7"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Eliyahu b. Halfon", "label": "Eliyahu b. Halfon", "shape": "dot", "size": 26.132766476604772, "title": "Eliyahu b. Halfon\nSect: Karaite (presumed)\nRoles: Witness (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 5"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Hasan b. Moses", "label": "Hasan b. Moses", "shape": "dot", "size": 26.608574550464063, "title": "Hasan b. Moses\nSect: Karaite\nRoles: BrideFather (OS57); Agent (OS57)\nDocuments: OS57\nYears: 1035-1035\nPlaces: Fustat [?]\nSect evidence: father of the Karaite bride (OS57)\nPageRank: 0.0058 | Betweenness: 0.0000\nCommunity: 8"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Hizkiyahu b. Benjamin", "label": "Hizkiyahu b. Benjamin", "shape": "dot", "size": 25.815920283367596, "title": "Hizkiyahu b. Benjamin\nSect: Karaite (presumed)\nRoles: Groom (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Isaac b. Jehuda ha-Levi", "label": "Isaac b. Jehuda ha-Levi", "shape": "dot", "size": 26.608574550464063, "title": "Isaac b. Jehuda ha-Levi\nSect: Karaite (presumed)\nRoles: Witness (OS57)\nDocuments: OS57\nYears: 1035-1035\nPlaces: Fustat [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0058 | Betweenness: 0.0000\nCommunity: 8"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Isaac b. Joseph (groom, OS42)", "label": "Isaac b. Joseph (groom, OS42)", "shape": "dot", "size": 27.90710515873291, "title": "Isaac b. Joseph (groom, OS42)\nSect: Karaite (presumed)\nRoles: Groom (OS42); WitnessOfAgency (OS42)\nDocuments: OS42\nYears: 1050-1050\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0064 | Betweenness: 0.0000\nCommunity: 2"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Isaac b. Yefet", "label": "Isaac b. Yefet", "shape": "dot", "size": 26.132766476604772, "title": "Isaac b. Yefet\nSect: Karaite (presumed)\nRoles: WitnessOfAgency (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 5"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Joseph (father of Rivqa)", "label": "Joseph (father of Rivqa)", "shape": "dot", "size": 26.132766476604772, "title": "Joseph (father of Rivqa)\nSect: Karaite (presumed)\nRoles: BrideFather (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 5"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Nathana\u0027el ha-Kohen b. Meshullam", "label": "Nathana\u0027el ha-Kohen b. Meshullam", "shape": "dot", "size": 26.132766476604772, "title": "Nathana\u0027el ha-Kohen b. Meshullam\nSect: Karaite (presumed)\nRoles: Witness (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 5"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Rivqa bt. Joseph", "label": "Rivqa bt. Joseph", "shape": "dot", "size": 26.132766476604772, "title": "Rivqa bt. Joseph\nSect: Karaite (presumed)\nRoles: Bride (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 5"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Shemarya b. Shemen Tov", "label": "Shemarya b. Shemen Tov", "shape": "dot", "size": 26.132766476604772, "title": "Shemarya b. Shemen Tov\nSect: Karaite (presumed)\nRoles: GroomGrandfather (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 5"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Shemen Tov b. Shemarya", "label": "Shemen Tov b. Shemarya", "shape": "dot", "size": 26.132766476604772, "title": "Shemen Tov b. Shemarya\nSect: Karaite (presumed)\nRoles: GroomFather (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 5"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "[...] b. El\u0027azar b. Halfon", "label": "[...] b. El\u0027azar b. Halfon", "shape": "dot", "size": 26.132766476604772, "title": "[...] b. El\u0027azar b. Halfon\nSect: Karaite (presumed)\nRoles: WitnessOfAgency (OS26)\nDocuments: OS26\nYears: 1201-1201\nPlaces: Cairo\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 5"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Jacob b. Fadlan", "label": "Jacob b. Fadlan", "shape": "dot", "size": 25.815920283367596, "title": "Jacob b. Fadlan\nSect: Karaite (presumed)\nRoles: WitnessOfAgency (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Joseph (father of Isaac, OS42)", "label": "Joseph (father of Isaac, OS42)", "shape": "dot", "size": 27.90710515873291, "title": "Joseph (father of Isaac, OS42)\nSect: Karaite (presumed)\nRoles: GroomFather (OS42)\nDocuments: OS42\nYears: 1050-1050\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0064 | Betweenness: 0.0000\nCommunity: 2"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Karima bt. Abraham", "label": "Karima bt. Abraham", "shape": "dot", "size": 27.90710515873291, "title": "Karima bt. Abraham\nSect: Karaite (presumed)\nRoles: Bride (OS42)\nDocuments: OS42\nYears: 1050-1050\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0064 | Betweenness: 0.0000\nCommunity: 2"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Joseph b. Abraham ha-Kohen", "label": "Joseph b. Abraham ha-Kohen", "shape": "dot", "size": 25.815920283367596, "title": "Joseph b. Abraham ha-Kohen\nSect: Karaite\nRoles: Agent (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: tentatively the Karaite philosopher Joseph al-Basir (OS39 comments)\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Joseph b. Samuel", "label": "Joseph b. Samuel", "shape": "dot", "size": 25.815920283367596, "title": "Joseph b. Samuel\nSect: Karaite (presumed)\nRoles: Witness (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Karima bt. Hasan", "label": "Karima bt. Hasan", "shape": "dot", "size": 26.608574550464063, "title": "Karima bt. Hasan\nSect: Karaite\nRoles: Bride (OS57)\nDocuments: OS57\nYears: 1035-1035\nPlaces: Fustat [?]\nSect evidence: Karaite bride of the mixed betrothal OS57\nPageRank: 0.0058 | Betweenness: 0.0000\nCommunity: 8"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Nathana\u0027el ha-Levi b. Rawh", "label": "Nathana\u0027el ha-Levi b. Rawh", "shape": "dot", "size": 26.712142372809872, "title": "Nathana\u0027el ha-Levi b. Rawh\nSect: Karaite\nRoles: Witness (OS43)\nDocuments: OS43\nYears: 1030-1030\nPlaces: Fustat [?]\nSect evidence: described among \u0027prominent Karaites\u0027 courted by Nathan b. Abraham (OS43 comments)\nPageRank: 0.0059 | Betweenness: 0.0000\nCommunity: 4"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Sedaqa (groom, OS43)", "label": "Sedaqa (groom, OS43)", "shape": "dot", "size": 26.712142372809872, "title": "Sedaqa (groom, OS43)\nSect: Karaite (presumed)\nRoles: Groom (OS43)\nDocuments: OS43\nYears: 1030-1030\nPlaces: Fustat [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0059 | Betweenness: 0.0000\nCommunity: 4"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "[...] ha-Kohen b. Joseph", "label": "[...] ha-Kohen b. Joseph", "shape": "dot", "size": 26.712142372809872, "title": "[...] ha-Kohen b. Joseph\nSect: Karaite (presumed)\nRoles: Witness (OS43)\nDocuments: OS43\nYears: 1030-1030\nPlaces: Fustat [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0059 | Betweenness: 0.0000\nCommunity: 4"}, {"color": "#e88a8a", "font": {"color": "#222222"}, "id": "Levi ha-Levi bar Joseph", "label": "Levi ha-Levi bar Joseph", "shape": "dot", "size": 36.271844660194176, "title": "Levi ha-Levi bar Joseph\nSect: Rabbanite (probable)\nRoles: Witness (OS19)\nDocuments: OS19\nYears: 1020-1020\nSect evidence: Aramaic bar (OS19)\nPageRank: 0.0097 | Betweenness: 0.0000\nCommunity: 9"}, {"color": "#e88a8a", "font": {"color": "#222222"}, "id": "Shela ha-Kohen b. Sadoq beRabbi [...]", "label": "Shela ha-Kohen b. Sadoq beRabbi [...]", "shape": "dot", "size": 36.271844660194176, "title": "Shela ha-Kohen b. Sadoq beRabbi [...]\nSect: Rabbanite (probable)\nRoles: Witness (OS19)\nDocuments: OS19\nYears: 1020-1020\nSect evidence: Aramaic bar/beRabbi (OS19)\nPageRank: 0.0097 | Betweenness: 0.0000\nCommunity: 9"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Maimon b. Fadl", "label": "Maimon b. Fadl", "shape": "dot", "size": 26.23415725844066, "title": "Maimon b. Fadl\nSect: Karaite (presumed)\nRoles: WitnessOfAgency (OS29)\nDocuments: OS29\nYears: 1015-1015\nPlaces: Tyre [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 7"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Moses b. Siba\u0027a", "label": "Moses b. Siba\u0027a", "shape": "dot", "size": 26.608574550464063, "title": "Moses b. Siba\u0027a\nSect: Karaite\nRoles: WitnessOfAgency (OS57)\nDocuments: OS57\nYears: 1035-1035\nPlaces: Fustat [?]\nSect evidence: Karaite active between Tyre and Fustat (OS57 comments)\nPageRank: 0.0058 | Betweenness: 0.0000\nCommunity: 8"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Mu\u0027ammar b. S[edaqa]", "label": "Mu\u0027ammar b. S[edaqa]", "shape": "dot", "size": 26.608574550464063, "title": "Mu\u0027ammar b. S[edaqa]\nSect: Karaite (presumed)\nRoles: Witness (OS57)\nDocuments: OS57\nYears: 1035-1035\nPlaces: Fustat [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0058 | Betweenness: 0.0000\nCommunity: 8"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Sa\u0027id b. [...] (OS57)", "label": "Sa\u0027id b. [...] (OS57)", "shape": "dot", "size": 26.608574550464063, "title": "Sa\u0027id b. [...] (OS57)\nSect: Karaite (presumed)\nRoles: Witness (OS57)\nDocuments: OS57\nYears: 1035-1035\nPlaces: Fustat [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0058 | Betweenness: 0.0000\nCommunity: 8"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Sahlawaya b. Hayyim", "label": "Sahlawaya b. Hayyim", "shape": "dot", "size": 26.608574550464063, "title": "Sahlawaya b. Hayyim\nSect: Karaite\nRoles: BrideFather (OS20); BrideGrandfather (OS08); Witness (OS57)\nDocuments: OS08, OS20, OS57\nYears: 1035-1038\nPlaces: Fustat, Fustat [?]\nSect evidence: rich Karaite banker of Fustat, active 1011-1035 (OS08, OS20, OS57, ch.3)\nPageRank: 0.0058 | Betweenness: 0.0000\nCommunity: 8"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Sedaqa b. Nahum ha-Kohen", "label": "Sedaqa b. Nahum ha-Kohen", "shape": "dot", "size": 26.608574550464063, "title": "Sedaqa b. Nahum ha-Kohen\nSect: Karaite\nRoles: WitnessOfAgency (OS57)\nDocuments: OS57\nYears: 1035-1035\nPlaces: Fustat [?]\nSect evidence: witness in Karaite divorce TS 10 J 2.4 (OS57 comments)\nPageRank: 0.0058 | Betweenness: 0.0000\nCommunity: 8"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Yefet ha-Kohen b. Eli b. Zita", "label": "Yefet ha-Kohen b. Eli b. Zita", "shape": "dot", "size": 26.608574550464063, "title": "Yefet ha-Kohen b. Eli b. Zita\nSect: Karaite\nRoles: Witness (OS03, OS57)\nDocuments: OS03, OS57\nYears: 1030-1035\nPlaces: Fustat, Fustat [?]\nSect evidence: of the Karaite ben Zita family (OS03, OS57)\nPageRank: 0.0058 | Betweenness: 0.0000\nCommunity: 8"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Mansur b. Mevasser", "label": "Mansur b. Mevasser", "shape": "dot", "size": 26.048274158408184, "title": "Mansur b. Mevasser\nSect: Karaite (presumed)\nRoles: Witness (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Mevasser b. Abraham", "label": "Mevasser b. Abraham", "shape": "dot", "size": 26.23415725844066, "title": "Mevasser b. Abraham\nSect: Karaite (presumed)\nRoles: Witness (OS29)\nDocuments: OS29\nYears: 1015-1015\nPlaces: Tyre [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 7"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Mevorakh b. David", "label": "Mevorakh b. David", "shape": "dot", "size": 25.815920283367596, "title": "Mevorakh b. David\nSect: Karaite (presumed)\nRoles: WitnessOfAgency (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Mevorakh b. Samuel", "label": "Mevorakh b. Samuel", "shape": "dot", "size": 26.23415725844066, "title": "Mevorakh b. Samuel\nSect: Karaite (presumed)\nRoles: Groom (OS29)\nDocuments: OS29\nYears: 1015-1015\nPlaces: Tyre [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 7"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Mevorakh b. Yefet", "label": "Mevorakh b. Yefet", "shape": "dot", "size": 26.23415725844066, "title": "Mevorakh b. Yefet\nSect: Karaite\nRoles: Witness (OS29)\nDocuments: OS29\nYears: 1015-1015\nPlaces: Tyre [?]\nSect evidence: probably the Karaite groom of mixed contract Antonin 637 (OS29 comments)\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 7"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Mubarak b. Husain", "label": "Mubarak b. Husain", "shape": "dot", "size": 26.23415725844066, "title": "Mubarak b. Husain\nSect: Karaite (presumed)\nRoles: Witness (OS29)\nDocuments: OS29\nYears: 1015-1015\nPlaces: Tyre [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 7"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Nathan b. Nisan ha-Levi (the scholar)", "label": "Nathan b. Nisan ha-Levi (the scholar)", "shape": "dot", "size": 25.815920283367596, "title": "Nathan b. Nisan ha-Levi (the scholar)\nSect: Karaite (presumed)\nRoles: Witness (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Omar b. Yehoshua", "label": "Omar b. Yehoshua", "shape": "dot", "size": 25.815920283367596, "title": "Omar b. Yehoshua\nSect: Karaite (presumed)\nRoles: Witness (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Sarwa bt. Sedaqa", "label": "Sarwa bt. Sedaqa", "shape": "dot", "size": 25.815920283367596, "title": "Sarwa bt. Sedaqa\nSect: Karaite (presumed)\nRoles: Bride (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Sedaqa b. Jarir", "label": "Sedaqa b. Jarir", "shape": "dot", "size": 25.815920283367596, "title": "Sedaqa b. Jarir\nSect: Karaite (presumed)\nRoles: BrideFather (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Sedaqa b. Zakharya", "label": "Sedaqa b. Zakharya", "shape": "dot", "size": 25.815920283367596, "title": "Sedaqa b. Zakharya\nSect: Karaite (presumed)\nRoles: Witness (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Solomon b. David ha-Kohen (the scholar)", "label": "Solomon b. David ha-Kohen (the scholar)", "shape": "dot", "size": 25.815920283367596, "title": "Solomon b. David ha-Kohen (the scholar)\nSect: Karaite (presumed)\nRoles: Witness (OS39); Scribe (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Yehoshua b. Adiya ha-Kohen", "label": "Yehoshua b. Adiya ha-Kohen", "shape": "dot", "size": 25.815920283367596, "title": "Yehoshua b. Adiya ha-Kohen\nSect: Karaite (presumed)\nRoles: Witness (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Yehoshua b. Eli ha-Kohen b. Zita", "label": "Yehoshua b. Eli ha-Kohen b. Zita", "shape": "dot", "size": 25.815920283367596, "title": "Yehoshua b. Eli ha-Kohen b. Zita\nSect: Karaite\nRoles: Witness (OS39)\nDocuments: OS39\nYears: 1028-1028\nPlaces: Jerusalem\nSect evidence: of the Karaite ben Zita family, Jerusalem (OS39)\nPageRank: 0.0055 | Betweenness: 0.0000\nCommunity: 6"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Samuel b. [...]", "label": "Samuel b. [...]", "shape": "dot", "size": 26.048274158408184, "title": "Samuel b. [...]\nSect: Karaite (presumed)\nRoles: Witness (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Sedaqa b. Sa\u0027adya", "label": "Sedaqa b. Sa\u0027adya", "shape": "dot", "size": 26.048274158408184, "title": "Sedaqa b. Sa\u0027adya\nSect: Karaite (presumed)\nRoles: WitnessOfAgency (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#4a90c4", "font": {"color": "#222222"}, "id": "Shela b. Amram al-Qirqisani", "label": "Shela b. Amram al-Qirqisani", "shape": "dot", "size": 26.048274158408184, "title": "Shela b. Amram al-Qirqisani\nSect: Karaite (probable)\nRoles: Groom (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: Mann thought him Rabbanite; Olszowy-Schlanger argues the formula is standard Karaite (OS13)\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Solomon b. Adiya b. Menashe (al-Qazzaz)", "label": "Solomon b. Adiya b. Menashe (al-Qazzaz)", "shape": "dot", "size": 26.048274158408184, "title": "Solomon b. Adiya b. Menashe (al-Qazzaz)\nSect: Karaite\nRoles: GroomAgent (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: al-Qazzaz family of Karaite Fatimid officials in Tyre (OS13, ch.3)\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#999999", "font": {"color": "#222222"}, "id": "Solomon b. Musafir", "label": "Solomon b. Musafir", "shape": "dot", "size": 26.048274158408184, "title": "Solomon b. Musafir\nSect: unknown\nRoles: Agent (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: bride\u0027s agent OS13; signatory of the Tyre (Rabbanite) court letter to Aleppo\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Yaman bt. David", "label": "Yaman bt. David", "shape": "dot", "size": 26.048274158408184, "title": "Yaman bt. David\nSect: Karaite (presumed)\nRoles: Bride (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Yefet [b. ? Solomon b. Abraham]", "label": "Yefet [b. ? Solomon b. Abraham]", "shape": "dot", "size": 26.048274158408184, "title": "Yefet [b. ? Solomon b. Abraham]\nSect: Karaite (presumed)\nRoles: WitnessOfAgency (OS13)\nDocuments: OS13\nYears: 1051-1051\nPlaces: Fustat\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0056 | Betweenness: 0.0000\nCommunity: 1"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Shala [?]", "label": "Shala [?]", "shape": "dot", "size": 26.23415725844066, "title": "Shala [?]\nSect: Karaite (presumed)\nRoles: Witness (OS29)\nDocuments: OS29\nYears: 1015-1015\nPlaces: Tyre [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 7"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Sitt-al-Ahl (bride, OS29)", "label": "Sitt-al-Ahl (bride, OS29)", "shape": "dot", "size": 26.23415725844066, "title": "Sitt-al-Ahl (bride, OS29)\nSect: Karaite (presumed)\nRoles: Bride (OS29)\nDocuments: OS29\nYears: 1015-1015\nPlaces: Tyre [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 7"}, {"color": "#7fb3d8", "font": {"color": "#222222"}, "id": "Solomon b. Maimon", "label": "Solomon b. Maimon", "shape": "dot", "size": 26.23415725844066, "title": "Solomon b. Maimon\nSect: Karaite (presumed)\nRoles: WitnessOfAgency (OS29)\nDocuments: OS29\nYears: 1015-1015\nPlaces: Tyre [?]\nSect evidence: participant in a Karaite legal document; no contrary evidence\nPageRank: 0.0057 | Betweenness: 0.0000\nCommunity: 7"}, {"color": "#d62728", "font": {"color": "#222222"}, "id": "David b. Daniel b. Azarya", "label": "David b. Daniel b. Azarya", "shape": "dot", "size": 36.271844660194176, "title": "David b. Daniel b. Azarya\nSect: Rabbanite\nRoles: Mentioned (OS33)\nDocuments: OS33\nYears: 1088-1088\nPlaces: Fustat [?]\nSect evidence: of the Exilarch family; contender for Palestinian gaonate (OS33 comments)\nPageRank: 0.0097 | Betweenness: 0.0000\nCommunity: 10"}, {"color": "#1f77b4", "font": {"color": "#222222"}, "id": "Nasiya bt. Moses ha-Kohen", "label": "Nasiya bt. Moses ha-Kohen", "shape": "dot", "size": 36.271844660194176, "title": "Nasiya bt. Moses ha-Kohen\nSect: Karaite\nRoles: Mentioned (OS33)\nDocuments: OS33\nYears: 1088-1088\nPlaces: Fustat [?]\nSect evidence: Karaite wife of the Rabbanite David b. Daniel b. Azarya (OS33 comments)\nPageRank: 0.0097 | Betweenness: 0.0000\nCommunity: 10"}]);
+                  edges = new vis.DataSet([{"color": "#9a9a9a", "from": "Aaron b. Isaac", "title": "weight 1 | docs: Z01", "to": "Abraham b. Solomon (Abu Kathir)", "value": 1}, {"color": "#9a9a9a", "from": "Aaron b. Isaac", "title": "weight 1 | docs: Z01", "to": "Eli b. Amram (he-haver)", "value": 1}, {"color": "#9a9a9a", "from": "Aaron b. Isaac", "title": "weight 1 | docs: Z01", "to": "Eli ha-Kohen ha-parnas b. Ya\u0027ish", "value": 1}, {"color": "#9a9a9a", "from": "Aaron b. Isaac", "title": "weight 1 | docs: Z01", "to": "Nahray b. Nissim", "value": 1}, {"color": "#9a9a9a", "from": "Abraham b. Solomon (Abu Kathir)", "title": "weight 1 | docs: Z01", "to": "Eli b. Amram (he-haver)", "value": 1}, {"color": "#9a9a9a", "from": "Abraham b. Solomon (Abu Kathir)", "title": "weight 1 | docs: Z01", "to": "Eli ha-Kohen ha-parnas b. Ya\u0027ish", "value": 1}, {"color": "#9a9a9a", "from": "Abraham b. Solomon (Abu Kathir)", "title": "weight 1 | docs: Z01", "to": "Josiah b. Solomon (nasi)", "value": 1}, {"color": "#9a9a9a", "from": "Abraham b. Solomon (Abu Kathir)", "title": "weight 1 | docs: Z01", "to": "Mevorakh b. Israel (heir)", "value": 1}, {"color": "#9a9a9a", "from": "Abraham b. Solomon (Abu Kathir)", "title": "weight 1 | docs: Z01", "to": "Nahray b. Nissim", "value": 1}, {"color": "#9a9a9a", "from": "Abraham b. Solomon (Abu Kathir)", "title": "weight 1 | docs: Z01", "to": "Samuel b. Yehuda (the orphan)", "value": 1}, {"color": "#9a9a9a", "from": "Abraham b. Solomon (Abu Kathir)", "title": "weight 1 | docs: Z01", "to": "Umm Samuel bt. Aaron", "value": 1}, {"color": "#9a9a9a", "from": "Eli b. Amram (he-haver)", "title": "weight 1 | docs: Z01", "to": "Eli ha-Kohen ha-parnas b. Ya\u0027ish", "value": 1}, {"color": "#9a9a9a", "from": "Eli b. Amram (he-haver)", "title": "weight 1 | docs: Z01", "to": "Josiah b. Solomon (nasi)", "value": 1}, {"color": "#9a9a9a", "from": "Eli b. Amram (he-haver)", "title": "weight 1 | docs: Z01", "to": "Mevorakh b. Israel (heir)", "value": 1}, {"color": "#9a9a9a", "from": "Eli b. Amram (he-haver)", "title": "weight 1 | docs: Z01", "to": "Nahray b. Nissim", "value": 1}, {"color": "#9a9a9a", "from": "Eli b. Amram (he-haver)", "title": "weight 1 | docs: Z01", "to": "Samuel b. Yehuda (the orphan)", "value": 1}, {"color": "#9a9a9a", "from": "Eli b. Amram (he-haver)", "title": "weight 1 | docs: Z01", "to": "Umm Samuel bt. Aaron", "value": 1}, {"color": "#9a9a9a", "from": "Eli ha-Kohen ha-parnas b. Ya\u0027ish", "title": "weight 1 | docs: Z01", "to": "Josiah b. Solomon (nasi)", "value": 1}, {"color": "#9a9a9a", "from": "Eli ha-Kohen ha-parnas b. Ya\u0027ish", "title": "weight 1 | docs: Z01", "to": "Mevorakh b. Israel (heir)", "value": 1}, {"color": "#9a9a9a", "from": "Eli ha-Kohen ha-parnas b. Ya\u0027ish", "title": "weight 1 | docs: Z01", "to": "Nahray b. Nissim", "value": 1}, {"color": "#9a9a9a", "from": "Eli ha-Kohen ha-parnas b. Ya\u0027ish", "title": "weight 1 | docs: Z01", "to": "Samuel b. Yehuda (the orphan)", "value": 1}, {"color": "#9a9a9a", "from": "Eli ha-Kohen ha-parnas b. Ya\u0027ish", "title": "weight 1 | docs: Z01", "to": "Umm Samuel bt. Aaron", "value": 1}, {"color": "#9a9a9a", "from": "Nahray b. Nissim", "title": "weight 1 | docs: Z01", "to": "Josiah b. Solomon (nasi)", "value": 1}, {"color": "#9a9a9a", "from": "Nahray b. Nissim", "title": "weight 1 | docs: Z01", "to": "Mevorakh b. Israel (heir)", "value": 1}, {"color": "#9a9a9a", "from": "Nahray b. Nissim", "title": "weight 1 | docs: Z01", "to": "Samuel b. Yehuda (the orphan)", "value": 1}, {"color": "#9a9a9a", "from": "Nahray b. Nissim", "title": "weight 1 | docs: Z01", "to": "Umm Samuel bt. Aaron", "value": 1}, {"color": "#9a9a9a", "from": "Aaron b. Semah ha-Kohen", "title": "weight 1 | docs: OS13", "to": "Samuel bar Rabbi Moses he-haver", "value": 1}, {"color": "#9a9a9a", "from": "Samuel bar Rabbi Moses he-haver", "title": "weight 1 | docs: OS13", "to": "Amram al-Qirqisani", "value": 1}, {"color": "#9a9a9a", "from": "Samuel bar Rabbi Moses he-haver", "title": "weight 1 | docs: OS13", "to": "David b. Semah (nasi)", "value": 1}, {"color": "#9a9a9a", "from": "Samuel bar Rabbi Moses he-haver", "title": "weight 1 | docs: OS13", "to": "David b. Yesha\u0027ya ha-Melammed", "value": 1}, {"color": "#9a9a9a", "from": "Samuel bar Rabbi Moses he-haver", "title": "weight 1 | docs: OS13", "to": "Mansur b. Mevasser", "value": 1}, {"color": "#9a9a9a", "from": "Samuel bar Rabbi Moses he-haver", "title": "weight 1 | docs: OS13", "to": "Samuel b. [...]", "value": 1}, {"color": "#9a9a9a", "from": "Samuel bar Rabbi Moses he-haver", "title": "weight 1 | docs: OS13", "to": "Sedaqa b. Sa\u0027adya", "value": 1}, {"color": "#9a9a9a", "from": "Samuel bar Rabbi Moses he-haver", "title": "weight 1 | docs: OS13", "to": "Shela b. Amram al-Qirqisani", "value": 1}, {"color": "#9a9a9a", "from": "Samuel bar Rabbi Moses he-haver", "title": "weight 1 | docs: OS13", "to": "Solomon b. Adiya b. Menashe (al-Qazzaz)", "value": 1}, {"color": "#9a9a9a", "from": "Samuel bar Rabbi Moses he-haver", "title": "weight 1 | docs: OS13", "to": "Solomon b. Musafir", "value": 1}, {"color": "#9a9a9a", "from": "Samuel bar Rabbi Moses he-haver", "title": "weight 1 | docs: OS13", "to": "Yaman bt. David", "value": 1}, {"color": "#9a9a9a", "from": "Samuel bar Rabbi Moses he-haver", "title": "weight 1 | docs: OS13", "to": "Yefet [b. ? Solomon b. Abraham]", "value": 1}, {"color": "#9a9a9a", "from": "Abraham (father of Karima)", "title": "weight 1 | docs: OS42", "to": "Jacob b. Hillel b. Awkal", "value": 1}, {"color": "#9a9a9a", "from": "Jacob b. Hillel b. Awkal", "title": "weight 1 | docs: OS42", "to": "Isaac b. Joseph (groom, OS42)", "value": 1}, {"color": "#9a9a9a", "from": "Jacob b. Hillel b. Awkal", "title": "weight 1 | docs: OS42", "to": "Joseph (father of Isaac, OS42)", "value": 1}, {"color": "#9a9a9a", "from": "Jacob b. Hillel b. Awkal", "title": "weight 1 | docs: OS42", "to": "Karima bt. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "Abraham (physician, father of Yehya)", "title": "weight 1 | docs: OS56", "to": "David ha-Kohen b. Sedaqa ha-Kohen", "value": 1}, {"color": "#9a9a9a", "from": "Abraham (physician, father of Yehya)", "title": "weight 1 | docs: OS56", "to": "Hasdai b. Hizkiyahu (nasi)", "value": 1}, {"color": "#9a9a9a", "from": "Abraham (physician, father of Yehya)", "title": "weight 1 | docs: OS56", "to": "Isaac ha-Parnas b. Sedaqa", "value": 1}, {"color": "#9a9a9a", "from": "Abraham (physician, father of Yehya)", "title": "weight 1 | docs: OS56", "to": "Mevorakh b. El\u0027azar b. [...] Yehoshua", "value": 1}, {"color": "#9a9a9a", "from": "Abraham (physician, father of Yehya)", "title": "weight 1 | docs: OS56", "to": "Nathan b. Joseph b. Nahorai", "value": 1}, {"color": "#9a9a9a", "from": "Abraham (physician, father of Yehya)", "title": "weight 1 | docs: OS56", "to": "Rayyisa bt. Sa\u0027adya", "value": 1}, {"color": "#9a9a9a", "from": "Abraham (physician, father of Yehya)", "title": "weight 1 | docs: OS56", "to": "Sa\u0027adya b. David (father of Rayyisa)", "value": 1}, {"color": "#9a9a9a", "from": "Abraham (physician, father of Yehya)", "title": "weight 1 | docs: OS56", "to": "Sedaqa ha-Levi b. Efraim", "value": 1}, {"color": "#9a9a9a", "from": "Abraham (physician, father of Yehya)", "title": "weight 1 | docs: OS56", "to": "Yehoshua ha-Kohen b. Sedaqa ha-Kohen", "value": 1}, {"color": "#9a9a9a", "from": "Abraham (physician, father of Yehya)", "title": "weight 1 | docs: OS56", "to": "Yehya b. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "David ha-Kohen b. Sedaqa ha-Kohen", "title": "weight 1 | docs: OS56", "to": "Yehya b. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "Hasdai b. Hizkiyahu (nasi)", "title": "weight 1 | docs: OS56", "to": "Yehya b. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "Isaac ha-Parnas b. Sedaqa", "title": "weight 1 | docs: OS56", "to": "Yehya b. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "Mevorakh b. El\u0027azar b. [...] Yehoshua", "title": "weight 1 | docs: OS56", "to": "Yehya b. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "Nathan b. Joseph b. Nahorai", "title": "weight 1 | docs: OS56", "to": "Yehya b. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "Rayyisa bt. Sa\u0027adya", "title": "weight 1 | docs: OS56", "to": "Yehya b. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "Sa\u0027adya b. David (father of Rayyisa)", "title": "weight 1 | docs: OS56", "to": "Yehya b. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "Sedaqa ha-Levi b. Efraim", "title": "weight 1 | docs: OS56", "to": "Yehya b. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "Yehoshua ha-Kohen b. Sedaqa ha-Kohen", "title": "weight 1 | docs: OS56", "to": "Yehya b. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "Abraham b. Musallam", "title": "weight 1 | docs: OS43", "to": "Levi ha-Levi bar Jacob", "value": 1}, {"color": "#9a9a9a", "from": "Levi ha-Levi bar Jacob", "title": "weight 1 | docs: OS43", "to": "Abraham ha-Kohen b. Khalaf", "value": 1}, {"color": "#9a9a9a", "from": "Levi ha-Levi bar Jacob", "title": "weight 1 | docs: OS43", "to": "Barakat b. Benjamin", "value": 1}, {"color": "#9a9a9a", "from": "Levi ha-Levi bar Jacob", "title": "weight 1 | docs: OS43", "to": "Barakat b. Mubarak", "value": 1}, {"color": "#9a9a9a", "from": "Levi ha-Levi bar Jacob", "title": "weight 1 | docs: OS43", "to": "Nathana\u0027el ha-Levi b. Rawh", "value": 1}, {"color": "#9a9a9a", "from": "Levi ha-Levi bar Jacob", "title": "weight 1 | docs: OS43", "to": "Sedaqa (groom, OS43)", "value": 1}, {"color": "#9a9a9a", "from": "Levi ha-Levi bar Jacob", "title": "weight 1 | docs: OS43", "to": "[...] ha-Kohen b. Joseph", "value": 1}, {"color": "#9a9a9a", "from": "Amaryahu Jehuda (nasi)", "title": "weight 1 | docs: OS26", "to": "Isaac bar Azaryahu", "value": 1}, {"color": "#9a9a9a", "from": "Isaac bar Azaryahu", "title": "weight 1 | docs: OS26", "to": "Amram ha-Levi b. Joseph ha-Levi", "value": 1}, {"color": "#9a9a9a", "from": "Isaac bar Azaryahu", "title": "weight 1 | docs: OS26", "to": "El\u0027azar b. Shemen Tov", "value": 1}, {"color": "#9a9a9a", "from": "Isaac bar Azaryahu", "title": "weight 1 | docs: OS26", "to": "Eliyahu b. Halfon", "value": 1}, {"color": "#9a9a9a", "from": "Isaac bar Azaryahu", "title": "weight 1 | docs: OS26", "to": "Isaac b. Yefet", "value": 1}, {"color": "#9a9a9a", "from": "Isaac bar Azaryahu", "title": "weight 1 | docs: OS26", "to": "Joseph (father of Rivqa)", "value": 1}, {"color": "#9a9a9a", "from": "Isaac bar Azaryahu", "title": "weight 1 | docs: OS26", "to": "Nathana\u0027el ha-Kohen b. Meshullam", "value": 1}, {"color": "#9a9a9a", "from": "Isaac bar Azaryahu", "title": "weight 1 | docs: OS26", "to": "Rivqa bt. Joseph", "value": 1}, {"color": "#9a9a9a", "from": "Isaac bar Azaryahu", "title": "weight 1 | docs: OS26", "to": "Shemarya b. Shemen Tov", "value": 1}, {"color": "#9a9a9a", "from": "Isaac bar Azaryahu", "title": "weight 1 | docs: OS26", "to": "Shemen Tov b. Shemarya", "value": 1}, {"color": "#9a9a9a", "from": "Isaac bar Azaryahu", "title": "weight 1 | docs: OS26", "to": "[...] b. El\u0027azar b. Halfon", "value": 1}, {"color": "#9a9a9a", "from": "Benjamin (father of Hizkiyahu, OS39)", "title": "weight 1 | docs: OS39", "to": "Nathan ha-Kohen bar Yehai", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Bishr b. Abraham ha-Levi", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Eli b. Mu\u0027ammar", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Hizkiyahu b. Benjamin", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Jacob b. Fadlan", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Joseph b. Abraham ha-Kohen", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Joseph b. Samuel", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Mevorakh b. David", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Nathan b. Nisan ha-Levi (the scholar)", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Omar b. Yehoshua", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Sarwa bt. Sedaqa", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Sedaqa b. Jarir", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Sedaqa b. Zakharya", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Solomon b. David ha-Kohen (the scholar)", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Yehoshua b. Adiya ha-Kohen", "value": 1}, {"color": "#9a9a9a", "from": "Nathan ha-Kohen bar Yehai", "title": "weight 1 | docs: OS39", "to": "Yehoshua b. Eli ha-Kohen b. Zita", "value": 1}, {"color": "#9a9a9a", "from": "Benjamin b. Hasson", "title": "weight 1 | docs: OS29", "to": "Shela ha-Kohen bar Rabbi Mevasser", "value": 1}, {"color": "#9a9a9a", "from": "Shela ha-Kohen bar Rabbi Mevasser", "title": "weight 1 | docs: OS29", "to": "Eli b. Solomon", "value": 1}, {"color": "#9a9a9a", "from": "Shela ha-Kohen bar Rabbi Mevasser", "title": "weight 1 | docs: OS29", "to": "Maimon b. Fadl", "value": 1}, {"color": "#9a9a9a", "from": "Shela ha-Kohen bar Rabbi Mevasser", "title": "weight 1 | docs: OS29", "to": "Mevasser b. Abraham", "value": 1}, {"color": "#9a9a9a", "from": "Shela ha-Kohen bar Rabbi Mevasser", "title": "weight 1 | docs: OS29", "to": "Mevorakh b. Samuel", "value": 1}, {"color": "#9a9a9a", "from": "Shela ha-Kohen bar Rabbi Mevasser", "title": "weight 1 | docs: OS29", "to": "Mevorakh b. Yefet", "value": 1}, {"color": "#9a9a9a", "from": "Shela ha-Kohen bar Rabbi Mevasser", "title": "weight 1 | docs: OS29", "to": "Mubarak b. Husain", "value": 1}, {"color": "#9a9a9a", "from": "Shela ha-Kohen bar Rabbi Mevasser", "title": "weight 1 | docs: OS29", "to": "Shala [?]", "value": 1}, {"color": "#9a9a9a", "from": "Shela ha-Kohen bar Rabbi Mevasser", "title": "weight 1 | docs: OS29", "to": "Sitt-al-Ahl (bride, OS29)", "value": 1}, {"color": "#9a9a9a", "from": "Shela ha-Kohen bar Rabbi Mevasser", "title": "weight 1 | docs: OS29", "to": "Solomon b. Maimon", "value": 1}, {"color": "#9a9a9a", "from": "David b. Moses (OS57)", "title": "weight 1 | docs: OS57", "to": "Mansur (father of groom, OS57)", "value": 1}, {"color": "#9a9a9a", "from": "David b. Moses (OS57)", "title": "weight 1 | docs: OS57", "to": "[...] b. Mansur (groom, OS57)", "value": 1}, {"color": "#9a9a9a", "from": "Mansur (father of groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Efraim b. Mevasser b. Solomon", "value": 1}, {"color": "#9a9a9a", "from": "Mansur (father of groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Hasan b. Moses", "value": 1}, {"color": "#9a9a9a", "from": "Mansur (father of groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Isaac b. Jehuda ha-Levi", "value": 1}, {"color": "#9a9a9a", "from": "Mansur (father of groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Karima bt. Hasan", "value": 1}, {"color": "#9a9a9a", "from": "Mansur (father of groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Moses b. Siba\u0027a", "value": 1}, {"color": "#9a9a9a", "from": "Mansur (father of groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Mu\u0027ammar b. S[edaqa]", "value": 1}, {"color": "#9a9a9a", "from": "Mansur (father of groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Sa\u0027id b. [...] (OS57)", "value": 1}, {"color": "#9a9a9a", "from": "Mansur (father of groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Sahlawaya b. Hayyim", "value": 1}, {"color": "#9a9a9a", "from": "Mansur (father of groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Sedaqa b. Nahum ha-Kohen", "value": 1}, {"color": "#9a9a9a", "from": "Mansur (father of groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Yefet ha-Kohen b. Eli b. Zita", "value": 1}, {"color": "#9a9a9a", "from": "Mansur (father of groom, OS57)", "title": "weight 1 | docs: OS57", "to": "[...] b. Mansur (groom, OS57)", "value": 1}, {"color": "#9a9a9a", "from": "[...] b. Mansur (groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Efraim b. Mevasser b. Solomon", "value": 1}, {"color": "#9a9a9a", "from": "[...] b. Mansur (groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Hasan b. Moses", "value": 1}, {"color": "#9a9a9a", "from": "[...] b. Mansur (groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Isaac b. Jehuda ha-Levi", "value": 1}, {"color": "#9a9a9a", "from": "[...] b. Mansur (groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Karima bt. Hasan", "value": 1}, {"color": "#9a9a9a", "from": "[...] b. Mansur (groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Moses b. Siba\u0027a", "value": 1}, {"color": "#9a9a9a", "from": "[...] b. Mansur (groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Mu\u0027ammar b. S[edaqa]", "value": 1}, {"color": "#9a9a9a", "from": "[...] b. Mansur (groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Sa\u0027id b. [...] (OS57)", "value": 1}, {"color": "#9a9a9a", "from": "[...] b. Mansur (groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Sahlawaya b. Hayyim", "value": 1}, {"color": "#9a9a9a", "from": "[...] b. Mansur (groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Sedaqa b. Nahum ha-Kohen", "value": 1}, {"color": "#9a9a9a", "from": "[...] b. Mansur (groom, OS57)", "title": "weight 1 | docs: OS57", "to": "Yefet ha-Kohen b. Eli b. Zita", "value": 1}, {"color": "#9a9a9a", "from": "Levi ha-Levi bar Joseph", "title": "weight 1 | docs: OS19", "to": "Shela ha-Kohen b. Sadoq beRabbi [...]", "value": 1}, {"color": "#9a9a9a", "from": "David b. Daniel b. Azarya", "title": "married | weight 1 | docs: OS33", "to": "Nasiya bt. Moses ha-Kohen", "value": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "forceAtlas2Based": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.008,
+            "damping": 0.55,
+            "gravitationalConstant": -60,
+            "springConstant": 0.08,
+            "springLength": 110
+        },
+        "solver": "forceAtlas2Based",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+                    network.on("selectNode", neighbourhoodHighlight);
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

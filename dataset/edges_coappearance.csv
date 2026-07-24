@@ -1,0 +1,1359 @@
+﻿source_id,source,target_id,target,weight,docs
+P001,'The exquisite scholar',P030,Abu'l-Fadl,1,TS J 3.47v
+P001,'The exquisite scholar',P031,Abu'l-Hasan b. al-Jabawi,1,TS J 3.47v
+P001,'The exquisite scholar',P060,Daughter of Abu'l-Fadl,1,TS J 3.47v
+P001,'The exquisite scholar',P064,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),1,TS J 3.47v
+P010,Aaron b. Isaac,P027,Abraham b. Solomon (Abu Kathir),1,Mosseri VII.43 + TS Ar.53.53
+P010,Aaron b. Isaac,P089,Eli b. Amram (he-haver),1,Mosseri VII.43 + TS Ar.53.53
+P010,Aaron b. Isaac,P097,Eli ha-Kohen ha-parnas b. Ya'ish,1,Mosseri VII.43 + TS Ar.53.53
+P010,Aaron b. Isaac,P177,Josiah b. Solomon (nasi),1,Mosseri VII.43 + TS Ar.53.53
+P010,Aaron b. Isaac,P210,Mevorakh b. Israel (heir),1,Mosseri VII.43 + TS Ar.53.53
+P010,Aaron b. Isaac,P229,Nahray b. Nissim,1,Mosseri VII.43 + TS Ar.53.53
+P010,Aaron b. Isaac,P265,Samuel b. Yehuda (the orphan),1,Mosseri VII.43 + TS Ar.53.53
+P010,Aaron b. Isaac,P324,Umm Samuel bt. Aaron,1,Mosseri VII.43 + TS Ar.53.53
+P011,Aaron b. Mordekhai,P215,Mevorakh b. Yehya,1,TS 16.236
+P011,Aaron b. Mordekhai,P225,"Mubaraka (bride, OS28)",1,TS 16.236
+P012,Aaron b. Sahl al-Tustari,P014,Aaron b. Yehoshua,1,TS 16.50
+P012,Aaron b. Sahl al-Tustari,P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,1,TS 16.50
+P012,Aaron b. Sahl al-Tustari,P021,Abraham b. al-Fara,1,TS 16.50
+P012,Aaron b. Sahl al-Tustari,P035,Ama al-Aziz bt. Hizkiyahu,1,TS 16.50
+P012,Aaron b. Sahl al-Tustari,P043,Azarya b. Salih,1,TS 16.50
+P012,Aaron b. Sahl al-Tustari,P073,David b. Semah (nasi),1,TS 16.50
+P012,Aaron b. Sahl al-Tustari,P099,Ezra b. Ishma'el b. Ezra,1,TS 16.50
+P012,Aaron b. Sahl al-Tustari,P125,Hizkiyahu b. Solomon (nasi),1,TS 16.50
+P012,Aaron b. Sahl al-Tustari,P166,Joseph b. Abraham b. al-Fara,1,TS 16.50
+P012,Aaron b. Sahl al-Tustari,P183,Khatabya b. al-Tabat,1,TS 16.50
+P012,Aaron b. Sahl al-Tustari,P259,Sahl b. Sa'adya al-Baghdadi,1,TS 16.50
+P012,Aaron b. Sahl al-Tustari,P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P013,Aaron b. Semah ha-Kohen,P039,Amram al-Qirqisani,1,Mosseri Ia.2
+P013,Aaron b. Semah ha-Kohen,P073,David b. Semah (nasi),1,Mosseri Ia.2
+P013,Aaron b. Semah ha-Kohen,P076,David b. Yesha'ya ha-Melammed,1,Mosseri Ia.2
+P013,Aaron b. Semah ha-Kohen,P192,Mansur b. Mevasser,1,Mosseri Ia.2
+P013,Aaron b. Semah ha-Kohen,P261,Samuel b. [...],1,Mosseri Ia.2
+P013,Aaron b. Semah ha-Kohen,P266,Samuel bar Rabbi Moses he-haver,1,Mosseri Ia.2
+P013,Aaron b. Semah ha-Kohen,P285,Sedaqa b. Sa'adya,1,Mosseri Ia.2
+P013,Aaron b. Semah ha-Kohen,P292,Shela b. Amram al-Qirqisani,1,Mosseri Ia.2
+P013,Aaron b. Semah ha-Kohen,P307,Solomon b. Adiya b. Menashe (al-Qazzaz),1,Mosseri Ia.2
+P013,Aaron b. Semah ha-Kohen,P317,Solomon b. Musafir,1,Mosseri Ia.2
+P013,Aaron b. Semah ha-Kohen,P326,Yaman bt. David,1,Mosseri Ia.2
+P013,Aaron b. Semah ha-Kohen,P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P014,Aaron b. Yehoshua,P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,1,TS 16.50
+P014,Aaron b. Yehoshua,P021,Abraham b. al-Fara,1,TS 16.50
+P014,Aaron b. Yehoshua,P035,Ama al-Aziz bt. Hizkiyahu,1,TS 16.50
+P014,Aaron b. Yehoshua,P043,Azarya b. Salih,1,TS 16.50
+P014,Aaron b. Yehoshua,P073,David b. Semah (nasi),1,TS 16.50
+P014,Aaron b. Yehoshua,P099,Ezra b. Ishma'el b. Ezra,1,TS 16.50
+P014,Aaron b. Yehoshua,P125,Hizkiyahu b. Solomon (nasi),1,TS 16.50
+P014,Aaron b. Yehoshua,P166,Joseph b. Abraham b. al-Fara,1,TS 16.50
+P014,Aaron b. Yehoshua,P183,Khatabya b. al-Tabat,1,TS 16.50
+P014,Aaron b. Yehoshua,P259,Sahl b. Sa'adya al-Baghdadi,1,TS 16.50
+P014,Aaron b. Yehoshua,P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P015,Aaron ha-Kohen (father of Menashe),P016,"Aaron ha-Kohen (grandfather, OS33)",1,TS 24.45 + TS NS J 86
+P015,Aaron ha-Kohen (father of Menashe),P091,Eli b. Hillel,1,TS 24.45 + TS NS J 86
+P015,Aaron ha-Kohen (father of Menashe),P198,"Menashe (groom, OS33)",1,TS 24.45 + TS NS J 86
+P015,Aaron ha-Kohen (father of Menashe),P220,Moses ha-Kohen b. Aaron,1,TS 24.45 + TS NS J 86
+P015,Aaron ha-Kohen (father of Menashe),P303,Sitt-al-Husn bt. Moses ha-Kohen,1,TS 24.45 + TS NS J 86
+P016,"Aaron ha-Kohen (grandfather, OS33)",P091,Eli b. Hillel,1,TS 24.45 + TS NS J 86
+P016,"Aaron ha-Kohen (grandfather, OS33)",P198,"Menashe (groom, OS33)",1,TS 24.45 + TS NS J 86
+P016,"Aaron ha-Kohen (grandfather, OS33)",P220,Moses ha-Kohen b. Aaron,1,TS 24.45 + TS NS J 86
+P016,"Aaron ha-Kohen (grandfather, OS33)",P303,Sitt-al-Husn bt. Moses ha-Kohen,1,TS 24.45 + TS NS J 86
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,P021,Abraham b. al-Fara,1,TS 16.50
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,P035,Ama al-Aziz bt. Hizkiyahu,1,TS 16.50
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,P043,Azarya b. Salih,1,TS 16.50
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,P073,David b. Semah (nasi),1,TS 16.50
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,P099,Ezra b. Ishma'el b. Ezra,1,TS 16.50
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,P125,Hizkiyahu b. Solomon (nasi),1,TS 16.50
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,P166,Joseph b. Abraham b. al-Fara,1,TS 16.50
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,P183,Khatabya b. al-Tabat,1,TS 16.50
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,P259,Sahl b. Sa'adya al-Baghdadi,1,TS 16.50
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P018,Abraham (father of Karima),P136,"Isaac b. Joseph (groom, OS42)",1,Bodl. MS Heb. b.12.31
+P018,Abraham (father of Karima),P151,Jacob b. Hillel b. Awkal,1,Bodl. MS Heb. b.12.31
+P018,Abraham (father of Karima),P160,"Joseph (father of Isaac, OS42)",1,Bodl. MS Heb. b.12.31
+P018,Abraham (father of Karima),P178,Karima bt. Abraham,1,Bodl. MS Heb. b.12.31
+P019,"Abraham (physician, father of Yehya)",P078,David ha-Kohen b. Sedaqa ha-Kohen,1,Bodl. MS Heb. a.3.42
+P019,"Abraham (physician, father of Yehya)",P116,Hasdai b. Hizkiyahu (nasi),1,Bodl. MS Heb. a.3.42
+P019,"Abraham (physician, father of Yehya)",P140,Isaac ha-Parnas b. Sedaqa,1,Bodl. MS Heb. a.3.42
+P019,"Abraham (physician, father of Yehya)",P209,Mevorakh b. El'azar b. [...] Yehoshua,1,Bodl. MS Heb. a.3.42
+P019,"Abraham (physician, father of Yehya)",P234,Nathan b. Joseph b. Nahorai,1,Bodl. MS Heb. a.3.42
+P019,"Abraham (physician, father of Yehya)",P247,Rayyisa bt. Sa'adya,1,Bodl. MS Heb. a.3.42
+P019,"Abraham (physician, father of Yehya)",P250,Sa'adya b. David (father of Rayyisa),1,Bodl. MS Heb. a.3.42
+P019,"Abraham (physician, father of Yehya)",P287,Sedaqa ha-Levi b. Efraim,1,Bodl. MS Heb. a.3.42
+P019,"Abraham (physician, father of Yehya)",P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,1,Bodl. MS Heb. a.3.42
+P019,"Abraham (physician, father of Yehya)",P344,Yehya b. Abraham,1,Bodl. MS Heb. a.3.42
+P020,Abraham al-Awalani,P102,Faraj b. Solomon,1,Bodl. MS Heb. a.3.44
+P020,Abraham al-Awalani,P158,Jehuda b. Khalaf,1,Bodl. MS Heb. a.3.44
+P020,Abraham al-Awalani,P180,"Khalaf (father of Jehuda, OS40)",1,Bodl. MS Heb. a.3.44
+P020,Abraham al-Awalani,P216,Miriam bt. Solomon,1,Bodl. MS Heb. a.3.44
+P020,Abraham al-Awalani,P289,Semah b. Asa (nasi),1,Bodl. MS Heb. a.3.44
+P020,Abraham al-Awalani,P304,"Solomon (father of Miriam, OS40)",1,Bodl. MS Heb. a.3.44
+P022,Abraham b. Isaac,P047,Bahlul b. Isaac ha-Kohen,1,TS 6 Ja 2
+P022,Abraham b. Isaac,P075,David b. Solomon,1,TS 6 Ja 2
+P022,Abraham b. Isaac,P093,Eli b. Mu'ammar,1,TS 6 Ja 2
+P022,Abraham b. Isaac,P120,Hiba b. Khalaf al-Shinizi,1,TS 6 Ja 2
+P022,Abraham b. Isaac,P133,Isaac b. Eliya ha-Kohen,1,TS 6 Ja 2
+P022,Abraham b. Isaac,P134,Isaac b. Jacob,1,TS 6 Ja 2
+P022,Abraham b. Isaac,P137,Isaac b. Samuel al-Fara,1,TS 6 Ja 2
+P022,Abraham b. Isaac,P152,Jacob b. Isaac,1,TS 6 Ja 2
+P022,Abraham b. Isaac,P169,Joseph b. Isaac,1,TS 6 Ja 2
+P022,Abraham b. Isaac,P171,Joseph b. Jacob,1,TS 6 Ja 2
+P022,Abraham b. Isaac,P199,Menashe b. Mahbub ha-Levi (of Acre),1,TS 6 Ja 2
+P022,Abraham b. Isaac,P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P022,Abraham b. Isaac,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P024,Abraham b. Jacob,P145,"Jacob (father of Abraham, OS23)",1,TS 12.715 + Bodl. MS Heb. a.3.34
+P024,Abraham b. Jacob,P255,Sa'id ha-Kohen b. Nahum,1,TS 12.715 + Bodl. MS Heb. a.3.34
+P024,Abraham b. Jacob,P256,"Sahl (father of Sara, OS23)",1,TS 12.715 + Bodl. MS Heb. a.3.34
+P024,Abraham b. Jacob,P268,Sara bt. Sahl,1,TS 12.715 + Bodl. MS Heb. a.3.34
+P025,Abraham b. Joseph b. Anan ha-Levi,P034,Alan b. Nahum,1,TS 24.13
+P025,Abraham b. Joseph b. Anan ha-Levi,P087,El'azar b. Samuel b. Sahl ha-Eved,1,TS 24.13
+P025,Abraham b. Joseph b. Anan ha-Levi,P104,Faras bt. Simha,1,TS 24.13
+P025,Abraham b. Joseph b. Anan ha-Levi,P112,Hananya b. Elnathan,1,TS 24.13
+P025,Abraham b. Joseph b. Anan ha-Levi,P194,Marzuq b. Yefet,1,TS 24.13
+P025,Abraham b. Joseph b. Anan ha-Levi,P237,Nathana'el b. Mevasser ha-Levi,1,TS 24.13
+P025,Abraham b. Joseph b. Anan ha-Levi,P252,Sa'adya b. Razi'el,1,TS 24.13
+P025,Abraham b. Joseph b. Anan ha-Levi,P272,Saul b. Abraham,1,TS 24.13
+P025,Abraham b. Joseph b. Anan ha-Levi,P282,Sedaqa b. Menashe,1,TS 24.13
+P025,Abraham b. Joseph b. Anan ha-Levi,P299,Simha (father of Faras),1,TS 24.13
+P025,Abraham b. Joseph b. Anan ha-Levi,P328,Yefet (father of Marzuq),1,TS 24.13
+P025,Abraham b. Joseph b. Anan ha-Levi,P002,[...] b. Efraim,1,TS 24.13
+P026,Abraham b. Musallam,P029,Abraham ha-Kohen b. Khalaf,1,ENA 4020.38v
+P026,Abraham b. Musallam,P049,Barakat b. Benjamin,1,ENA 4020.38v
+P026,Abraham b. Musallam,P052,Barakat b. Mubarak,1,ENA 4020.38v
+P026,Abraham b. Musallam,P100,Fadla bt. Abraham,1,A.I.U. VII D 1r
+P026,Abraham b. Musallam,P184,Levi ha-Levi bar Jacob,1,ENA 4020.38v
+P026,Abraham b. Musallam,P188,Mahfuz b. Menahem,1,A.I.U. VII D 1r
+P026,Abraham b. Musallam,P195,Menahem (father of Mahfuz),1,A.I.U. VII D 1r
+P026,Abraham b. Musallam,P239,Nathana'el ha-Levi b. Rawh,1,ENA 4020.38v
+P026,Abraham b. Musallam,P275,"Sedaqa (groom, OS43)",1,ENA 4020.38v
+P026,Abraham b. Musallam,P009,[...] ha-Kohen b. Joseph,1,ENA 4020.38v
+P027,Abraham b. Solomon (Abu Kathir),P089,Eli b. Amram (he-haver),1,Mosseri VII.43 + TS Ar.53.53
+P027,Abraham b. Solomon (Abu Kathir),P097,Eli ha-Kohen ha-parnas b. Ya'ish,1,Mosseri VII.43 + TS Ar.53.53
+P027,Abraham b. Solomon (Abu Kathir),P177,Josiah b. Solomon (nasi),1,Mosseri VII.43 + TS Ar.53.53
+P027,Abraham b. Solomon (Abu Kathir),P210,Mevorakh b. Israel (heir),1,Mosseri VII.43 + TS Ar.53.53
+P027,Abraham b. Solomon (Abu Kathir),P229,Nahray b. Nissim,1,Mosseri VII.43 + TS Ar.53.53
+P027,Abraham b. Solomon (Abu Kathir),P265,Samuel b. Yehuda (the orphan),1,Mosseri VII.43 + TS Ar.53.53
+P027,Abraham b. Solomon (Abu Kathir),P324,Umm Samuel bt. Aaron,1,Mosseri VII.43 + TS Ar.53.53
+P021,Abraham b. al-Fara,P035,Ama al-Aziz bt. Hizkiyahu,1,TS 16.50
+P021,Abraham b. al-Fara,P043,Azarya b. Salih,1,TS 16.50
+P021,Abraham b. al-Fara,P073,David b. Semah (nasi),1,TS 16.50
+P021,Abraham b. al-Fara,P099,Ezra b. Ishma'el b. Ezra,1,TS 16.50
+P021,Abraham b. al-Fara,P125,Hizkiyahu b. Solomon (nasi),1,TS 16.50
+P021,Abraham b. al-Fara,P166,Joseph b. Abraham b. al-Fara,1,TS 16.50
+P021,Abraham b. al-Fara,P183,Khatabya b. al-Tabat,1,TS 16.50
+P021,Abraham b. al-Fara,P259,Sahl b. Sa'adya al-Baghdadi,1,TS 16.50
+P021,Abraham b. al-Fara,P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P029,Abraham ha-Kohen b. Khalaf,P049,Barakat b. Benjamin,1,ENA 4020.38v
+P029,Abraham ha-Kohen b. Khalaf,P052,Barakat b. Mubarak,1,ENA 4020.38v
+P029,Abraham ha-Kohen b. Khalaf,P184,Levi ha-Levi bar Jacob,1,ENA 4020.38v
+P029,Abraham ha-Kohen b. Khalaf,P239,Nathana'el ha-Levi b. Rawh,1,ENA 4020.38v
+P029,Abraham ha-Kohen b. Khalaf,P275,"Sedaqa (groom, OS43)",1,ENA 4020.38v
+P029,Abraham ha-Kohen b. Khalaf,P009,[...] ha-Kohen b. Joseph,1,ENA 4020.38v
+P030,Abu'l-Fadl,P031,Abu'l-Hasan b. al-Jabawi,1,TS J 3.47v
+P030,Abu'l-Fadl,P060,Daughter of Abu'l-Fadl,1,TS J 3.47v
+P030,Abu'l-Fadl,P064,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),1,TS J 3.47v
+P031,Abu'l-Hasan b. al-Jabawi,P060,Daughter of Abu'l-Fadl,1,TS J 3.47v
+P031,Abu'l-Hasan b. al-Jabawi,P064,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),1,TS J 3.47v
+P034,Alan b. Nahum,P036,Ama al-Qadar bt. Efraim,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P051,Barakat b. Menahem ha-Kohen,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P068,David b. Isaac b. Moses ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P073,David b. Semah (nasi),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P076,David b. Yesha'ya ha-Melammed,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P080,Efraim b. Mansur b. Furat,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P087,El'azar b. Samuel b. Sahl ha-Eved,1,TS 24.13
+P034,Alan b. Nahum,P104,Faras bt. Simha,1,TS 24.13
+P034,Alan b. Nahum,P112,Hananya b. Elnathan,1,TS 24.13
+P034,Alan b. Nahum,P163,Joseph b. [...] b. Efraim,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P182,Khalaf b. Mahfuz,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P187,Mahfuz (father of Khalaf),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P194,Marzuq b. Yefet,1,TS 24.13
+P034,Alan b. Nahum,P230,Nahum b. Nahum,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P237,Nathana'el b. Mevasser ha-Levi,1,TS 24.13
+P034,Alan b. Nahum,P252,Sa'adya b. Razi'el,1,TS 24.13
+P034,Alan b. Nahum,P272,Saul b. Abraham,1,TS 24.13
+P034,Alan b. Nahum,P281,Sedaqa b. Masliah b. Sahl ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P282,Sedaqa b. Menashe,1,TS 24.13
+P034,Alan b. Nahum,P299,Simha (father of Faras),1,TS 24.13
+P034,Alan b. Nahum,P328,Yefet (father of Marzuq),1,TS 24.13
+P034,Alan b. Nahum,P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P034,Alan b. Nahum,P002,[...] b. Efraim,1,TS 24.13
+P035,Ama al-Aziz bt. Hizkiyahu,P043,Azarya b. Salih,1,TS 16.50
+P035,Ama al-Aziz bt. Hizkiyahu,P073,David b. Semah (nasi),1,TS 16.50
+P035,Ama al-Aziz bt. Hizkiyahu,P099,Ezra b. Ishma'el b. Ezra,1,TS 16.50
+P035,Ama al-Aziz bt. Hizkiyahu,P125,Hizkiyahu b. Solomon (nasi),1,TS 16.50
+P035,Ama al-Aziz bt. Hizkiyahu,P166,Joseph b. Abraham b. al-Fara,1,TS 16.50
+P035,Ama al-Aziz bt. Hizkiyahu,P183,Khatabya b. al-Tabat,1,TS 16.50
+P035,Ama al-Aziz bt. Hizkiyahu,P259,Sahl b. Sa'adya al-Baghdadi,1,TS 16.50
+P035,Ama al-Aziz bt. Hizkiyahu,P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P036,Ama al-Qadar bt. Efraim,P051,Barakat b. Menahem ha-Kohen,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P036,Ama al-Qadar bt. Efraim,P068,David b. Isaac b. Moses ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P036,Ama al-Qadar bt. Efraim,P073,David b. Semah (nasi),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P036,Ama al-Qadar bt. Efraim,P076,David b. Yesha'ya ha-Melammed,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P036,Ama al-Qadar bt. Efraim,P080,Efraim b. Mansur b. Furat,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P036,Ama al-Qadar bt. Efraim,P163,Joseph b. [...] b. Efraim,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P036,Ama al-Qadar bt. Efraim,P182,Khalaf b. Mahfuz,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P036,Ama al-Qadar bt. Efraim,P187,Mahfuz (father of Khalaf),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P036,Ama al-Qadar bt. Efraim,P230,Nahum b. Nahum,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P036,Ama al-Qadar bt. Efraim,P281,Sedaqa b. Masliah b. Sahl ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P036,Ama al-Qadar bt. Efraim,P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P037,Ama al-Wahid bt. Halfon,P059,Daniel b. Bundar,1,ENA NS 17.24
+P037,Ama al-Wahid bt. Halfon,P107,Halfon (father of Ama al-Wahid),1,ENA NS 17.24
+P037,Ama al-Wahid bt. Halfon,P109,Halfon ha-Levi b. Daniel,1,ENA NS 17.24
+P037,Ama al-Wahid bt. Halfon,P121,Hillel (the elder),1,ENA NS 17.24
+P037,Ama al-Wahid bt. Halfon,P227,Musafir b. Isaac ha-Kohen,1,ENA NS 17.24
+P037,Ama al-Wahid bt. Halfon,P293,Shela b. Joseph,1,ENA NS 17.24
+P038,Amaryahu Jehuda (nasi),P040,Amram ha-Levi b. Joseph ha-Levi,1,TS 16.67
+P038,Amaryahu Jehuda (nasi),P088,El'azar b. Shemen Tov,1,TS 16.67
+P038,Amaryahu Jehuda (nasi),P098,Eliyahu b. Halfon,1,TS 16.67
+P038,Amaryahu Jehuda (nasi),P138,Isaac b. Yefet,1,TS 16.67
+P038,Amaryahu Jehuda (nasi),P139,Isaac bar Azaryahu,1,TS 16.67
+P038,Amaryahu Jehuda (nasi),P161,Joseph (father of Rivqa),1,TS 16.67
+P038,Amaryahu Jehuda (nasi),P238,Nathana'el ha-Kohen b. Meshullam,1,TS 16.67
+P038,Amaryahu Jehuda (nasi),P249,Rivqa bt. Joseph,1,TS 16.67
+P038,Amaryahu Jehuda (nasi),P296,Shemarya b. Shemen Tov,1,TS 16.67
+P038,Amaryahu Jehuda (nasi),P297,Shemen Tov b. Shemarya,1,TS 16.67
+P038,Amaryahu Jehuda (nasi),P003,[...] b. El'azar b. Halfon,1,TS 16.67
+P039,Amram al-Qirqisani,P073,David b. Semah (nasi),1,Mosseri Ia.2
+P039,Amram al-Qirqisani,P076,David b. Yesha'ya ha-Melammed,1,Mosseri Ia.2
+P039,Amram al-Qirqisani,P192,Mansur b. Mevasser,1,Mosseri Ia.2
+P039,Amram al-Qirqisani,P261,Samuel b. [...],1,Mosseri Ia.2
+P039,Amram al-Qirqisani,P266,Samuel bar Rabbi Moses he-haver,1,Mosseri Ia.2
+P039,Amram al-Qirqisani,P285,Sedaqa b. Sa'adya,1,Mosseri Ia.2
+P039,Amram al-Qirqisani,P292,Shela b. Amram al-Qirqisani,1,Mosseri Ia.2
+P039,Amram al-Qirqisani,P307,Solomon b. Adiya b. Menashe (al-Qazzaz),1,Mosseri Ia.2
+P039,Amram al-Qirqisani,P317,Solomon b. Musafir,1,Mosseri Ia.2
+P039,Amram al-Qirqisani,P326,Yaman bt. David,1,Mosseri Ia.2
+P039,Amram al-Qirqisani,P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P040,Amram ha-Levi b. Joseph ha-Levi,P088,El'azar b. Shemen Tov,1,TS 16.67
+P040,Amram ha-Levi b. Joseph ha-Levi,P098,Eliyahu b. Halfon,1,TS 16.67
+P040,Amram ha-Levi b. Joseph ha-Levi,P138,Isaac b. Yefet,1,TS 16.67
+P040,Amram ha-Levi b. Joseph ha-Levi,P139,Isaac bar Azaryahu,1,TS 16.67
+P040,Amram ha-Levi b. Joseph ha-Levi,P161,Joseph (father of Rivqa),1,TS 16.67
+P040,Amram ha-Levi b. Joseph ha-Levi,P238,Nathana'el ha-Kohen b. Meshullam,1,TS 16.67
+P040,Amram ha-Levi b. Joseph ha-Levi,P249,Rivqa bt. Joseph,1,TS 16.67
+P040,Amram ha-Levi b. Joseph ha-Levi,P296,Shemarya b. Shemen Tov,1,TS 16.67
+P040,Amram ha-Levi b. Joseph ha-Levi,P297,Shemen Tov b. Shemarya,1,TS 16.67
+P040,Amram ha-Levi b. Joseph ha-Levi,P003,[...] b. El'azar b. Halfon,1,TS 16.67
+P043,Azarya b. Salih,P073,David b. Semah (nasi),1,TS 16.50
+P043,Azarya b. Salih,P099,Ezra b. Ishma'el b. Ezra,1,TS 16.50
+P043,Azarya b. Salih,P125,Hizkiyahu b. Solomon (nasi),1,TS 16.50
+P043,Azarya b. Salih,P166,Joseph b. Abraham b. al-Fara,1,TS 16.50
+P043,Azarya b. Salih,P183,Khatabya b. al-Tabat,1,TS 16.50
+P043,Azarya b. Salih,P259,Sahl b. Sa'adya al-Baghdadi,1,TS 16.50
+P043,Azarya b. Salih,P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P044,Azhar (father of Jabir),P086,El'azar b. Menashe,1,TS AS 145.307r + TS Misc. 29.58a r
+P044,Azhar (father of Jabir),P118,Hayyim b. Sahlawaya,1,TS AS 145.307r + TS Misc. 29.58a r
+P044,Azhar (father of Jabir),P129,Husn bt. Hayyim,1,TS AS 145.307r + TS Misc. 29.58a r
+P044,Azhar (father of Jabir),P144,Jabir b. Azhar ha-Kohen,1,TS AS 145.307r + TS Misc. 29.58a r
+P044,Azhar (father of Jabir),P232,Nathan b. [...],1,TS AS 145.307r + TS Misc. 29.58a r
+P044,Azhar (father of Jabir),P260,Sahlawaya b. Hayyim,1,TS AS 145.307r + TS Misc. 29.58a r
+P045,Babad ha-Kohen b. David,P132,Isaac b. Eli,1,TS 12.644
+P045,Babad ha-Kohen b. David,P159,Jehuda ha-Levi b. Nisi ha-Melammed,1,TS 12.644
+P045,Babad ha-Kohen b. David,P164,Joseph b. Aaron ha-Levi,1,TS 12.644
+P045,Babad ha-Kohen b. David,P172,Joseph b. Jehuda ha-Levi,1,TS 12.644
+P045,Babad ha-Kohen b. David,P226,Mubaraka bt. [...],1,TS 12.644
+P045,Babad ha-Kohen b. David,P262,Samuel b. Joseph al-Basri,1,TS 12.644
+P045,Babad ha-Kohen b. David,P283,Sedaqa b. Moses,1,TS 12.644
+P045,Babad ha-Kohen b. David,P334,Yefet ha-Kohen b. Eli b. Zita,1,TS 12.644
+P047,Bahlul b. Isaac ha-Kohen,P075,David b. Solomon,1,TS 6 Ja 2
+P047,Bahlul b. Isaac ha-Kohen,P093,Eli b. Mu'ammar,1,TS 6 Ja 2
+P047,Bahlul b. Isaac ha-Kohen,P120,Hiba b. Khalaf al-Shinizi,1,TS 6 Ja 2
+P047,Bahlul b. Isaac ha-Kohen,P133,Isaac b. Eliya ha-Kohen,1,TS 6 Ja 2
+P047,Bahlul b. Isaac ha-Kohen,P134,Isaac b. Jacob,1,TS 6 Ja 2
+P047,Bahlul b. Isaac ha-Kohen,P137,Isaac b. Samuel al-Fara,1,TS 6 Ja 2
+P047,Bahlul b. Isaac ha-Kohen,P152,Jacob b. Isaac,1,TS 6 Ja 2
+P047,Bahlul b. Isaac ha-Kohen,P169,Joseph b. Isaac,1,TS 6 Ja 2
+P047,Bahlul b. Isaac ha-Kohen,P171,Joseph b. Jacob,1,TS 6 Ja 2
+P047,Bahlul b. Isaac ha-Kohen,P199,Menashe b. Mahbub ha-Levi (of Acre),1,TS 6 Ja 2
+P047,Bahlul b. Isaac ha-Kohen,P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P047,Bahlul b. Isaac ha-Kohen,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P048,Barakat b. Azarya,P050,Barakat b. David,1,TS 20.47r
+P048,Barakat b. Azarya,P061,David (father of Barakat),1,TS 20.47r
+P048,Barakat b. Azarya,P228,Na'ama bt. Nisi,1,TS 20.47r
+P048,Barakat b. Azarya,P240,Nisi b. Jacob,1,TS 20.47r
+P048,Barakat b. Azarya,P007,[...] b. Yesha'ya ha-Kohen,1,TS 20.47r
+P049,Barakat b. Benjamin,P052,Barakat b. Mubarak,1,ENA 4020.38v
+P049,Barakat b. Benjamin,P184,Levi ha-Levi bar Jacob,1,ENA 4020.38v
+P049,Barakat b. Benjamin,P239,Nathana'el ha-Levi b. Rawh,1,ENA 4020.38v
+P049,Barakat b. Benjamin,P275,"Sedaqa (groom, OS43)",1,ENA 4020.38v
+P049,Barakat b. Benjamin,P009,[...] ha-Kohen b. Joseph,1,ENA 4020.38v
+P050,Barakat b. David,P061,David (father of Barakat),2,TS 16.109 + TS AS 153.489; TS 20.47r
+P050,Barakat b. David,P087,El'azar b. Samuel b. Sahl ha-Eved,1,TS 16.109 + TS AS 153.489
+P050,Barakat b. David,P115,Hasan b. Sedaqa ha-Kohen,1,TS 16.109 + TS AS 153.489
+P050,Barakat b. David,P146,Jacob (father of Nisi),1,TS 16.109 + TS AS 153.489
+P050,Barakat b. David,P153,Jacob b. Joseph,1,TS 16.109 + TS AS 153.489
+P050,Barakat b. David,P168,Joseph b. Azarya,1,TS 16.109 + TS AS 153.489
+P050,Barakat b. David,P217,Moses b. A[...],1,TS 16.109 + TS AS 153.489
+P050,Barakat b. David,P228,Na'ama bt. Nisi,2,TS 16.109 + TS AS 153.489; TS 20.47r
+P050,Barakat b. David,P240,Nisi b. Jacob,2,TS 16.109 + TS AS 153.489; TS 20.47r
+P050,Barakat b. David,P279,Sedaqa b. Isaac,1,TS 16.109 + TS AS 153.489
+P050,Barakat b. David,P332,Yefet b. Jacob,1,TS 16.109 + TS AS 153.489
+P050,Barakat b. David,P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P050,Barakat b. David,P007,[...] b. Yesha'ya ha-Kohen,1,TS 20.47r
+P051,Barakat b. Menahem ha-Kohen,P068,David b. Isaac b. Moses ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P051,Barakat b. Menahem ha-Kohen,P073,David b. Semah (nasi),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P051,Barakat b. Menahem ha-Kohen,P076,David b. Yesha'ya ha-Melammed,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P051,Barakat b. Menahem ha-Kohen,P080,Efraim b. Mansur b. Furat,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P051,Barakat b. Menahem ha-Kohen,P163,Joseph b. [...] b. Efraim,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P051,Barakat b. Menahem ha-Kohen,P182,Khalaf b. Mahfuz,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P051,Barakat b. Menahem ha-Kohen,P187,Mahfuz (father of Khalaf),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P051,Barakat b. Menahem ha-Kohen,P230,Nahum b. Nahum,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P051,Barakat b. Menahem ha-Kohen,P281,Sedaqa b. Masliah b. Sahl ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P051,Barakat b. Menahem ha-Kohen,P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P052,Barakat b. Mubarak,P184,Levi ha-Levi bar Jacob,1,ENA 4020.38v
+P052,Barakat b. Mubarak,P239,Nathana'el ha-Levi b. Rawh,1,ENA 4020.38v
+P052,Barakat b. Mubarak,P275,"Sedaqa (groom, OS43)",1,ENA 4020.38v
+P052,Barakat b. Mubarak,P009,[...] ha-Kohen b. Joseph,1,ENA 4020.38v
+P053,"Benjamin (father of Hizkiyahu, OS39)",P056,Bishr b. Abraham ha-Levi,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P093,Eli b. Mu'ammar,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P124,Hizkiyahu b. Benjamin,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P150,Jacob b. Fadlan,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P167,Joseph b. Abraham ha-Kohen,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P173,Joseph b. Samuel,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P208,Mevorakh b. David,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P235,Nathan b. Nisan ha-Levi (the scholar),1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P236,Nathan ha-Kohen bar Yehai,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P241,Omar b. Yehoshua,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P271,Sarwa bt. Sedaqa,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P053,"Benjamin (father of Hizkiyahu, OS39)",P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P054,Benjamin b. Hasson,P095,Eli b. Solomon,1,TS 20.2
+P054,Benjamin b. Hasson,P189,Maimon b. Fadl,1,TS 20.2
+P054,Benjamin b. Hasson,P203,Mevasser b. Abraham,1,TS 20.2
+P054,Benjamin b. Hasson,P213,Mevorakh b. Samuel,1,TS 20.2
+P054,Benjamin b. Hasson,P214,Mevorakh b. Yefet,1,TS 20.2
+P054,Benjamin b. Hasson,P224,Mubarak b. Husain,1,TS 20.2
+P054,Benjamin b. Hasson,P291,Shala [?],1,TS 20.2
+P054,Benjamin b. Hasson,P295,Shela ha-Kohen bar Rabbi Mevasser,1,TS 20.2
+P054,Benjamin b. Hasson,P300,"Sitt-al-Ahl (bride, OS29)",1,TS 20.2
+P054,Benjamin b. Hasson,P314,Solomon b. Maimon,1,TS 20.2
+P056,Bishr b. Abraham ha-Levi,P069,David b. Isaac ha-Kohen (the scribe),1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P082,Efraim b. Moses,1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P092,Eli b. Isma'il al-Bairuti (the scholar),1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P093,Eli b. Mu'ammar,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P106,Habib b. David (Abu Ali),1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P124,Hizkiyahu b. Benjamin,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P128,Husn bt. David (OS41),1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P131,Isaac b. [...] (OS41),1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P150,Jacob b. Fadlan,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P157,Jehuda [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P167,Joseph b. Abraham ha-Kohen,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P173,Joseph b. Samuel,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P186,Mahbub [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P196,Menahem b. Isaac,1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P208,Mevorakh b. David,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P211,Mevorakh b. Nathan,1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P235,Nathan b. Nisan ha-Levi (the scholar),1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P236,Nathan ha-Kohen bar Yehai,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P241,Omar b. Yehoshua,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P243,Parhon b. Mevorakh ha-Levi,1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P271,Sarwa bt. Sedaqa,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P056,Bishr b. Abraham ha-Levi,P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P056,Bishr b. Abraham ha-Levi,P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P059,Daniel b. Bundar,P107,Halfon (father of Ama al-Wahid),1,ENA NS 17.24
+P059,Daniel b. Bundar,P109,Halfon ha-Levi b. Daniel,1,ENA NS 17.24
+P059,Daniel b. Bundar,P121,Hillel (the elder),1,ENA NS 17.24
+P059,Daniel b. Bundar,P227,Musafir b. Isaac ha-Kohen,1,ENA NS 17.24
+P059,Daniel b. Bundar,P293,Shela b. Joseph,1,ENA NS 17.24
+P060,Daughter of Abu'l-Fadl,P064,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),1,TS J 3.47v
+P061,David (father of Barakat),P087,El'azar b. Samuel b. Sahl ha-Eved,1,TS 16.109 + TS AS 153.489
+P061,David (father of Barakat),P115,Hasan b. Sedaqa ha-Kohen,1,TS 16.109 + TS AS 153.489
+P061,David (father of Barakat),P146,Jacob (father of Nisi),1,TS 16.109 + TS AS 153.489
+P061,David (father of Barakat),P153,Jacob b. Joseph,1,TS 16.109 + TS AS 153.489
+P061,David (father of Barakat),P168,Joseph b. Azarya,1,TS 16.109 + TS AS 153.489
+P061,David (father of Barakat),P217,Moses b. A[...],1,TS 16.109 + TS AS 153.489
+P061,David (father of Barakat),P228,Na'ama bt. Nisi,2,TS 16.109 + TS AS 153.489; TS 20.47r
+P061,David (father of Barakat),P240,Nisi b. Jacob,2,TS 16.109 + TS AS 153.489; TS 20.47r
+P061,David (father of Barakat),P279,Sedaqa b. Isaac,1,TS 16.109 + TS AS 153.489
+P061,David (father of Barakat),P332,Yefet b. Jacob,1,TS 16.109 + TS AS 153.489
+P061,David (father of Barakat),P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P061,David (father of Barakat),P007,[...] b. Yesha'ya ha-Kohen,1,TS 20.47r
+P062,"David (groom, OS44)",P126,"Husn (bride, OS44)",1,ENA NS 3.23 + ENA NS 3.27
+P063,David al-Shulhani,P069,David b. Isaac ha-Kohen (the scribe),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P063,David al-Shulhani,P079,Efraim b. Jehuda,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P063,David al-Shulhani,P101,Faraj b. Mevasser ha-Levi,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P063,David al-Shulhani,P148,Jacob [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P063,David al-Shulhani,P149,Jacob b. David al-Shulhani,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P063,David al-Shulhani,P162,Joseph [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P063,David al-Shulhani,P181,Khalaf [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P063,David al-Shulhani,P197,Menahem b. Job al-Halabi,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P063,David al-Shulhani,P274,Sayyida bt. Wahb,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P063,David al-Shulhani,P288,Semah [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P063,David al-Shulhani,P325,Wahb al-Arri [?],1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P068,David b. Isaac b. Moses ha-Levi,P073,David b. Semah (nasi),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P068,David b. Isaac b. Moses ha-Levi,P076,David b. Yesha'ya ha-Melammed,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P068,David b. Isaac b. Moses ha-Levi,P080,Efraim b. Mansur b. Furat,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P068,David b. Isaac b. Moses ha-Levi,P163,Joseph b. [...] b. Efraim,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P068,David b. Isaac b. Moses ha-Levi,P182,Khalaf b. Mahfuz,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P068,David b. Isaac b. Moses ha-Levi,P187,Mahfuz (father of Khalaf),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P068,David b. Isaac b. Moses ha-Levi,P230,Nahum b. Nahum,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P068,David b. Isaac b. Moses ha-Levi,P281,Sedaqa b. Masliah b. Sahl ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P068,David b. Isaac b. Moses ha-Levi,P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P069,David b. Isaac ha-Kohen (the scribe),P079,Efraim b. Jehuda,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P069,David b. Isaac ha-Kohen (the scribe),P082,Efraim b. Moses,1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P092,Eli b. Isma'il al-Bairuti (the scholar),1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P101,Faraj b. Mevasser ha-Levi,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P069,David b. Isaac ha-Kohen (the scribe),P106,Habib b. David (Abu Ali),1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P128,Husn bt. David (OS41),1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P131,Isaac b. [...] (OS41),1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P148,Jacob [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P069,David b. Isaac ha-Kohen (the scribe),P149,Jacob b. David al-Shulhani,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P069,David b. Isaac ha-Kohen (the scribe),P157,Jehuda [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P162,Joseph [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P069,David b. Isaac ha-Kohen (the scribe),P181,Khalaf [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P069,David b. Isaac ha-Kohen (the scribe),P186,Mahbub [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P196,Menahem b. Isaac,1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P197,Menahem b. Job al-Halabi,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P069,David b. Isaac ha-Kohen (the scribe),P211,Mevorakh b. Nathan,1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P243,Parhon b. Mevorakh ha-Levi,1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P274,Sayyida bt. Wahb,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P069,David b. Isaac ha-Kohen (the scribe),P288,Semah [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P069,David b. Isaac ha-Kohen (the scribe),P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P325,Wahb al-Arri [?],1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P069,David b. Isaac ha-Kohen (the scribe),P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P069,David b. Isaac ha-Kohen (the scribe),P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P072,David b. Moses (OS57),P081,Efraim b. Mevasser b. Solomon,1,ENA NS 18.37
+P072,David b. Moses (OS57),P114,Hasan b. Moses,1,ENA NS 18.37
+P072,David b. Moses (OS57),P135,Isaac b. Jehuda ha-Levi,1,ENA NS 18.37
+P072,David b. Moses (OS57),P179,Karima bt. Hasan,1,ENA NS 18.37
+P072,David b. Moses (OS57),P191,"Mansur (father of groom, OS57)",1,ENA NS 18.37
+P072,David b. Moses (OS57),P218,Moses b. Siba'a,1,ENA NS 18.37
+P072,David b. Moses (OS57),P223,Mu'ammar b. S[edaqa],1,ENA NS 18.37
+P072,David b. Moses (OS57),P253,Sa'id b. [...] (OS57),1,ENA NS 18.37
+P072,David b. Moses (OS57),P260,Sahlawaya b. Hayyim,1,ENA NS 18.37
+P072,David b. Moses (OS57),P284,Sedaqa b. Nahum ha-Kohen,1,ENA NS 18.37
+P072,David b. Moses (OS57),P334,Yefet ha-Kohen b. Eli b. Zita,1,ENA NS 18.37
+P072,David b. Moses (OS57),P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P073,David b. Semah (nasi),P076,David b. Yesha'ya ha-Melammed,2,"TS 18 J 5.10a,b + TS 10 J 27.6; Mosseri Ia.2"
+P073,David b. Semah (nasi),P080,Efraim b. Mansur b. Furat,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P073,David b. Semah (nasi),P099,Ezra b. Ishma'el b. Ezra,1,TS 16.50
+P073,David b. Semah (nasi),P123,"Hizkiyahu (groom, OS12)",1,Mosseri VII.90.1
+P073,David b. Semah (nasi),P125,Hizkiyahu b. Solomon (nasi),1,TS 16.50
+P073,David b. Semah (nasi),P166,Joseph b. Abraham b. al-Fara,1,TS 16.50
+P073,David b. Semah (nasi),P163,Joseph b. [...] b. Efraim,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P073,David b. Semah (nasi),P182,Khalaf b. Mahfuz,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P073,David b. Semah (nasi),P183,Khatabya b. al-Tabat,1,TS 16.50
+P073,David b. Semah (nasi),P187,Mahfuz (father of Khalaf),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P073,David b. Semah (nasi),P192,Mansur b. Mevasser,1,Mosseri Ia.2
+P073,David b. Semah (nasi),P207,Mevorakh b. Barhun,1,Mosseri VII.90.1
+P073,David b. Semah (nasi),P230,Nahum b. Nahum,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P073,David b. Semah (nasi),P259,Sahl b. Sa'adya al-Baghdadi,1,TS 16.50
+P073,David b. Semah (nasi),P261,Samuel b. [...],1,Mosseri Ia.2
+P073,David b. Semah (nasi),P266,Samuel bar Rabbi Moses he-haver,1,Mosseri Ia.2
+P073,David b. Semah (nasi),P277,Sedaqa b. Elun,1,Mosseri VII.90.1
+P073,David b. Semah (nasi),P281,Sedaqa b. Masliah b. Sahl ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P073,David b. Semah (nasi),P285,Sedaqa b. Sa'adya,1,Mosseri Ia.2
+P073,David b. Semah (nasi),P292,Shela b. Amram al-Qirqisani,1,Mosseri Ia.2
+P073,David b. Semah (nasi),P307,Solomon b. Adiya b. Menashe (al-Qazzaz),1,Mosseri Ia.2
+P073,David b. Semah (nasi),P317,Solomon b. Musafir,1,Mosseri Ia.2
+P073,David b. Semah (nasi),P326,Yaman bt. David,1,Mosseri Ia.2
+P073,David b. Semah (nasi),P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P073,David b. Semah (nasi),P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P073,David b. Semah (nasi),P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P075,David b. Solomon,P093,Eli b. Mu'ammar,1,TS 6 Ja 2
+P075,David b. Solomon,P120,Hiba b. Khalaf al-Shinizi,1,TS 6 Ja 2
+P075,David b. Solomon,P133,Isaac b. Eliya ha-Kohen,1,TS 6 Ja 2
+P075,David b. Solomon,P134,Isaac b. Jacob,1,TS 6 Ja 2
+P075,David b. Solomon,P137,Isaac b. Samuel al-Fara,1,TS 6 Ja 2
+P075,David b. Solomon,P152,Jacob b. Isaac,1,TS 6 Ja 2
+P075,David b. Solomon,P169,Joseph b. Isaac,1,TS 6 Ja 2
+P075,David b. Solomon,P171,Joseph b. Jacob,1,TS 6 Ja 2
+P075,David b. Solomon,P199,Menashe b. Mahbub ha-Levi (of Acre),1,TS 6 Ja 2
+P075,David b. Solomon,P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P075,David b. Solomon,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P076,David b. Yesha'ya ha-Melammed,P080,Efraim b. Mansur b. Furat,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P076,David b. Yesha'ya ha-Melammed,P163,Joseph b. [...] b. Efraim,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P076,David b. Yesha'ya ha-Melammed,P182,Khalaf b. Mahfuz,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P076,David b. Yesha'ya ha-Melammed,P187,Mahfuz (father of Khalaf),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P076,David b. Yesha'ya ha-Melammed,P192,Mansur b. Mevasser,1,Mosseri Ia.2
+P076,David b. Yesha'ya ha-Melammed,P230,Nahum b. Nahum,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P076,David b. Yesha'ya ha-Melammed,P261,Samuel b. [...],1,Mosseri Ia.2
+P076,David b. Yesha'ya ha-Melammed,P266,Samuel bar Rabbi Moses he-haver,1,Mosseri Ia.2
+P076,David b. Yesha'ya ha-Melammed,P281,Sedaqa b. Masliah b. Sahl ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P076,David b. Yesha'ya ha-Melammed,P285,Sedaqa b. Sa'adya,1,Mosseri Ia.2
+P076,David b. Yesha'ya ha-Melammed,P292,Shela b. Amram al-Qirqisani,1,Mosseri Ia.2
+P076,David b. Yesha'ya ha-Melammed,P307,Solomon b. Adiya b. Menashe (al-Qazzaz),1,Mosseri Ia.2
+P076,David b. Yesha'ya ha-Melammed,P317,Solomon b. Musafir,1,Mosseri Ia.2
+P076,David b. Yesha'ya ha-Melammed,P326,Yaman bt. David,1,Mosseri Ia.2
+P076,David b. Yesha'ya ha-Melammed,P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P076,David b. Yesha'ya ha-Melammed,P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P078,David ha-Kohen b. Sedaqa ha-Kohen,P116,Hasdai b. Hizkiyahu (nasi),1,Bodl. MS Heb. a.3.42
+P078,David ha-Kohen b. Sedaqa ha-Kohen,P140,Isaac ha-Parnas b. Sedaqa,1,Bodl. MS Heb. a.3.42
+P078,David ha-Kohen b. Sedaqa ha-Kohen,P209,Mevorakh b. El'azar b. [...] Yehoshua,1,Bodl. MS Heb. a.3.42
+P078,David ha-Kohen b. Sedaqa ha-Kohen,P234,Nathan b. Joseph b. Nahorai,1,Bodl. MS Heb. a.3.42
+P078,David ha-Kohen b. Sedaqa ha-Kohen,P247,Rayyisa bt. Sa'adya,1,Bodl. MS Heb. a.3.42
+P078,David ha-Kohen b. Sedaqa ha-Kohen,P250,Sa'adya b. David (father of Rayyisa),1,Bodl. MS Heb. a.3.42
+P078,David ha-Kohen b. Sedaqa ha-Kohen,P287,Sedaqa ha-Levi b. Efraim,1,Bodl. MS Heb. a.3.42
+P078,David ha-Kohen b. Sedaqa ha-Kohen,P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,1,Bodl. MS Heb. a.3.42
+P078,David ha-Kohen b. Sedaqa ha-Kohen,P344,Yehya b. Abraham,1,Bodl. MS Heb. a.3.42
+P079,Efraim b. Jehuda,P101,Faraj b. Mevasser ha-Levi,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P079,Efraim b. Jehuda,P148,Jacob [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P079,Efraim b. Jehuda,P149,Jacob b. David al-Shulhani,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P079,Efraim b. Jehuda,P162,Joseph [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P079,Efraim b. Jehuda,P181,Khalaf [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P079,Efraim b. Jehuda,P197,Menahem b. Job al-Halabi,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P079,Efraim b. Jehuda,P274,Sayyida bt. Wahb,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P079,Efraim b. Jehuda,P288,Semah [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P079,Efraim b. Jehuda,P325,Wahb al-Arri [?],1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P080,Efraim b. Mansur b. Furat,P163,Joseph b. [...] b. Efraim,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P080,Efraim b. Mansur b. Furat,P182,Khalaf b. Mahfuz,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P080,Efraim b. Mansur b. Furat,P187,Mahfuz (father of Khalaf),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P080,Efraim b. Mansur b. Furat,P230,Nahum b. Nahum,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P080,Efraim b. Mansur b. Furat,P281,Sedaqa b. Masliah b. Sahl ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P080,Efraim b. Mansur b. Furat,P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P081,Efraim b. Mevasser b. Solomon,P114,Hasan b. Moses,1,ENA NS 18.37
+P081,Efraim b. Mevasser b. Solomon,P135,Isaac b. Jehuda ha-Levi,1,ENA NS 18.37
+P081,Efraim b. Mevasser b. Solomon,P179,Karima bt. Hasan,1,ENA NS 18.37
+P081,Efraim b. Mevasser b. Solomon,P191,"Mansur (father of groom, OS57)",1,ENA NS 18.37
+P081,Efraim b. Mevasser b. Solomon,P218,Moses b. Siba'a,1,ENA NS 18.37
+P081,Efraim b. Mevasser b. Solomon,P223,Mu'ammar b. S[edaqa],1,ENA NS 18.37
+P081,Efraim b. Mevasser b. Solomon,P253,Sa'id b. [...] (OS57),1,ENA NS 18.37
+P081,Efraim b. Mevasser b. Solomon,P260,Sahlawaya b. Hayyim,1,ENA NS 18.37
+P081,Efraim b. Mevasser b. Solomon,P284,Sedaqa b. Nahum ha-Kohen,1,ENA NS 18.37
+P081,Efraim b. Mevasser b. Solomon,P334,Yefet ha-Kohen b. Eli b. Zita,1,ENA NS 18.37
+P081,Efraim b. Mevasser b. Solomon,P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P082,Efraim b. Moses,P092,Eli b. Isma'il al-Bairuti (the scholar),1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P106,Habib b. David (Abu Ali),1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P128,Husn bt. David (OS41),1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P131,Isaac b. [...] (OS41),1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P157,Jehuda [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P186,Mahbub [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P196,Menahem b. Isaac,1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P211,Mevorakh b. Nathan,1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P243,Parhon b. Mevorakh ha-Levi,1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P082,Efraim b. Moses,P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P086,El'azar b. Menashe,P118,Hayyim b. Sahlawaya,1,TS AS 145.307r + TS Misc. 29.58a r
+P086,El'azar b. Menashe,P129,Husn bt. Hayyim,1,TS AS 145.307r + TS Misc. 29.58a r
+P086,El'azar b. Menashe,P144,Jabir b. Azhar ha-Kohen,1,TS AS 145.307r + TS Misc. 29.58a r
+P086,El'azar b. Menashe,P232,Nathan b. [...],1,TS AS 145.307r + TS Misc. 29.58a r
+P086,El'azar b. Menashe,P260,Sahlawaya b. Hayyim,1,TS AS 145.307r + TS Misc. 29.58a r
+P087,El'azar b. Samuel b. Sahl ha-Eved,P104,Faras bt. Simha,1,TS 24.13
+P087,El'azar b. Samuel b. Sahl ha-Eved,P112,Hananya b. Elnathan,1,TS 24.13
+P087,El'azar b. Samuel b. Sahl ha-Eved,P115,Hasan b. Sedaqa ha-Kohen,1,TS 16.109 + TS AS 153.489
+P087,El'azar b. Samuel b. Sahl ha-Eved,P146,Jacob (father of Nisi),1,TS 16.109 + TS AS 153.489
+P087,El'azar b. Samuel b. Sahl ha-Eved,P153,Jacob b. Joseph,1,TS 16.109 + TS AS 153.489
+P087,El'azar b. Samuel b. Sahl ha-Eved,P168,Joseph b. Azarya,1,TS 16.109 + TS AS 153.489
+P087,El'azar b. Samuel b. Sahl ha-Eved,P194,Marzuq b. Yefet,1,TS 24.13
+P087,El'azar b. Samuel b. Sahl ha-Eved,P217,Moses b. A[...],1,TS 16.109 + TS AS 153.489
+P087,El'azar b. Samuel b. Sahl ha-Eved,P228,Na'ama bt. Nisi,1,TS 16.109 + TS AS 153.489
+P087,El'azar b. Samuel b. Sahl ha-Eved,P237,Nathana'el b. Mevasser ha-Levi,1,TS 24.13
+P087,El'azar b. Samuel b. Sahl ha-Eved,P240,Nisi b. Jacob,1,TS 16.109 + TS AS 153.489
+P087,El'azar b. Samuel b. Sahl ha-Eved,P252,Sa'adya b. Razi'el,1,TS 24.13
+P087,El'azar b. Samuel b. Sahl ha-Eved,P272,Saul b. Abraham,1,TS 24.13
+P087,El'azar b. Samuel b. Sahl ha-Eved,P279,Sedaqa b. Isaac,1,TS 16.109 + TS AS 153.489
+P087,El'azar b. Samuel b. Sahl ha-Eved,P282,Sedaqa b. Menashe,1,TS 24.13
+P087,El'azar b. Samuel b. Sahl ha-Eved,P299,Simha (father of Faras),1,TS 24.13
+P087,El'azar b. Samuel b. Sahl ha-Eved,P328,Yefet (father of Marzuq),1,TS 24.13
+P087,El'azar b. Samuel b. Sahl ha-Eved,P332,Yefet b. Jacob,1,TS 16.109 + TS AS 153.489
+P087,El'azar b. Samuel b. Sahl ha-Eved,P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P087,El'azar b. Samuel b. Sahl ha-Eved,P002,[...] b. Efraim,1,TS 24.13
+P088,El'azar b. Shemen Tov,P098,Eliyahu b. Halfon,1,TS 16.67
+P088,El'azar b. Shemen Tov,P138,Isaac b. Yefet,1,TS 16.67
+P088,El'azar b. Shemen Tov,P139,Isaac bar Azaryahu,1,TS 16.67
+P088,El'azar b. Shemen Tov,P161,Joseph (father of Rivqa),1,TS 16.67
+P088,El'azar b. Shemen Tov,P238,Nathana'el ha-Kohen b. Meshullam,1,TS 16.67
+P088,El'azar b. Shemen Tov,P249,Rivqa bt. Joseph,1,TS 16.67
+P088,El'azar b. Shemen Tov,P296,Shemarya b. Shemen Tov,1,TS 16.67
+P088,El'azar b. Shemen Tov,P297,Shemen Tov b. Shemarya,1,TS 16.67
+P088,El'azar b. Shemen Tov,P003,[...] b. El'azar b. Halfon,1,TS 16.67
+P089,Eli b. Amram (he-haver),P097,Eli ha-Kohen ha-parnas b. Ya'ish,1,Mosseri VII.43 + TS Ar.53.53
+P089,Eli b. Amram (he-haver),P177,Josiah b. Solomon (nasi),1,Mosseri VII.43 + TS Ar.53.53
+P089,Eli b. Amram (he-haver),P210,Mevorakh b. Israel (heir),1,Mosseri VII.43 + TS Ar.53.53
+P089,Eli b. Amram (he-haver),P229,Nahray b. Nissim,1,Mosseri VII.43 + TS Ar.53.53
+P089,Eli b. Amram (he-haver),P265,Samuel b. Yehuda (the orphan),1,Mosseri VII.43 + TS Ar.53.53
+P089,Eli b. Amram (he-haver),P324,Umm Samuel bt. Aaron,1,Mosseri VII.43 + TS Ar.53.53
+P091,Eli b. Hillel,P198,"Menashe (groom, OS33)",1,TS 24.45 + TS NS J 86
+P091,Eli b. Hillel,P220,Moses ha-Kohen b. Aaron,1,TS 24.45 + TS NS J 86
+P091,Eli b. Hillel,P303,Sitt-al-Husn bt. Moses ha-Kohen,1,TS 24.45 + TS NS J 86
+P092,Eli b. Isma'il al-Bairuti (the scholar),P106,Habib b. David (Abu Ali),1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P128,Husn bt. David (OS41),1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P131,Isaac b. [...] (OS41),1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P157,Jehuda [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P186,Mahbub [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P196,Menahem b. Isaac,1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P211,Mevorakh b. Nathan,1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P243,Parhon b. Mevorakh ha-Levi,1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P092,Eli b. Isma'il al-Bairuti (the scholar),P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P093,Eli b. Mu'ammar,P120,Hiba b. Khalaf al-Shinizi,1,TS 6 Ja 2
+P093,Eli b. Mu'ammar,P124,Hizkiyahu b. Benjamin,1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P133,Isaac b. Eliya ha-Kohen,1,TS 6 Ja 2
+P093,Eli b. Mu'ammar,P134,Isaac b. Jacob,1,TS 6 Ja 2
+P093,Eli b. Mu'ammar,P137,Isaac b. Samuel al-Fara,1,TS 6 Ja 2
+P093,Eli b. Mu'ammar,P150,Jacob b. Fadlan,1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P152,Jacob b. Isaac,1,TS 6 Ja 2
+P093,Eli b. Mu'ammar,P167,Joseph b. Abraham ha-Kohen,1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P169,Joseph b. Isaac,1,TS 6 Ja 2
+P093,Eli b. Mu'ammar,P171,Joseph b. Jacob,1,TS 6 Ja 2
+P093,Eli b. Mu'ammar,P173,Joseph b. Samuel,1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P199,Menashe b. Mahbub ha-Levi (of Acre),1,TS 6 Ja 2
+P093,Eli b. Mu'ammar,P208,Mevorakh b. David,1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P093,Eli b. Mu'ammar,P235,Nathan b. Nisan ha-Levi (the scholar),1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P236,Nathan ha-Kohen bar Yehai,1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P241,Omar b. Yehoshua,1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P093,Eli b. Mu'ammar,P271,Sarwa bt. Sedaqa,1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P093,Eli b. Mu'ammar,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P095,Eli b. Solomon,P189,Maimon b. Fadl,1,TS 20.2
+P095,Eli b. Solomon,P203,Mevasser b. Abraham,1,TS 20.2
+P095,Eli b. Solomon,P213,Mevorakh b. Samuel,1,TS 20.2
+P095,Eli b. Solomon,P214,Mevorakh b. Yefet,1,TS 20.2
+P095,Eli b. Solomon,P224,Mubarak b. Husain,1,TS 20.2
+P095,Eli b. Solomon,P291,Shala [?],1,TS 20.2
+P095,Eli b. Solomon,P295,Shela ha-Kohen bar Rabbi Mevasser,1,TS 20.2
+P095,Eli b. Solomon,P300,"Sitt-al-Ahl (bride, OS29)",1,TS 20.2
+P095,Eli b. Solomon,P314,Solomon b. Maimon,1,TS 20.2
+P097,Eli ha-Kohen ha-parnas b. Ya'ish,P177,Josiah b. Solomon (nasi),1,Mosseri VII.43 + TS Ar.53.53
+P097,Eli ha-Kohen ha-parnas b. Ya'ish,P210,Mevorakh b. Israel (heir),1,Mosseri VII.43 + TS Ar.53.53
+P097,Eli ha-Kohen ha-parnas b. Ya'ish,P229,Nahray b. Nissim,1,Mosseri VII.43 + TS Ar.53.53
+P097,Eli ha-Kohen ha-parnas b. Ya'ish,P265,Samuel b. Yehuda (the orphan),1,Mosseri VII.43 + TS Ar.53.53
+P097,Eli ha-Kohen ha-parnas b. Ya'ish,P324,Umm Samuel bt. Aaron,1,Mosseri VII.43 + TS Ar.53.53
+P098,Eliyahu b. Halfon,P138,Isaac b. Yefet,1,TS 16.67
+P098,Eliyahu b. Halfon,P139,Isaac bar Azaryahu,1,TS 16.67
+P098,Eliyahu b. Halfon,P161,Joseph (father of Rivqa),1,TS 16.67
+P098,Eliyahu b. Halfon,P238,Nathana'el ha-Kohen b. Meshullam,1,TS 16.67
+P098,Eliyahu b. Halfon,P249,Rivqa bt. Joseph,1,TS 16.67
+P098,Eliyahu b. Halfon,P296,Shemarya b. Shemen Tov,1,TS 16.67
+P098,Eliyahu b. Halfon,P297,Shemen Tov b. Shemarya,1,TS 16.67
+P098,Eliyahu b. Halfon,P003,[...] b. El'azar b. Halfon,1,TS 16.67
+P099,Ezra b. Ishma'el b. Ezra,P125,Hizkiyahu b. Solomon (nasi),1,TS 16.50
+P099,Ezra b. Ishma'el b. Ezra,P166,Joseph b. Abraham b. al-Fara,1,TS 16.50
+P099,Ezra b. Ishma'el b. Ezra,P183,Khatabya b. al-Tabat,1,TS 16.50
+P099,Ezra b. Ishma'el b. Ezra,P259,Sahl b. Sa'adya al-Baghdadi,1,TS 16.50
+P099,Ezra b. Ishma'el b. Ezra,P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P100,Fadla bt. Abraham,P188,Mahfuz b. Menahem,1,A.I.U. VII D 1r
+P100,Fadla bt. Abraham,P195,Menahem (father of Mahfuz),1,A.I.U. VII D 1r
+P101,Faraj b. Mevasser ha-Levi,P148,Jacob [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P101,Faraj b. Mevasser ha-Levi,P149,Jacob b. David al-Shulhani,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P101,Faraj b. Mevasser ha-Levi,P162,Joseph [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P101,Faraj b. Mevasser ha-Levi,P181,Khalaf [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P101,Faraj b. Mevasser ha-Levi,P197,Menahem b. Job al-Halabi,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P101,Faraj b. Mevasser ha-Levi,P274,Sayyida bt. Wahb,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P101,Faraj b. Mevasser ha-Levi,P288,Semah [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P101,Faraj b. Mevasser ha-Levi,P325,Wahb al-Arri [?],1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P102,Faraj b. Solomon,P158,Jehuda b. Khalaf,1,Bodl. MS Heb. a.3.44
+P102,Faraj b. Solomon,P180,"Khalaf (father of Jehuda, OS40)",1,Bodl. MS Heb. a.3.44
+P102,Faraj b. Solomon,P216,Miriam bt. Solomon,1,Bodl. MS Heb. a.3.44
+P102,Faraj b. Solomon,P289,Semah b. Asa (nasi),1,Bodl. MS Heb. a.3.44
+P102,Faraj b. Solomon,P304,"Solomon (father of Miriam, OS40)",1,Bodl. MS Heb. a.3.44
+P103,Farajiyya bt. Jehuda,P113,Hasan (Yefet) b. Amram known as ben Shemun,1,TS 20.156
+P103,Farajiyya bt. Jehuda,P155,Jehuda (father of Farajiyya),1,TS 20.156
+P103,Farajiyya bt. Jehuda,P193,Mansur b. Yehai b. Abu'l-Shahaba,1,TS 20.156
+P103,Farajiyya bt. Jehuda,P315,Solomon b. Mansur,1,TS 20.156
+P103,Farajiyya bt. Jehuda,P345,Yesha'ya b. Isaac,1,TS 20.156
+P104,Faras bt. Simha,P112,Hananya b. Elnathan,1,TS 24.13
+P104,Faras bt. Simha,P194,Marzuq b. Yefet,1,TS 24.13
+P104,Faras bt. Simha,P237,Nathana'el b. Mevasser ha-Levi,1,TS 24.13
+P104,Faras bt. Simha,P252,Sa'adya b. Razi'el,1,TS 24.13
+P104,Faras bt. Simha,P272,Saul b. Abraham,1,TS 24.13
+P104,Faras bt. Simha,P282,Sedaqa b. Menashe,1,TS 24.13
+P104,Faras bt. Simha,P299,Simha (father of Faras),1,TS 24.13
+P104,Faras bt. Simha,P328,Yefet (father of Marzuq),1,TS 24.13
+P104,Faras bt. Simha,P002,[...] b. Efraim,1,TS 24.13
+P105,Ghaliya bt. Joseph,P147,Jacob (father of Thabit),1,"TS NS 320.34a,b"
+P105,Ghaliya bt. Joseph,P165,Joseph b. Abraham (father of Ghaliya),1,"TS NS 320.34a,b"
+P105,Ghaliya bt. Joseph,P320,Thabit b. Jacob,1,"TS NS 320.34a,b"
+P106,Habib b. David (Abu Ali),P128,Husn bt. David (OS41),1,Bodl. MS Heb. a.3.4v
+P106,Habib b. David (Abu Ali),P131,Isaac b. [...] (OS41),1,Bodl. MS Heb. a.3.4v
+P106,Habib b. David (Abu Ali),P157,Jehuda [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P106,Habib b. David (Abu Ali),P186,Mahbub [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P106,Habib b. David (Abu Ali),P196,Menahem b. Isaac,1,Bodl. MS Heb. a.3.4v
+P106,Habib b. David (Abu Ali),P211,Mevorakh b. Nathan,1,Bodl. MS Heb. a.3.4v
+P106,Habib b. David (Abu Ali),P243,Parhon b. Mevorakh ha-Levi,1,Bodl. MS Heb. a.3.4v
+P106,Habib b. David (Abu Ali),P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P106,Habib b. David (Abu Ali),P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P106,Habib b. David (Abu Ali),P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P106,Habib b. David (Abu Ali),P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P106,Habib b. David (Abu Ali),P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P107,Halfon (father of Ama al-Wahid),P109,Halfon ha-Levi b. Daniel,1,ENA NS 17.24
+P107,Halfon (father of Ama al-Wahid),P121,Hillel (the elder),1,ENA NS 17.24
+P107,Halfon (father of Ama al-Wahid),P227,Musafir b. Isaac ha-Kohen,1,ENA NS 17.24
+P107,Halfon (father of Ama al-Wahid),P293,Shela b. Joseph,1,ENA NS 17.24
+P109,Halfon ha-Levi b. Daniel,P121,Hillel (the elder),1,ENA NS 17.24
+P109,Halfon ha-Levi b. Daniel,P227,Musafir b. Isaac ha-Kohen,1,ENA NS 17.24
+P109,Halfon ha-Levi b. Daniel,P293,Shela b. Joseph,1,ENA NS 17.24
+P112,Hananya b. Elnathan,P194,Marzuq b. Yefet,1,TS 24.13
+P112,Hananya b. Elnathan,P237,Nathana'el b. Mevasser ha-Levi,1,TS 24.13
+P112,Hananya b. Elnathan,P252,Sa'adya b. Razi'el,1,TS 24.13
+P112,Hananya b. Elnathan,P272,Saul b. Abraham,1,TS 24.13
+P112,Hananya b. Elnathan,P282,Sedaqa b. Menashe,1,TS 24.13
+P112,Hananya b. Elnathan,P299,Simha (father of Faras),1,TS 24.13
+P112,Hananya b. Elnathan,P328,Yefet (father of Marzuq),1,TS 24.13
+P112,Hananya b. Elnathan,P002,[...] b. Efraim,1,TS 24.13
+P113,Hasan (Yefet) b. Amram known as ben Shemun,P155,Jehuda (father of Farajiyya),1,TS 20.156
+P113,Hasan (Yefet) b. Amram known as ben Shemun,P193,Mansur b. Yehai b. Abu'l-Shahaba,1,TS 20.156
+P113,Hasan (Yefet) b. Amram known as ben Shemun,P315,Solomon b. Mansur,1,TS 20.156
+P113,Hasan (Yefet) b. Amram known as ben Shemun,P345,Yesha'ya b. Isaac,1,TS 20.156
+P114,Hasan b. Moses,P135,Isaac b. Jehuda ha-Levi,1,ENA NS 18.37
+P114,Hasan b. Moses,P179,Karima bt. Hasan,1,ENA NS 18.37
+P114,Hasan b. Moses,P191,"Mansur (father of groom, OS57)",1,ENA NS 18.37
+P114,Hasan b. Moses,P218,Moses b. Siba'a,1,ENA NS 18.37
+P114,Hasan b. Moses,P223,Mu'ammar b. S[edaqa],1,ENA NS 18.37
+P114,Hasan b. Moses,P253,Sa'id b. [...] (OS57),1,ENA NS 18.37
+P114,Hasan b. Moses,P260,Sahlawaya b. Hayyim,1,ENA NS 18.37
+P114,Hasan b. Moses,P284,Sedaqa b. Nahum ha-Kohen,1,ENA NS 18.37
+P114,Hasan b. Moses,P334,Yefet ha-Kohen b. Eli b. Zita,1,ENA NS 18.37
+P114,Hasan b. Moses,P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P115,Hasan b. Sedaqa ha-Kohen,P146,Jacob (father of Nisi),1,TS 16.109 + TS AS 153.489
+P115,Hasan b. Sedaqa ha-Kohen,P153,Jacob b. Joseph,1,TS 16.109 + TS AS 153.489
+P115,Hasan b. Sedaqa ha-Kohen,P168,Joseph b. Azarya,1,TS 16.109 + TS AS 153.489
+P115,Hasan b. Sedaqa ha-Kohen,P217,Moses b. A[...],1,TS 16.109 + TS AS 153.489
+P115,Hasan b. Sedaqa ha-Kohen,P228,Na'ama bt. Nisi,1,TS 16.109 + TS AS 153.489
+P115,Hasan b. Sedaqa ha-Kohen,P240,Nisi b. Jacob,1,TS 16.109 + TS AS 153.489
+P115,Hasan b. Sedaqa ha-Kohen,P279,Sedaqa b. Isaac,1,TS 16.109 + TS AS 153.489
+P115,Hasan b. Sedaqa ha-Kohen,P332,Yefet b. Jacob,1,TS 16.109 + TS AS 153.489
+P115,Hasan b. Sedaqa ha-Kohen,P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P116,Hasdai b. Hizkiyahu (nasi),P140,Isaac ha-Parnas b. Sedaqa,1,Bodl. MS Heb. a.3.42
+P116,Hasdai b. Hizkiyahu (nasi),P209,Mevorakh b. El'azar b. [...] Yehoshua,1,Bodl. MS Heb. a.3.42
+P116,Hasdai b. Hizkiyahu (nasi),P234,Nathan b. Joseph b. Nahorai,1,Bodl. MS Heb. a.3.42
+P116,Hasdai b. Hizkiyahu (nasi),P247,Rayyisa bt. Sa'adya,1,Bodl. MS Heb. a.3.42
+P116,Hasdai b. Hizkiyahu (nasi),P250,Sa'adya b. David (father of Rayyisa),1,Bodl. MS Heb. a.3.42
+P116,Hasdai b. Hizkiyahu (nasi),P287,Sedaqa ha-Levi b. Efraim,1,Bodl. MS Heb. a.3.42
+P116,Hasdai b. Hizkiyahu (nasi),P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,1,Bodl. MS Heb. a.3.42
+P116,Hasdai b. Hizkiyahu (nasi),P344,Yehya b. Abraham,1,Bodl. MS Heb. a.3.42
+P118,Hayyim b. Sahlawaya,P129,Husn bt. Hayyim,1,TS AS 145.307r + TS Misc. 29.58a r
+P118,Hayyim b. Sahlawaya,P144,Jabir b. Azhar ha-Kohen,1,TS AS 145.307r + TS Misc. 29.58a r
+P118,Hayyim b. Sahlawaya,P232,Nathan b. [...],1,TS AS 145.307r + TS Misc. 29.58a r
+P118,Hayyim b. Sahlawaya,P260,Sahlawaya b. Hayyim,1,TS AS 145.307r + TS Misc. 29.58a r
+P120,Hiba b. Khalaf al-Shinizi,P133,Isaac b. Eliya ha-Kohen,1,TS 6 Ja 2
+P120,Hiba b. Khalaf al-Shinizi,P134,Isaac b. Jacob,1,TS 6 Ja 2
+P120,Hiba b. Khalaf al-Shinizi,P137,Isaac b. Samuel al-Fara,1,TS 6 Ja 2
+P120,Hiba b. Khalaf al-Shinizi,P152,Jacob b. Isaac,1,TS 6 Ja 2
+P120,Hiba b. Khalaf al-Shinizi,P169,Joseph b. Isaac,1,TS 6 Ja 2
+P120,Hiba b. Khalaf al-Shinizi,P171,Joseph b. Jacob,1,TS 6 Ja 2
+P120,Hiba b. Khalaf al-Shinizi,P199,Menashe b. Mahbub ha-Levi (of Acre),1,TS 6 Ja 2
+P120,Hiba b. Khalaf al-Shinizi,P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P120,Hiba b. Khalaf al-Shinizi,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P121,Hillel (the elder),P227,Musafir b. Isaac ha-Kohen,1,ENA NS 17.24
+P121,Hillel (the elder),P293,Shela b. Joseph,1,ENA NS 17.24
+P123,"Hizkiyahu (groom, OS12)",P207,Mevorakh b. Barhun,1,Mosseri VII.90.1
+P123,"Hizkiyahu (groom, OS12)",P277,Sedaqa b. Elun,1,Mosseri VII.90.1
+P124,Hizkiyahu b. Benjamin,P150,Jacob b. Fadlan,1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P167,Joseph b. Abraham ha-Kohen,1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P173,Joseph b. Samuel,1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P208,Mevorakh b. David,1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P235,Nathan b. Nisan ha-Levi (the scholar),1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P236,Nathan ha-Kohen bar Yehai,1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P241,Omar b. Yehoshua,1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P271,Sarwa bt. Sedaqa,1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P124,Hizkiyahu b. Benjamin,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P125,Hizkiyahu b. Solomon (nasi),P166,Joseph b. Abraham b. al-Fara,1,TS 16.50
+P125,Hizkiyahu b. Solomon (nasi),P183,Khatabya b. al-Tabat,1,TS 16.50
+P125,Hizkiyahu b. Solomon (nasi),P259,Sahl b. Sa'adya al-Baghdadi,1,TS 16.50
+P125,Hizkiyahu b. Solomon (nasi),P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P127,"Husn (bride, OS46)",P158,Jehuda b. Khalaf,1,II Firk. Heb. A. 717r
+P127,"Husn (bride, OS46)",P008,[...] ha-Kohen (OS46),1,II Firk. Heb. A. 717r
+P128,Husn bt. David (OS41),P131,Isaac b. [...] (OS41),1,Bodl. MS Heb. a.3.4v
+P128,Husn bt. David (OS41),P157,Jehuda [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P128,Husn bt. David (OS41),P186,Mahbub [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P128,Husn bt. David (OS41),P196,Menahem b. Isaac,1,Bodl. MS Heb. a.3.4v
+P128,Husn bt. David (OS41),P211,Mevorakh b. Nathan,1,Bodl. MS Heb. a.3.4v
+P128,Husn bt. David (OS41),P243,Parhon b. Mevorakh ha-Levi,1,Bodl. MS Heb. a.3.4v
+P128,Husn bt. David (OS41),P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P128,Husn bt. David (OS41),P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P128,Husn bt. David (OS41),P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P128,Husn bt. David (OS41),P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P128,Husn bt. David (OS41),P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P129,Husn bt. Hayyim,P144,Jabir b. Azhar ha-Kohen,1,TS AS 145.307r + TS Misc. 29.58a r
+P129,Husn bt. Hayyim,P232,Nathan b. [...],1,TS AS 145.307r + TS Misc. 29.58a r
+P129,Husn bt. Hayyim,P260,Sahlawaya b. Hayyim,1,TS AS 145.307r + TS Misc. 29.58a r
+P132,Isaac b. Eli,P159,Jehuda ha-Levi b. Nisi ha-Melammed,1,TS 12.644
+P132,Isaac b. Eli,P164,Joseph b. Aaron ha-Levi,1,TS 12.644
+P132,Isaac b. Eli,P172,Joseph b. Jehuda ha-Levi,1,TS 12.644
+P132,Isaac b. Eli,P226,Mubaraka bt. [...],1,TS 12.644
+P132,Isaac b. Eli,P262,Samuel b. Joseph al-Basri,1,TS 12.644
+P132,Isaac b. Eli,P283,Sedaqa b. Moses,1,TS 12.644
+P132,Isaac b. Eli,P334,Yefet ha-Kohen b. Eli b. Zita,1,TS 12.644
+P133,Isaac b. Eliya ha-Kohen,P134,Isaac b. Jacob,1,TS 6 Ja 2
+P133,Isaac b. Eliya ha-Kohen,P137,Isaac b. Samuel al-Fara,1,TS 6 Ja 2
+P133,Isaac b. Eliya ha-Kohen,P152,Jacob b. Isaac,1,TS 6 Ja 2
+P133,Isaac b. Eliya ha-Kohen,P169,Joseph b. Isaac,1,TS 6 Ja 2
+P133,Isaac b. Eliya ha-Kohen,P171,Joseph b. Jacob,1,TS 6 Ja 2
+P133,Isaac b. Eliya ha-Kohen,P199,Menashe b. Mahbub ha-Levi (of Acre),1,TS 6 Ja 2
+P133,Isaac b. Eliya ha-Kohen,P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P133,Isaac b. Eliya ha-Kohen,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P134,Isaac b. Jacob,P137,Isaac b. Samuel al-Fara,1,TS 6 Ja 2
+P134,Isaac b. Jacob,P152,Jacob b. Isaac,1,TS 6 Ja 2
+P134,Isaac b. Jacob,P169,Joseph b. Isaac,1,TS 6 Ja 2
+P134,Isaac b. Jacob,P171,Joseph b. Jacob,1,TS 6 Ja 2
+P134,Isaac b. Jacob,P199,Menashe b. Mahbub ha-Levi (of Acre),1,TS 6 Ja 2
+P134,Isaac b. Jacob,P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P134,Isaac b. Jacob,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P135,Isaac b. Jehuda ha-Levi,P179,Karima bt. Hasan,1,ENA NS 18.37
+P135,Isaac b. Jehuda ha-Levi,P191,"Mansur (father of groom, OS57)",1,ENA NS 18.37
+P135,Isaac b. Jehuda ha-Levi,P218,Moses b. Siba'a,1,ENA NS 18.37
+P135,Isaac b. Jehuda ha-Levi,P223,Mu'ammar b. S[edaqa],1,ENA NS 18.37
+P135,Isaac b. Jehuda ha-Levi,P253,Sa'id b. [...] (OS57),1,ENA NS 18.37
+P135,Isaac b. Jehuda ha-Levi,P260,Sahlawaya b. Hayyim,1,ENA NS 18.37
+P135,Isaac b. Jehuda ha-Levi,P284,Sedaqa b. Nahum ha-Kohen,1,ENA NS 18.37
+P135,Isaac b. Jehuda ha-Levi,P334,Yefet ha-Kohen b. Eli b. Zita,1,ENA NS 18.37
+P135,Isaac b. Jehuda ha-Levi,P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P136,"Isaac b. Joseph (groom, OS42)",P151,Jacob b. Hillel b. Awkal,1,Bodl. MS Heb. b.12.31
+P136,"Isaac b. Joseph (groom, OS42)",P160,"Joseph (father of Isaac, OS42)",1,Bodl. MS Heb. b.12.31
+P136,"Isaac b. Joseph (groom, OS42)",P178,Karima bt. Abraham,1,Bodl. MS Heb. b.12.31
+P137,Isaac b. Samuel al-Fara,P152,Jacob b. Isaac,1,TS 6 Ja 2
+P137,Isaac b. Samuel al-Fara,P169,Joseph b. Isaac,1,TS 6 Ja 2
+P137,Isaac b. Samuel al-Fara,P171,Joseph b. Jacob,1,TS 6 Ja 2
+P137,Isaac b. Samuel al-Fara,P199,Menashe b. Mahbub ha-Levi (of Acre),1,TS 6 Ja 2
+P137,Isaac b. Samuel al-Fara,P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P137,Isaac b. Samuel al-Fara,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P138,Isaac b. Yefet,P139,Isaac bar Azaryahu,1,TS 16.67
+P138,Isaac b. Yefet,P161,Joseph (father of Rivqa),1,TS 16.67
+P138,Isaac b. Yefet,P238,Nathana'el ha-Kohen b. Meshullam,1,TS 16.67
+P138,Isaac b. Yefet,P249,Rivqa bt. Joseph,1,TS 16.67
+P138,Isaac b. Yefet,P296,Shemarya b. Shemen Tov,1,TS 16.67
+P138,Isaac b. Yefet,P297,Shemen Tov b. Shemarya,1,TS 16.67
+P138,Isaac b. Yefet,P003,[...] b. El'azar b. Halfon,1,TS 16.67
+P131,Isaac b. [...] (OS41),P157,Jehuda [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P131,Isaac b. [...] (OS41),P186,Mahbub [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P131,Isaac b. [...] (OS41),P196,Menahem b. Isaac,1,Bodl. MS Heb. a.3.4v
+P131,Isaac b. [...] (OS41),P211,Mevorakh b. Nathan,1,Bodl. MS Heb. a.3.4v
+P131,Isaac b. [...] (OS41),P243,Parhon b. Mevorakh ha-Levi,1,Bodl. MS Heb. a.3.4v
+P131,Isaac b. [...] (OS41),P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P131,Isaac b. [...] (OS41),P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P131,Isaac b. [...] (OS41),P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P131,Isaac b. [...] (OS41),P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P131,Isaac b. [...] (OS41),P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P139,Isaac bar Azaryahu,P161,Joseph (father of Rivqa),1,TS 16.67
+P139,Isaac bar Azaryahu,P238,Nathana'el ha-Kohen b. Meshullam,1,TS 16.67
+P139,Isaac bar Azaryahu,P249,Rivqa bt. Joseph,1,TS 16.67
+P139,Isaac bar Azaryahu,P296,Shemarya b. Shemen Tov,1,TS 16.67
+P139,Isaac bar Azaryahu,P297,Shemen Tov b. Shemarya,1,TS 16.67
+P139,Isaac bar Azaryahu,P003,[...] b. El'azar b. Halfon,1,TS 16.67
+P140,Isaac ha-Parnas b. Sedaqa,P209,Mevorakh b. El'azar b. [...] Yehoshua,1,Bodl. MS Heb. a.3.42
+P140,Isaac ha-Parnas b. Sedaqa,P234,Nathan b. Joseph b. Nahorai,1,Bodl. MS Heb. a.3.42
+P140,Isaac ha-Parnas b. Sedaqa,P247,Rayyisa bt. Sa'adya,1,Bodl. MS Heb. a.3.42
+P140,Isaac ha-Parnas b. Sedaqa,P250,Sa'adya b. David (father of Rayyisa),1,Bodl. MS Heb. a.3.42
+P140,Isaac ha-Parnas b. Sedaqa,P287,Sedaqa ha-Levi b. Efraim,1,Bodl. MS Heb. a.3.42
+P140,Isaac ha-Parnas b. Sedaqa,P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,1,Bodl. MS Heb. a.3.42
+P140,Isaac ha-Parnas b. Sedaqa,P344,Yehya b. Abraham,1,Bodl. MS Heb. a.3.42
+P144,Jabir b. Azhar ha-Kohen,P232,Nathan b. [...],1,TS AS 145.307r + TS Misc. 29.58a r
+P144,Jabir b. Azhar ha-Kohen,P260,Sahlawaya b. Hayyim,1,TS AS 145.307r + TS Misc. 29.58a r
+P145,"Jacob (father of Abraham, OS23)",P255,Sa'id ha-Kohen b. Nahum,1,TS 12.715 + Bodl. MS Heb. a.3.34
+P145,"Jacob (father of Abraham, OS23)",P256,"Sahl (father of Sara, OS23)",1,TS 12.715 + Bodl. MS Heb. a.3.34
+P145,"Jacob (father of Abraham, OS23)",P268,Sara bt. Sahl,1,TS 12.715 + Bodl. MS Heb. a.3.34
+P146,Jacob (father of Nisi),P153,Jacob b. Joseph,1,TS 16.109 + TS AS 153.489
+P146,Jacob (father of Nisi),P168,Joseph b. Azarya,1,TS 16.109 + TS AS 153.489
+P146,Jacob (father of Nisi),P217,Moses b. A[...],1,TS 16.109 + TS AS 153.489
+P146,Jacob (father of Nisi),P228,Na'ama bt. Nisi,1,TS 16.109 + TS AS 153.489
+P146,Jacob (father of Nisi),P240,Nisi b. Jacob,1,TS 16.109 + TS AS 153.489
+P146,Jacob (father of Nisi),P279,Sedaqa b. Isaac,1,TS 16.109 + TS AS 153.489
+P146,Jacob (father of Nisi),P332,Yefet b. Jacob,1,TS 16.109 + TS AS 153.489
+P146,Jacob (father of Nisi),P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P147,Jacob (father of Thabit),P165,Joseph b. Abraham (father of Ghaliya),1,"TS NS 320.34a,b"
+P147,Jacob (father of Thabit),P320,Thabit b. Jacob,1,"TS NS 320.34a,b"
+P148,Jacob [...] (OS38),P149,Jacob b. David al-Shulhani,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P148,Jacob [...] (OS38),P162,Joseph [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P148,Jacob [...] (OS38),P181,Khalaf [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P148,Jacob [...] (OS38),P197,Menahem b. Job al-Halabi,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P148,Jacob [...] (OS38),P274,Sayyida bt. Wahb,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P148,Jacob [...] (OS38),P288,Semah [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P148,Jacob [...] (OS38),P325,Wahb al-Arri [?],1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P149,Jacob b. David al-Shulhani,P162,Joseph [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P149,Jacob b. David al-Shulhani,P181,Khalaf [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P149,Jacob b. David al-Shulhani,P197,Menahem b. Job al-Halabi,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P149,Jacob b. David al-Shulhani,P274,Sayyida bt. Wahb,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P149,Jacob b. David al-Shulhani,P288,Semah [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P149,Jacob b. David al-Shulhani,P325,Wahb al-Arri [?],1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P150,Jacob b. Fadlan,P167,Joseph b. Abraham ha-Kohen,1,CUL Add. 3430
+P150,Jacob b. Fadlan,P173,Joseph b. Samuel,1,CUL Add. 3430
+P150,Jacob b. Fadlan,P208,Mevorakh b. David,1,CUL Add. 3430
+P150,Jacob b. Fadlan,P235,Nathan b. Nisan ha-Levi (the scholar),1,CUL Add. 3430
+P150,Jacob b. Fadlan,P236,Nathan ha-Kohen bar Yehai,1,CUL Add. 3430
+P150,Jacob b. Fadlan,P241,Omar b. Yehoshua,1,CUL Add. 3430
+P150,Jacob b. Fadlan,P271,Sarwa bt. Sedaqa,1,CUL Add. 3430
+P150,Jacob b. Fadlan,P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P150,Jacob b. Fadlan,P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P150,Jacob b. Fadlan,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P150,Jacob b. Fadlan,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P150,Jacob b. Fadlan,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P151,Jacob b. Hillel b. Awkal,P160,"Joseph (father of Isaac, OS42)",1,Bodl. MS Heb. b.12.31
+P151,Jacob b. Hillel b. Awkal,P178,Karima bt. Abraham,1,Bodl. MS Heb. b.12.31
+P152,Jacob b. Isaac,P169,Joseph b. Isaac,1,TS 6 Ja 2
+P152,Jacob b. Isaac,P171,Joseph b. Jacob,1,TS 6 Ja 2
+P152,Jacob b. Isaac,P199,Menashe b. Mahbub ha-Levi (of Acre),1,TS 6 Ja 2
+P152,Jacob b. Isaac,P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P152,Jacob b. Isaac,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P153,Jacob b. Joseph,P168,Joseph b. Azarya,1,TS 16.109 + TS AS 153.489
+P153,Jacob b. Joseph,P217,Moses b. A[...],1,TS 16.109 + TS AS 153.489
+P153,Jacob b. Joseph,P228,Na'ama bt. Nisi,1,TS 16.109 + TS AS 153.489
+P153,Jacob b. Joseph,P240,Nisi b. Jacob,1,TS 16.109 + TS AS 153.489
+P153,Jacob b. Joseph,P279,Sedaqa b. Isaac,1,TS 16.109 + TS AS 153.489
+P153,Jacob b. Joseph,P332,Yefet b. Jacob,1,TS 16.109 + TS AS 153.489
+P153,Jacob b. Joseph,P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P154,Jacob b. Yesha'ya,P202,"Meshullam (groom, OS25)",1,TS 13 J 37.11
+P155,Jehuda (father of Farajiyya),P193,Mansur b. Yehai b. Abu'l-Shahaba,1,TS 20.156
+P155,Jehuda (father of Farajiyya),P315,Solomon b. Mansur,1,TS 20.156
+P155,Jehuda (father of Farajiyya),P345,Yesha'ya b. Isaac,1,TS 20.156
+P156,"Jehuda (groom, OS34)",P302,Sitt-al-Fadl,1,TS AS 146.34
+P156,"Jehuda (groom, OS34)",P305,"Solomon b. [...] (agent, OS34)",1,TS AS 146.34
+P157,Jehuda [?] (OS41),P186,Mahbub [?] (OS41),1,Bodl. MS Heb. a.3.4v
+P157,Jehuda [?] (OS41),P196,Menahem b. Isaac,1,Bodl. MS Heb. a.3.4v
+P157,Jehuda [?] (OS41),P211,Mevorakh b. Nathan,1,Bodl. MS Heb. a.3.4v
+P157,Jehuda [?] (OS41),P243,Parhon b. Mevorakh ha-Levi,1,Bodl. MS Heb. a.3.4v
+P157,Jehuda [?] (OS41),P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P157,Jehuda [?] (OS41),P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P157,Jehuda [?] (OS41),P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P157,Jehuda [?] (OS41),P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P157,Jehuda [?] (OS41),P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P158,Jehuda b. Khalaf,P180,"Khalaf (father of Jehuda, OS40)",1,Bodl. MS Heb. a.3.44
+P158,Jehuda b. Khalaf,P216,Miriam bt. Solomon,1,Bodl. MS Heb. a.3.44
+P158,Jehuda b. Khalaf,P289,Semah b. Asa (nasi),1,Bodl. MS Heb. a.3.44
+P158,Jehuda b. Khalaf,P304,"Solomon (father of Miriam, OS40)",1,Bodl. MS Heb. a.3.44
+P158,Jehuda b. Khalaf,P008,[...] ha-Kohen (OS46),1,II Firk. Heb. A. 717r
+P159,Jehuda ha-Levi b. Nisi ha-Melammed,P164,Joseph b. Aaron ha-Levi,1,TS 12.644
+P159,Jehuda ha-Levi b. Nisi ha-Melammed,P172,Joseph b. Jehuda ha-Levi,1,TS 12.644
+P159,Jehuda ha-Levi b. Nisi ha-Melammed,P226,Mubaraka bt. [...],1,TS 12.644
+P159,Jehuda ha-Levi b. Nisi ha-Melammed,P262,Samuel b. Joseph al-Basri,1,TS 12.644
+P159,Jehuda ha-Levi b. Nisi ha-Melammed,P283,Sedaqa b. Moses,1,TS 12.644
+P159,Jehuda ha-Levi b. Nisi ha-Melammed,P334,Yefet ha-Kohen b. Eli b. Zita,1,TS 12.644
+P160,"Joseph (father of Isaac, OS42)",P178,Karima bt. Abraham,1,Bodl. MS Heb. b.12.31
+P161,Joseph (father of Rivqa),P238,Nathana'el ha-Kohen b. Meshullam,1,TS 16.67
+P161,Joseph (father of Rivqa),P249,Rivqa bt. Joseph,1,TS 16.67
+P161,Joseph (father of Rivqa),P296,Shemarya b. Shemen Tov,1,TS 16.67
+P161,Joseph (father of Rivqa),P297,Shemen Tov b. Shemarya,1,TS 16.67
+P161,Joseph (father of Rivqa),P003,[...] b. El'azar b. Halfon,1,TS 16.67
+P162,Joseph [...] (OS38),P181,Khalaf [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P162,Joseph [...] (OS38),P197,Menahem b. Job al-Halabi,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P162,Joseph [...] (OS38),P274,Sayyida bt. Wahb,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P162,Joseph [...] (OS38),P288,Semah [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P162,Joseph [...] (OS38),P325,Wahb al-Arri [?],1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P164,Joseph b. Aaron ha-Levi,P172,Joseph b. Jehuda ha-Levi,1,TS 12.644
+P164,Joseph b. Aaron ha-Levi,P226,Mubaraka bt. [...],1,TS 12.644
+P164,Joseph b. Aaron ha-Levi,P262,Samuel b. Joseph al-Basri,1,TS 12.644
+P164,Joseph b. Aaron ha-Levi,P283,Sedaqa b. Moses,1,TS 12.644
+P164,Joseph b. Aaron ha-Levi,P334,Yefet ha-Kohen b. Eli b. Zita,1,TS 12.644
+P165,Joseph b. Abraham (father of Ghaliya),P320,Thabit b. Jacob,1,"TS NS 320.34a,b"
+P166,Joseph b. Abraham b. al-Fara,P183,Khatabya b. al-Tabat,1,TS 16.50
+P166,Joseph b. Abraham b. al-Fara,P259,Sahl b. Sa'adya al-Baghdadi,1,TS 16.50
+P166,Joseph b. Abraham b. al-Fara,P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P167,Joseph b. Abraham ha-Kohen,P173,Joseph b. Samuel,1,CUL Add. 3430
+P167,Joseph b. Abraham ha-Kohen,P208,Mevorakh b. David,1,CUL Add. 3430
+P167,Joseph b. Abraham ha-Kohen,P235,Nathan b. Nisan ha-Levi (the scholar),1,CUL Add. 3430
+P167,Joseph b. Abraham ha-Kohen,P236,Nathan ha-Kohen bar Yehai,1,CUL Add. 3430
+P167,Joseph b. Abraham ha-Kohen,P241,Omar b. Yehoshua,1,CUL Add. 3430
+P167,Joseph b. Abraham ha-Kohen,P271,Sarwa bt. Sedaqa,1,CUL Add. 3430
+P167,Joseph b. Abraham ha-Kohen,P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P167,Joseph b. Abraham ha-Kohen,P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P167,Joseph b. Abraham ha-Kohen,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P167,Joseph b. Abraham ha-Kohen,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P167,Joseph b. Abraham ha-Kohen,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P168,Joseph b. Azarya,P217,Moses b. A[...],1,TS 16.109 + TS AS 153.489
+P168,Joseph b. Azarya,P228,Na'ama bt. Nisi,1,TS 16.109 + TS AS 153.489
+P168,Joseph b. Azarya,P240,Nisi b. Jacob,1,TS 16.109 + TS AS 153.489
+P168,Joseph b. Azarya,P279,Sedaqa b. Isaac,1,TS 16.109 + TS AS 153.489
+P168,Joseph b. Azarya,P332,Yefet b. Jacob,1,TS 16.109 + TS AS 153.489
+P168,Joseph b. Azarya,P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P169,Joseph b. Isaac,P171,Joseph b. Jacob,1,TS 6 Ja 2
+P169,Joseph b. Isaac,P199,Menashe b. Mahbub ha-Levi (of Acre),1,TS 6 Ja 2
+P169,Joseph b. Isaac,P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P169,Joseph b. Isaac,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P171,Joseph b. Jacob,P199,Menashe b. Mahbub ha-Levi (of Acre),1,TS 6 Ja 2
+P171,Joseph b. Jacob,P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P171,Joseph b. Jacob,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P172,Joseph b. Jehuda ha-Levi,P226,Mubaraka bt. [...],1,TS 12.644
+P172,Joseph b. Jehuda ha-Levi,P262,Samuel b. Joseph al-Basri,1,TS 12.644
+P172,Joseph b. Jehuda ha-Levi,P283,Sedaqa b. Moses,1,TS 12.644
+P172,Joseph b. Jehuda ha-Levi,P334,Yefet ha-Kohen b. Eli b. Zita,1,TS 12.644
+P173,Joseph b. Samuel,P208,Mevorakh b. David,1,CUL Add. 3430
+P173,Joseph b. Samuel,P235,Nathan b. Nisan ha-Levi (the scholar),1,CUL Add. 3430
+P173,Joseph b. Samuel,P236,Nathan ha-Kohen bar Yehai,1,CUL Add. 3430
+P173,Joseph b. Samuel,P241,Omar b. Yehoshua,1,CUL Add. 3430
+P173,Joseph b. Samuel,P271,Sarwa bt. Sedaqa,1,CUL Add. 3430
+P173,Joseph b. Samuel,P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P173,Joseph b. Samuel,P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P173,Joseph b. Samuel,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P173,Joseph b. Samuel,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P173,Joseph b. Samuel,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P163,Joseph b. [...] b. Efraim,P182,Khalaf b. Mahfuz,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P163,Joseph b. [...] b. Efraim,P187,Mahfuz (father of Khalaf),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P163,Joseph b. [...] b. Efraim,P230,Nahum b. Nahum,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P163,Joseph b. [...] b. Efraim,P281,Sedaqa b. Masliah b. Sahl ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P163,Joseph b. [...] b. Efraim,P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P177,Josiah b. Solomon (nasi),P210,Mevorakh b. Israel (heir),1,Mosseri VII.43 + TS Ar.53.53
+P177,Josiah b. Solomon (nasi),P229,Nahray b. Nissim,1,Mosseri VII.43 + TS Ar.53.53
+P177,Josiah b. Solomon (nasi),P265,Samuel b. Yehuda (the orphan),1,Mosseri VII.43 + TS Ar.53.53
+P177,Josiah b. Solomon (nasi),P324,Umm Samuel bt. Aaron,1,Mosseri VII.43 + TS Ar.53.53
+P179,Karima bt. Hasan,P191,"Mansur (father of groom, OS57)",1,ENA NS 18.37
+P179,Karima bt. Hasan,P218,Moses b. Siba'a,1,ENA NS 18.37
+P179,Karima bt. Hasan,P223,Mu'ammar b. S[edaqa],1,ENA NS 18.37
+P179,Karima bt. Hasan,P253,Sa'id b. [...] (OS57),1,ENA NS 18.37
+P179,Karima bt. Hasan,P260,Sahlawaya b. Hayyim,1,ENA NS 18.37
+P179,Karima bt. Hasan,P284,Sedaqa b. Nahum ha-Kohen,1,ENA NS 18.37
+P179,Karima bt. Hasan,P334,Yefet ha-Kohen b. Eli b. Zita,1,ENA NS 18.37
+P179,Karima bt. Hasan,P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P180,"Khalaf (father of Jehuda, OS40)",P216,Miriam bt. Solomon,1,Bodl. MS Heb. a.3.44
+P180,"Khalaf (father of Jehuda, OS40)",P289,Semah b. Asa (nasi),1,Bodl. MS Heb. a.3.44
+P180,"Khalaf (father of Jehuda, OS40)",P304,"Solomon (father of Miriam, OS40)",1,Bodl. MS Heb. a.3.44
+P181,Khalaf [...] (OS38),P197,Menahem b. Job al-Halabi,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P181,Khalaf [...] (OS38),P274,Sayyida bt. Wahb,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P181,Khalaf [...] (OS38),P288,Semah [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P181,Khalaf [...] (OS38),P325,Wahb al-Arri [?],1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P182,Khalaf b. Mahfuz,P187,Mahfuz (father of Khalaf),1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P182,Khalaf b. Mahfuz,P230,Nahum b. Nahum,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P182,Khalaf b. Mahfuz,P281,Sedaqa b. Masliah b. Sahl ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P182,Khalaf b. Mahfuz,P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P183,Khatabya b. al-Tabat,P259,Sahl b. Sa'adya al-Baghdadi,1,TS 16.50
+P183,Khatabya b. al-Tabat,P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P184,Levi ha-Levi bar Jacob,P239,Nathana'el ha-Levi b. Rawh,1,ENA 4020.38v
+P184,Levi ha-Levi bar Jacob,P275,"Sedaqa (groom, OS43)",1,ENA 4020.38v
+P184,Levi ha-Levi bar Jacob,P009,[...] ha-Kohen b. Joseph,1,ENA 4020.38v
+P185,Levi ha-Levi bar Joseph,P294,Shela ha-Kohen b. Sadoq beRabbi [...],1,TS 12.449
+P186,Mahbub [?] (OS41),P196,Menahem b. Isaac,1,Bodl. MS Heb. a.3.4v
+P186,Mahbub [?] (OS41),P211,Mevorakh b. Nathan,1,Bodl. MS Heb. a.3.4v
+P186,Mahbub [?] (OS41),P243,Parhon b. Mevorakh ha-Levi,1,Bodl. MS Heb. a.3.4v
+P186,Mahbub [?] (OS41),P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P186,Mahbub [?] (OS41),P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P186,Mahbub [?] (OS41),P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P186,Mahbub [?] (OS41),P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P186,Mahbub [?] (OS41),P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P187,Mahfuz (father of Khalaf),P230,Nahum b. Nahum,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P187,Mahfuz (father of Khalaf),P281,Sedaqa b. Masliah b. Sahl ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P187,Mahfuz (father of Khalaf),P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P188,Mahfuz b. Menahem,P195,Menahem (father of Mahfuz),1,A.I.U. VII D 1r
+P189,Maimon b. Fadl,P203,Mevasser b. Abraham,1,TS 20.2
+P189,Maimon b. Fadl,P213,Mevorakh b. Samuel,1,TS 20.2
+P189,Maimon b. Fadl,P214,Mevorakh b. Yefet,1,TS 20.2
+P189,Maimon b. Fadl,P224,Mubarak b. Husain,1,TS 20.2
+P189,Maimon b. Fadl,P291,Shala [?],1,TS 20.2
+P189,Maimon b. Fadl,P295,Shela ha-Kohen bar Rabbi Mevasser,1,TS 20.2
+P189,Maimon b. Fadl,P300,"Sitt-al-Ahl (bride, OS29)",1,TS 20.2
+P189,Maimon b. Fadl,P314,Solomon b. Maimon,1,TS 20.2
+P191,"Mansur (father of groom, OS57)",P218,Moses b. Siba'a,1,ENA NS 18.37
+P191,"Mansur (father of groom, OS57)",P223,Mu'ammar b. S[edaqa],1,ENA NS 18.37
+P191,"Mansur (father of groom, OS57)",P253,Sa'id b. [...] (OS57),1,ENA NS 18.37
+P191,"Mansur (father of groom, OS57)",P260,Sahlawaya b. Hayyim,1,ENA NS 18.37
+P191,"Mansur (father of groom, OS57)",P284,Sedaqa b. Nahum ha-Kohen,1,ENA NS 18.37
+P191,"Mansur (father of groom, OS57)",P334,Yefet ha-Kohen b. Eli b. Zita,1,ENA NS 18.37
+P191,"Mansur (father of groom, OS57)",P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P192,Mansur b. Mevasser,P261,Samuel b. [...],1,Mosseri Ia.2
+P192,Mansur b. Mevasser,P266,Samuel bar Rabbi Moses he-haver,1,Mosseri Ia.2
+P192,Mansur b. Mevasser,P285,Sedaqa b. Sa'adya,1,Mosseri Ia.2
+P192,Mansur b. Mevasser,P292,Shela b. Amram al-Qirqisani,1,Mosseri Ia.2
+P192,Mansur b. Mevasser,P307,Solomon b. Adiya b. Menashe (al-Qazzaz),1,Mosseri Ia.2
+P192,Mansur b. Mevasser,P317,Solomon b. Musafir,1,Mosseri Ia.2
+P192,Mansur b. Mevasser,P326,Yaman bt. David,1,Mosseri Ia.2
+P192,Mansur b. Mevasser,P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P193,Mansur b. Yehai b. Abu'l-Shahaba,P315,Solomon b. Mansur,1,TS 20.156
+P193,Mansur b. Yehai b. Abu'l-Shahaba,P345,Yesha'ya b. Isaac,1,TS 20.156
+P194,Marzuq b. Yefet,P237,Nathana'el b. Mevasser ha-Levi,1,TS 24.13
+P194,Marzuq b. Yefet,P252,Sa'adya b. Razi'el,1,TS 24.13
+P194,Marzuq b. Yefet,P272,Saul b. Abraham,1,TS 24.13
+P194,Marzuq b. Yefet,P282,Sedaqa b. Menashe,1,TS 24.13
+P194,Marzuq b. Yefet,P299,Simha (father of Faras),1,TS 24.13
+P194,Marzuq b. Yefet,P328,Yefet (father of Marzuq),1,TS 24.13
+P194,Marzuq b. Yefet,P002,[...] b. Efraim,1,TS 24.13
+P196,Menahem b. Isaac,P211,Mevorakh b. Nathan,1,Bodl. MS Heb. a.3.4v
+P196,Menahem b. Isaac,P243,Parhon b. Mevorakh ha-Levi,1,Bodl. MS Heb. a.3.4v
+P196,Menahem b. Isaac,P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P196,Menahem b. Isaac,P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P196,Menahem b. Isaac,P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P196,Menahem b. Isaac,P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P196,Menahem b. Isaac,P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P197,Menahem b. Job al-Halabi,P274,Sayyida bt. Wahb,1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P197,Menahem b. Job al-Halabi,P288,Semah [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P197,Menahem b. Job al-Halabi,P325,Wahb al-Arri [?],1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P198,"Menashe (groom, OS33)",P220,Moses ha-Kohen b. Aaron,1,TS 24.45 + TS NS J 86
+P198,"Menashe (groom, OS33)",P303,Sitt-al-Husn bt. Moses ha-Kohen,1,TS 24.45 + TS NS J 86
+P199,Menashe b. Mahbub ha-Levi (of Acre),P221,Mu'ammala bt. Hayyim,1,TS 6 Ja 2
+P199,Menashe b. Mahbub ha-Levi (of Acre),P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P203,Mevasser b. Abraham,P213,Mevorakh b. Samuel,1,TS 20.2
+P203,Mevasser b. Abraham,P214,Mevorakh b. Yefet,1,TS 20.2
+P203,Mevasser b. Abraham,P224,Mubarak b. Husain,1,TS 20.2
+P203,Mevasser b. Abraham,P291,Shala [?],1,TS 20.2
+P203,Mevasser b. Abraham,P295,Shela ha-Kohen bar Rabbi Mevasser,1,TS 20.2
+P203,Mevasser b. Abraham,P300,"Sitt-al-Ahl (bride, OS29)",1,TS 20.2
+P203,Mevasser b. Abraham,P314,Solomon b. Maimon,1,TS 20.2
+P204,Mevasser b. Sahl al-Ani,P258,Sahl al-Ani,1,TS 24.7
+P204,Mevasser b. Sahl al-Ani,P270,Sara bt. Yesha'ya,1,TS 24.7
+P204,Mevasser b. Sahl al-Ani,P316,Solomon b. Mevasser b. Sahl al-Ani,1,TS 24.7
+P204,Mevasser b. Sahl al-Ani,P346,Yesha'ya b. Sahl al-Ani,1,TS 24.7
+P207,Mevorakh b. Barhun,P277,Sedaqa b. Elun,1,Mosseri VII.90.1
+P208,Mevorakh b. David,P235,Nathan b. Nisan ha-Levi (the scholar),1,CUL Add. 3430
+P208,Mevorakh b. David,P236,Nathan ha-Kohen bar Yehai,1,CUL Add. 3430
+P208,Mevorakh b. David,P241,Omar b. Yehoshua,1,CUL Add. 3430
+P208,Mevorakh b. David,P271,Sarwa bt. Sedaqa,1,CUL Add. 3430
+P208,Mevorakh b. David,P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P208,Mevorakh b. David,P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P208,Mevorakh b. David,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P208,Mevorakh b. David,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P208,Mevorakh b. David,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P209,Mevorakh b. El'azar b. [...] Yehoshua,P234,Nathan b. Joseph b. Nahorai,1,Bodl. MS Heb. a.3.42
+P209,Mevorakh b. El'azar b. [...] Yehoshua,P247,Rayyisa bt. Sa'adya,1,Bodl. MS Heb. a.3.42
+P209,Mevorakh b. El'azar b. [...] Yehoshua,P250,Sa'adya b. David (father of Rayyisa),1,Bodl. MS Heb. a.3.42
+P209,Mevorakh b. El'azar b. [...] Yehoshua,P287,Sedaqa ha-Levi b. Efraim,1,Bodl. MS Heb. a.3.42
+P209,Mevorakh b. El'azar b. [...] Yehoshua,P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,1,Bodl. MS Heb. a.3.42
+P209,Mevorakh b. El'azar b. [...] Yehoshua,P344,Yehya b. Abraham,1,Bodl. MS Heb. a.3.42
+P210,Mevorakh b. Israel (heir),P229,Nahray b. Nissim,1,Mosseri VII.43 + TS Ar.53.53
+P210,Mevorakh b. Israel (heir),P265,Samuel b. Yehuda (the orphan),1,Mosseri VII.43 + TS Ar.53.53
+P210,Mevorakh b. Israel (heir),P324,Umm Samuel bt. Aaron,1,Mosseri VII.43 + TS Ar.53.53
+P211,Mevorakh b. Nathan,P243,Parhon b. Mevorakh ha-Levi,1,Bodl. MS Heb. a.3.4v
+P211,Mevorakh b. Nathan,P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P211,Mevorakh b. Nathan,P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P211,Mevorakh b. Nathan,P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P211,Mevorakh b. Nathan,P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P211,Mevorakh b. Nathan,P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P213,Mevorakh b. Samuel,P214,Mevorakh b. Yefet,1,TS 20.2
+P213,Mevorakh b. Samuel,P224,Mubarak b. Husain,1,TS 20.2
+P213,Mevorakh b. Samuel,P291,Shala [?],1,TS 20.2
+P213,Mevorakh b. Samuel,P295,Shela ha-Kohen bar Rabbi Mevasser,1,TS 20.2
+P213,Mevorakh b. Samuel,P300,"Sitt-al-Ahl (bride, OS29)",1,TS 20.2
+P213,Mevorakh b. Samuel,P314,Solomon b. Maimon,1,TS 20.2
+P214,Mevorakh b. Yefet,P224,Mubarak b. Husain,1,TS 20.2
+P214,Mevorakh b. Yefet,P291,Shala [?],1,TS 20.2
+P214,Mevorakh b. Yefet,P295,Shela ha-Kohen bar Rabbi Mevasser,1,TS 20.2
+P214,Mevorakh b. Yefet,P300,"Sitt-al-Ahl (bride, OS29)",1,TS 20.2
+P214,Mevorakh b. Yefet,P314,Solomon b. Maimon,1,TS 20.2
+P215,Mevorakh b. Yehya,P225,"Mubaraka (bride, OS28)",1,TS 16.236
+P216,Miriam bt. Solomon,P289,Semah b. Asa (nasi),1,Bodl. MS Heb. a.3.44
+P216,Miriam bt. Solomon,P304,"Solomon (father of Miriam, OS40)",1,Bodl. MS Heb. a.3.44
+P217,Moses b. A[...],P228,Na'ama bt. Nisi,1,TS 16.109 + TS AS 153.489
+P217,Moses b. A[...],P240,Nisi b. Jacob,1,TS 16.109 + TS AS 153.489
+P217,Moses b. A[...],P279,Sedaqa b. Isaac,1,TS 16.109 + TS AS 153.489
+P217,Moses b. A[...],P332,Yefet b. Jacob,1,TS 16.109 + TS AS 153.489
+P217,Moses b. A[...],P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P218,Moses b. Siba'a,P223,Mu'ammar b. S[edaqa],1,ENA NS 18.37
+P218,Moses b. Siba'a,P253,Sa'id b. [...] (OS57),1,ENA NS 18.37
+P218,Moses b. Siba'a,P260,Sahlawaya b. Hayyim,1,ENA NS 18.37
+P218,Moses b. Siba'a,P284,Sedaqa b. Nahum ha-Kohen,1,ENA NS 18.37
+P218,Moses b. Siba'a,P334,Yefet ha-Kohen b. Eli b. Zita,1,ENA NS 18.37
+P218,Moses b. Siba'a,P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P220,Moses ha-Kohen b. Aaron,P303,Sitt-al-Husn bt. Moses ha-Kohen,1,TS 24.45 + TS NS J 86
+P221,Mu'ammala bt. Hayyim,P251,Sa'adya b. Joseph,1,TS 6 Ja 2
+P223,Mu'ammar b. S[edaqa],P253,Sa'id b. [...] (OS57),1,ENA NS 18.37
+P223,Mu'ammar b. S[edaqa],P260,Sahlawaya b. Hayyim,1,ENA NS 18.37
+P223,Mu'ammar b. S[edaqa],P284,Sedaqa b. Nahum ha-Kohen,1,ENA NS 18.37
+P223,Mu'ammar b. S[edaqa],P334,Yefet ha-Kohen b. Eli b. Zita,1,ENA NS 18.37
+P223,Mu'ammar b. S[edaqa],P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P224,Mubarak b. Husain,P291,Shala [?],1,TS 20.2
+P224,Mubarak b. Husain,P295,Shela ha-Kohen bar Rabbi Mevasser,1,TS 20.2
+P224,Mubarak b. Husain,P300,"Sitt-al-Ahl (bride, OS29)",1,TS 20.2
+P224,Mubarak b. Husain,P314,Solomon b. Maimon,1,TS 20.2
+P226,Mubaraka bt. [...],P262,Samuel b. Joseph al-Basri,1,TS 12.644
+P226,Mubaraka bt. [...],P283,Sedaqa b. Moses,1,TS 12.644
+P226,Mubaraka bt. [...],P334,Yefet ha-Kohen b. Eli b. Zita,1,TS 12.644
+P227,Musafir b. Isaac ha-Kohen,P293,Shela b. Joseph,1,ENA NS 17.24
+P228,Na'ama bt. Nisi,P240,Nisi b. Jacob,2,TS 16.109 + TS AS 153.489; TS 20.47r
+P228,Na'ama bt. Nisi,P279,Sedaqa b. Isaac,1,TS 16.109 + TS AS 153.489
+P228,Na'ama bt. Nisi,P332,Yefet b. Jacob,1,TS 16.109 + TS AS 153.489
+P228,Na'ama bt. Nisi,P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P228,Na'ama bt. Nisi,P007,[...] b. Yesha'ya ha-Kohen,1,TS 20.47r
+P229,Nahray b. Nissim,P265,Samuel b. Yehuda (the orphan),1,Mosseri VII.43 + TS Ar.53.53
+P229,Nahray b. Nissim,P324,Umm Samuel bt. Aaron,1,Mosseri VII.43 + TS Ar.53.53
+P230,Nahum b. Nahum,P281,Sedaqa b. Masliah b. Sahl ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P230,Nahum b. Nahum,P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P230,Nahum b. Nahum,P005,[...] b. Khalaf,1,TS AS 146.417r
+P234,Nathan b. Joseph b. Nahorai,P247,Rayyisa bt. Sa'adya,1,Bodl. MS Heb. a.3.42
+P234,Nathan b. Joseph b. Nahorai,P250,Sa'adya b. David (father of Rayyisa),1,Bodl. MS Heb. a.3.42
+P234,Nathan b. Joseph b. Nahorai,P287,Sedaqa ha-Levi b. Efraim,1,Bodl. MS Heb. a.3.42
+P234,Nathan b. Joseph b. Nahorai,P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,1,Bodl. MS Heb. a.3.42
+P234,Nathan b. Joseph b. Nahorai,P344,Yehya b. Abraham,1,Bodl. MS Heb. a.3.42
+P235,Nathan b. Nisan ha-Levi (the scholar),P236,Nathan ha-Kohen bar Yehai,1,CUL Add. 3430
+P235,Nathan b. Nisan ha-Levi (the scholar),P241,Omar b. Yehoshua,1,CUL Add. 3430
+P235,Nathan b. Nisan ha-Levi (the scholar),P271,Sarwa bt. Sedaqa,1,CUL Add. 3430
+P235,Nathan b. Nisan ha-Levi (the scholar),P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P235,Nathan b. Nisan ha-Levi (the scholar),P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P235,Nathan b. Nisan ha-Levi (the scholar),P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P235,Nathan b. Nisan ha-Levi (the scholar),P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P235,Nathan b. Nisan ha-Levi (the scholar),P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P232,Nathan b. [...],P260,Sahlawaya b. Hayyim,1,TS AS 145.307r + TS Misc. 29.58a r
+P236,Nathan ha-Kohen bar Yehai,P241,Omar b. Yehoshua,1,CUL Add. 3430
+P236,Nathan ha-Kohen bar Yehai,P271,Sarwa bt. Sedaqa,1,CUL Add. 3430
+P236,Nathan ha-Kohen bar Yehai,P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P236,Nathan ha-Kohen bar Yehai,P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P236,Nathan ha-Kohen bar Yehai,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P236,Nathan ha-Kohen bar Yehai,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P236,Nathan ha-Kohen bar Yehai,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P237,Nathana'el b. Mevasser ha-Levi,P252,Sa'adya b. Razi'el,1,TS 24.13
+P237,Nathana'el b. Mevasser ha-Levi,P272,Saul b. Abraham,1,TS 24.13
+P237,Nathana'el b. Mevasser ha-Levi,P282,Sedaqa b. Menashe,1,TS 24.13
+P237,Nathana'el b. Mevasser ha-Levi,P299,Simha (father of Faras),1,TS 24.13
+P237,Nathana'el b. Mevasser ha-Levi,P328,Yefet (father of Marzuq),1,TS 24.13
+P237,Nathana'el b. Mevasser ha-Levi,P002,[...] b. Efraim,1,TS 24.13
+P238,Nathana'el ha-Kohen b. Meshullam,P249,Rivqa bt. Joseph,1,TS 16.67
+P238,Nathana'el ha-Kohen b. Meshullam,P296,Shemarya b. Shemen Tov,1,TS 16.67
+P238,Nathana'el ha-Kohen b. Meshullam,P297,Shemen Tov b. Shemarya,1,TS 16.67
+P238,Nathana'el ha-Kohen b. Meshullam,P003,[...] b. El'azar b. Halfon,1,TS 16.67
+P239,Nathana'el ha-Levi b. Rawh,P275,"Sedaqa (groom, OS43)",1,ENA 4020.38v
+P239,Nathana'el ha-Levi b. Rawh,P009,[...] ha-Kohen b. Joseph,1,ENA 4020.38v
+P240,Nisi b. Jacob,P279,Sedaqa b. Isaac,1,TS 16.109 + TS AS 153.489
+P240,Nisi b. Jacob,P332,Yefet b. Jacob,1,TS 16.109 + TS AS 153.489
+P240,Nisi b. Jacob,P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P240,Nisi b. Jacob,P007,[...] b. Yesha'ya ha-Kohen,1,TS 20.47r
+P241,Omar b. Yehoshua,P271,Sarwa bt. Sedaqa,1,CUL Add. 3430
+P241,Omar b. Yehoshua,P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P241,Omar b. Yehoshua,P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P241,Omar b. Yehoshua,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P241,Omar b. Yehoshua,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P241,Omar b. Yehoshua,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P242,Ovadya b. Sedaqa,P278,Sedaqa b. Halfon b. Elun,1,TS AS 147.120
+P242,Ovadya b. Sedaqa,P322,Tovya (father of al-Tifrat),1,TS AS 147.120
+P242,Ovadya b. Sedaqa,P333,Yefet b. Menashe,1,TS AS 147.120
+P242,Ovadya b. Sedaqa,P033,al-Tifrat bt. Tovya,1,TS AS 147.120
+P243,Parhon b. Mevorakh ha-Levi,P308,Solomon b. Amram (OS41),1,Bodl. MS Heb. a.3.4v
+P243,Parhon b. Mevorakh ha-Levi,P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P243,Parhon b. Mevorakh ha-Levi,P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P243,Parhon b. Mevorakh ha-Levi,P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P243,Parhon b. Mevorakh ha-Levi,P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P245,Rav Hesed,P260,Sahlawaya b. Hayyim,1,TS 12.621
+P245,Rav Hesed,P269,Sara bt. Sahlawaya,1,TS 12.621
+P247,Rayyisa bt. Sa'adya,P250,Sa'adya b. David (father of Rayyisa),1,Bodl. MS Heb. a.3.42
+P247,Rayyisa bt. Sa'adya,P287,Sedaqa ha-Levi b. Efraim,1,Bodl. MS Heb. a.3.42
+P247,Rayyisa bt. Sa'adya,P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,1,Bodl. MS Heb. a.3.42
+P247,Rayyisa bt. Sa'adya,P344,Yehya b. Abraham,1,Bodl. MS Heb. a.3.42
+P249,Rivqa bt. Joseph,P296,Shemarya b. Shemen Tov,1,TS 16.67
+P249,Rivqa bt. Joseph,P297,Shemen Tov b. Shemarya,1,TS 16.67
+P249,Rivqa bt. Joseph,P003,[...] b. El'azar b. Halfon,1,TS 16.67
+P250,Sa'adya b. David (father of Rayyisa),P287,Sedaqa ha-Levi b. Efraim,1,Bodl. MS Heb. a.3.42
+P250,Sa'adya b. David (father of Rayyisa),P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,1,Bodl. MS Heb. a.3.42
+P250,Sa'adya b. David (father of Rayyisa),P344,Yehya b. Abraham,1,Bodl. MS Heb. a.3.42
+P252,Sa'adya b. Razi'el,P272,Saul b. Abraham,1,TS 24.13
+P252,Sa'adya b. Razi'el,P282,Sedaqa b. Menashe,1,TS 24.13
+P252,Sa'adya b. Razi'el,P299,Simha (father of Faras),1,TS 24.13
+P252,Sa'adya b. Razi'el,P328,Yefet (father of Marzuq),1,TS 24.13
+P252,Sa'adya b. Razi'el,P002,[...] b. Efraim,1,TS 24.13
+P253,Sa'id b. [...] (OS57),P260,Sahlawaya b. Hayyim,1,ENA NS 18.37
+P253,Sa'id b. [...] (OS57),P284,Sedaqa b. Nahum ha-Kohen,1,ENA NS 18.37
+P253,Sa'id b. [...] (OS57),P334,Yefet ha-Kohen b. Eli b. Zita,1,ENA NS 18.37
+P253,Sa'id b. [...] (OS57),P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P255,Sa'id ha-Kohen b. Nahum,P256,"Sahl (father of Sara, OS23)",1,TS 12.715 + Bodl. MS Heb. a.3.34
+P255,Sa'id ha-Kohen b. Nahum,P268,Sara bt. Sahl,1,TS 12.715 + Bodl. MS Heb. a.3.34
+P256,"Sahl (father of Sara, OS23)",P268,Sara bt. Sahl,1,TS 12.715 + Bodl. MS Heb. a.3.34
+P258,Sahl al-Ani,P270,Sara bt. Yesha'ya,1,TS 24.7
+P258,Sahl al-Ani,P316,Solomon b. Mevasser b. Sahl al-Ani,1,TS 24.7
+P258,Sahl al-Ani,P346,Yesha'ya b. Sahl al-Ani,1,TS 24.7
+P259,Sahl b. Sa'adya al-Baghdadi,P330,Yefet b. Abraham al-Tustari,1,TS 16.50
+P260,Sahlawaya b. Hayyim,P269,Sara bt. Sahlawaya,1,TS 12.621
+P260,Sahlawaya b. Hayyim,P284,Sedaqa b. Nahum ha-Kohen,1,ENA NS 18.37
+P260,Sahlawaya b. Hayyim,P334,Yefet ha-Kohen b. Eli b. Zita,1,ENA NS 18.37
+P260,Sahlawaya b. Hayyim,P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P262,Samuel b. Joseph al-Basri,P283,Sedaqa b. Moses,1,TS 12.644
+P262,Samuel b. Joseph al-Basri,P334,Yefet ha-Kohen b. Eli b. Zita,1,TS 12.644
+P265,Samuel b. Yehuda (the orphan),P324,Umm Samuel bt. Aaron,1,Mosseri VII.43 + TS Ar.53.53
+P261,Samuel b. [...],P266,Samuel bar Rabbi Moses he-haver,1,Mosseri Ia.2
+P261,Samuel b. [...],P285,Sedaqa b. Sa'adya,1,Mosseri Ia.2
+P261,Samuel b. [...],P292,Shela b. Amram al-Qirqisani,1,Mosseri Ia.2
+P261,Samuel b. [...],P307,Solomon b. Adiya b. Menashe (al-Qazzaz),1,Mosseri Ia.2
+P261,Samuel b. [...],P317,Solomon b. Musafir,1,Mosseri Ia.2
+P261,Samuel b. [...],P326,Yaman bt. David,1,Mosseri Ia.2
+P261,Samuel b. [...],P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P266,Samuel bar Rabbi Moses he-haver,P285,Sedaqa b. Sa'adya,1,Mosseri Ia.2
+P266,Samuel bar Rabbi Moses he-haver,P292,Shela b. Amram al-Qirqisani,1,Mosseri Ia.2
+P266,Samuel bar Rabbi Moses he-haver,P307,Solomon b. Adiya b. Menashe (al-Qazzaz),1,Mosseri Ia.2
+P266,Samuel bar Rabbi Moses he-haver,P317,Solomon b. Musafir,1,Mosseri Ia.2
+P266,Samuel bar Rabbi Moses he-haver,P326,Yaman bt. David,1,Mosseri Ia.2
+P266,Samuel bar Rabbi Moses he-haver,P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P270,Sara bt. Yesha'ya,P316,Solomon b. Mevasser b. Sahl al-Ani,1,TS 24.7
+P270,Sara bt. Yesha'ya,P346,Yesha'ya b. Sahl al-Ani,1,TS 24.7
+P271,Sarwa bt. Sedaqa,P280,Sedaqa b. Jarir,1,CUL Add. 3430
+P271,Sarwa bt. Sedaqa,P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P271,Sarwa bt. Sedaqa,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P271,Sarwa bt. Sedaqa,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P271,Sarwa bt. Sedaqa,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P272,Saul b. Abraham,P282,Sedaqa b. Menashe,1,TS 24.13
+P272,Saul b. Abraham,P299,Simha (father of Faras),1,TS 24.13
+P272,Saul b. Abraham,P328,Yefet (father of Marzuq),1,TS 24.13
+P272,Saul b. Abraham,P002,[...] b. Efraim,1,TS 24.13
+P274,Sayyida bt. Wahb,P288,Semah [...] (OS38),1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P274,Sayyida bt. Wahb,P325,Wahb al-Arri [?],1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P275,"Sedaqa (groom, OS43)",P009,[...] ha-Kohen b. Joseph,1,ENA 4020.38v
+P278,Sedaqa b. Halfon b. Elun,P322,Tovya (father of al-Tifrat),1,TS AS 147.120
+P278,Sedaqa b. Halfon b. Elun,P333,Yefet b. Menashe,1,TS AS 147.120
+P278,Sedaqa b. Halfon b. Elun,P033,al-Tifrat bt. Tovya,1,TS AS 147.120
+P279,Sedaqa b. Isaac,P332,Yefet b. Jacob,1,TS 16.109 + TS AS 153.489
+P279,Sedaqa b. Isaac,P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P280,Sedaqa b. Jarir,P286,Sedaqa b. Zakharya,1,CUL Add. 3430
+P280,Sedaqa b. Jarir,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P280,Sedaqa b. Jarir,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P280,Sedaqa b. Jarir,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P281,Sedaqa b. Masliah b. Sahl ha-Levi,P331,Yefet b. Abraham ha-Levi,1,"TS 18 J 5.10a,b + TS 10 J 27.6"
+P282,Sedaqa b. Menashe,P299,Simha (father of Faras),1,TS 24.13
+P282,Sedaqa b. Menashe,P328,Yefet (father of Marzuq),1,TS 24.13
+P282,Sedaqa b. Menashe,P002,[...] b. Efraim,1,TS 24.13
+P283,Sedaqa b. Moses,P334,Yefet ha-Kohen b. Eli b. Zita,1,TS 12.644
+P284,Sedaqa b. Nahum ha-Kohen,P334,Yefet ha-Kohen b. Eli b. Zita,1,ENA NS 18.37
+P284,Sedaqa b. Nahum ha-Kohen,P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P285,Sedaqa b. Sa'adya,P292,Shela b. Amram al-Qirqisani,1,Mosseri Ia.2
+P285,Sedaqa b. Sa'adya,P307,Solomon b. Adiya b. Menashe (al-Qazzaz),1,Mosseri Ia.2
+P285,Sedaqa b. Sa'adya,P317,Solomon b. Musafir,1,Mosseri Ia.2
+P285,Sedaqa b. Sa'adya,P326,Yaman bt. David,1,Mosseri Ia.2
+P285,Sedaqa b. Sa'adya,P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P286,Sedaqa b. Zakharya,P311,Solomon b. David ha-Kohen (the scholar),1,CUL Add. 3430
+P286,Sedaqa b. Zakharya,P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P286,Sedaqa b. Zakharya,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P287,Sedaqa ha-Levi b. Efraim,P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,1,Bodl. MS Heb. a.3.42
+P287,Sedaqa ha-Levi b. Efraim,P344,Yehya b. Abraham,1,Bodl. MS Heb. a.3.42
+P288,Semah [...] (OS38),P325,Wahb al-Arri [?],1,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+P289,Semah b. Asa (nasi),P304,"Solomon (father of Miriam, OS40)",1,Bodl. MS Heb. a.3.44
+P291,Shala [?],P295,Shela ha-Kohen bar Rabbi Mevasser,1,TS 20.2
+P291,Shala [?],P300,"Sitt-al-Ahl (bride, OS29)",1,TS 20.2
+P291,Shala [?],P314,Solomon b. Maimon,1,TS 20.2
+P292,Shela b. Amram al-Qirqisani,P307,Solomon b. Adiya b. Menashe (al-Qazzaz),1,Mosseri Ia.2
+P292,Shela b. Amram al-Qirqisani,P317,Solomon b. Musafir,1,Mosseri Ia.2
+P292,Shela b. Amram al-Qirqisani,P326,Yaman bt. David,1,Mosseri Ia.2
+P292,Shela b. Amram al-Qirqisani,P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P295,Shela ha-Kohen bar Rabbi Mevasser,P300,"Sitt-al-Ahl (bride, OS29)",1,TS 20.2
+P295,Shela ha-Kohen bar Rabbi Mevasser,P314,Solomon b. Maimon,1,TS 20.2
+P296,Shemarya b. Shemen Tov,P297,Shemen Tov b. Shemarya,1,TS 16.67
+P296,Shemarya b. Shemen Tov,P003,[...] b. El'azar b. Halfon,1,TS 16.67
+P297,Shemen Tov b. Shemarya,P003,[...] b. El'azar b. Halfon,1,TS 16.67
+P299,Simha (father of Faras),P328,Yefet (father of Marzuq),1,TS 24.13
+P299,Simha (father of Faras),P002,[...] b. Efraim,1,TS 24.13
+P300,"Sitt-al-Ahl (bride, OS29)",P314,Solomon b. Maimon,1,TS 20.2
+P302,Sitt-al-Fadl,P305,"Solomon b. [...] (agent, OS34)",1,TS AS 146.34
+P307,Solomon b. Adiya b. Menashe (al-Qazzaz),P317,Solomon b. Musafir,1,Mosseri Ia.2
+P307,Solomon b. Adiya b. Menashe (al-Qazzaz),P326,Yaman bt. David,1,Mosseri Ia.2
+P307,Solomon b. Adiya b. Menashe (al-Qazzaz),P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P308,Solomon b. Amram (OS41),P335,Yehai b. Eli ha-Kohen,1,Bodl. MS Heb. a.3.4v
+P308,Solomon b. Amram (OS41),P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P308,Solomon b. Amram (OS41),P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P308,Solomon b. Amram (OS41),P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P311,Solomon b. David ha-Kohen (the scholar),P338,Yehoshua b. Adiya ha-Kohen,1,CUL Add. 3430
+P311,Solomon b. David ha-Kohen (the scholar),P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P315,Solomon b. Mansur,P345,Yesha'ya b. Isaac,1,TS 20.156
+P316,Solomon b. Mevasser b. Sahl al-Ani,P346,Yesha'ya b. Sahl al-Ani,1,TS 24.7
+P317,Solomon b. Musafir,P326,Yaman bt. David,1,Mosseri Ia.2
+P317,Solomon b. Musafir,P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P322,Tovya (father of al-Tifrat),P333,Yefet b. Menashe,1,TS AS 147.120
+P322,Tovya (father of al-Tifrat),P033,al-Tifrat bt. Tovya,1,TS AS 147.120
+P326,Yaman bt. David,P329,Yefet [b. ? Solomon b. Abraham],1,Mosseri Ia.2
+P328,Yefet (father of Marzuq),P002,[...] b. Efraim,1,TS 24.13
+P332,Yefet b. Jacob,P336,Yehezqel b. Benjamin ha-Levi,1,TS 16.109 + TS AS 153.489
+P333,Yefet b. Menashe,P033,al-Tifrat bt. Tovya,1,TS AS 147.120
+P334,Yefet ha-Kohen b. Eli b. Zita,P006,"[...] b. Mansur (groom, OS57)",1,ENA NS 18.37
+P335,Yehai b. Eli ha-Kohen,P348,Yeshu'a b. Khatim,1,Bodl. MS Heb. a.3.4v
+P335,Yehai b. Eli ha-Kohen,P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P335,Yehai b. Eli ha-Kohen,P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P338,Yehoshua b. Adiya ha-Kohen,P339,Yehoshua b. Eli ha-Kohen b. Zita,1,CUL Add. 3430
+P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,P344,Yehya b. Abraham,1,Bodl. MS Heb. a.3.42
+P348,Yeshu'a b. Khatim,P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,1,Bodl. MS Heb. a.3.4v
+P348,Yeshu'a b. Khatim,P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v
+P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,P004,[...] b. Isaac ha-Levi al-Qata'if,1,Bodl. MS Heb. a.3.4v

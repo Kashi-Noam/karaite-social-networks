@@ -1,0 +1,16 @@
+﻿action_id,action_en,action_he,definition,action_class
+ACT01,Groom,חתן,contracts the betrothal/marriage as husband,Party
+ACT02,Bride,כלה,is betrothed/married; accepts the marriage and its conditions,Party
+ACT03,LegalParty,צד משפטי,"litigant, heir or claimant in a legal proceeding",Party
+ACT04,Guarantor,ערב,stands surety (daman al-darak) for another party,Party
+ACT05,Agent,שליח (פקיד),"represents a party - receives the mohar, contracts on her/his behalf",Representation
+ACT06,WitnessOfAgency,עד מינוי שליח,witnesses the appointment of the agent,Attestation
+ACT07,Witness,עד חותם,signs the document as witness,Attestation
+ACT08,Scribe,סופר,writes the document,Attestation
+ACT09,Declarant,מצהיר בפני בית דין,"declares/confirms before the court (court copies, certifications)",Attestation
+ACT10,Judge,דיין / אב בית דין,presides over the session; examines and certifies deeds,Court
+ACT11,Trustee,נאמן בית דין,court-appointed trustee over property,Court
+ACT12,NamedNasi,נשיא מכהן,the reigning nasi named in the dating clause,Reference
+ACT13,FamilyMention,נזכר כבן משפחה,parent/grandparent named in a party's genealogy,Reference
+ACT14,DocumentMention,נזכר במסמך,any other person named in the document text,Reference
+ACT15,ScholarlyMention,נזכר בהערות המהדיר,person known only from the editors' commentary/footnotes on this document,Reference
