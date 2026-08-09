@@ -93,7 +93,9 @@ def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n
     if legend and color_by=="sect":
         plt.legend(handles=[Line2D([0],[0],marker='o',color='w',markerfacecolor=c,markersize=9,label=s)
                             for s,c in COL.items()], loc="lower left", fontsize=9, frameon=False)
-    plt.title(title, fontsize=14); plt.axis("off"); plt.tight_layout()
+    if os.environ.get("FIGTITLES","1")=="1":
+        plt.title(title, fontsize=14)
+    plt.axis("off"); plt.tight_layout()
     plt.savefig(f"{OUT}/{name}.png", dpi=200, facecolor="white"); plt.close()
 
 def html(G, name, title, r=None, n2c=None, extra=None):

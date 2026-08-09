@@ -62,8 +62,9 @@ introductions, commentaries and footnotes — from:
 
 ## The paper
 
-**`docs/Karaite_SNA_Paper.docx`** — *Who Held the Karaite Community Together? A Social
-Network Analysis of Karaite Legal Documents from the Cairo Geniza* (10 pp. + bibliography).
+**`docs/עבודה_רשתות_קראים.docx`** — *מי החזיק את הקהילה הקראית יחד? ניתוח רשתות חברתיות של
+מסמכים משפטיים קראיים מגניזת קהיר* — the seminar paper (Hebrew, RTL, 9 pp.).
+An earlier English version is kept as `docs/Karaite_SNA_Paper.docx`.
 Its three findings: the corpus is held together by **judicial** institutions rather than
 kinship (the reigning *nasi* and a handful of professional witnesses hold the highest
 brokerage scores); elite marriage strategy is legible as graph structure (one betrothal
@@ -103,7 +104,8 @@ src/build_dataset2.py            builds dataset/ (CSVs + Excel workbook + valida
         ├──► src/build_rdf.py    builds rdf/ (Turtle + RDF/XML, validated, SPARQL-checked)
         ├──► src/analyze_v2.py   5 weighted networks: degree, betweenness, eigenvector,
         │                        PageRank, Louvain; PNG figures + interactive HTML
-        └──► src/make_paper.js   builds docs/Karaite_SNA_Paper.docx from the live results
+        └──► src/make_paper_he.js  builds the Hebrew paper from the live results
+             src/make_paper.js     builds the English version
 ```
 
 Run:
@@ -114,7 +116,9 @@ cd src
 python3 build_dataset2.py     # dataset/  (CSVs + Excel + validation report)
 python3 build_rdf.py          # rdf/      (Turtle + RDF/XML)
 python3 analyze_v2.py         # networks/ (metrics, figures, interactive HTML)
-npm install docx && node make_paper.js   # docs/Karaite_SNA_Paper.docx
+npm install docx
+node make_paper_he.js         # docs/עבודה_רשתות_קראים.docx   (Hebrew, the submitted paper)
+node make_paper.js            # docs/Karaite_SNA_Paper.docx    (English version)
 ```
 
 ## Networks

@@ -27,15 +27,7 @@
     0.03076923076923077
    ],
    [
-    "Barakat b. David",
-    0.014423076923076924
-   ],
-   [
     "David (father of Barakat)",
-    0.014423076923076924
-   ],
-   [
-    "Nisi b. Jacob",
     0.014423076923076924
    ],
    [
@@ -43,50 +35,58 @@
     0.014423076923076924
    ],
    [
-    "Hizkiyahu b. Solomon (nasi)",
+    "Barakat b. David",
+    0.014423076923076924
+   ],
+   [
+    "Nisi b. Jacob",
+    0.014423076923076924
+   ],
+   [
+    "Shela b. Amram al-Qirqisani",
     0.0
    ]
   ],
   "top_pagerank": [
    [
     "David b. Semah (nasi)",
-    0.04582759816021111
+    0.0458275981602111
    ],
    [
     "David b. Yesha'ya ha-Melammed",
-    0.026900984112431907
+    0.02690098411243191
    ],
    [
     "Alan b. Nahum",
-    0.02662407642155569
+    0.026624076421555693
    ],
    [
     "El'azar b. Samuel b. Sahl ha-Eved",
-    0.026231295976509625
-   ],
-   [
-    "Na'ama bt. Nisi",
-    0.019657287185401294
-   ],
-   [
-    "Barakat b. David",
-    0.01965728718540129
+    0.026231295976509632
    ],
    [
     "David (father of Barakat)",
-    0.01965728718540129
+    0.019657287185401297
+   ],
+   [
+    "Na'ama bt. Nisi",
+    0.019657287185401297
+   ],
+   [
+    "Barakat b. David",
+    0.019657287185401297
    ],
    [
     "Nisi b. Jacob",
-    0.01965728718540129
+    0.019657287185401297
    ],
    [
     "Nahum b. Nahum",
     0.017332697159175025
    ],
    [
-    "Hizkiyahu b. Solomon (nasi)",
-    0.014817973037451467
+    "Abraham (Abu Sa'ad) b. Sahl al-Tustari",
+    0.01481797303745147
    ]
   ]
  },
