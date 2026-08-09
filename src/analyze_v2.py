@@ -6,7 +6,7 @@ publication figures (PNG) and interactive views (HTML).
 cd src && python3 analyze_v2.py
 """
 import csv, os, json, math
-from collections import defaultdict
+from collections import defaultdict, Counter
 import networkx as nx
 import matplotlib
 matplotlib.use("Agg")
@@ -44,6 +44,7 @@ def analyze(G):
         d["dist"] = 1.0/max(d.get("weight",1), 1)
     r = {"degree":dict(G.degree()), "wdegree":dict(G.degree(weight="weight")),
          "betweenness":nx.betweenness_centrality(G, weight="dist", normalized=True),
+         "closeness":nx.closeness_centrality(G, distance="dist"),
          "pagerank":nx.pagerank(G, weight="weight")}
     try: r["eigenvector"] = nx.eigenvector_centrality(G, max_iter=3000, weight="weight")
     except Exception: r["eigenvector"] = {n:0 for n in G}
@@ -60,10 +61,11 @@ def write_metrics(G, r, name):
     n2c = {n:i for i,c in enumerate(r["communities"]) for n in c}
     with open(f"{OUT}/{name}_metrics.csv","w",newline="",encoding="utf-8-sig") as f:
         w = csv.writer(f)
-        w.writerow(["person_id","node","sect","degree","weighted_degree","betweenness","eigenvector","pagerank","community"])
+        w.writerow(["person_id","node","sect","degree","weighted_degree","betweenness","closeness","eigenvector","pagerank","community"])
         for n in sorted(G, key=lambda x: -r["pagerank"].get(x,0)):
             w.writerow([pid(n), n, sect(n), r["degree"].get(n,0), r["wdegree"].get(n,0),
-                        round(r["betweenness"].get(n,0),5), round(r["eigenvector"].get(n,0),5),
+                        round(r["betweenness"].get(n,0),5), round(r["closeness"].get(n,0),5),
+                        round(r["eigenvector"].get(n,0),5),
                         round(r["pagerank"].get(n,0),5), n2c.get(n,"")])
     return n2c
 
@@ -136,12 +138,12 @@ fig(G1,"fig1_coappearance_full","Figure 1. Co-appearance network, all components
 fig(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,label_n=26)
 fig(giant1,"fig1b_communities","Figure 1b. Louvain communities within the giant component",rg,ng,color_by="community",legend=False,label_n=22)
 REPORT["N1_giant"] = {k:rg[k] for k in ["n_nodes","n_edges","density","modularity"]}
-REPORT["N1_giant"].update(n_communities=len(rg["communities"]), top_betweenness=top(rg["betweenness"]), top_pagerank=top(rg["pagerank"]))
+REPORT["N1_giant"].update(n_communities=len(rg["communities"]), top_betweenness=top(rg["betweenness"]), top_pagerank=top(rg["pagerank"]), top_closeness=top(rg["closeness"]), top_degree=top(rg["degree"]), top_eigen=top(rg["eigenvector"]))
 html(G1,"N1_coappearance","N1. Co-appearance network (weighted)",r1,n1)
 REPORT["N1"] = {k:r1[k] for k in ["n_nodes","n_edges","n_components","giant","density","modularity","avg_degree"]}
 REPORT["N1"].update(n_communities=len(r1["communities"]),
     top_pagerank=top(r1["pagerank"]), top_betweenness=top(r1["betweenness"]),
-    top_wdegree=top(r1["wdegree"]), top_eigen=top(r1["eigenvector"]))
+    top_wdegree=top(r1["wdegree"]), top_eigen=top(r1["eigenvector"]), top_closeness=top(r1["closeness"]))
 
 # =============================================================== N2 bipartite
 G2 = nx.Graph()
@@ -202,7 +204,7 @@ docs_R = sorted({a["shelfmark"] for a in apps if group(a["person"])=="R"})
 REPORT["N4"] = {k:r4[k] for k in ["n_nodes","n_edges","n_components"]}
 REPORT["N4"].update(direct_KR_edges=len(kr), docs_with_rabbanites=docs_R,
     n_docs_with_rabbanites=len(docs_R), rabbanites=sorted({p for p in persons if group(p)=="R"}),
-    top_betweenness=top(r4["betweenness"]), top_pagerank=top(r4["pagerank"]))
+    top_betweenness=top(r4["betweenness"]), top_pagerank=top(r4["pagerank"]), top_closeness=top(r4["closeness"]))
 
 # =============================================================== N5 attestation professionals
 ATT = {"Witness","WitnessOfAgency","Scribe","Declarant"}
@@ -222,10 +224,82 @@ fig(G5,"fig5_attestation","Figure 5. Witness, scribe and declarant co-signature 
 html(G5,"N5_attestation","N5. Attestation network (witnesses, witnesses of agency, scribes)",r5,n5)
 REPORT["N5"] = {k:r5[k] for k in ["n_nodes","n_edges","n_components","giant","modularity"]}
 REPORT["N5"].update(n_communities=len(r5["communities"]), top_betweenness=top(r5["betweenness"]),
-                    top_pagerank=top(r5["pagerank"]), top_wdegree=top(r5["wdegree"]))
+                    top_pagerank=top(r5["pagerank"]), top_wdegree=top(r5["wdegree"]), top_closeness=top(r5["closeness"]))
+
+
+# =============================================================== N6 ketubbot only
+KET = {d for d,v in docs.items() if "ketubba" in v["doc_type"] and "formular" not in v["doc_type"]
+       and "book of" not in v["doc_type"]}
+BET = {d for d,v in docs.items() if "betrothal" in v["doc_type"] and "formular" not in v["doc_type"]
+       and "book of" not in v["doc_type"]}
+def subnet(doclist, name):
+    dp = defaultdict(set)
+    for a in apps:
+        if a["shelfmark"] in doclist and a["action_en"] not in ("DocumentMention","ScholarlyMention"):
+            dp[a["shelfmark"]].add(a["person"])
+    pr_ = defaultdict(set)
+    for d, pp in dp.items():
+        pp = sorted(pp)
+        for i in range(len(pp)):
+            for j in range(i+1, len(pp)): pr_[(pp[i],pp[j])].add(d)
+    G = nx.Graph()
+    for (a,b), ds in pr_.items(): G.add_edge(a,b,weight=len(ds),docs="; ".join(sorted(ds)))
+    return G, len(dp)
+
+G6, n6docs = subnet(KET, "ketubbot")
+r6 = analyze(G6); c6 = write_metrics(G6, r6, "N6_ketubbot")
+fig(G6,"fig6_ketubbot","Ketubbot only",r6,size=(16,12),label_n=30)
+html(G6,"N6_ketubbot","N6. Ketubbot only (Karaite marriage contracts)",r6,c6)
+G6b, n6bdocs = subnet(BET, "betrothals")
+r6b = analyze(G6b)
+REPORT["N6_ketubbot"] = {k:r6[k] for k in ["n_nodes","n_edges","n_components","giant","density","modularity"]}
+REPORT["N6_ketubbot"].update(n_documents=n6docs, n_communities=len(r6["communities"]),
+    top_pagerank=top(r6["pagerank"]), top_betweenness=top(r6["betweenness"]),
+    top_closeness=top(r6["closeness"]), top_degree=top(r6["degree"]))
+REPORT["N6_betrothals"] = {k:r6b[k] for k in ["n_nodes","n_edges","n_components","giant","density"]}
+REPORT["N6_betrothals"].update(n_documents=n6bdocs, top_betweenness=top(r6b["betweenness"]))
+
+# per-document participant profile for ketubbot vs betrothals
+def profile(doclist):
+    c = Counter()
+    for a in apps:
+        if a["shelfmark"] in doclist: c[a["action_en"]] += 1
+    return dict(c.most_common())
+REPORT["profile_ketubbot"] = profile(KET)
+REPORT["profile_betrothal"] = profile(BET)
+
+# =============================================================== courts and adjudication
+COURT_ACT = {"Judge","Trustee","Declarant","NamedNasi"}
+court_docs = sorted({a["shelfmark"] for a in apps if a["action_en"] in COURT_ACT})
+court_people = defaultdict(set)
+for a in apps:
+    if a["action_en"] in COURT_ACT: court_people[a["action_en"]].add(a["person"])
+# documents that record a court act in their type or notes
+court_type_docs = sorted({d for d,v in docs.items()
+    if "court" in v["doc_type"].lower() or "attorney" in v["doc_type"].lower()
+    or "court" in v["notes"].lower() or "certif" in v["notes"].lower()})
+REPORT["courts"] = {
+  "docs_with_court_actions": court_docs,
+  "n_docs_with_court_actions": len(court_docs),
+  "docs_of_court_type_or_note": court_type_docs,
+  "n_docs_court_type_or_note": len(court_type_docs),
+  "judges": sorted(court_people["Judge"]),
+  "nesiim_named": sorted(court_people["NamedNasi"]),
+  "trustees": sorted(court_people["Trustee"]),
+  "declarants": sorted(court_people["Declarant"]),
+}
+# how central are court-act persons in N1?
+court_persons = set().union(*court_people.values()) if court_people else set()
+in_n1 = [p for p in court_persons if p in G1]
+if in_n1:
+    import statistics as st
+    others = [n for n in G1 if n not in court_persons]
+    REPORT["courts"]["mean_betweenness_court_persons"] = round(st.mean(r1["betweenness"][p] for p in in_n1),5)
+    REPORT["courts"]["mean_betweenness_others"] = round(st.mean(r1["betweenness"][p] for p in others),5)
+    REPORT["courts"]["mean_pagerank_court_persons"] = round(st.mean(r1["pagerank"][p] for p in in_n1),5)
+    REPORT["courts"]["mean_pagerank_others"] = round(st.mean(r1["pagerank"][p] for p in others),5)
 
 # =============================================================== corpus descriptives
-from collections import Counter
 REPORT["corpus"] = {
  "documents": len(docs), "persons": len(persons), "appearances": len(apps), "relations": len(rels),
  "action_distribution": dict(Counter(a["action_en"] for a in apps).most_common()),
@@ -236,6 +310,6 @@ REPORT["corpus"] = {
 }
 json.dump(REPORT, open(f"{OUT}/analysis_v2.json","w",encoding="utf-8"), indent=1, ensure_ascii=False)
 
-for k in ["N1","N2","N3","N4","N5"]:
+for k in ["N1","N1_giant","N2","N3","N4","N5","N6_ketubbot"]:
     print(k, {x:REPORT[k][x] for x in REPORT[k] if not isinstance(REPORT[k][x], list)})
 print("corpus:", REPORT["corpus"]["action_distribution"])

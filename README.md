@@ -65,7 +65,8 @@ introductions, commentaries and footnotes — from:
 **`docs/עבודה_רשתות_קראים.docx`** — *מי החזיק את הקהילה הקראית יחד? ניתוח רשתות חברתיות של
 מסמכים משפטיים קראיים מגניזת קהיר* — the seminar paper (Hebrew, RTL, 9 pp.).
 An earlier English version is kept as `docs/Karaite_SNA_Paper.docx`.
-Its three findings: the corpus is held together by **judicial** institutions rather than
+Centrality measures: degree, betweenness, closeness, eigenvector and PageRank, plus Louvain
+communities. Its findings: the corpus is held together by **judicial** institutions rather than
 kinship (the reigning *nasi* and a handful of professional witnesses hold the highest
 brokerage scores); elite marriage strategy is legible as graph structure (one betrothal
 fuses the *nesiʾim* and Tustari lineages); and Karaite–Rabbanite contact is routine —
@@ -131,6 +132,8 @@ node make_paper.js            # docs/Karaite_SNA_Paper.docx    (English version)
 | N3 kinship / marriage / agency | 204 | 180 | 45 families; largest (32) = *nesiʾim* × Tustari via one betrothal |
 | N4 Karaite–Rabbanite contact | 118 | 145 | 107 direct cross-sect edges in 15 of 60 source units |
 | N5 attestation (witnesses/scribes) | 138 | 526 | a Palestinian and an Egyptian block of professional signatories |
+| N6 ketubbot only | 178 | 838 | 28 marriage contracts; sparse, run by witnesses and scribes |
+| N6b betrothals only | 96 | 490 | 13 deeds; twice as dense, dominated by the *nasi* — the court's business |
 
 To add a new Geniza fragment: add one row in `data_docs.py`, its appearances in
 `data_appearances.py` (and relations/sect entries if relevant), then rebuild.

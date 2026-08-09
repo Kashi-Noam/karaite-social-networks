@@ -31,7 +31,7 @@
     0.014423076923076924
    ],
    [
-    "Na'ama bt. Nisi",
+    "Nisi b. Jacob",
     0.014423076923076924
    ],
    [
@@ -39,18 +39,18 @@
     0.014423076923076924
    ],
    [
-    "Nisi b. Jacob",
+    "Na'ama bt. Nisi",
     0.014423076923076924
    ],
    [
-    "Shela b. Amram al-Qirqisani",
+    "Sedaqa b. Masliah b. Sahl ha-Levi",
     0.0
    ]
   ],
   "top_pagerank": [
    [
     "David b. Semah (nasi)",
-    0.0458275981602111
+    0.04582759816021109
    ],
    [
     "David b. Yesha'ya ha-Melammed",
@@ -58,35 +58,161 @@
    ],
    [
     "Alan b. Nahum",
-    0.026624076421555693
+    0.02662407642155569
    ],
    [
     "El'azar b. Samuel b. Sahl ha-Eved",
-    0.026231295976509632
-   ],
-   [
-    "David (father of Barakat)",
-    0.019657287185401297
-   ],
-   [
-    "Na'ama bt. Nisi",
-    0.019657287185401297
+    0.02623129597650963
    ],
    [
     "Barakat b. David",
     0.019657287185401297
    ],
    [
+    "David (father of Barakat)",
+    0.019657287185401294
+   ],
+   [
     "Nisi b. Jacob",
-    0.019657287185401297
+    0.019657287185401294
+   ],
+   [
+    "Na'ama bt. Nisi",
+    0.019657287185401294
    ],
    [
     "Nahum b. Nahum",
     0.017332697159175025
    ],
    [
-    "Abraham (Abu Sa'ad) b. Sahl al-Tustari",
-    0.01481797303745147
+    "Khatabya b. al-Tabat",
+    0.014817973037451467
+   ]
+  ],
+  "top_closeness": [
+   [
+    "David b. Semah (nasi)",
+    0.6046511627906976
+   ],
+   [
+    "Alan b. Nahum",
+    0.6018518518518519
+   ],
+   [
+    "David b. Yesha'ya ha-Melammed",
+    0.5652173913043478
+   ],
+   [
+    "Nahum b. Nahum",
+    0.48872180451127817
+   ],
+   [
+    "El'azar b. Samuel b. Sahl ha-Eved",
+    0.48872180451127817
+   ],
+   [
+    "Sedaqa b. Masliah b. Sahl ha-Levi",
+    0.48507462686567165
+   ],
+   [
+    "David b. Isaac b. Moses ha-Levi",
+    0.48507462686567165
+   ],
+   [
+    "Khalaf b. Mahfuz",
+    0.48507462686567165
+   ],
+   [
+    "Mahfuz (father of Khalaf)",
+    0.48507462686567165
+   ],
+   [
+    "Ama al-Qadar bt. Efraim",
+    0.48507462686567165
+   ]
+  ],
+  "top_degree": [
+   [
+    "David b. Semah (nasi)",
+    38
+   ],
+   [
+    "Alan b. Nahum",
+    24
+   ],
+   [
+    "El'azar b. Samuel b. Sahl ha-Eved",
+    24
+   ],
+   [
+    "David b. Yesha'ya ha-Melammed",
+    23
+   ],
+   [
+    "David (father of Barakat)",
+    14
+   ],
+   [
+    "Nisi b. Jacob",
+    14
+   ],
+   [
+    "Barakat b. David",
+    14
+   ],
+   [
+    "Na'ama bt. Nisi",
+    14
+   ],
+   [
+    "Nahum b. Nahum",
+    13
+   ],
+   [
+    "Sedaqa b. Masliah b. Sahl ha-Levi",
+    12
+   ]
+  ],
+  "top_eigen": [
+   [
+    "David b. Semah (nasi)",
+    0.3665234343264948
+   ],
+   [
+    "David b. Yesha'ya ha-Melammed",
+    0.2850263450644654
+   ],
+   [
+    "Alan b. Nahum",
+    0.22011663544088206
+   ],
+   [
+    "Nahum b. Nahum",
+    0.15932914766864767
+   ],
+   [
+    "Sedaqa b. Masliah b. Sahl ha-Levi",
+    0.15862020938499324
+   ],
+   [
+    "David b. Isaac b. Moses ha-Levi",
+    0.15862020938499324
+   ],
+   [
+    "Khalaf b. Mahfuz",
+    0.15862020938499324
+   ],
+   [
+    "Mahfuz (father of Khalaf)",
+    0.15862020938499324
+   ],
+   [
+    "Ama al-Qadar bt. Efraim",
+    0.15862020938499324
+   ],
+   [
+    "Barakat b. Menahem ha-Kohen",
+    0.15862020938499324
    ]
   ]
  },
@@ -265,6 +391,48 @@
    [
     "Nathan b. Nisan ha-Levi (the scholar)",
     0.16719590281501365
+   ]
+  ],
+  "top_closeness": [
+   [
+    "David b. Semah (nasi)",
+    0.14343914445764724
+   ],
+   [
+    "Bishr b. Abraham ha-Levi",
+    0.14306569343065692
+   ],
+   [
+    "Alan b. Nahum",
+    0.1427750743444174
+   ],
+   [
+    "David b. Yesha'ya ha-Melammed",
+    0.134084417645192
+   ],
+   [
+    "Eli b. Mu'ammar",
+    0.12175803696226122
+   ],
+   [
+    "David b. Isaac ha-Kohen (the scribe)",
+    0.11678832116788321
+   ],
+   [
+    "El'azar b. Samuel b. Sahl ha-Eved",
+    0.11593765435486525
+   ],
+   [
+    "Nahum b. Nahum",
+    0.11593765435486525
+   ],
+   [
+    "Ama al-Qadar bt. Efraim",
+    0.11507244797908268
+   ],
+   [
+    "Barakat b. Menahem ha-Kohen",
+    0.11507244797908268
    ]
   ]
  },
@@ -654,6 +822,48 @@
     "Yehya b. Abraham",
     0.023167038292155582
    ]
+  ],
+  "top_closeness": [
+   [
+    "Nathan ha-Kohen bar Yehai",
+    0.13675213675213677
+   ],
+   [
+    "Samuel bar Rabbi Moses he-haver",
+    0.10256410256410256
+   ],
+   [
+    "Mansur (father of groom, OS57)",
+    0.10256410256410256
+   ],
+   [
+    "[...] b. Mansur (groom, OS57)",
+    0.10256410256410256
+   ],
+   [
+    "Isaac bar Azaryahu",
+    0.09401709401709402
+   ],
+   [
+    "Solomon b. Jehuda (Gaon)",
+    0.0875718088832843
+   ],
+   [
+    "Abraham (physician, father of Yehya)",
+    0.08547008547008547
+   ],
+   [
+    "Yehya b. Abraham",
+    0.08547008547008547
+   ],
+   [
+    "Shela ha-Kohen bar Rabbi Mevasser",
+    0.08547008547008547
+   ],
+   [
+    "Eli b. Amram (he-haver)",
+    0.08479175145841812
+   ]
   ]
  },
  "N5": {
@@ -788,7 +998,358 @@
     "Isaac b. [...] (OS41)",
     14
    ]
+  ],
+  "top_closeness": [
+   [
+    "Bishr b. Abraham ha-Levi",
+    0.22125164532727057
+   ],
+   [
+    "Eli b. Mu'ammar",
+    0.19559928065164497
+   ],
+   [
+    "David b. Isaac ha-Kohen (the scribe)",
+    0.1730301328841475
+   ],
+   [
+    "Jacob b. Fadlan",
+    0.16662160944399387
+   ],
+   [
+    "Joseph b. Samuel",
+    0.16662160944399387
+   ],
+   [
+    "Mevorakh b. David",
+    0.16662160944399387
+   ],
+   [
+    "Nathan b. Nisan ha-Levi (the scholar)",
+    0.16662160944399387
+   ],
+   [
+    "Nathan ha-Kohen bar Yehai",
+    0.16662160944399387
+   ],
+   [
+    "Omar b. Yehoshua",
+    0.16662160944399387
+   ],
+   [
+    "Sedaqa b. Zakharya",
+    0.16662160944399387
+   ]
   ]
+ },
+ "N6_ketubbot": {
+  "n_nodes": 178,
+  "n_edges": 838,
+  "n_components": 21,
+  "giant": 57,
+  "density": 0.0531962165936647,
+  "modularity": 0.8522564806534482,
+  "n_documents": 28,
+  "n_communities": 24,
+  "top_pagerank": [
+   [
+    "Bishr b. Abraham ha-Levi",
+    0.010236241096259074
+   ],
+   [
+    "Eli b. Mu'ammar",
+    0.009969283565890693
+   ],
+   [
+    "David b. Isaac ha-Kohen (the scribe)",
+    0.009868851612972821
+   ],
+   [
+    "Jehuda b. Khalaf",
+    0.008521484854162474
+   ],
+   [
+    "Abraham al-Awalani",
+    0.0059932283795787085
+   ],
+   [
+    "Faraj b. Solomon",
+    0.0059932283795787085
+   ],
+   [
+    "Khalaf (father of Jehuda, OS40)",
+    0.0059932283795787085
+   ],
+   [
+    "Miriam bt. Solomon",
+    0.0059932283795787085
+   ],
+   [
+    "Semah b. Asa (nasi)",
+    0.0059932283795787085
+   ],
+   [
+    "Solomon (father of Miriam, OS40)",
+    0.0059932283795787085
+   ]
+  ],
+  "top_betweenness": [
+   [
+    "Bishr b. Abraham ha-Levi",
+    0.05026964560862866
+   ],
+   [
+    "Eli b. Mu'ammar",
+    0.03588854648176682
+   ],
+   [
+    "David b. Isaac ha-Kohen (the scribe)",
+    0.03177966101694915
+   ],
+   [
+    "Jehuda b. Khalaf",
+    0.0007704160246533128
+   ],
+   [
+    "Barakat b. Azarya",
+    0.0
+   ],
+   [
+    "Barakat b. David",
+    0.0
+   ],
+   [
+    "David (father of Barakat)",
+    0.0
+   ],
+   [
+    "Na'ama bt. Nisi",
+    0.0
+   ],
+   [
+    "Nisi b. Jacob",
+    0.0
+   ],
+   [
+    "[...] b. Yesha'ya ha-Kohen",
+    0.0
+   ]
+  ],
+  "top_closeness": [
+   [
+    "Bishr b. Abraham ha-Levi",
+    0.2214689265536723
+   ],
+   [
+    "Eli b. Mu'ammar",
+    0.18848419281163603
+   ],
+   [
+    "David b. Isaac ha-Kohen (the scribe)",
+    0.1807909604519774
+   ],
+   [
+    "Benjamin (father of Hizkiyahu, OS39)",
+    0.16558424415227838
+   ],
+   [
+    "Hizkiyahu b. Benjamin",
+    0.16558424415227838
+   ],
+   [
+    "Jacob b. Fadlan",
+    0.16558424415227838
+   ],
+   [
+    "Joseph b. Abraham ha-Kohen",
+    0.16558424415227838
+   ],
+   [
+    "Joseph b. Samuel",
+    0.16558424415227838
+   ],
+   [
+    "Mevorakh b. David",
+    0.16558424415227838
+   ],
+   [
+    "Nathan b. Nisan ha-Levi (the scholar)",
+    0.16558424415227838
+   ]
+  ],
+  "top_degree": [
+   [
+    "Bishr b. Abraham ha-Levi",
+    32
+   ],
+   [
+    "Eli b. Mu'ammar",
+    29
+   ],
+   [
+    "David b. Isaac ha-Kohen (the scribe)",
+    27
+   ],
+   [
+    "Benjamin (father of Hizkiyahu, OS39)",
+    16
+   ],
+   [
+    "Hizkiyahu b. Benjamin",
+    16
+   ],
+   [
+    "Jacob b. Fadlan",
+    16
+   ],
+   [
+    "Joseph b. Abraham ha-Kohen",
+    16
+   ],
+   [
+    "Joseph b. Samuel",
+    16
+   ],
+   [
+    "Mevorakh b. David",
+    16
+   ],
+   [
+    "Nathan b. Nisan ha-Levi (the scholar)",
+    16
+   ]
+  ]
+ },
+ "N6_betrothals": {
+  "n_nodes": 96,
+  "n_edges": 490,
+  "n_components": 6,
+  "giant": 40,
+  "density": 0.1074561403508772,
+  "n_documents": 13,
+  "top_betweenness": [
+   [
+    "David b. Semah (nasi)",
+    0.10347144456886899
+   ],
+   [
+    "Yefet ha-Kohen b. Eli b. Zita",
+    0.0322508398656215
+   ],
+   [
+    "Sahlawaya b. Hayyim",
+    0.02687569988801792
+   ],
+   [
+    "David b. Yesha'ya ha-Melammed",
+    0.014781634938409855
+   ],
+   [
+    "Nahum b. Nahum",
+    0.00851063829787234
+   ],
+   [
+    "Barakat b. David",
+    0.0
+   ],
+   [
+    "David (father of Barakat)",
+    0.0
+   ],
+   [
+    "El'azar b. Samuel b. Sahl ha-Eved",
+    0.0
+   ],
+   [
+    "Hasan b. Sedaqa ha-Kohen",
+    0.0
+   ],
+   [
+    "Jacob (father of Nisi)",
+    0.0
+   ]
+  ]
+ },
+ "profile_ketubbot": {
+  "Witness": 72,
+  "FamilyMention": 31,
+  "Bride": 25,
+  "ScholarlyMention": 24,
+  "Groom": 22,
+  "WitnessOfAgency": 18,
+  "Agent": 16,
+  "Scribe": 5,
+  "DocumentMention": 5,
+  "NamedNasi": 3,
+  "Declarant": 2
+ },
+ "profile_betrothal": {
+  "Witness": 31,
+  "WitnessOfAgency": 23,
+  "FamilyMention": 19,
+  "Groom": 11,
+  "ScholarlyMention": 11,
+  "Bride": 10,
+  "Agent": 9,
+  "NamedNasi": 5,
+  "Scribe": 4,
+  "DocumentMention": 4,
+  "Judge": 2
+ },
+ "courts": {
+  "docs_with_court_actions": [
+   "Bodl. MS Heb. a.3.42",
+   "Bodl. MS Heb. a.3.44",
+   "Bodl. MS Heb. a.3.4v",
+   "Bodl. MS Heb. d.66.49v-50r",
+   "Brit. Mus. Or. 5532",
+   "Mosseri Ia.2",
+   "Mosseri VII.43 + TS Ar.53.53",
+   "Mosseri VII.90.1",
+   "TS 16.50",
+   "TS 16.67",
+   "TS 18 J 5.10a,b + TS 10 J 27.6",
+   "TS 20.42"
+  ],
+  "n_docs_with_court_actions": 12,
+  "docs_of_court_type_or_note": [
+   "Bodl. MS Heb. a.3.4v",
+   "Mosseri Ia.2",
+   "Mosseri VII.43 + TS Ar.53.53",
+   "TS 16.109 + TS AS 153.489",
+   "TS 16.50",
+   "TS 20.47r",
+   "TS 6 Ja 2",
+   "TS 8.152"
+  ],
+  "n_docs_court_type_or_note": 8,
+  "judges": [
+   "David b. Semah (nasi)",
+   "Eli b. Amram (he-haver)",
+   "Josiah b. Solomon (nasi)"
+  ],
+  "nesiim_named": [
+   "Amaryahu Jehuda (nasi)",
+   "David b. Semah (nasi)",
+   "Hasdai b. Hizkiyahu (nasi)",
+   "Hizkiyahu b. Solomon (nasi)",
+   "Josiah b. Solomon (nasi)",
+   "Semah b. Asa (nasi)",
+   "Yedidya (nasi)"
+  ],
+  "trustees": [
+   "Abraham b. Solomon (Abu Kathir)",
+   "Eli ha-Kohen ha-parnas b. Ya'ish",
+   "Nahray b. Nissim"
+  ],
+  "declarants": [
+   "Eli b. Isma'il al-Bairuti (the scholar)",
+   "Menahem b. Isaac"
+  ],
+  "mean_betweenness_court_persons": 0.00222,
+  "mean_betweenness_others": 0.00044,
+  "mean_pagerank_court_persons": 0.00426,
+  "mean_pagerank_others": 0.00361
  },
  "corpus": {
   "documents": 60,
