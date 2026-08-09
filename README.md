@@ -60,6 +60,33 @@ introductions, commentaries and footnotes — from:
   the scholar between TS 18 J 5.10 and Mosseri Ia.2). Unmerged same-name candidates
   are listed in the validation report.
 
+## The paper
+
+**`docs/Karaite_SNA_Paper.docx`** — *Who Held the Karaite Community Together? A Social
+Network Analysis of Karaite Legal Documents from the Cairo Geniza* (10 pp. + bibliography).
+Its three findings: the corpus is held together by **judicial** institutions rather than
+kinship (the reigning *nasi* and a handful of professional witnesses hold the highest
+brokerage scores); elite marriage strategy is legible as graph structure (one betrothal
+fuses the *nesiʾim* and Tustari lineages); and Karaite–Rabbanite contact is routine —
+a quarter of the documents involve an identified Rabbanite — concentrated in shared courts
+and in the scribal profession.
+
+## RDF
+
+`rdf/karaite_geniza.ttl` (+ RDF/XML) — **17,725 triples**, validated with rdflib.
+The model follows the event/role pattern of factoid prosopography: an **Appearance** is a
+first-class resource linking a Person, a Document and an Action from the closed vocabulary,
+and carrying its evidential certainty, so that historical uncertainty stays machine-readable.
+Reuses FOAF, Dublin Core, SKOS, WGS84 and PROV-O; `owl:sameAs` links to the Princeton
+Geniza Lab. Relations and co-appearance edges are reified as `rdf:Statement` so each carries
+its evidence and derivation. Example query — every document in which a Rabbanite appears:
+
+```sparql
+SELECT ?doc ?name WHERE {
+  ?a kg:inDocument ?doc ; kg:byPerson ?p .
+  ?p foaf:name ?name ; kg:hasSect sect:Rabbanite . }
+```
+
 ## Pipeline
 
 ```
@@ -73,18 +100,33 @@ src/data_extra.py                │
 src/data_places_actions.py       ┘  closed vocabularies: places, actions, relation types
         ▼
 src/build_dataset2.py            builds dataset/ (CSVs + Excel workbook + validation)
-        ▼
-src/analyze_networks.py          SNA phase (v1; being rebuilt on the v2 schema):
-                                 5 weighted networks, centrality algorithms, Louvain
-                                 communities, interactive HTML + PNG visualizations
+        ├──► src/build_rdf.py    builds rdf/ (Turtle + RDF/XML, validated, SPARQL-checked)
+        ├──► src/analyze_v2.py   5 weighted networks: degree, betweenness, eigenvector,
+        │                        PageRank, Louvain; PNG figures + interactive HTML
+        └──► src/make_paper.js   builds docs/Karaite_SNA_Paper.docx from the live results
 ```
 
 Run:
 
 ```bash
 pip install -r requirements.txt
-cd src && python3 build_dataset2.py     # rebuilds dataset/ from the curated layers
+cd src
+python3 build_dataset2.py     # dataset/  (CSVs + Excel + validation report)
+python3 build_rdf.py          # rdf/      (Turtle + RDF/XML)
+python3 analyze_v2.py         # networks/ (metrics, figures, interactive HTML)
+npm install docx && node make_paper.js   # docs/Karaite_SNA_Paper.docx
 ```
+
+## Networks
+
+| network | nodes | edges | what it shows |
+|---|---|---|---|
+| N1 co-appearance (all persons) | 275 | 1,358 | modular (Q=0.874); giant component of 66 fused by court personnel |
+| N1g giant component | 66 | 405 | brokers: ʿAlan b. Naḥum, the *nasi* David b. Ṣemaḥ, Elʿazar b. Samuel |
+| N2 bipartite person–document | 286 | 258 | which documents carry the network (court copies over-represented) |
+| N3 kinship / marriage / agency | 204 | 180 | 45 families; largest (32) = *nesiʾim* × Tustari via one betrothal |
+| N4 Karaite–Rabbanite contact | 118 | 145 | 107 direct cross-sect edges in 15 of 60 source units |
+| N5 attestation (witnesses/scribes) | 138 | 526 | a Palestinian and an Egyptian block of professional signatories |
 
 To add a new Geniza fragment: add one row in `data_docs.py`, its appearances in
 `data_appearances.py` (and relations/sect entries if relevant), then rebuild.
@@ -93,11 +135,12 @@ To add a new Geniza fragment: add one row in `data_docs.py`, its appearances in
 
 ```
 extraction/     PDF-to-text extraction code (step 1)
-src/            curated data layers + build & analysis scripts
+src/            curated data layers + build, RDF, analysis and paper scripts
 data/external/  Princeton Geniza Lab exports (people, places)
-dataset/        the built database (CSVs + Excel) — v2, shelfmark identifiers
-networks/       v1 network outputs (PNG, interactive HTML, per-node metrics)
-docs/           work plan & analysis report (docx)
+dataset/        the built database (CSVs + Excel) — shelfmark identifiers
+rdf/            karaite_geniza.ttl / .rdf — 17,725 triples
+networks/       figures (PNG), interactive views (HTML), per-node metrics, summary JSON
+docs/           the seminar paper + the earlier work plan & report (docx)
 ```
 
 ## Status / roadmap
@@ -105,9 +148,12 @@ docs/           work plan & analysis report (docx)
 - [x] Harvest of both sources incl. commentaries and footnotes; validation scan
 - [x] v2 database: person IDs & merges, closed place/action/relation vocabularies,
       Princeton Geniza Lab integration, shelfmark identifiers
-- [ ] Rebuild the five networks on the v2 schema (weighted, typed by action)
-- [ ] RDF export (persons, documents, places, actions as predicates)
-- [ ] Final seminar paper: SNA results vs. the historiography of Karaite–Rabbanite relations
+- [x] Five networks on the v2 schema; centralities, Louvain communities, figures
+- [x] RDF export with an event/role ontology, validated and SPARQL-queryable
+- [x] Seminar paper (10 pp.): SNA results vs. the historiography of Karaite–Rabbanite relations
+- [ ] Corpus expansion: further mixed contracts (TS 8.223, TS 24.1, TS Misc. 35.13,
+      Antonin 637), Karaite divorce deeds, Rabbanite court records involving Karaites
+- [ ] Temporal slicing by half-century; comparative Rabbanite baseline corpus
 
 ## Attribution & licensing
 
