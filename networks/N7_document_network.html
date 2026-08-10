@@ -1,0 +1,435 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script>function neighbourhoodHighlight(params) {
+  // console.log("in nieghbourhoodhighlight");
+  allNodes = nodes.get({ returnType: "Object" });
+  // originalNodes = JSON.parse(JSON.stringify(allNodes));
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    highlightActive = true;
+    var i, j;
+    var selectedNode = params.nodes[0];
+    var degrees = 2;
+
+    // mark all nodes as hard to read.
+    for (let nodeId in allNodes) {
+      // nodeColors[nodeId] = allNodes[nodeId].color;
+      allNodes[nodeId].color = "rgba(200,200,200,0.5)";
+      if (allNodes[nodeId].hiddenLabel === undefined) {
+        allNodes[nodeId].hiddenLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+    var connectedNodes = network.getConnectedNodes(selectedNode);
+    var allConnectedNodes = [];
+
+    // get the second degree nodes
+    for (i = 1; i < degrees; i++) {
+      for (j = 0; j < connectedNodes.length; j++) {
+        allConnectedNodes = allConnectedNodes.concat(
+          network.getConnectedNodes(connectedNodes[j])
+        );
+      }
+    }
+
+    // all second degree nodes get a different color and their label back
+    for (i = 0; i < allConnectedNodes.length; i++) {
+      // allNodes[allConnectedNodes[i]].color = "pink";
+      allNodes[allConnectedNodes[i]].color = "rgba(150,150,150,0.75)";
+      if (allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[allConnectedNodes[i]].label =
+          allNodes[allConnectedNodes[i]].hiddenLabel;
+        allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // all first degree nodes get their own color and their label back
+    for (i = 0; i < connectedNodes.length; i++) {
+      // allNodes[connectedNodes[i]].color = undefined;
+      allNodes[connectedNodes[i]].color = nodeColors[connectedNodes[i]];
+      if (allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
+        allNodes[connectedNodes[i]].label =
+          allNodes[connectedNodes[i]].hiddenLabel;
+        allNodes[connectedNodes[i]].hiddenLabel = undefined;
+      }
+    }
+
+    // the main node gets its own color and its label back.
+    // allNodes[selectedNode].color = undefined;
+    allNodes[selectedNode].color = nodeColors[selectedNode];
+    if (allNodes[selectedNode].hiddenLabel !== undefined) {
+      allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
+      allNodes[selectedNode].hiddenLabel = undefined;
+    }
+  } else if (highlightActive === true) {
+    // console.log("highlightActive was true");
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      // allNodes[nodeId].color = "purple";
+      allNodes[nodeId].color = nodeColors[nodeId];
+      // delete allNodes[nodeId].color;
+      if (allNodes[nodeId].hiddenLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
+        allNodes[nodeId].hiddenLabel = undefined;
+      }
+    }
+    highlightActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    // console.log("Nothing was selected");
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        // console.log(allNodes[nodeId]);
+        // allNodes[nodeId].color = {};
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function filterHighlight(params) {
+  allNodes = nodes.get({ returnType: "Object" });
+  // if something is selected:
+  if (params.nodes.length > 0) {
+    filterActive = true;
+    let selectedNodes = params.nodes;
+
+    // hiding all nodes and saving the label
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = true;
+      if (allNodes[nodeId].savedLabel === undefined) {
+        allNodes[nodeId].savedLabel = allNodes[nodeId].label;
+        allNodes[nodeId].label = undefined;
+      }
+    }
+
+    for (let i=0; i < selectedNodes.length; i++) {
+      allNodes[selectedNodes[i]].hidden = false;
+      if (allNodes[selectedNodes[i]].savedLabel !== undefined) {
+        allNodes[selectedNodes[i]].label = allNodes[selectedNodes[i]].savedLabel;
+        allNodes[selectedNodes[i]].savedLabel = undefined;
+      }
+    }
+
+  } else if (filterActive === true) {
+    // reset all nodes
+    for (let nodeId in allNodes) {
+      allNodes[nodeId].hidden = false;
+      if (allNodes[nodeId].savedLabel !== undefined) {
+        allNodes[nodeId].label = allNodes[nodeId].savedLabel;
+        allNodes[nodeId].savedLabel = undefined;
+      }
+    }
+    filterActive = false;
+  }
+
+  // transform the object into an array
+  var updateArray = [];
+  if (params.nodes.length > 0) {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  } else {
+    for (let nodeId in allNodes) {
+      if (allNodes.hasOwnProperty(nodeId)) {
+        updateArray.push(allNodes[nodeId]);
+      }
+    }
+    nodes.update(updateArray);
+  }
+}
+
+function selectNode(nodes) {
+  network.selectNodes(nodes);
+  neighbourhoodHighlight({ nodes: nodes });
+  return nodes;
+}
+
+function selectNodes(nodes) {
+  network.selectNodes(nodes);
+  filterHighlight({nodes: nodes});
+  return nodes;
+}
+
+function highlightFilter(filter) {
+  let selectedNodes = []
+  let selectedProp = filter['property']
+  if (filter['item'] === 'node') {
+    let allNodes = nodes.get({ returnType: "Object" });
+    for (let nodeId in allNodes) {
+      if (allNodes[nodeId][selectedProp] && filter['value'].includes((allNodes[nodeId][selectedProp]).toString())) {
+        selectedNodes.push(nodeId)
+      }
+    }
+  }
+  else if (filter['item'] === 'edge'){
+    let allEdges = edges.get({returnType: 'object'});
+    // check if the selected property exists for selected edge and select the nodes connected to the edge
+    for (let edge in allEdges) {
+      if (allEdges[edge][selectedProp] && filter['value'].includes((allEdges[edge][selectedProp]).toString())) {
+        selectedNodes.push(allEdges[edge]['from'])
+        selectedNodes.push(allEdges[edge]['to'])
+      }
+    }
+  }
+  selectNodes(selectedNodes)
+}</script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+            
+            
+            
+            
+            
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tom-select/2.0.0-rc.4/css/tom-select.min.css" integrity="sha512-43fHB3GLgZfz8QXl1RPQ8O66oIgv3po9cJ5erMt1c4QISq9dYb195T3vr5ImnJPXuVroKcGBPXBFKETW8jrPNQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/tom-select/2.0.0-rc.4/js/tom-select.complete.js" integrity="sha512-jeF9CfnvzDiw9G9xiksVjxR2lib44Gnovvkv+3CgCG6NXCD4gqlA5nDAVW5WjpA+i+/zKsUWV5xNEbW1X/HH0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+
+        
+<center>
+<h1>N7. Document network (documents linked by shared persons)</h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1>N7. Document network (documents linked by shared persons)</h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 900px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+                <div id="select-menu" class="card-header">
+                    <div class="row no-gutters">
+                        <div class="col-10 pb-2">
+                            <select
+                            class="form-select"
+                            aria-label="Default select example"
+                            onchange="selectNode([value]);"
+                            id="select-node"
+                            placeholder="Select node..."
+                            >
+                                <option selected>Select a Node by ID</option>
+                                
+                                    <option value="TS 16.109 + TS AS 153.489">TS 16.109 + TS AS 153.489</option>
+                                
+                                    <option value="TS 20.47r">TS 20.47r</option>
+                                
+                                    <option value="TS 24.13">TS 24.13</option>
+                                
+                                    <option value="ENA NS 18.37">ENA NS 18.37</option>
+                                
+                                    <option value="TS 12.644">TS 12.644</option>
+                                
+                                    <option value="TS 16.50">TS 16.50</option>
+                                
+                                    <option value="TS 20.42">TS 20.42</option>
+                                
+                                    <option value="Mosseri Ia.2">Mosseri Ia.2</option>
+                                
+                                    <option value="Mosseri VII.90.1">Mosseri VII.90.1</option>
+                                
+                                    <option value="TS 18 J 5.10a,b + TS 10 J 27.6">TS 18 J 5.10a,b + TS 10 J 27.6</option>
+                                
+                                    <option value="TS AS 146.417r">TS AS 146.417r</option>
+                                
+                                    <option value="TS 12.621">TS 12.621</option>
+                                
+                                    <option value="TS AS 145.307r + TS Misc. 29.58a r">TS AS 145.307r + TS Misc. 29.58a r</option>
+                                
+                                    <option value="A.I.U. VII D 1r">A.I.U. VII D 1r</option>
+                                
+                                    <option value="ENA 4020.38v">ENA 4020.38v</option>
+                                
+                                    <option value="CUL Add. 3430">CUL Add. 3430</option>
+                                
+                                    <option value="TS 6 Ja 2">TS 6 Ja 2</option>
+                                
+                                    <option value="Bodl. MS Heb. a.3.4v">Bodl. MS Heb. a.3.4v</option>
+                                
+                                    <option value="TS NS 323.35 + TS NS 320.76a,b + TS 12.535">TS NS 323.35 + TS NS 320.76a,b + TS 12.535</option>
+                                
+                                    <option value="Bodl. MS Heb. a.3.44">Bodl. MS Heb. a.3.44</option>
+                                
+                                    <option value="II Firk. Heb. A. 717r">II Firk. Heb. A. 717r</option>
+                                
+                                    <option value="Bodl. MS Heb. d.66.49v-50r">Bodl. MS Heb. d.66.49v-50r</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-2 pb-2">
+                            <button type="button" class="btn btn-primary btn-block" onclick="neighbourhoodHighlight({nodes: []});">Reset Selection</button>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+                  new TomSelect("#select-node",{
+                      create: false,
+                      sortField: {
+                          field: "text",
+                          direction: "asc"
+                      }
+                  });
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS 16.109 + TS AS 153.489", "label": "TS 16.109 + TS AS 153.489", "shape": "dot", "size": 140.72583607192792, "title": "TS 16.109 + TS AS 153.489\nid: \nsect: unknown\nPageRank 0.0585 | betweenness 0.0333"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS 20.47r", "label": "TS 20.47r", "shape": "dot", "size": 114.53473032146334, "title": "TS 20.47r\nid: \nsect: unknown\nPageRank 0.0466 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS 24.13", "label": "TS 24.13", "shape": "dot", "size": 74.52404729986492, "title": "TS 24.13\nid: \nsect: unknown\nPageRank 0.0284 | betweenness 0.0571"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "ENA NS 18.37", "label": "ENA NS 18.37", "shape": "dot", "size": 158.6943468531534, "title": "ENA NS 18.37\nid: \nsect: unknown\nPageRank 0.0667 | betweenness 0.0095"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS 12.644", "label": "TS 12.644", "shape": "dot", "size": 68.56339827571705, "title": "TS 12.644\nid: \nsect: unknown\nPageRank 0.0257 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS 16.50", "label": "TS 16.50", "shape": "dot", "size": 140.6405977767323, "title": "TS 16.50\nid: \nsect: unknown\nPageRank 0.0585 | betweenness 0.0333"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS 20.42", "label": "TS 20.42", "shape": "dot", "size": 54.33612037434695, "title": "TS 20.42\nid: \nsect: unknown\nPageRank 0.0192 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "Mosseri Ia.2", "label": "Mosseri Ia.2", "shape": "dot", "size": 132.10836590815757, "title": "Mosseri Ia.2\nid: \nsect: unknown\nPageRank 0.0546 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "Mosseri VII.90.1", "label": "Mosseri VII.90.1", "shape": "dot", "size": 105.4994909557122, "title": "Mosseri VII.90.1\nid: \nsect: unknown\nPageRank 0.0425 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS 18 J 5.10a,b + TS 10 J 27.6", "label": "TS 18 J 5.10a,b + TS 10 J 27.6", "shape": "dot", "size": 192.9904465722958, "title": "TS 18 J 5.10a,b + TS 10 J 27.6\nid: \nsect: unknown\nPageRank 0.0823 | betweenness 0.0905"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS AS 146.417r", "label": "TS AS 146.417r", "shape": "dot", "size": 52.6403647194991, "title": "TS AS 146.417r\nid: \nsect: unknown\nPageRank 0.0185 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS 12.621", "label": "TS 12.621", "shape": "dot", "size": 110.37112743556474, "title": "TS 12.621\nid: \nsect: unknown\nPageRank 0.0447 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS AS 145.307r + TS Misc. 29.58a r", "label": "TS AS 145.307r + TS Misc. 29.\u2026", "shape": "dot", "size": 110.37112743556474, "title": "TS AS 145.307r + TS Misc. 29.58a r\nid: \nsect: unknown\nPageRank 0.0447 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "A.I.U. VII D 1r", "label": "A.I.U. VII D 1r", "shape": "dot", "size": 112.0, "title": "A.I.U. VII D 1r\nid: \nsect: unknown\nPageRank 0.0455 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "ENA 4020.38v", "label": "ENA 4020.38v", "shape": "dot", "size": 112.0, "title": "ENA 4020.38v\nid: \nsect: unknown\nPageRank 0.0455 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "CUL Add. 3430", "label": "CUL Add. 3430", "shape": "dot", "size": 141.82456140350877, "title": "CUL Add. 3430\nid: \nsect: unknown\nPageRank 0.0590 | betweenness 0.0095"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS 6 Ja 2", "label": "TS 6 Ja 2", "shape": "dot", "size": 82.17543859649123, "title": "TS 6 Ja 2\nid: \nsect: unknown\nPageRank 0.0319 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "Bodl. MS Heb. a.3.4v", "label": "Bodl. MS Heb. a.3.4v", "shape": "dot", "size": 141.82456140350877, "title": "Bodl. MS Heb. a.3.4v\nid: \nsect: unknown\nPageRank 0.0590 | betweenness 0.0095"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "TS NS 323.35 + TS NS 320.76a,b + TS 12.535", "label": "TS NS 323.35 + TS NS 320.76a,\u2026", "shape": "dot", "size": 82.17543859649123, "title": "TS NS 323.35 + TS NS 320.76a,b + TS 12.535\nid: \nsect: unknown\nPageRank 0.0319 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "Bodl. MS Heb. a.3.44", "label": "Bodl. MS Heb. a.3.44", "shape": "dot", "size": 157.9361277581566, "title": "Bodl. MS Heb. a.3.44\nid: \nsect: unknown\nPageRank 0.0663 | betweenness 0.0048"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "II Firk. Heb. A. 717r", "label": "II Firk. Heb. A. 717r", "shape": "dot", "size": 89.03193612092167, "title": "II Firk. Heb. A. 717r\nid: \nsect: unknown\nPageRank 0.0350 | betweenness 0.0000"}, {"color": "#9e9e9e", "font": {"color": "#222"}, "id": "Bodl. MS Heb. d.66.49v-50r", "label": "Bodl. MS Heb. d.66.49v-50r", "shape": "dot", "size": 89.03193612092167, "title": "Bodl. MS Heb. d.66.49v-50r\nid: \nsect: unknown\nPageRank 0.0350 | betweenness 0.0000"}]);
+                  edges = new vis.DataSet([{"color": "#9a9a9a", "from": "TS 16.109 + TS AS 153.489", "title": "weight 4 | Barakat b. David; David (father of Barakat); Na\u0027ama bt. Nisi; Nisi b. Jacob", "to": "TS 20.47r", "value": 4}, {"color": "#9a9a9a", "from": "TS 16.109 + TS AS 153.489", "title": "weight 1 | El\u0027azar b. Samuel b. Sahl ha-Eved", "to": "TS 24.13", "value": 1}, {"color": "#9a9a9a", "from": "TS 24.13", "title": "weight 1 | Alan b. Nahum", "to": "TS 18 J 5.10a,b + TS 10 J 27.6", "value": 1}, {"color": "#9a9a9a", "from": "ENA NS 18.37", "title": "weight 1 | Yefet ha-Kohen b. Eli b. Zita", "to": "TS 12.644", "value": 1}, {"color": "#9a9a9a", "from": "ENA NS 18.37", "title": "weight 1 | Sahlawaya b. Hayyim", "to": "TS 12.621", "value": 1}, {"color": "#9a9a9a", "from": "ENA NS 18.37", "title": "weight 1 | Sahlawaya b. Hayyim", "to": "TS AS 145.307r + TS Misc. 29.58a r", "value": 1}, {"color": "#9a9a9a", "from": "TS 16.50", "title": "weight 1 | Hizkiyahu b. Solomon (nasi)", "to": "TS 20.42", "value": 1}, {"color": "#9a9a9a", "from": "TS 16.50", "title": "weight 1 | David b. Semah (nasi)", "to": "Mosseri Ia.2", "value": 1}, {"color": "#9a9a9a", "from": "TS 16.50", "title": "weight 1 | David b. Semah (nasi)", "to": "Mosseri VII.90.1", "value": 1}, {"color": "#9a9a9a", "from": "TS 16.50", "title": "weight 1 | David b. Semah (nasi)", "to": "TS 18 J 5.10a,b + TS 10 J 27.6", "value": 1}, {"color": "#9a9a9a", "from": "Mosseri Ia.2", "title": "weight 1 | David b. Semah (nasi)", "to": "Mosseri VII.90.1", "value": 1}, {"color": "#9a9a9a", "from": "Mosseri Ia.2", "title": "weight 2 | David b. Semah (nasi); David b. Yesha\u0027ya ha-Melammed", "to": "TS 18 J 5.10a,b + TS 10 J 27.6", "value": 2}, {"color": "#9a9a9a", "from": "Mosseri VII.90.1", "title": "weight 1 | David b. Semah (nasi)", "to": "TS 18 J 5.10a,b + TS 10 J 27.6", "value": 1}, {"color": "#9a9a9a", "from": "TS 18 J 5.10a,b + TS 10 J 27.6", "title": "weight 1 | Nahum b. Nahum", "to": "TS AS 146.417r", "value": 1}, {"color": "#9a9a9a", "from": "TS 12.621", "title": "weight 1 | Sahlawaya b. Hayyim", "to": "TS AS 145.307r + TS Misc. 29.58a r", "value": 1}, {"color": "#9a9a9a", "from": "A.I.U. VII D 1r", "title": "weight 1 | Abraham b. Musallam", "to": "ENA 4020.38v", "value": 1}, {"color": "#9a9a9a", "from": "CUL Add. 3430", "title": "weight 1 | Eli b. Mu\u0027ammar", "to": "TS 6 Ja 2", "value": 1}, {"color": "#9a9a9a", "from": "CUL Add. 3430", "title": "weight 1 | Bishr b. Abraham ha-Levi", "to": "Bodl. MS Heb. a.3.4v", "value": 1}, {"color": "#9a9a9a", "from": "Bodl. MS Heb. a.3.4v", "title": "weight 1 | David b. Isaac ha-Kohen (the scribe)", "to": "TS NS 323.35 + TS NS 320.76a,b + TS 12.535", "value": 1}, {"color": "#9a9a9a", "from": "Bodl. MS Heb. a.3.44", "title": "weight 1 | Jehuda b. Khalaf", "to": "II Firk. Heb. A. 717r", "value": 1}, {"color": "#9a9a9a", "from": "Bodl. MS Heb. a.3.44", "title": "weight 1 | Semah b. Asa (nasi)", "to": "Bodl. MS Heb. d.66.49v-50r", "value": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "forceAtlas2Based": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.008,
+            "damping": 0.55,
+            "gravitationalConstant": -60,
+            "springConstant": 0.08,
+            "springLength": 110
+        },
+        "solver": "forceAtlas2Based",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+                    network.on("selectNode", neighbourhoodHighlight);
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

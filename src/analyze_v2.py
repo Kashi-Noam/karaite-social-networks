@@ -69,16 +69,19 @@ def write_metrics(G, r, name):
                         round(r["pagerank"].get(n,0),5), n2c.get(n,"")])
     return n2c
 
-def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n=28, legend=True):
+def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n=28, legend=True, layout="spring"):
     plt.figure(figsize=size)
-    pos = nx.spring_layout(G, weight="weight", seed=11, k=1.5/math.sqrt(max(G.number_of_nodes(),2)), iterations=200)
+    if layout=="kk" and G.number_of_nodes() < 200:
+        pos = nx.kamada_kawai_layout(G, dist=None, weight="dist")
+    else:
+        pos = nx.spring_layout(G, weight="weight", seed=11, k=1.5/math.sqrt(max(G.number_of_nodes(),2)), iterations=200)
     if color_by == "community" and n2c:
         cm = plt.cm.tab20; colors=[cm(n2c.get(n,0)%20) for n in G]
     else:
         colors=[col(n) for n in G]
     pr = (r or {}).get("pagerank", {})
     mx = max(pr.values()) if pr else 1
-    sizes = [110+2600*pr.get(n,0)/mx for n in G] if pr else [60+40*G.degree(n) for n in G]
+    sizes = [150+3400*pr.get(n,0)/mx for n in G] if pr else [60+40*G.degree(n) for n in G]
     ws = [G[u][v].get("weight",1) for u,v in G.edges()]
     nx.draw_networkx_edges(G,pos,alpha=0.22,width=[0.4+0.8*w for w in ws],edge_color="#666666")
     nx.draw_networkx_nodes(G,pos,node_color=colors,node_size=sizes,alpha=0.93,linewidths=0.5,edgecolors="#2b2b2b")
@@ -88,10 +91,10 @@ def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n
     lab={}
     for n,_ in sorted(((n,pr.get(n,0)) for n in G if n in keys), key=lambda x:-x[1]):
         x,y=pos[n]
-        if all((x-px)**2+((y-py)*1.7)**2 > 0.0075 for px,py in placed):
+        if all((x-px)**2+((y-py)*1.7)**2 > 0.019 for px,py in placed):
             placed.append((x,y)); lab[n]=short(n)
-    nx.draw_networkx_labels(G,pos,labels=lab,font_size=8,
-        bbox=dict(boxstyle="round,pad=0.15",fc="white",ec="none",alpha=0.72))
+    nx.draw_networkx_labels(G,pos,labels=lab,font_size=10.5,font_weight="bold",
+        bbox=dict(boxstyle="round,pad=0.25",fc="white",ec="#bbbbbb",lw=0.5,alpha=0.9))
     if legend and color_by=="sect":
         plt.legend(handles=[Line2D([0],[0],marker='o',color='w',markerfacecolor=c,markersize=9,label=s)
                             for s,c in COL.items()], loc="lower left", fontsize=9, frameon=False)
@@ -135,7 +138,7 @@ r1 = analyze(G1); n1 = write_metrics(G1, r1, "N1_coappearance")
 giant1 = G1.subgraph(max(nx.connected_components(G1), key=len)).copy()
 rg = analyze(giant1); ng = write_metrics(giant1, rg, "N1_giant")
 fig(G1,"fig1_coappearance_full","Figure 1. Co-appearance network, all components\n(node colour = sect, node size = PageRank)",r1,label_n=14)
-fig(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,label_n=26)
+fig(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,label_n=16,size=(17,12),layout="kk")
 fig(giant1,"fig1b_communities","Figure 1b. Louvain communities within the giant component",rg,ng,color_by="community",legend=False,label_n=22)
 REPORT["N1_giant"] = {k:rg[k] for k in ["n_nodes","n_edges","density","modularity"]}
 REPORT["N1_giant"].update(n_communities=len(rg["communities"]), top_betweenness=top(rg["betweenness"]), top_pagerank=top(rg["pagerank"]), top_closeness=top(rg["closeness"]), top_degree=top(rg["degree"]), top_eigen=top(rg["eigenvector"]))
@@ -178,7 +181,7 @@ for r in rels:
     G3.add_edge(r["source"], r["target"], weight=2 if r["relation"] in ("married","betrothed") else 1,
                 label=r["relation"], color=RC.get(r["relation"],"#aaa"), docs=r["evidence"])
 r3 = analyze(G3); n3 = write_metrics(G3, r3, "N3_kinship")
-fig(G3,"fig3_kinship","Figure 3. Kinship, marriage and agency network",r3,size=(17,13),label_n=45)
+fig(G3,"fig3_kinship","Figure 3. Kinship, marriage and agency network",r3,size=(17,13),label_n=22)
 html(G3,"N3_kinship","N3. Kinship, marriage and agency (edge colour = relation type)",r3,n3)
 comp3 = sorted(nx.connected_components(G3), key=len, reverse=True)
 REPORT["N3"] = {k:r3[k] for k in ["n_nodes","n_edges","n_components","giant"]}
@@ -197,7 +200,7 @@ for r in rels:
         if not G4.has_edge(r["source"], r["target"]):
             G4.add_edge(r["source"], r["target"], weight=1, label=r["relation"], docs=r["evidence"])
 r4 = analyze(G4); n4 = write_metrics(G4, r4, "N4_cross_sect")
-fig(G4,"fig4_cross_sect","Figure 4. Karaite–Rabbanite contact network\n(red = Rabbanite, blue = Karaite, grey = unknown)",r4,size=(16,12),label_n=45)
+fig(G4,"fig4_cross_sect","Figure 4. Karaite–Rabbanite contact network\n(red = Rabbanite, blue = Karaite, grey = unknown)",r4,size=(17,12),label_n=20)
 html(G4,"N4_cross_sect","N4. Karaite–Rabbanite contact network",r4,n4)
 kr = [(u,v) for u,v in G4.edges() if {group(u),group(v)} == {"K","R"}]
 docs_R = sorted({a["shelfmark"] for a in apps if group(a["person"])=="R"})
@@ -220,7 +223,7 @@ for d, pp in dw.items():
 G5 = nx.Graph()
 for (a,b), ds in pair.items(): G5.add_edge(a,b,weight=len(ds),docs="; ".join(sorted(ds)))
 r5 = analyze(G5); n5 = write_metrics(G5, r5, "N5_attestation")
-fig(G5,"fig5_attestation","Figure 5. Witness, scribe and declarant co-signature network",r5,size=(16,12),label_n=30)
+fig(G5,"fig5_attestation","Figure 5. Witness, scribe and declarant co-signature network",r5,size=(17,12),label_n=16)
 html(G5,"N5_attestation","N5. Attestation network (witnesses, witnesses of agency, scribes)",r5,n5)
 REPORT["N5"] = {k:r5[k] for k in ["n_nodes","n_edges","n_components","giant","modularity"]}
 REPORT["N5"].update(n_communities=len(r5["communities"]), top_betweenness=top(r5["betweenness"]),
@@ -248,7 +251,7 @@ def subnet(doclist, name):
 
 G6, n6docs = subnet(KET, "ketubbot")
 r6 = analyze(G6); c6 = write_metrics(G6, r6, "N6_ketubbot")
-fig(G6,"fig6_ketubbot","Ketubbot only",r6,size=(16,12),label_n=30)
+fig(G6,"fig6_ketubbot","Ketubbot only",r6,size=(17,12),label_n=16)
 html(G6,"N6_ketubbot","N6. Ketubbot only (Karaite marriage contracts)",r6,c6)
 G6b, n6bdocs = subnet(BET, "betrothals")
 r6b = analyze(G6b)
@@ -298,6 +301,64 @@ if in_n1:
     REPORT["courts"]["mean_betweenness_others"] = round(st.mean(r1["betweenness"][p] for p in others),5)
     REPORT["courts"]["mean_pagerank_court_persons"] = round(st.mean(r1["pagerank"][p] for p in in_n1),5)
     REPORT["courts"]["mean_pagerank_others"] = round(st.mean(r1["pagerank"][p] for p in others),5)
+
+
+# =============================================================== alternative weighting schemes
+# Scheme A (used throughout): weight = number of shared documents.
+# Scheme B (Newman): a tie made inside a document with k participants is worth 1/(k-1),
+#   so a signature in a crowded court copy counts for less than one in a small deed.
+# Scheme C: binary, weight = 1 for any co-appearance.
+doc_size = {d: len(pp) for d, pp in doc_people.items()} if "doc_people" in dir() else {}
+dp2 = defaultdict(set)
+for a in apps:
+    if a["action_en"] not in ("DocumentMention","ScholarlyMention") and a["certainty"]!="contextual":
+        dp2[a["shelfmark"]].add(a["person"])
+GA, GB, GC = nx.Graph(), nx.Graph(), nx.Graph()
+wB = defaultdict(float); wA = defaultdict(int)
+for d, pp in dp2.items():
+    pp = sorted(pp); k = len(pp)
+    for i in range(k):
+        for j in range(i+1, k):
+            wA[(pp[i],pp[j])] += 1
+            wB[(pp[i],pp[j])] += 1.0/max(k-1,1)
+for (a,b),w in wA.items(): GA.add_edge(a,b,weight=w); GC.add_edge(a,b,weight=1)
+for (a,b),w in wB.items(): GB.add_edge(a,b,weight=round(w,4))
+rA, rB, rC = analyze(GA), analyze(GB), analyze(GC)
+write_metrics(GB, rB, "N1_newman_weighting")
+def rank(d, n=10): return [x for x,_ in top(d,n)]
+REPORT["weighting"] = {
+  "scheme_A_shared_documents": {"top_betweenness":top(rA["betweenness"],8), "top_pagerank":top(rA["pagerank"],8)},
+  "scheme_B_newman_1_over_k": {"top_betweenness":top(rB["betweenness"],8), "top_pagerank":top(rB["pagerank"],8)},
+  "scheme_C_binary": {"top_betweenness":top(rC["betweenness"],8), "top_pagerank":top(rC["pagerank"],8)},
+  "overlap_top10_betweenness_A_vs_B": len(set(rank(rA["betweenness"])) & set(rank(rB["betweenness"]))),
+  "overlap_top10_pagerank_A_vs_B": len(set(rank(rA["pagerank"])) & set(rank(rB["pagerank"]))),
+  "overlap_top10_betweenness_A_vs_C": len(set(rank(rA["betweenness"])) & set(rank(rC["betweenness"]))),
+}
+
+# =============================================================== N7 document-document network
+# two documents are linked if they share at least one person; weight = number of shared persons
+person_docs = defaultdict(set)
+for a in apps:
+    if a["action_en"] not in ("DocumentMention","ScholarlyMention") and a["certainty"]!="contextual":
+        person_docs[a["person"]].add(a["shelfmark"])
+dd = defaultdict(set)
+for p, ds in person_docs.items():
+    ds = sorted(ds)
+    for i in range(len(ds)):
+        for j in range(i+1, len(ds)): dd[(ds[i],ds[j])].add(p)
+G7 = nx.Graph()
+for (a,b), ps in dd.items(): G7.add_edge(a,b,weight=len(ps),docs="; ".join(sorted(ps)))
+if G7.number_of_nodes():
+    r7 = analyze(G7)
+    with open(f"{OUT}/N7_document_network.csv","w",newline="",encoding="utf-8-sig") as f:
+        w=csv.writer(f); w.writerow(["doc_a","doc_b","shared_persons","persons"])
+        for (a,b),ps in sorted(dd.items(), key=lambda x:-len(x[1])):
+            w.writerow([a,b,len(ps),"; ".join(sorted(ps))])
+    html(G7,"N7_document_network","N7. Document network (documents linked by shared persons)",r7)
+    REPORT["N7_documents"] = {k:r7[k] for k in ["n_nodes","n_edges","n_components","giant","density"]}
+    REPORT["N7_documents"].update(
+      top_betweenness=top(r7["betweenness"],8), top_degree=top(r7["degree"],8),
+      strongest_links=[[a,b,len(ps)] for (a,b),ps in sorted(dd.items(), key=lambda x:-len(x[1]))[:6]])
 
 # =============================================================== corpus descriptives
 REPORT["corpus"] = {
