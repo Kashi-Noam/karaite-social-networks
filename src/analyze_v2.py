@@ -28,8 +28,10 @@ def sect(p):  return persons.get(p, {}).get("sect", "unknown")
 def group(p):
     s = sect(p)
     return "K" if s.startswith("Karaite") else ("R" if s.startswith("Rabbanite") else "U")
-COL = {"Karaite":"#1f5f9e","Karaite (probable)":"#3d7fb8","Karaite (presumed)":"#9dc3e0",
-       "Rabbanite":"#b3282d","Rabbanite (probable)":"#e08a8d","unknown":"#9e9e9e"}
+COL = {"Karaite":"#3d6b8e","Karaite (probable)":"#6d94b0","Karaite (presumed)":"#b6cbdb",
+       "Rabbanite":"#a8555a","Rabbanite (probable)":"#cf9a9d","unknown":"#b8b3ad"}
+plt.rcParams.update({"font.family":"DejaVu Sans","font.size":11,
+                     "axes.edgecolor":"none","savefig.facecolor":"white"})
 def col(p): return COL.get(sect(p), "#9e9e9e")
 def pid(p):  return persons.get(p, {}).get("person_id", "")
 def short(p):
@@ -83,8 +85,8 @@ def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n
     mx = max(pr.values()) if pr else 1
     sizes = [150+3400*pr.get(n,0)/mx for n in G] if pr else [60+40*G.degree(n) for n in G]
     ws = [G[u][v].get("weight",1) for u,v in G.edges()]
-    nx.draw_networkx_edges(G,pos,alpha=0.22,width=[0.4+0.8*w for w in ws],edge_color="#666666")
-    nx.draw_networkx_nodes(G,pos,node_color=colors,node_size=sizes,alpha=0.93,linewidths=0.5,edgecolors="#2b2b2b")
+    nx.draw_networkx_edges(G,pos,alpha=0.20,width=[0.4+0.7*w for w in ws],edge_color="#8d8d8d")
+    nx.draw_networkx_nodes(G,pos,node_color=colors,node_size=sizes,alpha=0.95,linewidths=0.6,edgecolors="#54514d")
     keys = set(n for n,_ in top(pr, label_n)) | set(n for n,_ in top((r or {}).get("betweenness",{}), 12))
     # drop labels that would collide with an already-placed one
     placed=[]
@@ -93,11 +95,11 @@ def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n
         x,y=pos[n]
         if all((x-px)**2+((y-py)*1.7)**2 > 0.019 for px,py in placed):
             placed.append((x,y)); lab[n]=short(n)
-    nx.draw_networkx_labels(G,pos,labels=lab,font_size=10.5,font_weight="bold",
-        bbox=dict(boxstyle="round,pad=0.25",fc="white",ec="#bbbbbb",lw=0.5,alpha=0.9))
+    nx.draw_networkx_labels(G,pos,labels=lab,font_size=12,font_color="#26241f",
+        bbox=dict(boxstyle="round,pad=0.3",fc="#fffdf8",ec="#cfc9c0",lw=0.6,alpha=0.94))
     if legend and color_by=="sect":
-        plt.legend(handles=[Line2D([0],[0],marker='o',color='w',markerfacecolor=c,markersize=9,label=s)
-                            for s,c in COL.items()], loc="lower left", fontsize=9, frameon=False)
+        plt.legend(handles=[Line2D([0],[0],marker='o',color='w',markerfacecolor=c,markersize=11,label=s)
+                            for s,c in COL.items()], loc="lower left", fontsize=11, frameon=False)
     if os.environ.get("FIGTITLES","1")=="1":
         plt.title(title, fontsize=14)
     plt.axis("off"); plt.tight_layout()
@@ -138,7 +140,7 @@ r1 = analyze(G1); n1 = write_metrics(G1, r1, "N1_coappearance")
 giant1 = G1.subgraph(max(nx.connected_components(G1), key=len)).copy()
 rg = analyze(giant1); ng = write_metrics(giant1, rg, "N1_giant")
 fig(G1,"fig1_coappearance_full","Figure 1. Co-appearance network, all components\n(node colour = sect, node size = PageRank)",r1,label_n=14)
-fig(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,label_n=16,size=(17,12),layout="kk")
+fig(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,label_n=16,size=(18,12.5),layout="kk")
 fig(giant1,"fig1b_communities","Figure 1b. Louvain communities within the giant component",rg,ng,color_by="community",legend=False,label_n=22)
 REPORT["N1_giant"] = {k:rg[k] for k in ["n_nodes","n_edges","density","modularity"]}
 REPORT["N1_giant"].update(n_communities=len(rg["communities"]), top_betweenness=top(rg["betweenness"]), top_pagerank=top(rg["pagerank"]), top_closeness=top(rg["closeness"]), top_degree=top(rg["degree"]), top_eigen=top(rg["eigenvector"]))
@@ -181,7 +183,7 @@ for r in rels:
     G3.add_edge(r["source"], r["target"], weight=2 if r["relation"] in ("married","betrothed") else 1,
                 label=r["relation"], color=RC.get(r["relation"],"#aaa"), docs=r["evidence"])
 r3 = analyze(G3); n3 = write_metrics(G3, r3, "N3_kinship")
-fig(G3,"fig3_kinship","Figure 3. Kinship, marriage and agency network",r3,size=(17,13),label_n=22)
+fig(G3,"fig3_kinship","Figure 3. Kinship, marriage and agency network",r3,size=(18,13),label_n=18)
 html(G3,"N3_kinship","N3. Kinship, marriage and agency (edge colour = relation type)",r3,n3)
 comp3 = sorted(nx.connected_components(G3), key=len, reverse=True)
 REPORT["N3"] = {k:r3[k] for k in ["n_nodes","n_edges","n_components","giant"]}
@@ -200,7 +202,7 @@ for r in rels:
         if not G4.has_edge(r["source"], r["target"]):
             G4.add_edge(r["source"], r["target"], weight=1, label=r["relation"], docs=r["evidence"])
 r4 = analyze(G4); n4 = write_metrics(G4, r4, "N4_cross_sect")
-fig(G4,"fig4_cross_sect","Figure 4. Karaite–Rabbanite contact network\n(red = Rabbanite, blue = Karaite, grey = unknown)",r4,size=(17,12),label_n=20)
+fig(G4,"fig4_cross_sect","Figure 4. Karaite–Rabbanite contact network\n(red = Rabbanite, blue = Karaite, grey = unknown)",r4,size=(18,12.5),label_n=18)
 html(G4,"N4_cross_sect","N4. Karaite–Rabbanite contact network",r4,n4)
 kr = [(u,v) for u,v in G4.edges() if {group(u),group(v)} == {"K","R"}]
 docs_R = sorted({a["shelfmark"] for a in apps if group(a["person"])=="R"})
@@ -223,7 +225,7 @@ for d, pp in dw.items():
 G5 = nx.Graph()
 for (a,b), ds in pair.items(): G5.add_edge(a,b,weight=len(ds),docs="; ".join(sorted(ds)))
 r5 = analyze(G5); n5 = write_metrics(G5, r5, "N5_attestation")
-fig(G5,"fig5_attestation","Figure 5. Witness, scribe and declarant co-signature network",r5,size=(17,12),label_n=16)
+fig(G5,"fig5_attestation","Figure 5. Witness, scribe and declarant co-signature network",r5,size=(18,12.5),label_n=14)
 html(G5,"N5_attestation","N5. Attestation network (witnesses, witnesses of agency, scribes)",r5,n5)
 REPORT["N5"] = {k:r5[k] for k in ["n_nodes","n_edges","n_components","giant","modularity"]}
 REPORT["N5"].update(n_communities=len(r5["communities"]), top_betweenness=top(r5["betweenness"]),
@@ -251,7 +253,7 @@ def subnet(doclist, name):
 
 G6, n6docs = subnet(KET, "ketubbot")
 r6 = analyze(G6); c6 = write_metrics(G6, r6, "N6_ketubbot")
-fig(G6,"fig6_ketubbot","Ketubbot only",r6,size=(17,12),label_n=16)
+fig(G6,"fig6_ketubbot","Ketubbot only",r6,size=(18,12.5),label_n=14)
 html(G6,"N6_ketubbot","N6. Ketubbot only (Karaite marriage contracts)",r6,c6)
 G6b, n6bdocs = subnet(BET, "betrothals")
 r6b = analyze(G6b)
@@ -359,6 +361,49 @@ if G7.number_of_nodes():
     REPORT["N7_documents"].update(
       top_betweenness=top(r7["betweenness"],8), top_degree=top(r7["degree"],8),
       strongest_links=[[a,b,len(ps)] for (a,b),ps in sorted(dd.items(), key=lambda x:-len(x[1]))[:6]])
+
+
+# =============================================================== robustness: without the nasi clause
+# The nasi is named in a fixed opening clause, not as a participant who acted.
+# This test rebuilds the network without those appearances to see whether the
+# judicial finding survives.
+import statistics as _st
+def _build(exclude=()):
+    dp = defaultdict(set)
+    for a in apps:
+        if a["action_en"] in ("DocumentMention","ScholarlyMention","FamilyMention"): continue
+        if a["action_en"] in exclude: continue
+        if a["certainty"]=="contextual": continue
+        dp[a["shelfmark"]].add(a["person"])
+    pr_ = defaultdict(set)
+    for d, pp in dp.items():
+        pp = sorted(pp)
+        for i in range(len(pp)):
+            for j in range(i+1,len(pp)): pr_[(pp[i],pp[j])].add(d)
+    G = nx.Graph()
+    for (a,b),ds in pr_.items(): G.add_edge(a,b,weight=len(ds))
+    return G
+COURT_ALL = {a["person"] for a in apps if a["action_en"] in ("Judge","Trustee","Declarant","NamedNasi")}
+COURT_ACTED = {a["person"] for a in apps if a["action_en"] in ("Judge","Trustee","Declarant")}
+def _probe(G, label):
+    for u,v,d in G.edges(data=True): d["dist"]=1/max(d["weight"],1)
+    bt = nx.betweenness_centrality(G, weight="dist", normalized=True)
+    comps = sorted(nx.connected_components(G), key=len, reverse=True)
+    inA=[p for p in COURT_ALL if p in G]; others=[n for n in G if n not in COURT_ALL]
+    out = {"nodes":G.number_of_nodes(), "giant":len(comps[0]), "components":len(comps),
+           "top_betweenness":top(bt,6)}
+    if inA: out["mean_betweenness_court_roles"]=round(_st.mean(bt[p] for p in inA),5)
+    if others: out["mean_betweenness_others"]=round(_st.mean(bt[p] for p in others),5)
+    if inA and others:
+        out["ratio"]=round(out["mean_betweenness_court_roles"]/max(out["mean_betweenness_others"],1e-9),2)
+    g = G.subgraph(comps[0]).copy()
+    for u,v,d in g.edges(data=True): d["dist"]=1/max(d["weight"],1)
+    out["giant_top_betweenness"]=top(nx.betweenness_centrality(g,weight="dist",normalized=True),5)
+    return out
+REPORT["robustness_nasi_clause"] = {
+  "with_nasi_clause": _probe(_build(), "with"),
+  "without_nasi_clause": _probe(_build(exclude=("NamedNasi",)), "without"),
+}
 
 # =============================================================== corpus descriptives
 REPORT["corpus"] = {
