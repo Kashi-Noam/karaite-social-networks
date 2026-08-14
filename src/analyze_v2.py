@@ -71,12 +71,27 @@ def write_metrics(G, r, name):
                         round(r["pagerank"].get(n,0),5), n2c.get(n,"")])
     return n2c
 
-def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n=28, legend=True, layout="spring"):
+def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n=28, legend=True, layout="spring", kfac=1.5):
     plt.figure(figsize=size)
-    if layout=="kk" and G.number_of_nodes() < 200:
+    if layout=="grid":
+        comps = sorted(nx.connected_components(G), key=len, reverse=True)
+        pos = {}
+        cols = max(1, int(math.ceil(math.sqrt(len(comps)))))
+        for idx, comp in enumerate(comps):
+            sub = G.subgraph(comp)
+            sp = nx.kamada_kawai_layout(sub, weight="dist") if len(comp) > 2 else \
+                 nx.circular_layout(sub)
+            xs = [p[0] for p in sp.values()] or [0]; ys = [p[1] for p in sp.values()] or [0]
+            w = (max(xs)-min(xs)) or 1; h = (max(ys)-min(ys)) or 1
+            scale = 0.42*min(1.0, math.sqrt(len(comp))/5.0) + 0.16
+            cx, cy = (idx % cols)*1.15, -(idx // cols)*1.15
+            for n,(x,y) in sp.items():
+                pos[n] = (cx + scale*(x-(max(xs)+min(xs))/2)/ (w/2 or 1),
+                          cy + scale*(y-(max(ys)+min(ys))/2)/ (h/2 or 1))
+    elif layout=="kk" and G.number_of_nodes() < 200:
         pos = nx.kamada_kawai_layout(G, dist=None, weight="dist")
     else:
-        pos = nx.spring_layout(G, weight="weight", seed=11, k=1.5/math.sqrt(max(G.number_of_nodes(),2)), iterations=200)
+        pos = nx.spring_layout(G, weight="weight", seed=11, k=kfac/math.sqrt(max(G.number_of_nodes(),2)), iterations=300)
     if color_by == "community" and n2c:
         cm = plt.cm.tab20; colors=[cm(n2c.get(n,0)%20) for n in G]
     else:
@@ -404,6 +419,67 @@ REPORT["robustness_nasi_clause"] = {
   "with_nasi_clause": _probe(_build(), "with"),
   "without_nasi_clause": _probe(_build(exclude=("NamedNasi",)), "without"),
 }
+
+
+# =============================================================== readable close-ups for the paper
+# Figure 4 was unreadable because eleven separate clusters overlapped.
+# Draw only the components that actually contain a Karaite-Rabbanite tie.
+def _kr_components(G):
+    keep = set()
+    for comp in nx.connected_components(G):
+        sub = G.subgraph(comp)
+        if any({group(u),group(v)}=={"K","R"} for u,v in sub.edges()):
+            keep |= comp
+    return G.subgraph(keep).copy()
+G4c = _kr_components(G4)
+if G4c.number_of_nodes():
+    r4c = analyze(G4c)
+    fig(G4c,"fig4_cross_sect_closeup",
+        "Figure 4. Karaite-Rabbanite contact, components containing a cross-sect tie",
+        r4c, size=(18,12.5), label_n=22, layout="grid")
+    REPORT["N4_closeup"] = {"n_nodes":G4c.number_of_nodes(), "n_edges":G4c.number_of_edges(),
+                            "n_components":nx.number_connected_components(G4c)}
+
+# Figure 5: close-up on the three components around the recurring signatories
+KEY = ["Bishr b. Abraham ha-Levi", "Eli b. Mu'ammar", "David b. Isaac ha-Kohen (the scribe)"]
+keep = set()
+for k in KEY:
+    if k in G5:
+        keep |= nx.node_connected_component(G5, k)
+G5c = G5.subgraph(keep).copy()
+if G5c.number_of_nodes():
+    r5c = analyze(G5c)
+    fig(G5c,"fig5_attestation_closeup",
+        "Figure 5. Close-up: the components around the three recurring signatories",
+        r5c, size=(18,12.5), label_n=18, layout="kk")
+    REPORT["N5_closeup"] = {"n_nodes":G5c.number_of_nodes(), "n_edges":G5c.number_of_edges(),
+                            "n_components":nx.number_connected_components(G5c),
+                            "share_of_network":round(G5c.number_of_nodes()/G5.number_of_nodes(),2)}
+
+# =============================================================== do communities follow document type?
+_giant = G1.subgraph(max(nx.connected_components(G1), key=len)).copy()
+_comms = nx.community.louvain_communities(_giant, weight="weight", seed=42)
+_pdocs = defaultdict(set)
+for a in apps:
+    if a["certainty"]!="contextual": _pdocs[a["person"]].add(a["shelfmark"])
+_out=[]
+for i,c in enumerate(_comms):
+    ds=set()
+    for p in c: ds |= _pdocs[p]
+    _out.append({"community":i,"people":len(c),"documents":len(ds),
+                 "types":dict(Counter(docs[d]["doc_type"].split(" (")[0] for d in ds if d in docs)),
+                 "places":dict(Counter(docs[d]["place"] for d in ds if d in docs))})
+REPORT["communities_vs_document_type"] = _out
+
+# =============================================================== formal role of the top brokers
+_ROLES = defaultdict(set)
+for a in apps: _ROLES[a["person"]].add(a["action_en"])
+Gnn = _build(exclude=("NamedNasi",))
+for u,v,d in Gnn.edges(data=True): d["dist"]=1/max(d["weight"],1)
+_bt = nx.betweenness_centrality(Gnn, weight="dist", normalized=True)
+REPORT["top_brokers_roles"] = [
+  {"person":n, "betweenness":round(v,4), "roles":sorted(_ROLES[n])}
+  for n,v in sorted(_bt.items(), key=lambda x:-x[1])[:6]]
 
 # =============================================================== corpus descriptives
 REPORT["corpus"] = {
