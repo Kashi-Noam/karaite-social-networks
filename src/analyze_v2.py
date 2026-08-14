@@ -71,7 +71,7 @@ def write_metrics(G, r, name):
                         round(r["pagerank"].get(n,0),5), n2c.get(n,"")])
     return n2c
 
-def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n=28, legend=True, layout="spring", kfac=1.5):
+def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n=28, legend=True, layout="spring", kfac=1.5, min_gap=0.019, fsize=12, must=()):
     plt.figure(figsize=size)
     if layout=="grid":
         comps = sorted(nx.connected_components(G), key=len, reverse=True)
@@ -103,18 +103,28 @@ def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n
     nx.draw_networkx_edges(G,pos,alpha=0.20,width=[0.4+0.7*w for w in ws],edge_color="#8d8d8d")
     nx.draw_networkx_nodes(G,pos,node_color=colors,node_size=sizes,alpha=0.95,linewidths=0.6,edgecolors="#54514d")
     keys = set(n for n,_ in top(pr, label_n)) | set(n for n,_ in top((r or {}).get("betweenness",{}), 12))
-    # drop labels that would collide with an already-placed one
+    # Drop labels whose boxes would overlap one already placed. The box is estimated
+    # from the character count and the figure size, so long names claim more room.
+    xs_ = [p[0] for p in pos.values()] or [0]; ys_ = [p[1] for p in pos.values()] or [0]
+    spanx = (max(xs_)-min(xs_)) or 1; spany = (max(ys_)-min(ys_)) or 1
+    cw = 0.62*fsize/72.0 * spanx/(0.92*size[0])      # data units per character
+    ch = 1.85*fsize/72.0 * spany/(0.92*size[1])      # data units per label height
     placed=[]
     lab={}
-    for n,_ in sorted(((n,pr.get(n,0)) for n in G if n in keys), key=lambda x:-x[1]):
-        x,y=pos[n]
-        if all((x-px)**2+((y-py)*1.7)**2 > 0.019 for px,py in placed):
-            placed.append((x,y)); lab[n]=short(n)
-    nx.draw_networkx_labels(G,pos,labels=lab,font_size=12,font_color="#26241f",
+    order = [n for n in must if n in G] + [n for n,_ in sorted(((n,pr.get(n,0)) for n in G if n in keys),
+                                                                key=lambda x:-x[1]) if n not in must]
+    for n in order:
+        x,y=pos[n]; s=short(n)
+        w=max(len(s)*cw, 3*cw)/2 + 1.0*cw; h=ch/2
+        if all(abs(x-px) > w+pw or abs(y-py) > h+ph for px,py,pw,ph in placed):
+            placed.append((x,y,w,h)); lab[n]=s
+    nx.draw_networkx_labels(G,pos,labels=lab,font_size=fsize,font_color="#26241f",
         bbox=dict(boxstyle="round,pad=0.3",fc="#fffdf8",ec="#cfc9c0",lw=0.6,alpha=0.94))
+    plt.xlim(min(xs_)-13*cw, max(xs_)+13*cw); plt.ylim(min(ys_)-2.2*ch, max(ys_)+2.2*ch)
     if legend and color_by=="sect":
-        plt.legend(handles=[Line2D([0],[0],marker='o',color='w',markerfacecolor=c,markersize=11,label=s)
-                            for s,c in COL.items()], loc="lower left", fontsize=11, frameon=False)
+        plt.legend(handles=[Line2D([0],[0],marker='o',color='w',markerfacecolor=c,markersize=9,label=s)
+                            for s,c in COL.items()], loc="upper center", bbox_to_anchor=(0.5,-0.005),
+                   ncol=6, fontsize=10, frameon=False, handletextpad=0.3, columnspacing=1.4)
     if os.environ.get("FIGTITLES","1")=="1":
         plt.title(title, fontsize=14)
     plt.axis("off"); plt.tight_layout()
@@ -436,7 +446,8 @@ if G4c.number_of_nodes():
     r4c = analyze(G4c)
     fig(G4c,"fig4_cross_sect_closeup",
         "Figure 4. Karaite-Rabbanite contact, components containing a cross-sect tie",
-        r4c, size=(18,12.5), label_n=22, layout="grid")
+        r4c, size=(10.8,7.6), label_n=22, layout="grid", fsize=11,
+        must=["Eli b. Amram","Solomon b. Jehuda (Gaon)","Nathan b. Abraham (Gaon)","Josiah b. Solomon (nasi)"])
     REPORT["N4_closeup"] = {"n_nodes":G4c.number_of_nodes(), "n_edges":G4c.number_of_edges(),
                             "n_components":nx.number_connected_components(G4c)}
 
@@ -451,10 +462,32 @@ if G5c.number_of_nodes():
     r5c = analyze(G5c)
     fig(G5c,"fig5_attestation_closeup",
         "Figure 5. Close-up: the components around the three recurring signatories",
-        r5c, size=(18,12.5), label_n=18, layout="kk")
+        r5c, size=(10.5,7.3), label_n=18, layout="kk", fsize=12, must=KEY)
     REPORT["N5_closeup"] = {"n_nodes":G5c.number_of_nodes(), "n_edges":G5c.number_of_edges(),
                             "n_components":nx.number_connected_components(G5c),
                             "share_of_network":round(G5c.number_of_nodes()/G5.number_of_nodes(),2)}
+
+# Figure 2 in the paper: the ketubbot network is too fragmented to draw whole,
+# so the paper shows a close-up of its giant component with every person named.
+_g6c = G6.subgraph(max(nx.connected_components(G6), key=len)).copy()
+r6c = analyze(_g6c)
+fig(_g6c,"fig6_ketubbot_closeup",
+    "Figure 2. Close-up: the giant component of the ketubbot network",
+    r6c, size=(10.5,7.3), label_n=_g6c.number_of_nodes(), layout="kk", fsize=11, must=KEY)
+REPORT["N6_closeup"] = {"n_nodes":_g6c.number_of_nodes(), "n_edges":_g6c.number_of_edges(),
+                        "share_of_network":round(_g6c.number_of_nodes()/G6.number_of_nodes(),2),
+                        "n_documents":len({d for _,_,dd in _g6c.edges(data=True) for d in dd["docs"].split("; ")})}
+
+# Figure 3 in the paper: 45 family components cannot be read at page size,
+# so the paper shows a close-up of the largest one, the nesi'im x Tustari merger.
+_g3c = G3.subgraph(max(nx.connected_components(G3), key=len)).copy()
+r3c = analyze(_g3c)
+fig(_g3c,"fig3_kinship_closeup",
+    "Figure 3. Close-up: the largest family component (nesi'im x Tustari)",
+    r3c, size=(10.5,7.3), label_n=_g3c.number_of_nodes(), layout="kk", fsize=11,
+    must=["Yefet b. Abraham al-Tustari","Ama al-Aziz bt. Hizkiyahu","Hizkiyahu b. Solomon (nasi)",
+          "Sahl (Yashar) b. Israel al-Tustari","Anan b. David"])
+REPORT["N3_closeup"] = {"n_nodes":_g3c.number_of_nodes(), "n_edges":_g3c.number_of_edges()}
 
 # =============================================================== do communities follow document type?
 _giant = G1.subgraph(max(nx.connected_components(G1), key=len)).copy()
