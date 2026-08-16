@@ -73,16 +73,33 @@ def write_metrics(G, r, name):
     return n2c
 
 
-def _relax(pos, radius, size, iters=150, pad=1.35, groups=None):
+def _relax(pos, radius, size, iters=150, pad=1.35, groups=None, fixed_scale=False):
     """Push apart nodes whose drawn circles would overlap on the page.
     radius is in points; the layout is rescaled through the figure size so that
-    the separation test is done in the units the reader actually sees."""
+    the separation test is done in the units the reader actually sees.
+
+    By default the data-units-per-point scale is recomputed every iteration
+    from the current spread, which lets the canvas grow as crowded nodes push
+    apart. For a dense graph that recompute can runs away: pushing one pair
+    apart grows the span, which shrinks everyone else's point-distance under
+    the recompute, triggering a wider wave of pushes, growing the span again.
+    fixed_scale=True freezes the scale at the starting layout instead, so a
+    push only ever resolves the pair it was computed for.
+    """
     nodes = list(pos)
     blocks = [list(g) for g in groups] if groups else [nodes]
-    for _ in range(iters):
+    fixed_upx = fixed_upy = None
+    if fixed_scale:
         xs = [pos[n][0] for n in nodes]; ys = [pos[n][1] for n in nodes]
         spanx = (max(xs)-min(xs)) or 1.0; spany = (max(ys)-min(ys)) or 1.0
-        upx = spanx/(0.92*size[0]*72.0); upy = spany/(0.92*size[1]*72.0)
+        fixed_upx = spanx/(0.92*size[0]*72.0); fixed_upy = spany/(0.92*size[1]*72.0)
+    for _ in range(iters):
+        if fixed_scale:
+            upx, upy = fixed_upx, fixed_upy
+        else:
+            xs = [pos[n][0] for n in nodes]; ys = [pos[n][1] for n in nodes]
+            spanx = (max(xs)-min(xs)) or 1.0; spany = (max(ys)-min(ys)) or 1.0
+            upx = spanx/(0.92*size[0]*72.0); upy = spany/(0.92*size[1]*72.0)
         moved = 0.0
         for blk in blocks:
          for i in range(len(blk)):
@@ -186,162 +203,227 @@ def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n
     plt.savefig(f"{outdir or OUT}/{name}.png", dpi=200, facecolor="white"); plt.close()
 
 
-# =============================================================== clique clustering
-# A co-appearance network is a union of near-complete cliques, one per document:
-# everyone who signed the same deed is mutually connected. Drawn as circles and
-# edges that reads as a hairball, and most labels have to be dropped as soon as
-# a clique has more than a handful of people. Anyone whose *entire* presence in
-# the network is explained by a single shared document contributes nothing a
-# reader can use beyond "was in this document with these other people" -- so
-# instead of drawing them as nodes, they are collapsed into one labelled box
-# per document listing every name. People who appear in more than one document
-# stay as ordinary circles, since they are the ones the network's structure
-# actually depends on.
-def cluster_cliques(G, pin=(), min_leaf=3):
-    doc_nodes = defaultdict(set)
-    person_docs = defaultdict(set)
-    for u, v, d in G.edges(data=True):
-        ds = [x.strip() for x in d.get("docs", "").split(";") if x.strip()]
-        for doc in ds:
-            doc_nodes[doc].add(u); doc_nodes[doc].add(v)
-        person_docs[u].update(ds); person_docs[v].update(ds)
-    pin = set(pin)
-    leaves_by_doc = defaultdict(list)
-    for p, ds in person_docs.items():
-        if p not in pin and len(ds) == 1:
-            leaves_by_doc[next(iter(ds))].append(p)
-    H = nx.Graph()
-    cinfo = {}
-    collapsed = set()
-    for doc, leaves in leaves_by_doc.items():
-        if len(leaves) < min_leaf: continue
-        cid = f"CLUSTER::{doc}"
-        cinfo[cid] = {"doc": doc, "members": sorted(leaves)}
-        collapsed.update(leaves)
-        H.add_node(cid, cluster=True)
-        for h in doc_nodes[doc] - set(leaves):
-            H.add_edge(cid, h)
-    for n in G.nodes():
-        if n not in collapsed:
-            H.add_node(n, cluster=False)
-    for u, v in G.edges():
-        if u not in collapsed and v not in collapsed:
-            H.add_edge(u, v)
-    return H, cinfo
+# =============================================================== full-page plain graphs
+# These are ordinary node-link drawings, same as fig() -- circles, edges, every
+# person labelled -- but sized to fill one dedicated page rather than sharing a
+# page with body text, and laid out directly in points (1 data unit = 1pt) so
+# a push never has to be re-scaled mid-relaxation. The earlier version rescaled
+# the data-units-per-point conversion every iteration (matching what fig()
+# does), which for a dense 66-node graph fed back on itself -- pushing one
+# pair apart grew the span, which under the recompute shrank everyone else's
+# point-distance, triggering a wider wave of pushes, growing the span again --
+# and ran away to overflow. Working in points from the start removes that
+# feedback loop entirely.
+#
+# Each node's footprint is an axis-aligned box (circle on top, label below),
+# not a circle padded out to cover the label -- a box lets two nodes sit
+# closer when their labels don't actually occupy the same direction, which
+# matters because label text, not the circle, is what has to fit 40-60
+# people onto one page. Overlap is resolved on whichever axis needs the
+# smaller push, standard rectangle-separation.
+def _relax_boxes(pos, boxes, iters=1500, pad=1.05):
+    """pos, boxes already in points. boxes[n] = (halfw, top, bot): the box
+    spans x in [-halfw,+halfw] and y in [-bot,+top] relative to the node."""
+    nodes = list(pos)
+    for _ in range(iters):
+        moved = 0.0
+        for i in range(len(nodes)):
+            a = nodes[i]; hwa, topa, bota = boxes[a]
+            ax, ay = pos[a]
+            for j in range(i+1, len(nodes)):
+                b = nodes[j]; hwb, topb, botb = boxes[b]
+                bx, by = pos[b]
+                ddx = bx-ax; ddy = by-ay
+                ox = (hwa+hwb)*pad - abs(ddx)
+                oy = (min(topa, ddy+topb) - max(-bota, ddy-botb))*pad
+                if ox > 0 and oy > 0:
+                    moved += min(ox, oy)
+                    if ox < oy:
+                        s = 1.0 if ddx >= 0 else -1.0
+                        push = s*ox/2.0
+                        ax -= push; bx += push
+                    else:
+                        s = 1.0 if ddy >= 0 else -1.0
+                        push = s*oy/2.0
+                        ay -= push; by += push
+                    pos[a] = (ax, ay); pos[b] = (bx, by)
+        if moved < 0.5: break
+    return pos
 
-def _short_doc(s):
-    s = str(s)
-    return s if len(s) <= 26 else s[:24] + "…"
+def _extent_area(pos, boxes):
+    x0 = min(pos[n][0]-boxes[n][0] for n in pos); x1 = max(pos[n][0]+boxes[n][0] for n in pos)
+    y0 = min(pos[n][1]-boxes[n][2] for n in pos); y1 = max(pos[n][1]+boxes[n][1] for n in pos)
+    return (x1-x0)*(y1-y0)
 
-def _shelf_pack(items, target_w, gap=16):
-    """Lay out rectangular items left-to-right, wrapping onto a new shelf once
-    a row exceeds target_w. Unlike a force layout, this can never overlap --
-    the guarantee comes from the arithmetic, not from an optimiser converging.
-    items: list of (id, w, h). Returns {id: (left, top)}, total (w, h)."""
-    x = y = shelf_h = maxw = 0.0
-    pos = {}
-    for nid, w, h in items:
-        if x > 0 and x + w > target_w:
-            x = 0.0; y += shelf_h + gap; shelf_h = 0.0
-        pos[nid] = (x, y)
-        x += w + gap
-        shelf_h = max(shelf_h, h)
-        maxw = max(maxw, x - gap)
-    return pos, maxw, y + shelf_h
-
-def fig_clustered(G, name, title, r, size=(12, 10), fsize=11, pin=(), min_leaf=3,
-                   outdir=None, legend=True, seed=7):
-    H, cinfo = cluster_cliques(G, pin=pin, min_leaf=min_leaf)
-    pr = (r or {}).get("pagerank", {})
-    mx = max(pr.values()) if pr else 1
-
-    # Every node's footprint, in points -- circles sized by PageRank as
-    # elsewhere, cluster boxes sized by the text list they carry. This is
-    # computed once and used both to pack the layout (no overlap is possible
-    # by construction) and to draw the node afterwards, so the two always agree.
-    box, lines_of, circle_r = {}, {}, {}
-    for n, d in H.nodes(data=True):
-        if d.get("cluster"):
-            info = cinfo[n]
-            members = info["members"]
-            ncol = 2 if len(members) > 9 else 1
-            rows = math.ceil(len(members) / ncol)
-            cols = [members[i*rows:(i+1)*rows] for i in range(ncol)]
-            colw = [max((len(short(m)) for m in c), default=1) for c in cols]
-            w = sum(c*5.6 for c in colw) + 20*ncol
-            w = max(w, len(_short_doc(info["doc"]))*5.8 + 20)
-            h = (rows + 1.6) * fsize * 1.34 + 12
-            lines_of[n] = (_short_doc(info["doc"]), cols)
-            box[n] = (w, h)
+def _compact_pack(pos, boxes, iters=600, pad=1.05, rounds=16, shrink=0.93):
+    """Plain relaxation only ever pushes apart -- nothing pulls the layout
+    back together once early pushes have spread it out, so it tends to settle
+    into a loose, elongated packing with a lot of dead space. This alternates
+    a global shrink toward the centroid with a re-relax, keeping the result
+    only when it actually got smaller, which is what pushes packing density
+    up from ~20% toward something a page-budget estimate can rely on."""
+    pos = _relax_boxes(pos, boxes, iters=iters, pad=pad)
+    best_area = _extent_area(pos, boxes)
+    for _ in range(rounds):
+        cx = sum(p[0] for p in pos.values())/len(pos)
+        cy = sum(p[1] for p in pos.values())/len(pos)
+        trial = {n: (cx+(x-cx)*shrink, cy+(y-cy)*shrink) for n, (x, y) in pos.items()}
+        trial = _relax_boxes(trial, boxes, iters=iters, pad=pad)
+        area = _extent_area(trial, boxes)
+        if area < best_area*0.995:
+            pos, best_area = trial, area
         else:
-            area = 90 + 1000*pr.get(n, 0)/mx
-            rad = math.sqrt(area/math.pi); circle_r[n] = rad
-            lbl_w = len(short(n))*6.0 + 16
-            lbl_h = fsize*1.35 + 8
-            box[n] = (max(2*rad, lbl_w), 2*rad + 4 + lbl_h)
+            break
+    return pos
 
-    # order nodes by a breadth-first walk from the best-connected node, so that
-    # things which are actually linked tend to land on the same or an
-    # adjacent shelf instead of at opposite ends of the packing
-    if H.number_of_nodes():
-        root = max(H.degree, key=lambda x: x[1])[0]
-        order = list(nx.bfs_tree(H, root))
-        order += [n for n in H.nodes() if n not in order]
+def _fold_to_aspect(pos, boxes, target_ratio):
+    """Box relaxation only ever pushes apart, never pulls together, and for a
+    scatter of short-and-wide boxes the cheapest push to resolve any given
+    overlap is almost always vertical (the short axis needs less absolute
+    displacement to clear), so many independent pairwise pushes add up to one
+    emergent bias: the whole layout stacks into a tall thin column (or, less
+    often, a wide thin row) instead of filling a page in two dimensions. This
+    slices that strip into `K` bands and lays them side by side or stacked,
+    the way a printed sheet gets folded into columns -- a plain rearrangement
+    (each band keeps its internal relative positions, so no overlap it didn't
+    already have) rather than a physics step, and is what actually fixes the
+    aspect ratio."""
+    x0 = min(pos[n][0]-boxes[n][0] for n in pos); x1 = max(pos[n][0]+boxes[n][0] for n in pos)
+    y0 = min(pos[n][1]-boxes[n][2] for n in pos); y1 = max(pos[n][1]+boxes[n][1] for n in pos)
+    w, h = x1-x0, y1-y0
+    cur = w/h if h else 1.0
+    if 0.85*target_ratio <= cur <= target_ratio/0.85:
+        return pos
+    new_pos = dict(pos)
+    if cur < target_ratio:
+        K = max(1, round(math.sqrt(target_ratio*(h/w))))
+        if K <= 1: return pos
+        order = sorted(pos, key=lambda n: pos[n][1])
+        seg = math.ceil(len(order)/K)
+        col_w = w*1.15
+        for ci in range(K):
+            chunk = order[ci*seg:(ci+1)*seg]
+            if not chunk: continue
+            base_y = min(pos[n][1] for n in chunk)
+            for n in chunk:
+                new_pos[n] = (pos[n][0] + ci*col_w, pos[n][1] - base_y)
     else:
-        order = []
-    target_w = size[0]*72*0.94
-    items = [(n, box[n][0], box[n][1]) for n in order]
-    topleft, total_w, total_h = _shelf_pack(items, target_w)
+        K = max(1, round(math.sqrt((w/h)/target_ratio)))
+        if K <= 1: return pos
+        order = sorted(pos, key=lambda n: pos[n][0])
+        seg = math.ceil(len(order)/K)
+        row_h = h*1.15
+        for ri in range(K):
+            chunk = order[ri*seg:(ri+1)*seg]
+            if not chunk: continue
+            base_x = min(pos[n][0] for n in chunk)
+            for n in chunk:
+                new_pos[n] = (pos[n][0] - base_x, pos[n][1] + ri*row_h)
+    return new_pos
 
-    # node "position" = centre of its box, y flipped so the packing (which
-    # grows downward) reads top-to-bottom on the plotted (upward) y-axis
-    pos = {}
-    for n in order:
-        x0, y0 = topleft[n]; w, h = box[n]
-        pos[n] = (x0 + w/2, total_h - (y0 + h/2))
+def _node_boxes(G, r, fsize):
+    pr = (r or {}).get("pagerank", {}); mx = max(pr.values()) if pr else 1
+    radius, boxes = {}, {}
+    for nd in G:
+        area = 45 + 620*pr.get(nd, 0)/mx
+        rad = math.sqrt(area/math.pi); radius[nd] = rad
+        lw = len(short(nd))*0.585*fsize + 9
+        lh = fsize*1.28 + 5
+        boxes[nd] = (max(rad, lw/2), rad, rad + 3 + lh)
+    return radius, boxes
 
-    fig_h_in = size[1] if size[1] > total_h/72+1.4 else total_h/72 + 1.4
-    plt.figure(figsize=(size[0], fig_h_in))
-    ax = plt.gca()
+def fig_page(G, name, title, r, fsize=11, outdir=None, seed=11,
+             portrait_wh=(7.6, 9.1), landscape_wh=(10.1, 6.6), legend=True,
+             min_fsize=6.5):
+    n = G.number_of_nodes()
+    k = 2.4/math.sqrt(max(n, 2))
+    pos0 = nx.spring_layout(G, weight="weight", seed=seed, k=k, iterations=500)
+    xs0 = [p[0] for p in pos0.values()]; ys0 = [p[1] for p in pos0.values()]
+    spanx0 = (max(xs0)-min(xs0)) or 1; spany0 = (max(ys0)-min(ys0)) or 1
+    cx = sum(xs0)/n; cy = sum(ys0)/n
+    # orientation is decided once, from the graph's own raw spring shape --
+    # not from whatever shape the box-packing settles into, since that can be
+    # distorted by the vertical-stacking bias _fold_to_aspect corrects for
+    landscape = (spanx0/spany0) > 1.15
+    budget_w, budget_h = (landscape_wh if landscape else portrait_wh)
+    budget_w, budget_h = budget_w*72*0.92, budget_h*72*0.92
+    target_ratio = budget_w/budget_h
 
-    for u, v in H.edges():
-        x1, y1 = pos[u]; x2, y2 = pos[v]
-        ax.plot([x1, x2], [y1, y2], color="#a9a9a9", alpha=0.5, linewidth=1.0, zorder=1)
+    fs = fsize
+    while True:
+        radius, boxes = _node_boxes(G, r, fs)
+        # seed the point-space scale from the average box footprint, so relax
+        # starts near its target size instead of needing to expand by orders
+        # of magnitude (which is what made the naive version unstable).
+        # The search over fsize only needs an approximate fit estimate, so it
+        # runs a cheap, short pack; the expensive high-quality pack (more
+        # iterations, more compaction rounds) only runs once, after the
+        # right fsize is already known -- doing it on every trial fsize is
+        # what made this loop slow enough to time out.
+        avg_w = sum(2*hw for hw, _, _ in boxes.values())/n
+        scale = avg_w*1.35*math.sqrt(n) / max(spanx0, spany0)
+        pos = {nd: ((pos0[nd][0]-cx)*scale, (pos0[nd][1]-cy)*scale) for nd in G}
+        pos = _compact_pack(pos, boxes, iters=180, pad=1.05, rounds=4)
+        pos = _fold_to_aspect(pos, boxes, target_ratio)
+        pos = _compact_pack(pos, boxes, iters=150, pad=1.05, rounds=3)
 
-    for n, d in H.nodes(data=True):
-        x, y = pos[n]
-        if d.get("cluster"):
-            w, h = box[n]
-            ax.add_patch(FancyBboxPatch((x-w/2, y-h/2), w, h,
-                boxstyle=f"round,pad=0,rounding_size={0.10*min(w,h):.4f}",
-                fc="#f3efe6", ec="#a89f8f", lw=0.9, zorder=2))
-            header, cols = lines_of[n]
-            ax.text(x, y+h/2-8, header, ha="center", va="top",
-                     fontsize=max(fsize-1, 8), fontweight="bold", color="#3a362e", zorder=3)
-            ncol = len(cols); colw = w/ncol
-            for ci, members in enumerate(cols):
-                cx = x - w/2 + colw*(ci+0.5)
-                ax.text(cx, y+h/2-8-1.55*fsize, "\n".join(members),
-                         ha="center", va="top", fontsize=max(fsize-1.5, 7.5),
-                         linespacing=1.5, color="#26241f", zorder=3)
-        else:
-            rad = circle_r[n]
-            ax.add_patch(Ellipse((x, y+ (box[n][1]/2 - rad)), 2*rad, 2*rad,
-                                  fc=col(n), ec="#54514d", lw=0.8, zorder=3))
-            ax.text(x, y+box[n][1]/2-2*rad-6, short(n), ha="center", va="top",
-                     fontsize=fsize, color="#26241f", zorder=4,
-                     bbox=dict(boxstyle="round,pad=0.3", fc="#fffdf8", ec="#cfc9c0", lw=0.6, alpha=0.97))
+        x0 = min(pos[nd][0]-boxes[nd][0] for nd in G); x1 = max(pos[nd][0]+boxes[nd][0] for nd in G)
+        y0 = min(pos[nd][1]-boxes[nd][2] for nd in G); y1 = max(pos[nd][1]+boxes[nd][1] for nd in G)
+        need_w, need_h = (x1-x0), (y1-y0)
+        fit = max(need_w/budget_w, need_h/budget_h)
+        if fit <= 1.0 or fs <= min_fsize:
+            break
+        fs = max(min_fsize, fs*max(0.85, math.sqrt(1/fit)))
 
-    ax.set_xlim(-10, total_w+10); ax.set_ylim(-10, total_h+10)
-    ax.set_aspect("equal")
+    # the fsize search above used a short/cheap pack to estimate fit quickly;
+    # redo the final chosen fsize once with the full iteration budget so the
+    # shipped layout is fully converged, not just approximately so
+    pos = {nd: ((pos0[nd][0]-cx)*scale, (pos0[nd][1]-cy)*scale) for nd in G}
+    pos = _compact_pack(pos, boxes, iters=600, pad=1.05, rounds=14)
+    pos = _fold_to_aspect(pos, boxes, target_ratio)
+    pos = _compact_pack(pos, boxes, iters=500, pad=1.05, rounds=8)
+    x0 = min(pos[nd][0]-boxes[nd][0] for nd in G); x1 = max(pos[nd][0]+boxes[nd][0] for nd in G)
+    y0 = min(pos[nd][1]-boxes[nd][2] for nd in G); y1 = max(pos[nd][1]+boxes[nd][1] for nd in G)
+    need_w, need_h = (x1-x0), (y1-y0)
+    fit = max(need_w/budget_w, need_h/budget_h)
+
+    # numeric self-check against the *drawn* rectangles, not a proxy circle
+    nodes = list(pos); viol = 0; worst = 0.0
+    for i in range(len(nodes)):
+        a = nodes[i]; hwa, topa, bota = boxes[a]; ax, ay = pos[a]
+        for j in range(i+1, len(nodes)):
+            b = nodes[j]; hwb, topb, botb = boxes[b]; bx, by = pos[b]
+            ddx = bx-ax; ddy = by-ay
+            ox = (hwa+hwb) - abs(ddx)
+            oy = (min(topa, ddy+topb) - max(-bota, ddy-botb))
+            if ox > 0 and oy > 0:
+                viol += 1; worst = max(worst, min(ox, oy))
+    print(f"[fig_page] {name}: landscape={landscape} fsize={fs:.1f} "
+          f"needed={need_w:.0f}x{need_h:.0f}pt fit={fit:.2f} "
+          f"violations={viol}/{len(nodes)*(len(nodes)-1)//2} worst_overlap={worst:.1f}pt")
+
+    size = (need_w/72/0.92, need_h/72/0.92)
+    plt.figure(figsize=size)
+    ws = [G[u][v].get("weight", 1) for u, v in G.edges()]
+    nx.draw_networkx_edges(G, pos, alpha=0.22, width=[0.4+0.6*w for w in ws], edge_color="#8d8d8d")
+    nx.draw_networkx_nodes(G, pos, node_color=[col(nd) for nd in G],
+                            node_size=[math.pi*radius[nd]**2 for nd in G],
+                            alpha=0.95, linewidths=0.6, edgecolors="#54514d")
+    lpos = {nd: (pos[nd][0], pos[nd][1] - radius[nd] - 0.5*fs - 4) for nd in G}
+    nx.draw_networkx_labels(G, lpos, labels={nd: short(nd) for nd in G}, font_size=fs,
+        font_color="#26241f",
+        bbox=dict(boxstyle="round,pad=0.22", fc="#fffdf8", ec="#cfc9c0", lw=0.6, alpha=0.95))
+    plt.xlim(x0, x1); plt.ylim(y0, y1)
     if legend:
         plt.legend(handles=[Line2D([0],[0],marker='o',color='w',markerfacecolor=c,markersize=9,label=s)
-                            for s,c in COL.items()], loc="upper center", bbox_to_anchor=(0.5,-0.02),
-                   ncol=6, fontsize=10, frameon=False, handletextpad=0.3, columnspacing=1.4)
-    if os.environ.get("FIGTITLES","1")=="1":
-        plt.title(title, fontsize=14)
+                            for s, c in COL.items()], loc="upper center", bbox_to_anchor=(0.5, -0.01),
+                   ncol=3 if landscape else 2, fontsize=10, frameon=False, handletextpad=0.3, columnspacing=1.4)
+    if os.environ.get("FIGTITLES", "1") == "1":
+        title_fs = 13 if size[0] >= 7.5 else max(9, 13*size[0]/7.5)
+        plt.title(title, fontsize=title_fs, wrap=True)
     plt.axis("off"); plt.tight_layout()
-    plt.savefig(f"{outdir or OUT}/{name}.png", dpi=200, facecolor="white"); plt.close()
+    plt.savefig(f"{outdir or OUT}/{name}.png", dpi=220, facecolor="white"); plt.close()
+    return landscape, size
 
 
 def html(G, name, title, r=None, n2c=None, extra=None):
@@ -379,8 +461,7 @@ r1 = analyze(G1); n1 = write_metrics(G1, r1, "N1_coappearance")
 giant1 = G1.subgraph(max(nx.connected_components(G1), key=len)).copy()
 rg = analyze(giant1); ng = write_metrics(giant1, rg, "N1_giant")
 fig(G1,"fig1_coappearance_full","Figure 1. Co-appearance network, all components\n(node colour = sect, node size = PageRank)",r1,label_n=14)
-_pin1 = set(n for n,_ in top(rg["pagerank"],10)) | set(n for n,_ in top(rg["betweenness"],10))
-fig_clustered(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,size=(11,9.5),fsize=11,pin=_pin1)
+fig_page(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,fsize=9.5,min_fsize=5.5)
 fig(giant1,"fig1b_communities","Figure 1b. Louvain communities within the giant component",rg,ng,color_by="community",legend=False,label_n=22)
 REPORT["N1_giant"] = {k:rg[k] for k in ["n_nodes","n_edges","density","modularity"]}
 REPORT["N1_giant"].update(n_communities=len(rg["communities"]), top_betweenness=top(rg["betweenness"]), top_pagerank=top(rg["pagerank"]), top_closeness=top(rg["closeness"]), top_degree=top(rg["degree"]), top_eigen=top(rg["eigenvector"]))
@@ -675,10 +756,9 @@ for k in KEY:
 G5c = G5.subgraph(keep).copy()
 if G5c.number_of_nodes():
     r5c = analyze(G5c)
-    _pin5 = set(KEY) | set(n for n,_ in top(r5c["pagerank"],8)) | set(n for n,_ in top(r5c["betweenness"],8))
-    fig_clustered(G5c,"fig5_attestation_closeup",
+    fig_page(G5c,"fig5_attestation_closeup",
         "Figure 5. Close-up: the components around the three recurring signatories",
-        r5c, size=(11,10), fsize=11, pin=_pin5)
+        r5c, fsize=10)
     REPORT["N5_closeup"] = {"n_nodes":G5c.number_of_nodes(), "n_edges":G5c.number_of_edges(),
                             "n_components":nx.number_connected_components(G5c),
                             "share_of_network":round(G5c.number_of_nodes()/G5.number_of_nodes(),2)}
@@ -687,10 +767,9 @@ if G5c.number_of_nodes():
 # so the paper shows a close-up of its giant component with every person named.
 _g6c = G6.subgraph(max(nx.connected_components(G6), key=len)).copy()
 r6c = analyze(_g6c)
-_pin6 = set(KEY) | set(n for n,_ in top(r6c["pagerank"],8)) | set(n for n,_ in top(r6c["betweenness"],8))
-fig_clustered(_g6c,"fig6_ketubbot_closeup",
+fig_page(_g6c,"fig6_ketubbot_closeup",
     "Figure 2. Close-up: the giant component of the ketubbot network",
-    r6c, size=(11,9.5), fsize=11, pin=_pin6)
+    r6c, fsize=9.5)
 REPORT["N6_closeup"] = {"n_nodes":_g6c.number_of_nodes(), "n_edges":_g6c.number_of_edges(),
                         "share_of_network":round(_g6c.number_of_nodes()/G6.number_of_nodes(),2),
                         "n_documents":len({d for _,_,dd in _g6c.edges(data=True) for d in dd["docs"].split("; ")})}
