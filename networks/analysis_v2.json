@@ -27,6 +27,10 @@
     0.03076923076923077
    ],
    [
+    "Nisi b. Jacob",
+    0.014423076923076924
+   ],
+   [
     "David (father of Barakat)",
     0.014423076923076924
    ],
@@ -39,11 +43,7 @@
     0.014423076923076924
    ],
    [
-    "Nisi b. Jacob",
-    0.014423076923076924
-   ],
-   [
-    "Abraham b. al-Fara",
+    "Faras bt. Simha",
     0.0
    ]
   ],
@@ -62,31 +62,31 @@
    ],
    [
     "El'azar b. Samuel b. Sahl ha-Eved",
-    0.026231295976509632
-   ],
-   [
-    "David (father of Barakat)",
-    0.019657287185401294
-   ],
-   [
-    "Na'ama bt. Nisi",
-    0.019657287185401294
-   ],
-   [
-    "Barakat b. David",
-    0.019657287185401294
+    0.026231295976509635
    ],
    [
     "Nisi b. Jacob",
-    0.019657287185401294
+    0.019657287185401297
+   ],
+   [
+    "David (father of Barakat)",
+    0.019657287185401297
+   ],
+   [
+    "Na'ama bt. Nisi",
+    0.019657287185401297
+   ],
+   [
+    "Barakat b. David",
+    0.019657287185401297
    ],
    [
     "Nahum b. Nahum",
     0.01733269715917503
    ],
    [
-    "Abraham b. al-Fara",
-    0.014817973037451472
+    "Abraham (Abu Sa'ad) b. Sahl al-Tustari",
+    0.014817973037451467
    ]
   ],
   "top_closeness": [
@@ -111,23 +111,23 @@
     0.48872180451127817
    ],
    [
-    "David b. Isaac b. Moses ha-Levi",
-    0.48507462686567165
-   ],
-   [
-    "Barakat b. Menahem ha-Kohen",
-    0.48507462686567165
-   ],
-   [
     "Efraim b. Mansur b. Furat",
     0.48507462686567165
    ],
    [
-    "Yefet b. Abraham ha-Levi",
+    "Ama al-Qadar bt. Efraim",
     0.48507462686567165
    ],
    [
-    "Khalaf b. Mahfuz",
+    "Joseph b. [...] b. Efraim",
+    0.48507462686567165
+   ],
+   [
+    "Sedaqa b. Masliah b. Sahl ha-Levi",
+    0.48507462686567165
+   ],
+   [
+    "David b. Isaac b. Moses ha-Levi",
     0.48507462686567165
    ]
   ],
@@ -137,16 +137,20 @@
     38
    ],
    [
-    "El'azar b. Samuel b. Sahl ha-Eved",
+    "Alan b. Nahum",
     24
    ],
    [
-    "Alan b. Nahum",
+    "El'azar b. Samuel b. Sahl ha-Eved",
     24
    ],
    [
     "David b. Yesha'ya ha-Melammed",
     23
+   ],
+   [
+    "Nisi b. Jacob",
+    14
    ],
    [
     "David (father of Barakat)",
@@ -161,26 +165,22 @@
     14
    ],
    [
-    "Nisi b. Jacob",
-    14
-   ],
-   [
     "Nahum b. Nahum",
     13
    ],
    [
-    "Abraham b. al-Fara",
+    "Faras bt. Simha",
     12
    ]
   ],
   "top_eigen": [
    [
     "David b. Semah (nasi)",
-    0.36652343432649476
+    0.3665234343264947
    ],
    [
     "David b. Yesha'ya ha-Melammed",
-    0.2850263450644654
+    0.2850263450644652
    ],
    [
     "Alan b. Nahum",
@@ -188,30 +188,30 @@
    ],
    [
     "Nahum b. Nahum",
-    0.1593291476686477
-   ],
-   [
-    "David b. Isaac b. Moses ha-Levi",
-    0.15862020938499327
-   ],
-   [
-    "Barakat b. Menahem ha-Kohen",
-    0.15862020938499327
+    0.15932914766864772
    ],
    [
     "Efraim b. Mansur b. Furat",
     0.15862020938499327
    ],
    [
-    "Yefet b. Abraham ha-Levi",
+    "Ama al-Qadar bt. Efraim",
     0.15862020938499327
    ],
    [
-    "Khalaf b. Mahfuz",
+    "Joseph b. [...] b. Efraim",
     0.15862020938499327
    ],
    [
     "Sedaqa b. Masliah b. Sahl ha-Levi",
+    0.15862020938499327
+   ],
+   [
+    "David b. Isaac b. Moses ha-Levi",
+    0.15862020938499327
+   ],
+   [
+    "Khalaf b. Mahfuz",
     0.15862020938499327
    ]
   ]
@@ -1725,8 +1725,8 @@
      0.034482758620689655
     ],
     [
-     "Na'ama bt. Nisi",
-     0.0217785843920145
+     "Nisi b. Jacob",
+     0.02177858439201453
     ]
    ]
   },
@@ -1777,11 +1777,11 @@
      0.2918552036199095
     ],
     [
-     "Abraham b. Isaac",
+     "Jacob b. Isaac",
      0.0
     ],
     [
-     "Bahlul b. Isaac ha-Kohen",
+     "Solomon b. David ha-Kohen (the scholar)",
      0.0
     ]
    ]
@@ -1811,18 +1811,6 @@
  "communities_vs_document_type": [
   {
    "community": 0,
-   "people": 12,
-   "documents": 3,
-   "types": {
-    "deed of betrothal": 2,
-    "mixed Karaite-Rabbanite ketubba": 1
-   },
-   "places": {
-    "Fustat": 3
-   }
-  },
-  {
-   "community": 1,
    "people": 13,
    "documents": 3,
    "types": {
@@ -1834,7 +1822,31 @@
    }
   },
   {
+   "community": 1,
+   "people": 12,
+   "documents": 3,
+   "types": {
+    "deed of betrothal": 2,
+    "mixed Karaite-Rabbanite ketubba": 1
+   },
+   "places": {
+    "Fustat": 3
+   }
+  },
+  {
    "community": 2,
+   "people": 11,
+   "documents": 2,
+   "types": {
+    "deed of betrothal": 2
+   },
+   "places": {
+    "Fustat": 1,
+    "Unknown": 1
+   }
+  },
+  {
+   "community": 3,
    "people": 16,
    "documents": 4,
    "types": {
@@ -1845,27 +1857,15 @@
    }
   },
   {
-   "community": 3,
+   "community": 4,
    "people": 14,
    "documents": 2,
    "types": {
-    "ketubba": 1,
-    "deed of betrothal": 1
+    "deed of betrothal": 1,
+    "ketubba": 1
    },
    "places": {
     "Fustat": 2
-   }
-  },
-  {
-   "community": 4,
-   "people": 11,
-   "documents": 2,
-   "types": {
-    "deed of betrothal": 2
-   },
-   "places": {
-    "Unknown": 1,
-    "Fustat": 1
    }
   }
  ],

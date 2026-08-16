@@ -12,6 +12,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
+from matplotlib.patches import Ellipse, FancyBboxPatch
 from pyvis.network import Network
 
 DS, OUT = "../dataset", "../networks"
@@ -184,6 +185,165 @@ def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n
     plt.axis("off"); plt.tight_layout()
     plt.savefig(f"{outdir or OUT}/{name}.png", dpi=200, facecolor="white"); plt.close()
 
+
+# =============================================================== clique clustering
+# A co-appearance network is a union of near-complete cliques, one per document:
+# everyone who signed the same deed is mutually connected. Drawn as circles and
+# edges that reads as a hairball, and most labels have to be dropped as soon as
+# a clique has more than a handful of people. Anyone whose *entire* presence in
+# the network is explained by a single shared document contributes nothing a
+# reader can use beyond "was in this document with these other people" -- so
+# instead of drawing them as nodes, they are collapsed into one labelled box
+# per document listing every name. People who appear in more than one document
+# stay as ordinary circles, since they are the ones the network's structure
+# actually depends on.
+def cluster_cliques(G, pin=(), min_leaf=3):
+    doc_nodes = defaultdict(set)
+    person_docs = defaultdict(set)
+    for u, v, d in G.edges(data=True):
+        ds = [x.strip() for x in d.get("docs", "").split(";") if x.strip()]
+        for doc in ds:
+            doc_nodes[doc].add(u); doc_nodes[doc].add(v)
+        person_docs[u].update(ds); person_docs[v].update(ds)
+    pin = set(pin)
+    leaves_by_doc = defaultdict(list)
+    for p, ds in person_docs.items():
+        if p not in pin and len(ds) == 1:
+            leaves_by_doc[next(iter(ds))].append(p)
+    H = nx.Graph()
+    cinfo = {}
+    collapsed = set()
+    for doc, leaves in leaves_by_doc.items():
+        if len(leaves) < min_leaf: continue
+        cid = f"CLUSTER::{doc}"
+        cinfo[cid] = {"doc": doc, "members": sorted(leaves)}
+        collapsed.update(leaves)
+        H.add_node(cid, cluster=True)
+        for h in doc_nodes[doc] - set(leaves):
+            H.add_edge(cid, h)
+    for n in G.nodes():
+        if n not in collapsed:
+            H.add_node(n, cluster=False)
+    for u, v in G.edges():
+        if u not in collapsed and v not in collapsed:
+            H.add_edge(u, v)
+    return H, cinfo
+
+def _short_doc(s):
+    s = str(s)
+    return s if len(s) <= 26 else s[:24] + "…"
+
+def _shelf_pack(items, target_w, gap=16):
+    """Lay out rectangular items left-to-right, wrapping onto a new shelf once
+    a row exceeds target_w. Unlike a force layout, this can never overlap --
+    the guarantee comes from the arithmetic, not from an optimiser converging.
+    items: list of (id, w, h). Returns {id: (left, top)}, total (w, h)."""
+    x = y = shelf_h = maxw = 0.0
+    pos = {}
+    for nid, w, h in items:
+        if x > 0 and x + w > target_w:
+            x = 0.0; y += shelf_h + gap; shelf_h = 0.0
+        pos[nid] = (x, y)
+        x += w + gap
+        shelf_h = max(shelf_h, h)
+        maxw = max(maxw, x - gap)
+    return pos, maxw, y + shelf_h
+
+def fig_clustered(G, name, title, r, size=(12, 10), fsize=11, pin=(), min_leaf=3,
+                   outdir=None, legend=True, seed=7):
+    H, cinfo = cluster_cliques(G, pin=pin, min_leaf=min_leaf)
+    pr = (r or {}).get("pagerank", {})
+    mx = max(pr.values()) if pr else 1
+
+    # Every node's footprint, in points -- circles sized by PageRank as
+    # elsewhere, cluster boxes sized by the text list they carry. This is
+    # computed once and used both to pack the layout (no overlap is possible
+    # by construction) and to draw the node afterwards, so the two always agree.
+    box, lines_of, circle_r = {}, {}, {}
+    for n, d in H.nodes(data=True):
+        if d.get("cluster"):
+            info = cinfo[n]
+            members = info["members"]
+            ncol = 2 if len(members) > 9 else 1
+            rows = math.ceil(len(members) / ncol)
+            cols = [members[i*rows:(i+1)*rows] for i in range(ncol)]
+            colw = [max((len(short(m)) for m in c), default=1) for c in cols]
+            w = sum(c*5.6 for c in colw) + 20*ncol
+            w = max(w, len(_short_doc(info["doc"]))*5.8 + 20)
+            h = (rows + 1.6) * fsize * 1.34 + 12
+            lines_of[n] = (_short_doc(info["doc"]), cols)
+            box[n] = (w, h)
+        else:
+            area = 90 + 1000*pr.get(n, 0)/mx
+            rad = math.sqrt(area/math.pi); circle_r[n] = rad
+            lbl_w = len(short(n))*6.0 + 16
+            lbl_h = fsize*1.35 + 8
+            box[n] = (max(2*rad, lbl_w), 2*rad + 4 + lbl_h)
+
+    # order nodes by a breadth-first walk from the best-connected node, so that
+    # things which are actually linked tend to land on the same or an
+    # adjacent shelf instead of at opposite ends of the packing
+    if H.number_of_nodes():
+        root = max(H.degree, key=lambda x: x[1])[0]
+        order = list(nx.bfs_tree(H, root))
+        order += [n for n in H.nodes() if n not in order]
+    else:
+        order = []
+    target_w = size[0]*72*0.94
+    items = [(n, box[n][0], box[n][1]) for n in order]
+    topleft, total_w, total_h = _shelf_pack(items, target_w)
+
+    # node "position" = centre of its box, y flipped so the packing (which
+    # grows downward) reads top-to-bottom on the plotted (upward) y-axis
+    pos = {}
+    for n in order:
+        x0, y0 = topleft[n]; w, h = box[n]
+        pos[n] = (x0 + w/2, total_h - (y0 + h/2))
+
+    fig_h_in = size[1] if size[1] > total_h/72+1.4 else total_h/72 + 1.4
+    plt.figure(figsize=(size[0], fig_h_in))
+    ax = plt.gca()
+
+    for u, v in H.edges():
+        x1, y1 = pos[u]; x2, y2 = pos[v]
+        ax.plot([x1, x2], [y1, y2], color="#a9a9a9", alpha=0.5, linewidth=1.0, zorder=1)
+
+    for n, d in H.nodes(data=True):
+        x, y = pos[n]
+        if d.get("cluster"):
+            w, h = box[n]
+            ax.add_patch(FancyBboxPatch((x-w/2, y-h/2), w, h,
+                boxstyle=f"round,pad=0,rounding_size={0.10*min(w,h):.4f}",
+                fc="#f3efe6", ec="#a89f8f", lw=0.9, zorder=2))
+            header, cols = lines_of[n]
+            ax.text(x, y+h/2-8, header, ha="center", va="top",
+                     fontsize=max(fsize-1, 8), fontweight="bold", color="#3a362e", zorder=3)
+            ncol = len(cols); colw = w/ncol
+            for ci, members in enumerate(cols):
+                cx = x - w/2 + colw*(ci+0.5)
+                ax.text(cx, y+h/2-8-1.55*fsize, "\n".join(members),
+                         ha="center", va="top", fontsize=max(fsize-1.5, 7.5),
+                         linespacing=1.5, color="#26241f", zorder=3)
+        else:
+            rad = circle_r[n]
+            ax.add_patch(Ellipse((x, y+ (box[n][1]/2 - rad)), 2*rad, 2*rad,
+                                  fc=col(n), ec="#54514d", lw=0.8, zorder=3))
+            ax.text(x, y+box[n][1]/2-2*rad-6, short(n), ha="center", va="top",
+                     fontsize=fsize, color="#26241f", zorder=4,
+                     bbox=dict(boxstyle="round,pad=0.3", fc="#fffdf8", ec="#cfc9c0", lw=0.6, alpha=0.97))
+
+    ax.set_xlim(-10, total_w+10); ax.set_ylim(-10, total_h+10)
+    ax.set_aspect("equal")
+    if legend:
+        plt.legend(handles=[Line2D([0],[0],marker='o',color='w',markerfacecolor=c,markersize=9,label=s)
+                            for s,c in COL.items()], loc="upper center", bbox_to_anchor=(0.5,-0.02),
+                   ncol=6, fontsize=10, frameon=False, handletextpad=0.3, columnspacing=1.4)
+    if os.environ.get("FIGTITLES","1")=="1":
+        plt.title(title, fontsize=14)
+    plt.axis("off"); plt.tight_layout()
+    plt.savefig(f"{outdir or OUT}/{name}.png", dpi=200, facecolor="white"); plt.close()
+
+
 def html(G, name, title, r=None, n2c=None, extra=None):
     net = Network(height="900px", width="100%", bgcolor="#ffffff", font_color="#222",
                   select_menu=True, cdn_resources="remote")
@@ -219,7 +379,8 @@ r1 = analyze(G1); n1 = write_metrics(G1, r1, "N1_coappearance")
 giant1 = G1.subgraph(max(nx.connected_components(G1), key=len)).copy()
 rg = analyze(giant1); ng = write_metrics(giant1, rg, "N1_giant")
 fig(G1,"fig1_coappearance_full","Figure 1. Co-appearance network, all components\n(node colour = sect, node size = PageRank)",r1,label_n=14)
-fig(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,label_n=26,size=(10.5,8.6),layout="kk",fsize=10)
+_pin1 = set(n for n,_ in top(rg["pagerank"],10)) | set(n for n,_ in top(rg["betweenness"],10))
+fig_clustered(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,size=(11,9.5),fsize=11,pin=_pin1)
 fig(giant1,"fig1b_communities","Figure 1b. Louvain communities within the giant component",rg,ng,color_by="community",legend=False,label_n=22)
 REPORT["N1_giant"] = {k:rg[k] for k in ["n_nodes","n_edges","density","modularity"]}
 REPORT["N1_giant"].update(n_communities=len(rg["communities"]), top_betweenness=top(rg["betweenness"]), top_pagerank=top(rg["pagerank"]), top_closeness=top(rg["closeness"]), top_degree=top(rg["degree"]), top_eigen=top(rg["eigenvector"]))
@@ -514,9 +675,10 @@ for k in KEY:
 G5c = G5.subgraph(keep).copy()
 if G5c.number_of_nodes():
     r5c = analyze(G5c)
-    fig(G5c,"fig5_attestation_closeup",
+    _pin5 = set(KEY) | set(n for n,_ in top(r5c["pagerank"],8)) | set(n for n,_ in top(r5c["betweenness"],8))
+    fig_clustered(G5c,"fig5_attestation_closeup",
         "Figure 5. Close-up: the components around the three recurring signatories",
-        r5c, size=(10.5,9.6), label_n=22, layout="kk", fsize=11, must=KEY)
+        r5c, size=(11,10), fsize=11, pin=_pin5)
     REPORT["N5_closeup"] = {"n_nodes":G5c.number_of_nodes(), "n_edges":G5c.number_of_edges(),
                             "n_components":nx.number_connected_components(G5c),
                             "share_of_network":round(G5c.number_of_nodes()/G5.number_of_nodes(),2)}
@@ -525,9 +687,10 @@ if G5c.number_of_nodes():
 # so the paper shows a close-up of its giant component with every person named.
 _g6c = G6.subgraph(max(nx.connected_components(G6), key=len)).copy()
 r6c = analyze(_g6c)
-fig(_g6c,"fig6_ketubbot_closeup",
+_pin6 = set(KEY) | set(n for n,_ in top(r6c["pagerank"],8)) | set(n for n,_ in top(r6c["betweenness"],8))
+fig_clustered(_g6c,"fig6_ketubbot_closeup",
     "Figure 2. Close-up: the giant component of the ketubbot network",
-    r6c, size=(10.5,7.3), label_n=_g6c.number_of_nodes(), layout="kk", fsize=10, must=KEY)
+    r6c, size=(11,9.5), fsize=11, pin=_pin6)
 REPORT["N6_closeup"] = {"n_nodes":_g6c.number_of_nodes(), "n_edges":_g6c.number_of_edges(),
                         "share_of_network":round(_g6c.number_of_nodes()/G6.number_of_nodes(),2),
                         "n_documents":len({d for _,_,dd in _g6c.edges(data=True) for d in dd["docs"].split("; ")})}
