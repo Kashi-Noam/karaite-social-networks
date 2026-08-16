@@ -169,7 +169,12 @@ def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n
             placed.append((x,y,w,h)); lab[n]=s
     nx.draw_networkx_labels(G,lpos,labels=lab,font_size=fsize,font_color="#26241f",
         bbox=dict(boxstyle="round,pad=0.3",fc="#fffdf8",ec="#cfc9c0",lw=0.6,alpha=0.94))
-    plt.xlim(min(xs_)-13*cw, max(xs_)+13*cw); plt.ylim(min(ys_)-3.0*ch, max(ys_)+2.2*ch)
+    # the axes must contain the label boxes too, not only the nodes
+    _lx0 = min([px-pw for px,py,pw,ph in placed] + [min(xs_)])
+    _lx1 = max([px+pw for px,py,pw,ph in placed] + [max(xs_)])
+    _ly0 = min([py-ph for px,py,pw,ph in placed] + [min(ys_)])
+    _ly1 = max([py+ph for px,py,pw,ph in placed] + [max(ys_)])
+    plt.xlim(_lx0-1.5*cw, _lx1+1.5*cw); plt.ylim(_ly0-0.8*ch, _ly1+0.8*ch)
     if legend and color_by=="sect":
         plt.legend(handles=[Line2D([0],[0],marker='o',color='w',markerfacecolor=c,markersize=9,label=s)
                             for s,c in COL.items()], loc="upper center", bbox_to_anchor=(0.5,-0.005),
@@ -214,7 +219,7 @@ r1 = analyze(G1); n1 = write_metrics(G1, r1, "N1_coappearance")
 giant1 = G1.subgraph(max(nx.connected_components(G1), key=len)).copy()
 rg = analyze(giant1); ng = write_metrics(giant1, rg, "N1_giant")
 fig(G1,"fig1_coappearance_full","Figure 1. Co-appearance network, all components\n(node colour = sect, node size = PageRank)",r1,label_n=14)
-fig(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,label_n=26,size=(10.5,7.3),layout="kk",fsize=11)
+fig(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,label_n=26,size=(10.5,8.6),layout="kk",fsize=10)
 fig(giant1,"fig1b_communities","Figure 1b. Louvain communities within the giant component",rg,ng,color_by="community",legend=False,label_n=22)
 REPORT["N1_giant"] = {k:rg[k] for k in ["n_nodes","n_edges","density","modularity"]}
 REPORT["N1_giant"].update(n_communities=len(rg["communities"]), top_betweenness=top(rg["betweenness"]), top_pagerank=top(rg["pagerank"]), top_closeness=top(rg["closeness"]), top_degree=top(rg["degree"]), top_eigen=top(rg["eigenvector"]))
@@ -511,7 +516,7 @@ if G5c.number_of_nodes():
     r5c = analyze(G5c)
     fig(G5c,"fig5_attestation_closeup",
         "Figure 5. Close-up: the components around the three recurring signatories",
-        r5c, size=(10.5,7.3), label_n=18, layout="kk", fsize=12, must=KEY)
+        r5c, size=(10.5,9.6), label_n=22, layout="kk", fsize=11, must=KEY)
     REPORT["N5_closeup"] = {"n_nodes":G5c.number_of_nodes(), "n_edges":G5c.number_of_edges(),
                             "n_components":nx.number_connected_components(G5c),
                             "share_of_network":round(G5c.number_of_nodes()/G5.number_of_nodes(),2)}
@@ -522,7 +527,7 @@ _g6c = G6.subgraph(max(nx.connected_components(G6), key=len)).copy()
 r6c = analyze(_g6c)
 fig(_g6c,"fig6_ketubbot_closeup",
     "Figure 2. Close-up: the giant component of the ketubbot network",
-    r6c, size=(10.5,7.3), label_n=_g6c.number_of_nodes(), layout="kk", fsize=11, must=KEY)
+    r6c, size=(10.5,7.3), label_n=_g6c.number_of_nodes(), layout="kk", fsize=10, must=KEY)
 REPORT["N6_closeup"] = {"n_nodes":_g6c.number_of_nodes(), "n_edges":_g6c.number_of_edges(),
                         "share_of_network":round(_g6c.number_of_nodes()/G6.number_of_nodes(),2),
                         "n_documents":len({d for _,_,dd in _g6c.edges(data=True) for d in dd["docs"].split("; ")})}
@@ -533,7 +538,7 @@ _g3c = G3.subgraph(max(nx.connected_components(G3), key=len)).copy()
 r3c = analyze(_g3c)
 fig(_g3c,"fig3_kinship_closeup",
     "Figure 3. Close-up: the largest family component (nesi'im x Tustari)",
-    r3c, size=(10.5,7.3), label_n=_g3c.number_of_nodes(), layout="kk", fsize=11,
+    r3c, size=(10.5,9.0), label_n=_g3c.number_of_nodes(), layout="kk", fsize=10,
     must=["Yefet b. Abraham al-Tustari","Ama al-Aziz bt. Hizkiyahu","Hizkiyahu b. Solomon (nasi)",
           "Sahl (Yashar) b. Israel al-Tustari","Anan b. David"])
 REPORT["N3_closeup"] = {"n_nodes":_g3c.number_of_nodes(), "n_edges":_g3c.number_of_edges()}
