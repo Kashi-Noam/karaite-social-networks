@@ -461,8 +461,8 @@ r1 = analyze(G1); n1 = write_metrics(G1, r1, "N1_coappearance")
 giant1 = G1.subgraph(max(nx.connected_components(G1), key=len)).copy()
 rg = analyze(giant1); ng = write_metrics(giant1, rg, "N1_giant")
 fig(G1,"fig1_coappearance_full","Figure 1. Co-appearance network, all components\n(node colour = sect, node size = PageRank)",r1,label_n=14)
-fig_page(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,fsize=9.5,min_fsize=5.5)
-fig(giant1,"fig1b_communities","Figure 1b. Louvain communities within the giant component",rg,ng,color_by="community",legend=False,label_n=22)
+fig_page(giant1,"fig1_coappearance","Figure 1. Component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,fsize=9.5,min_fsize=5.5)
+fig(giant1,"fig1b_communities","Figure 1b. Louvain communities within the component",rg,ng,color_by="community",legend=False,label_n=22)
 REPORT["N1_giant"] = {k:rg[k] for k in ["n_nodes","n_edges","density","modularity"]}
 REPORT["N1_giant"].update(n_communities=len(rg["communities"]), top_betweenness=top(rg["betweenness"]), top_pagerank=top(rg["pagerank"]), top_closeness=top(rg["closeness"]), top_degree=top(rg["degree"]), top_eigen=top(rg["eigenvector"]))
 html(G1,"N1_coappearance","N1. Co-appearance network (weighted)",r1,n1)
@@ -768,7 +768,7 @@ if G5c.number_of_nodes():
 _g6c = G6.subgraph(max(nx.connected_components(G6), key=len)).copy()
 r6c = analyze(_g6c)
 fig_page(_g6c,"fig6_ketubbot_closeup",
-    "Figure 2. Close-up: the giant component of the ketubbot network",
+    "Figure 2. Close-up: the component of the ketubbot network",
     r6c, fsize=9.5)
 REPORT["N6_closeup"] = {"n_nodes":_g6c.number_of_nodes(), "n_edges":_g6c.number_of_edges(),
                         "share_of_network":round(_g6c.number_of_nodes()/G6.number_of_nodes(),2),
@@ -828,7 +828,7 @@ FULL = f"{OUT}/full"
 os.makedirs(FULL, exist_ok=True)
 _plates = [
     (G1,      "N1_coappearance_all", r1,  "grid", "Plate 1. Co-appearance network, all 275 persons, every component"),
-    (giant1,  "N1_giant",            rg,  "kk",   "Plate 2. Giant component of the co-appearance network, 66 persons"),
+    (giant1,  "N1_giant",            rg,  "kk",   "Plate 2. Component of the co-appearance network, 66 persons"),
     (G2,      "N2_person_document",  r2,  "grid", "Plate 3. Bipartite network of persons and documents"),
     (G3,      "N3_kinship",          r3,  "grid", "Plate 4. Kinship, marriage and agency, all 45 family components"),
     (G4,      "N4_cross_sect",       r4,  "grid", "Plate 5. Karaite-Rabbanite contact, all components"),
