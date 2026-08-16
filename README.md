@@ -116,7 +116,7 @@ pip install -r requirements.txt
 cd src
 python3 build_dataset2.py     # dataset/  (CSVs + Excel + validation report)
 python3 build_rdf.py          # rdf/      (Turtle + RDF/XML)
-python3 analyze_v2.py         # networks/ (metrics, figures, interactive HTML)
+python3 analyze_v2.py         # networks/ (metrics, figures, interactive HTML, full-size plates)
 npm install docx
 node make_paper_he.js         # docs/עבודה_רשתות_קראים.docx   (Hebrew, the submitted paper)
 node make_paper.js            # docs/Karaite_SNA_Paper.docx    (English version)
@@ -135,6 +135,14 @@ node make_paper.js            # docs/Karaite_SNA_Paper.docx    (English version)
 | N6 ketubbot only | 178 | 838 | 28 marriage contracts; sparse, run by witnesses and scribes |
 | N6b betrothals only | 96 | 490 | 13 deeds; twice as dense, dominated by the *nasi* — the court's business |
 
+### Figures
+
+The figures printed in the paper are close-ups: a page is roughly 16 cm wide, and a
+network of a few hundred people split into dozens of components cannot be drawn
+legibly at that width. `networks/full/` therefore holds every network whole, at
+6000 x 4200 pixels with all node labels, for reading on screen; `networks/*.html`
+holds the interactive versions, with per-node metrics on hover.
+
 To add a new Geniza fragment: add one row in `data_docs.py`, its appearances in
 `data_appearances.py` (and relations/sect entries if relevant), then rebuild.
 
@@ -147,6 +155,7 @@ data/external/  Princeton Geniza Lab exports (people, places)
 dataset/        the built database (CSVs + Excel) — shelfmark identifiers
 rdf/            karaite_geniza.ttl / .rdf — 17,725 triples
 networks/       figures (PNG), interactive views (HTML), per-node metrics, summary JSON
+networks/full/  the same networks whole, at plate size, every node named (see its README)
 docs/           the seminar paper + the earlier work plan & report (docx)
 ```
 

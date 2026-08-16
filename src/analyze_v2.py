@@ -71,23 +71,64 @@ def write_metrics(G, r, name):
                         round(r["pagerank"].get(n,0),5), n2c.get(n,"")])
     return n2c
 
-def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n=28, legend=True, layout="spring", kfac=1.5, min_gap=0.019, fsize=12, must=()):
+
+def _relax(pos, radius, size, iters=150, pad=1.35, groups=None):
+    """Push apart nodes whose drawn circles would overlap on the page.
+    radius is in points; the layout is rescaled through the figure size so that
+    the separation test is done in the units the reader actually sees."""
+    nodes = list(pos)
+    blocks = [list(g) for g in groups] if groups else [nodes]
+    for _ in range(iters):
+        xs = [pos[n][0] for n in nodes]; ys = [pos[n][1] for n in nodes]
+        spanx = (max(xs)-min(xs)) or 1.0; spany = (max(ys)-min(ys)) or 1.0
+        upx = spanx/(0.92*size[0]*72.0); upy = spany/(0.92*size[1]*72.0)
+        moved = 0.0
+        for blk in blocks:
+         for i in range(len(blk)):
+            a = blk[i]
+            for j in range(i+1, len(blk)):
+                b = blk[j]
+                dx = (pos[b][0]-pos[a][0])/upx; dy = (pos[b][1]-pos[a][1])/upy
+                d = math.hypot(dx, dy) or 1e-6
+                need = pad*(radius[a]+radius[b])
+                if d < need:
+                    push = (need-d)/2.0; ux, uy = dx/d, dy/d
+                    pos[a] = (pos[a][0]-ux*push*upx, pos[a][1]-uy*push*upy)
+                    pos[b] = (pos[b][0]+ux*push*upx, pos[b][1]+uy*push*upy)
+                    moved += push
+        if moved < 0.4: break
+    return pos
+
+def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n=28, legend=True, layout="spring", kfac=1.5, min_gap=0.019, fsize=12, must=(), nmin=40, nspan=780, outdir=None, relax=True):
     plt.figure(figsize=size)
     if layout=="grid":
+        # One cell per component, but the cell grows with the component, so a
+        # crowded twenty node cluster is not squeezed into the same box as a
+        # thirteen node star. Cells are packed onto shelves left to right.
         comps = sorted(nx.connected_components(G), key=len, reverse=True)
         pos = {}
-        cols = max(1, int(math.ceil(math.sqrt(len(comps)))))
+        WIDTH = 4.2
+        x_cursor, y_cursor, shelf_h = 0.0, 0.0, 0.0
+        solo = len(comps) > 1 and len(comps[0]) >= 1.4*len(comps[1])
         for idx, comp in enumerate(comps):
             sub = G.subgraph(comp)
             sp = nx.kamada_kawai_layout(sub, weight="dist") if len(comp) > 2 else \
                  nx.circular_layout(sub)
             xs = [p[0] for p in sp.values()] or [0]; ys = [p[1] for p in sp.values()] or [0]
             w = (max(xs)-min(xs)) or 1; h = (max(ys)-min(ys)) or 1
-            scale = 0.42*min(1.0, math.sqrt(len(comp))/5.0) + 0.16
-            cx, cy = (idx % cols)*1.15, -(idx // cols)*1.15
+            rad = 0.12*math.sqrt(len(comp)) + 0.07
+            if idx == 0 and solo:
+                rad = 1.05                      # the densest component gets a row of its own
+            if x_cursor > 0 and x_cursor + 2*rad > WIDTH:
+                x_cursor = 0.0; y_cursor -= shelf_h + 0.35; shelf_h = 0.0
+            cx, cy = x_cursor + rad, y_cursor - rad
             for n,(x,y) in sp.items():
-                pos[n] = (cx + scale*(x-(max(xs)+min(xs))/2)/ (w/2 or 1),
-                          cy + scale*(y-(max(ys)+min(ys))/2)/ (h/2 or 1))
+                pos[n] = (cx + rad*(x-(max(xs)+min(xs))/2)/(w/2 or 1),
+                          cy + rad*(y-(max(ys)+min(ys))/2)/(h/2 or 1))
+            x_cursor += 2*rad + 0.35
+            shelf_h = max(shelf_h, 2*rad)
+            if idx == 0 and solo:
+                x_cursor = WIDTH               # force the next component onto a new shelf
     elif layout=="kk" and G.number_of_nodes() < 200:
         pos = nx.kamada_kawai_layout(G, dist=None, weight="dist")
     else:
@@ -98,7 +139,11 @@ def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n
         colors=[col(n) for n in G]
     pr = (r or {}).get("pagerank", {})
     mx = max(pr.values()) if pr else 1
-    sizes = [150+3400*pr.get(n,0)/mx for n in G] if pr else [60+40*G.degree(n) for n in G]
+    sizes = [nmin+nspan*pr.get(n,0)/mx for n in G] if pr else [nmin+14*G.degree(n) for n in G]
+    if relax:
+        pos = _relax(pos, {n: math.sqrt(a/math.pi) for n, a in zip(list(G), sizes)}, size,
+                     groups=(sorted(nx.connected_components(G), key=len, reverse=True)
+                             if layout=="grid" else None))
     ws = [G[u][v].get("weight",1) for u,v in G.edges()]
     nx.draw_networkx_edges(G,pos,alpha=0.20,width=[0.4+0.7*w for w in ws],edge_color="#8d8d8d")
     nx.draw_networkx_nodes(G,pos,node_color=colors,node_size=sizes,alpha=0.95,linewidths=0.6,edgecolors="#54514d")
@@ -109,18 +154,22 @@ def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n
     spanx = (max(xs_)-min(xs_)) or 1; spany = (max(ys_)-min(ys_)) or 1
     cw = 0.62*fsize/72.0 * spanx/(0.92*size[0])      # data units per character
     ch = 1.85*fsize/72.0 * spany/(0.92*size[1])      # data units per label height
+    # the label sits just under its node, so the circle itself stays visible
+    upy = spany/(0.92*size[1]*72.0)
+    lpos = {n: (pos[n][0], pos[n][1] - (math.sqrt(a/math.pi)*upy) - 0.62*ch)
+            for n, a in zip(list(G), sizes)}
     placed=[]
     lab={}
     order = [n for n in must if n in G] + [n for n,_ in sorted(((n,pr.get(n,0)) for n in G if n in keys),
                                                                 key=lambda x:-x[1]) if n not in must]
     for n in order:
-        x,y=pos[n]; s=short(n)
-        w=max(len(s)*cw, 3*cw)/2 + 1.0*cw; h=ch/2
+        x,y=lpos[n]; s=short(n)
+        w=max(len(s)*cw, 3*cw)/2 + 1.7*cw; h=ch/2
         if all(abs(x-px) > w+pw or abs(y-py) > h+ph for px,py,pw,ph in placed):
             placed.append((x,y,w,h)); lab[n]=s
-    nx.draw_networkx_labels(G,pos,labels=lab,font_size=fsize,font_color="#26241f",
+    nx.draw_networkx_labels(G,lpos,labels=lab,font_size=fsize,font_color="#26241f",
         bbox=dict(boxstyle="round,pad=0.3",fc="#fffdf8",ec="#cfc9c0",lw=0.6,alpha=0.94))
-    plt.xlim(min(xs_)-13*cw, max(xs_)+13*cw); plt.ylim(min(ys_)-2.2*ch, max(ys_)+2.2*ch)
+    plt.xlim(min(xs_)-13*cw, max(xs_)+13*cw); plt.ylim(min(ys_)-3.0*ch, max(ys_)+2.2*ch)
     if legend and color_by=="sect":
         plt.legend(handles=[Line2D([0],[0],marker='o',color='w',markerfacecolor=c,markersize=9,label=s)
                             for s,c in COL.items()], loc="upper center", bbox_to_anchor=(0.5,-0.005),
@@ -128,7 +177,7 @@ def fig(G, name, title, r=None, n2c=None, color_by="sect", size=(16,12), label_n
     if os.environ.get("FIGTITLES","1")=="1":
         plt.title(title, fontsize=14)
     plt.axis("off"); plt.tight_layout()
-    plt.savefig(f"{OUT}/{name}.png", dpi=200, facecolor="white"); plt.close()
+    plt.savefig(f"{outdir or OUT}/{name}.png", dpi=200, facecolor="white"); plt.close()
 
 def html(G, name, title, r=None, n2c=None, extra=None):
     net = Network(height="900px", width="100%", bgcolor="#ffffff", font_color="#222",
@@ -165,7 +214,7 @@ r1 = analyze(G1); n1 = write_metrics(G1, r1, "N1_coappearance")
 giant1 = G1.subgraph(max(nx.connected_components(G1), key=len)).copy()
 rg = analyze(giant1); ng = write_metrics(giant1, rg, "N1_giant")
 fig(G1,"fig1_coappearance_full","Figure 1. Co-appearance network, all components\n(node colour = sect, node size = PageRank)",r1,label_n=14)
-fig(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,label_n=16,size=(18,12.5),layout="kk")
+fig(giant1,"fig1_coappearance","Figure 1. Giant component of the co-appearance network (66 persons)\n(node colour = sect, node size = PageRank)",rg,label_n=26,size=(10.5,7.3),layout="kk",fsize=11)
 fig(giant1,"fig1b_communities","Figure 1b. Louvain communities within the giant component",rg,ng,color_by="community",legend=False,label_n=22)
 REPORT["N1_giant"] = {k:rg[k] for k in ["n_nodes","n_edges","density","modularity"]}
 REPORT["N1_giant"].update(n_communities=len(rg["communities"]), top_betweenness=top(rg["betweenness"]), top_pagerank=top(rg["pagerank"]), top_closeness=top(rg["closeness"]), top_degree=top(rg["degree"]), top_eigen=top(rg["eigenvector"]))
@@ -447,7 +496,7 @@ if G4c.number_of_nodes():
     fig(G4c,"fig4_cross_sect_closeup",
         "Figure 4. Karaite-Rabbanite contact, components containing a cross-sect tie",
         r4c, size=(10.8,7.6), label_n=22, layout="grid", fsize=11,
-        must=["Eli b. Amram","Solomon b. Jehuda (Gaon)","Nathan b. Abraham (Gaon)","Josiah b. Solomon (nasi)"])
+        must=["Eli b. Amram (he-haver)","Solomon b. Jehuda (Gaon)","Nathan b. Abraham (Gaon)","Josiah b. Solomon (nasi)"])
     REPORT["N4_closeup"] = {"n_nodes":G4c.number_of_nodes(), "n_edges":G4c.number_of_edges(),
                             "n_components":nx.number_connected_components(G4c)}
 
@@ -523,6 +572,30 @@ REPORT["corpus"] = {
  "gender": dict(Counter(p["gender"] for p in persons.values())),
  "doc_type_distribution": dict(Counter(d["doc_type"] for d in docs.values()).most_common()),
 }
+
+# =============================================================== full size plates
+# The paper prints close-ups, because a page cannot carry a whole fragmented
+# network legibly. The complete networks are written here at plate size, every
+# node named, for readers who want to zoom in. See networks/full/README.md.
+FULL = f"{OUT}/full"
+os.makedirs(FULL, exist_ok=True)
+_plates = [
+    (G1,      "N1_coappearance_all", r1,  "grid", "Plate 1. Co-appearance network, all 275 persons, every component"),
+    (giant1,  "N1_giant",            rg,  "kk",   "Plate 2. Giant component of the co-appearance network, 66 persons"),
+    (G2,      "N2_person_document",  r2,  "grid", "Plate 3. Bipartite network of persons and documents"),
+    (G3,      "N3_kinship",          r3,  "grid", "Plate 4. Kinship, marriage and agency, all 45 family components"),
+    (G4,      "N4_cross_sect",       r4,  "grid", "Plate 5. Karaite-Rabbanite contact, all components"),
+    (G5,      "N5_attestation",      r5,  "grid", "Plate 6. Witnesses and scribes, all components"),
+    (G6,      "N6_ketubbot",         r6,  "grid", "Plate 7. Ketubbot only, all components"),
+    (G6b,     "N6_betrothals",       r6b, "grid", "Plate 8. Deeds of betrothal only, all components"),
+]
+if G7.number_of_nodes():
+    _plates.append((G7, "N7_document_network", r7, "kk", "Plate 9. Documents joined by shared persons"))
+for _g, _nm, _rr, _lay, _ttl in _plates:
+    fig(_g, _nm, _ttl, _rr, size=(30, 21), fsize=13, label_n=_g.number_of_nodes(),
+        layout=_lay, outdir=FULL, nmin=70, nspan=1500)
+print("plates written to", FULL)
+
 json.dump(REPORT, open(f"{OUT}/analysis_v2.json","w",encoding="utf-8"), indent=1, ensure_ascii=False)
 
 for k in ["N1","N1_giant","N2","N3","N4","N5","N6_ketubbot"]:
