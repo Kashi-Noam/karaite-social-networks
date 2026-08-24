@@ -2,6 +2,10 @@
 # SECT: explicit sect identifications with evidence. Persons NOT listed here get a default:
 #   - participants of OS01-OS57 (Karaite marriage corpus): "Karaite (presumed)"
 #   - participants of Z01: "unknown"
+# A child of a person identified explicitly here is identified explicitly too: the
+# corpus records no parent and child of different sects, so descent in a named family
+# is evidence, not an assumption. This already applied to sons ("son of Sahlawaya") and
+# to some daughters ("daughter of the nasi Hizkiyahu"); it is now applied consistently.
 SECT = {
  # --- Karaite, explicitly attested / argued by the editors
  "Hizkiyahu b. Solomon (nasi)": ("Karaite","Karaite nasi of Jerusalem, then Fustat (OS04, OS06; ch.9)"),
@@ -35,6 +39,8 @@ SECT = {
  "Aaron b. Yehoshua": ("Karaite","probably the Karaite grammarian Abu'l-Faraj Harun of Jerusalem (OS04, ch.3)"),
  "Sahlawaya b. Hayyim": ("Karaite","rich Karaite banker of Fustat, active 1011-1035 (OS08, OS20, OS57, ch.3)"),
  "Hayyim b. Sahlawaya": ("Karaite","son of Sahlawaya (OS08)"),
+ "Sara bt. Sahlawaya": ("Karaite","daughter of the Karaite banker Sahlawaya b. Hayyim (OS20)"),
+ "Husn bt. Hayyim": ("Karaite","daughter of Hayyim b. Sahlawaya, of the Sahlawaya family (OS08)"),
  "Eli b. Sahlawaya": ("Karaite","donated Bible codex to Fustat Karaites (OS08 comments)"),
  "Yefet ha-Kohen b. Eli b. Zita": ("Karaite","of the Karaite ben Zita family (OS03, OS57)"),
  "Yehoshua b. Eli ha-Kohen b. Zita": ("Karaite","of the Karaite ben Zita family, Jerusalem (OS39)"),
@@ -44,6 +50,7 @@ SECT = {
  "Yehoshua b. Jehuda (Abu'l-Faraj Furqan ibn Asad)": ("Karaite","leading Karaite scholar of Jerusalem (OS07 comments, ch.3)"),
  "Solomon b. Mevasser b. Sahl al-Ani": ("Karaite","al-Ani Karaite merchant family (OS31)"),
  "Yesha'ya b. Sahl al-Ani": ("Karaite","al-Ani family (OS31)"),
+ "Sara bt. Yesha'ya": ("Karaite","daughter of Yesha'ya b. Sahl al-Ani, of the al-Ani family (OS31)"),
  "Mevasser b. Sahl al-Ani": ("Karaite","al-Ani family (OS31)"),
  "Sahl al-Ani": ("Karaite","al-Ani family (OS31)"),
  "Solomon b. Adiya b. Menashe (al-Qazzaz)": ("Karaite","al-Qazzaz family of Karaite Fatimid officials in Tyre (OS13, ch.3)"),
@@ -53,6 +60,7 @@ SECT = {
  "Moses b. Siba'a": ("Karaite","Karaite active between Tyre and Fustat (OS57 comments)"),
  "Sedaqa b. Nahum ha-Kohen": ("Karaite","witness in Karaite divorce TS 10 J 2.4 (OS57 comments)"),
  "Abraham b. Musallam": ("Karaite","professional Karaite scribe; wrote Karaite calendars (OS14, OS43)"),
+ "Fadla bt. Abraham": ("Karaite","daughter of the Karaite scribe Abraham b. Musallam (OS14)"),
  "Joseph b. Abraham ha-Kohen": ("Karaite","tentatively the Karaite philosopher Joseph al-Basir (OS39 comments)"),
  "David b. Isaac ha-Levi (Abu Nasr)": ("Karaite","prominent Karaite courtier (OS57 comments, ch.3)"),
  "Mevorakh b. Yefet": ("Karaite","probably the Karaite groom of mixed contract Antonin 637 (OS29 comments)"),

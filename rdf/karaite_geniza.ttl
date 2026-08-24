@@ -1693,9 +1693,9 @@ kgp:P099 a kg:Person ;
 kgp:P100 a kg:Person ;
     foaf:name "Fadla bt. Abraham" ;
     dcterms:identifier "P100" ;
-    kg:hasSect sect:Karaite_presumed ;
+    kg:hasSect sect:Karaite ;
     foaf:gender "female" ;
-    kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
+    kg:sectEvidence "daughter of the Karaite scribe Abraham b. Musallam (A.I.U. VII D 1r)"@en ;
     kg:activeFrom "1049"^^xsd:gYear ;
     kg:activeTo "1049"^^xsd:gYear .
 kgp:P101 a kg:Person ;
@@ -1958,9 +1958,9 @@ kgp:P128 a kg:Person ;
 kgp:P129 a kg:Person ;
     foaf:name "Husn bt. Hayyim" ;
     dcterms:identifier "P129" ;
-    kg:hasSect sect:Karaite_presumed ;
+    kg:hasSect sect:Karaite ;
     foaf:gender "female" ;
-    kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
+    kg:sectEvidence "daughter of Hayyim b. Sahlawaya, of the Sahlawaya family (TS AS 145.307r + TS Misc. 29.58a r)"@en ;
     kg:activeFrom "1038"^^xsd:gYear ;
     kg:activeTo "1038"^^xsd:gYear ;
     rdfs:comment "granddaughter of Sahlawaya b. Hayyim"@en .
@@ -3192,18 +3192,18 @@ kgp:P268 a kg:Person ;
 kgp:P269 a kg:Person ;
     foaf:name "Sara bt. Sahlawaya" ;
     dcterms:identifier "P269" ;
-    kg:hasSect sect:Karaite_presumed ;
+    kg:hasSect sect:Karaite ;
     foaf:gender "female" ;
-    kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
+    kg:sectEvidence "daughter of the Karaite banker Sahlawaya b. Hayyim (TS 12.621)"@en ;
     kg:activeFrom "1038"^^xsd:gYear ;
     kg:activeTo "1038"^^xsd:gYear ;
     rdfs:comment "reading of name uncertain"@en .
 kgp:P270 a kg:Person ;
     foaf:name "Sara bt. Yesha'ya" ;
     dcterms:identifier "P270" ;
-    kg:hasSect sect:Karaite_presumed ;
+    kg:hasSect sect:Karaite ;
     foaf:gender "female" ;
-    kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
+    kg:sectEvidence "daughter of Yesha'ya b. Sahl al-Ani, of the al-Ani family (TS 24.7)"@en ;
     kg:activeFrom "1004"^^xsd:gYear ;
     kg:activeTo "1004"^^xsd:gYear ;
     rdfs:comment "first cousin of groom"@en .

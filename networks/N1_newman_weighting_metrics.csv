@@ -87,7 +87,7 @@ P215,Mevorakh b. Yehya,Karaite (presumed),2,1.0,0.0,0.0073,0.0,0.00364,12
 P225,"Mubaraka (bride, OS28)",Karaite (presumed),2,1.0,0.0,0.0073,0.0,0.00364,12
 P204,Mevasser b. Sahl al-Ani,Karaite,4,1.0,0.0,0.0146,0.0,0.00364,15
 P258,Sahl al-Ani,Karaite,4,1.0,0.0,0.0146,0.0,0.00364,15
-P270,Sara bt. Yesha'ya,Karaite (presumed),4,1.0,0.0,0.0146,0.0,0.00364,15
+P270,Sara bt. Yesha'ya,Karaite,4,1.0,0.0,0.0146,0.0,0.00364,15
 P316,Solomon b. Mevasser b. Sahl al-Ani,Karaite,4,1.0,0.0,0.0146,0.0,0.00364,15
 P346,Yesha'ya b. Sahl al-Ani,Karaite,4,1.0,0.0,0.0146,0.0,0.00364,15
 P156,"Jehuda (groom, OS34)",Karaite (presumed),2,1.0,0.0,0.0073,0.0,0.00364,17
@@ -227,13 +227,13 @@ P282,Sedaqa b. Menashe,Karaite (presumed),12,0.9996000000000002,0.0,0.1049,0.031
 P299,Simha (father of Faras),Karaite (presumed),12,0.9996000000000002,0.0,0.1049,0.03156,0.0033,1
 P328,Yefet (father of Marzuq),Karaite (presumed),12,0.9996000000000002,0.0,0.1049,0.03156,0.0033,1
 P002,[...] b. Efraim,Karaite (presumed),12,0.9996000000000002,0.0,0.1049,0.03156,0.0033,1
-P100,Fadla bt. Abraham,Karaite (presumed),3,0.9999,0.0,0.02147,0.0,0.0033,5
+P100,Fadla bt. Abraham,Karaite,3,0.9999,0.0,0.02147,0.0,0.0033,5
 P188,Mahfuz b. Menahem,Karaite (presumed),3,0.9999,0.0,0.02147,0.0,0.0033,5
 P195,Menahem (father of Mahfuz),Karaite (presumed),3,0.9999,0.0,0.02147,0.0,0.0033,5
 P044,Azhar (father of Jabir),Karaite (presumed),6,1.0002,0.0,0.04933,0.0,0.0033,8
 P086,El'azar b. Menashe,Karaite (presumed),6,1.0002,0.0,0.04933,0.0,0.0033,8
 P118,Hayyim b. Sahlawaya,Karaite,6,1.0002,0.0,0.04933,0.0,0.0033,8
-P129,Husn bt. Hayyim,Karaite (presumed),6,1.0002,0.0,0.04933,0.0,0.0033,8
+P129,Husn bt. Hayyim,Karaite,6,1.0002,0.0,0.04933,0.0,0.0033,8
 P144,Jabir b. Azhar ha-Kohen,Karaite (presumed),6,1.0002,0.0,0.04933,0.0,0.0033,8
 P232,Nathan b. [...],Karaite (presumed),6,1.0002,0.0,0.04933,0.0,0.0033,8
 P013,Aaron b. Semah ha-Kohen,Karaite (presumed),12,0.9996000000000002,0.0,0.09577,0.00548,0.00329,4
@@ -262,7 +262,7 @@ P123,"Hizkiyahu (groom, OS12)",Karaite (presumed),3,0.9999,0.0,0.0907,0.01055,0.
 P207,Mevorakh b. Barhun,Karaite (presumed),3,0.9999,0.0,0.0907,0.01055,0.00314,4
 P277,Sedaqa b. Elun,Karaite (presumed),3,0.9999,0.0,0.0907,0.01055,0.00314,4
 P245,Rav Hesed,Karaite (presumed),2,1.0,0.0,0.04615,0.0,0.00312,8
-P269,Sara bt. Sahlawaya,Karaite (presumed),2,1.0,0.0,0.04615,0.0,0.00312,8
+P269,Sara bt. Sahlawaya,Karaite,2,1.0,0.0,0.04615,0.0,0.00312,8
 P115,Hasan b. Sedaqa ha-Kohen,Karaite (presumed),12,0.9996000000000002,0.0,0.0838,0.16862,0.00298,0
 P146,Jacob (father of Nisi),Karaite (presumed),12,0.9996000000000002,0.0,0.0838,0.16862,0.00298,0
 P153,Jacob b. Joseph,Karaite (presumed),12,0.9996000000000002,0.0,0.0838,0.16862,0.00298,0

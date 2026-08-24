@@ -55,6 +55,17 @@ introductions, commentaries and footnotes — from:
   Rabbanite / Rabbanite (probable) / unknown. *Presumed* is a default assumption for
   participants in Karaite legal documents, not evidence; every explicit identification
   carries a written `sect_evidence`.
+- **Descent counts as evidence.** A child of a person who is identified explicitly is
+  identified explicitly too, with the parent named in `sect_evidence`. The corpus contains
+  no parent and child of different sects, so membership of a named family — Tustari,
+  Sahlawaya, al-ʿAnī, ben Zita, the *nesiʾim* — is a documented fact rather than an
+  inference. This rule was already applied to sons (`son of Sahlawaya`) and to some
+  daughters (`daughter of the nasi Hizkiyahu`); as of the current version it is applied
+  consistently, which moved four brides (Sara bt. Yeshaʿya, Sara bt. Sahlawaya, Husn bt.
+  Hayyim, Fadla bt. Abraham) from *presumed* to explicit. Note the residual imbalance it
+  does not fix: 32% of the men in the corpus carry an explicit identification against 23%
+  of the women, because the documents themselves say far less about brides than about
+  the witnesses, scribes and fathers who transact around them.
 - **Identity merging** across documents/name-forms follows the editors' explicit
   identifications only (e.g. the Arabic/Hebrew doublet Daoud/David; David b. Yeshaʿya
   the scholar between TS 18 J 5.10 and Mosseri Ia.2). Unmerged same-name candidates

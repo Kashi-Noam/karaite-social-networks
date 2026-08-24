@@ -69,15 +69,15 @@ P196,Menahem b. Isaac,Karaite (presumed),1,2,0.0,0.06113,0.28386,0.00305,29
 P159,Jehuda ha-Levi b. Nisi ha-Melammed,Karaite (presumed),1,2,0.0,0.02947,0.0,0.00295,1
 P172,Joseph b. Jehuda ha-Levi,Karaite (presumed),1,2,0.0,0.02947,0.0,0.00295,1
 P188,Mahfuz b. Menahem,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,7
-P100,Fadla bt. Abraham,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,7
+P100,Fadla bt. Abraham,Karaite,1,1,0.0,0.00468,0.0,0.00269,7
 P294,Shela ha-Kohen b. Sadoq beRabbi [...],Rabbanite (probable),1,1,0.0,0.00468,0.0,0.00269,10
 P185,Levi ha-Levi bar Joseph,Rabbanite (probable),1,1,0.0,0.00468,0.0,0.00269,10
 P245,Rav Hesed,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,11
-P269,Sara bt. Sahlawaya,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,11
+P269,Sara bt. Sahlawaya,Karaite,1,1,0.0,0.00468,0.0,0.00269,11
 P202,"Meshullam (groom, OS25)",Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,14
 P154,Jacob b. Yesha'ya,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,14
 P316,Solomon b. Mevasser b. Sahl al-Ani,Karaite,1,1,0.0,0.00468,0.0,0.00269,20
-P270,Sara bt. Yesha'ya,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,20
+P270,Sara bt. Yesha'ya,Karaite,1,1,0.0,0.00468,0.0,0.00269,20
 P062,"David (groom, OS44)",Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,32
 P126,"Husn (bride, OS44)",Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,32
 P024,Abraham b. Jacob,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,13
@@ -99,7 +99,7 @@ P320,Thabit b. Jacob,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,25
 P105,Ghaliya bt. Joseph,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,25
 P165,Joseph b. Abraham (father of Ghaliya),Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,25
 P144,Jabir b. Azhar ha-Kohen,Karaite (presumed),1,1,0.0,0.00802,0.0,0.00229,4
-P129,Husn bt. Hayyim,Karaite (presumed),1,1,0.0,0.00802,0.0,0.00229,4
+P129,Husn bt. Hayyim,Karaite,1,1,0.0,0.00802,0.0,0.00229,4
 P086,El'azar b. Menashe,Karaite (presumed),1,1,0.0,0.00802,0.0,0.00229,4
 P232,Nathan b. [...],Karaite (presumed),1,1,0.0,0.00802,0.0,0.00229,4
 P064,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),Karaite,1,1,0.0,0.00975,0.0,0.00221,3
