@@ -437,9 +437,9 @@
   ]
  },
  "N2": {
-  "n_nodes": 290,
-  "n_edges": 260,
-  "n_components": 32,
+  "n_nodes": 286,
+  "n_edges": 258,
+  "n_components": 30,
   "giant": 68,
   "top_documents": [
    [
@@ -528,43 +528,43 @@
   "top_betweenness": [
    [
     "TS 18 J 5.10a,b + TS 10 J 27.6",
-    0.035491157247212614
+    0.03649617000247097
    ],
    [
     "David b. Semah (nasi)",
-    0.03198289119569397
+    0.03288855942673585
    ],
    [
     "TS 24.13",
-    0.02890715109573241
+    0.029725722757598223
    ],
    [
     "CUL Add. 3430",
-    0.025398885044213764
+    0.02611811218186311
    ],
    [
     "Alan b. Nahum",
-    0.025230680507497116
+    0.025945144551519646
    ],
    [
     "Bodl. MS Heb. a.3.4v",
-    0.025230680507497116
+    0.025945144551519646
    ],
    [
     "Bishr b. Abraham ha-Levi",
-    0.018814878892733564
+    0.019347664936990364
    ],
    [
     "TS 16.109 + TS AS 153.489",
-    0.018418396770472894
+    0.018939955522609343
    ],
    [
     "El'azar b. Samuel b. Sahl ha-Eved",
-    0.01782968089196463
+    0.018334568816407215
    ],
    [
     "TS 16.50",
-    0.017421184159938485
+    0.017914504571287373
    ]
   ]
  },
@@ -1303,7 +1303,6 @@
    "Bodl. MS Heb. a.3.4v",
    "Bodl. MS Heb. d.66.49v-50r",
    "Brit. Mus. Or. 5532",
-   "MS Meunier",
    "Mosseri Ia.2",
    "Mosseri VII.43 + TS Ar.53.53",
    "Mosseri VII.90.1",
@@ -1312,7 +1311,7 @@
    "TS 18 J 5.10a,b + TS 10 J 27.6",
    "TS 20.42"
   ],
-  "n_docs_with_court_actions": 13,
+  "n_docs_with_court_actions": 12,
   "docs_of_court_type_or_note": [
    "Bodl. MS Heb. a.3.4v",
    "Mosseri Ia.2",
@@ -1344,7 +1343,6 @@
    "Nahray b. Nissim"
   ],
   "declarants": [
-   "Ben Solomon of Amwal (Tabaristan)",
    "Eli b. Isma'il al-Bairuti (the scholar)",
    "Menahem b. Isaac"
   ],
@@ -1850,14 +1848,12 @@
   {
    "community": 3,
    "people": 12,
-   "documents": 4,
+   "documents": 3,
    "types": {
-    "letter": 1,
     "deed of betrothal": 2,
     "mixed Karaite-Rabbanite ketubba": 1
    },
    "places": {
-    "Unknown": 1,
     "Fustat": 3
    }
   },
@@ -1921,9 +1917,9 @@
   }
  ],
  "corpus": {
-  "documents": 62,
-  "persons": 351,
-  "appearances": 400,
+  "documents": 60,
+  "persons": 350,
+  "appearances": 390,
   "relations": 212,
   "action_distribution": {
    "Witness": 103,
@@ -1932,27 +1928,27 @@
    "WitnessOfAgency": 41,
    "Bride": 35,
    "Groom": 33,
-   "Agent": 26,
-   "DocumentMention": 23,
+   "Agent": 25,
+   "DocumentMention": 15,
    "NamedNasi": 11,
    "Scribe": 9,
    "Judge": 4,
-   "Declarant": 3,
    "LegalParty": 3,
    "Trustee": 3,
+   "Declarant": 2,
    "Guarantor": 1
   },
   "sect_distribution": {
    "Karaite (presumed)": 219,
    "Rabbanite": 27,
-   "unknown": 15,
+   "unknown": 14,
    "Karaite": 79,
    "Karaite (probable)": 6,
    "Rabbanite (probable)": 5
   },
   "place_distribution": {
    "Fustat": 24,
-   "Unknown": 19,
+   "Unknown": 17,
    "Egypt (region)": 6,
    "Jerusalem": 5,
    "Cairo": 3,
@@ -1961,7 +1957,7 @@
    "Tyre": 1
   },
   "gender": {
-   "M": 309,
+   "M": 308,
    "F": 42
   },
   "doc_type_distribution": {
@@ -1974,7 +1970,6 @@
    "ketubba (fragment, trousseau)": 2,
    "ketubba (two fragments)": 2,
    "secondary source unit": 2,
-   "letter (business)": 2,
    "deed of betrothal (court copy)": 1,
    "deed of betrothal (draft) + deed of attorney": 1,
    "settlement of betrothal (draft, Arabic script)": 1,
