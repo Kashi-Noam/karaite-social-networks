@@ -1918,12 +1918,12 @@
  ],
  "corpus": {
   "documents": 60,
-  "persons": 350,
-  "appearances": 390,
+  "persons": 351,
+  "appearances": 391,
   "relations": 212,
   "action_distribution": {
    "Witness": 103,
-   "ScholarlyMention": 55,
+   "ScholarlyMention": 56,
    "FamilyMention": 50,
    "WitnessOfAgency": 41,
    "Bride": 35,
@@ -1941,7 +1941,7 @@
   "sect_distribution": {
    "Karaite (presumed)": 219,
    "Rabbanite": 27,
-   "unknown": 14,
+   "unknown": 15,
    "Karaite": 79,
    "Karaite (probable)": 6,
    "Rabbanite (probable)": 5
@@ -1957,7 +1957,7 @@
    "Tyre": 1
   },
   "gender": {
-   "M": 308,
+   "M": 309,
    "F": 42
   },
   "doc_type_distribution": {

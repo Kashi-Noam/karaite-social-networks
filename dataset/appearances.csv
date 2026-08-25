@@ -1,391 +1,392 @@
 ﻿shelfmark,person_id,person,role,action_id,action_en,action_he,certainty,year_est,place,doc_type,note
 TS 16.109 + TS AS 153.489,P050,Barakat b. David,Groom,ACT01,Groom,חתן,attested,1063,Fustat,deed of betrothal (court copy),
-TS 16.109 + TS AS 153.489,P061,David (father of Barakat),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1063,Fustat,deed of betrothal (court copy),"Arabic form Daud in TS 16.109 + TS AS 153.489, Hebrew David in TS 20.47r"
-TS 16.109 + TS AS 153.489,P228,Na'ama bt. Nisi,Bride,ACT02,Bride,כלה,attested,1063,Fustat,deed of betrothal (court copy),
-TS 16.109 + TS AS 153.489,P240,Nisi b. Jacob,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1063,Fustat,deed of betrothal (court copy),also her agent (paqid)
-TS 16.109 + TS AS 153.489,P240,Nisi b. Jacob,Agent,ACT05,Agent,שליח (פקיד),attested,1063,Fustat,deed of betrothal (court copy),
-TS 16.109 + TS AS 153.489,P146,Jacob (father of Nisi),BrideGrandfather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1063,Fustat,deed of betrothal (court copy),
-TS 16.109 + TS AS 153.489,P336,Yehezqel b. Benjamin ha-Levi,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1063,Fustat,deed of betrothal (court copy),also signs as witness
-TS 16.109 + TS AS 153.489,P168,Joseph b. Azarya,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1063,Fustat,deed of betrothal (court copy),also signs on margin as witness
-TS 16.109 + TS AS 153.489,P115,Hasan b. Sedaqa ha-Kohen,Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),
-TS 16.109 + TS AS 153.489,P279,Sedaqa b. Isaac,Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),per name index
-TS 16.109 + TS AS 153.489,P332,Yefet b. Jacob,Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),
-TS 16.109 + TS AS 153.489,P087,El'azar b. Samuel b. Sahl ha-Eved,Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),"also witness in TS 24.13 (1062, Fustat) - basis for dating"
-TS 16.109 + TS AS 153.489,P217,Moses b. A[...],Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),name damaged
-TS 16.109 + TS AS 153.489,P153,Jacob b. Joseph,Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),
-TS 16.109 + TS AS 153.489,P264,Samuel b. Sahl,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1063,Fustat,deed of betrothal (court copy),father of El'azar; signed Rabbanite court doc of Efraim b. Shemarya ~1042 with other Karaites
+TS 16.109 + TS AS 153.489,P062,David (father of Barakat),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1063,Fustat,deed of betrothal (court copy),"Arabic form Daud in TS 16.109 + TS AS 153.489, Hebrew David in TS 20.47r"
+TS 16.109 + TS AS 153.489,P229,Na'ama bt. Nisi,Bride,ACT02,Bride,כלה,attested,1063,Fustat,deed of betrothal (court copy),
+TS 16.109 + TS AS 153.489,P241,Nisi b. Jacob,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1063,Fustat,deed of betrothal (court copy),also her agent (paqid)
+TS 16.109 + TS AS 153.489,P241,Nisi b. Jacob,Agent,ACT05,Agent,שליח (פקיד),attested,1063,Fustat,deed of betrothal (court copy),
+TS 16.109 + TS AS 153.489,P147,Jacob (father of Nisi),BrideGrandfather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1063,Fustat,deed of betrothal (court copy),
+TS 16.109 + TS AS 153.489,P337,Yehezqel b. Benjamin ha-Levi,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1063,Fustat,deed of betrothal (court copy),also signs as witness
+TS 16.109 + TS AS 153.489,P169,Joseph b. Azarya,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1063,Fustat,deed of betrothal (court copy),also signs on margin as witness
+TS 16.109 + TS AS 153.489,P116,Hasan b. Sedaqa ha-Kohen,Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),
+TS 16.109 + TS AS 153.489,P280,Sedaqa b. Isaac,Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),per name index
+TS 16.109 + TS AS 153.489,P333,Yefet b. Jacob,Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),
+TS 16.109 + TS AS 153.489,P088,El'azar b. Samuel b. Sahl ha-Eved,Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),"also witness in TS 24.13 (1062, Fustat) - basis for dating"
+TS 16.109 + TS AS 153.489,P218,Moses b. A[...],Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),name damaged
+TS 16.109 + TS AS 153.489,P154,Jacob b. Joseph,Witness,ACT07,Witness,עד חותם,attested,1063,Fustat,deed of betrothal (court copy),
+TS 16.109 + TS AS 153.489,P265,Samuel b. Sahl,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1063,Fustat,deed of betrothal (court copy),father of El'azar; signed Rabbanite court doc of Efraim b. Shemarya ~1042 with other Karaites
 TS 20.47r,P050,Barakat b. David,Groom,ACT01,Groom,חתן,attested,1064,Fustat,ketubba,
-TS 20.47r,P061,David (father of Barakat),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1064,Fustat,ketubba,
-TS 20.47r,P228,Na'ama bt. Nisi,Bride,ACT02,Bride,כלה,attested,1064,Fustat,ketubba,
-TS 20.47r,P240,Nisi b. Jacob,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1064,Fustat,ketubba,
-TS 20.47r,P240,Nisi b. Jacob,Agent,ACT05,Agent,שליח (פקיד),attested,1064,Fustat,ketubba,
+TS 20.47r,P062,David (father of Barakat),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1064,Fustat,ketubba,
+TS 20.47r,P229,Na'ama bt. Nisi,Bride,ACT02,Bride,כלה,attested,1064,Fustat,ketubba,
+TS 20.47r,P241,Nisi b. Jacob,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1064,Fustat,ketubba,
+TS 20.47r,P241,Nisi b. Jacob,Agent,ACT05,Agent,שליח (פקיד),attested,1064,Fustat,ketubba,
 TS 20.47r,P007,[...] b. Yesha'ya ha-Kohen,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1064,Fustat,ketubba,first name lost
 TS 20.47r,P048,Barakat b. Azarya,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1064,Fustat,ketubba,possibly brother of Joseph b. Azarya (TS 16.109 + TS AS 153.489)
-TS 12.644,P132,Isaac b. Eli,Groom,ACT01,Groom,חתן,attested,1030,Fustat,deed of betrothal,
-TS 12.644,P226,Mubaraka bt. [...],Bride,ACT02,Bride,כלה,attested,1030,Fustat,deed of betrothal,father's name lost
-TS 12.644,P159,Jehuda ha-Levi b. Nisi ha-Melammed,Scribe,ACT08,Scribe,סופר,attested,1030,Fustat,deed of betrothal,also witness
-TS 12.644,P159,Jehuda ha-Levi b. Nisi ha-Melammed,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,
-TS 12.644,P172,Joseph b. Jehuda ha-Levi,Scribe,ACT08,Scribe,סופר,attested,1030,Fustat,deed of betrothal,son of the above; also witness
-TS 12.644,P172,Joseph b. Jehuda ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,
+TS 12.644,P133,Isaac b. Eli,Groom,ACT01,Groom,חתן,attested,1030,Fustat,deed of betrothal,
+TS 12.644,P227,Mubaraka bt. [...],Bride,ACT02,Bride,כלה,attested,1030,Fustat,deed of betrothal,father's name lost
+TS 12.644,P160,Jehuda ha-Levi b. Nisi ha-Melammed,Scribe,ACT08,Scribe,סופר,attested,1030,Fustat,deed of betrothal,also witness
+TS 12.644,P160,Jehuda ha-Levi b. Nisi ha-Melammed,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,
+TS 12.644,P173,Joseph b. Jehuda ha-Levi,Scribe,ACT08,Scribe,סופר,attested,1030,Fustat,deed of betrothal,son of the above; also witness
+TS 12.644,P173,Joseph b. Jehuda ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,
 TS 12.644,P045,Babad ha-Kohen b. David,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,Persian name
-TS 12.644,P334,Yefet ha-Kohen b. Eli b. Zita,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,also witness in ENA NS 18.37 and in Karaite divorce TS 12.70; brother of Yehoshua (CUL Add. 3430)
-TS 12.644,P262,Samuel b. Joseph al-Basri,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,Iraqi origin; probably d. ~1028 in Fustat
-TS 12.644,P283,Sedaqa b. Moses,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,
-TS 12.644,P164,Joseph b. Aaron ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,
-TS 16.50,P330,Yefet b. Abraham al-Tustari,Groom,ACT01,Groom,חתן,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,only son of Abraham al-Tustari; briefly Fatimid vizier in 1064
+TS 12.644,P335,Yefet ha-Kohen b. Eli b. Zita,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,also witness in ENA NS 18.37 and in Karaite divorce TS 12.70; brother of Yehoshua (CUL Add. 3430)
+TS 12.644,P263,Samuel b. Joseph al-Basri,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,Iraqi origin; probably d. ~1028 in Fustat
+TS 12.644,P284,Sedaqa b. Moses,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,
+TS 12.644,P165,Joseph b. Aaron ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,deed of betrothal,
+TS 16.50,P331,Yefet b. Abraham al-Tustari,Groom,ACT01,Groom,חתן,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,only son of Abraham al-Tustari; briefly Fatimid vizier in 1064
 TS 16.50,P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,financial adviser to the mother of Caliph Mustansir; d. 1047
 TS 16.50,P035,Ama al-Aziz bt. Hizkiyahu,Bride,ACT02,Bride,כלה,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,in Jerusalem
-TS 16.50,P125,Hizkiyahu b. Solomon (nasi),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,Karaite nasi in Jerusalem; original agent of his daughter
-TS 16.50,P125,Hizkiyahu b. Solomon (nasi),Agent,ACT05,Agent,שליח (פקיד),attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,first appointment; delegated by deed of attorney
-TS 16.50,P099,Ezra b. Ishma'el b. Ezra,Agent,ACT05,Agent,שליח (פקיד),attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,substitute agent in Fustat; prominent Fustat Karaite
+TS 16.50,P126,Hizkiyahu b. Solomon (nasi),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,Karaite nasi in Jerusalem; original agent of his daughter
+TS 16.50,P126,Hizkiyahu b. Solomon (nasi),Agent,ACT05,Agent,שליח (פקיד),attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,first appointment; delegated by deed of attorney
+TS 16.50,P100,Ezra b. Ishma'el b. Ezra,Agent,ACT05,Agent,שליח (פקיד),attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,substitute agent in Fustat; prominent Fustat Karaite
 TS 16.50,P012,Aaron b. Sahl al-Tustari,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,witness of first appointment; youngest Tustari brother; uncle of groom
 TS 16.50,P014,Aaron b. Yehoshua,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,"witness of second appointment, Jerusalem; possibly the grammarian Abu'l-Faraj Harun"
 TS 16.50,P043,Azarya b. Salih,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,witness of second appointment
-TS 16.50,P073,David b. Semah (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,presided over Karaite court in Fustat certifying the deed of attorney
-TS 16.50,P073,David b. Semah (nasi),Judge,ACT10,Judge,דיין / אב בית דין,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,Karaite court certification
-TS 16.50,P183,Khatabya b. al-Tabat,Witness,ACT07,Witness,עד חותם,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,"verso, court certificate"
-TS 16.50,P259,Sahl b. Sa'adya al-Baghdadi,Witness,ACT07,Witness,עד חותם,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,also in deed of release CUL Or 1080 J 262
-TS 16.50,P166,Joseph b. Abraham b. al-Fara,Witness,ACT07,Witness,עד חותם,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,
+TS 16.50,P074,David b. Semah (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,presided over Karaite court in Fustat certifying the deed of attorney
+TS 16.50,P074,David b. Semah (nasi),Judge,ACT10,Judge,דיין / אב בית דין,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,Karaite court certification
+TS 16.50,P184,Khatabya b. al-Tabat,Witness,ACT07,Witness,עד חותם,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,"verso, court certificate"
+TS 16.50,P260,Sahl b. Sa'adya al-Baghdadi,Witness,ACT07,Witness,עד חותם,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,also in deed of release CUL Or 1080 J 262
+TS 16.50,P167,Joseph b. Abraham b. al-Fara,Witness,ACT07,Witness,עד חותם,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,
 TS 16.50,P021,Abraham b. al-Fara,Witness,ACT07,Witness,עד חותם,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,
-TS 16.50,P119,Hesed (Abu Nasr) b. Sahl al-Tustari,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1043,Fustat,deed of betrothal (draft) + deed of attorney,brother of Abraham; murdered 1048
-TS 16.50,P257,Sahl (Yashar) b. Israel al-Tustari,Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,"deceased patriarch, mentioned with formulae for the dead"
-TS 16.50,P309,Solomon b. David (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,in bride's genealogy: Hizkiyahu b. Solomon b. David
-"TS 18 J 5.10a,b + TS 10 J 27.6",P182,Khalaf b. Mahfuz,Groom,ACT01,Groom,חתן,attested,1045,Fustat,deed of betrothal,
-"TS 18 J 5.10a,b + TS 10 J 27.6",P187,Mahfuz (father of Khalaf),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1045,Fustat,deed of betrothal,also called Mansur by scribal confusion
+TS 16.50,P120,Hesed (Abu Nasr) b. Sahl al-Tustari,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1043,Fustat,deed of betrothal (draft) + deed of attorney,brother of Abraham; murdered 1048
+TS 16.50,P258,Sahl (Yashar) b. Israel al-Tustari,Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,"deceased patriarch, mentioned with formulae for the dead"
+TS 16.50,P310,Solomon b. David (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1043,Fustat,deed of betrothal (draft) + deed of attorney,in bride's genealogy: Hizkiyahu b. Solomon b. David
+"TS 18 J 5.10a,b + TS 10 J 27.6",P183,Khalaf b. Mahfuz,Groom,ACT01,Groom,חתן,attested,1045,Fustat,deed of betrothal,
+"TS 18 J 5.10a,b + TS 10 J 27.6",P188,Mahfuz (father of Khalaf),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1045,Fustat,deed of betrothal,also called Mansur by scribal confusion
 "TS 18 J 5.10a,b + TS 10 J 27.6",P036,Ama al-Qadar bt. Efraim,Bride,ACT02,Bride,כלה,attested,1045,Fustat,deed of betrothal,
-"TS 18 J 5.10a,b + TS 10 J 27.6",P080,Efraim b. Mansur b. Furat,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1045,Fustat,deed of betrothal,also her agent
-"TS 18 J 5.10a,b + TS 10 J 27.6",P080,Efraim b. Mansur b. Furat,Agent,ACT05,Agent,שליח (פקיד),attested,1045,Fustat,deed of betrothal,
-"TS 18 J 5.10a,b + TS 10 J 27.6",P281,Sedaqa b. Masliah b. Sahl ha-Levi,Scribe,ACT08,Scribe,סופר,attested,1045,Fustat,deed of betrothal,signs first
+"TS 18 J 5.10a,b + TS 10 J 27.6",P081,Efraim b. Mansur b. Furat,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1045,Fustat,deed of betrothal,also her agent
+"TS 18 J 5.10a,b + TS 10 J 27.6",P081,Efraim b. Mansur b. Furat,Agent,ACT05,Agent,שליח (פקיד),attested,1045,Fustat,deed of betrothal,
+"TS 18 J 5.10a,b + TS 10 J 27.6",P282,Sedaqa b. Masliah b. Sahl ha-Levi,Scribe,ACT08,Scribe,סופר,attested,1045,Fustat,deed of betrothal,signs first
 "TS 18 J 5.10a,b + TS 10 J 27.6",P051,Barakat b. Menahem ha-Kohen,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1045,Fustat,deed of betrothal,
-"TS 18 J 5.10a,b + TS 10 J 27.6",P331,Yefet b. Abraham ha-Levi,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1045,Fustat,deed of betrothal,
-"TS 18 J 5.10a,b + TS 10 J 27.6",P068,David b. Isaac b. Moses ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1045,Fustat,deed of betrothal,
+"TS 18 J 5.10a,b + TS 10 J 27.6",P332,Yefet b. Abraham ha-Levi,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1045,Fustat,deed of betrothal,
+"TS 18 J 5.10a,b + TS 10 J 27.6",P069,David b. Isaac b. Moses ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1045,Fustat,deed of betrothal,
 "TS 18 J 5.10a,b + TS 10 J 27.6",P034,Alan b. Nahum,Witness,ACT07,Witness,עד חותם,attested,1045,Fustat,deed of betrothal,also witness TS 24.13 and Karaite deed of release TS 16.131
-"TS 18 J 5.10a,b + TS 10 J 27.6",P163,Joseph b. [...] b. Efraim,Witness,ACT07,Witness,עד חותם,attested,1045,Fustat,deed of betrothal,
-"TS 18 J 5.10a,b + TS 10 J 27.6",P076,David b. Yesha'ya ha-Melammed,Witness,ACT07,Witness,עד חותם,reconstructed,1045,Fustat,deed of betrothal,"reading uncertain; possibly = father of bride in Mosseri Ia.2 | merged from 'David b. Yesha'ya' (probable: TS 18 J 5.10a,b + TS 10 J 27.6 comments: the witness 'may be identical with David ben Yesha'ya the scholar, the father of the bride in n.13')"
-"TS 18 J 5.10a,b + TS 10 J 27.6",P230,Nahum b. Nahum,Witness,ACT07,Witness,עד חותם,reconstructed,1045,Fustat,deed of betrothal,possibly brother of Alan b. Nahum; possibly = Nahum b. Nahum (TS AS 146.417r) | merged from '[...] b. Nahum' (probable: TS 20.42/TS AS 146.417r comments: 'may probably be identical with a certain Nahum ben Nahum')
-"TS 18 J 5.10a,b + TS 10 J 27.6",P073,David b. Semah (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1045,Fustat,deed of betrothal,"'our Lord, the great nasi, David'"
-TS 20.42,P125,Hizkiyahu b. Solomon (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1063,Fustat,deed of betrothal (fragment),"acting nasi in Fustat, 'nasi of the Land of Israel and Juda'"
-TS 20.42,P309,Solomon b. David (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1063,Fustat,deed of betrothal (fragment),deceased father in nasi clause
-TS J 3.47v,P064,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),Groom,ACT01,Groom,חתן,attested,1033,Fustat,"settlement of betrothal (draft, Arabic script)",Karaite notable of Fustat; commissioned Yehoshua b. Jehuda's Genesis commentary
-TS J 3.47v,P060,Daughter of Abu'l-Fadl,Bride,ACT02,Bride,כלה,attested,1033,Fustat,"settlement of betrothal (draft, Arabic script)",name not given
+"TS 18 J 5.10a,b + TS 10 J 27.6",P164,Joseph b. [...] b. Efraim,Witness,ACT07,Witness,עד חותם,attested,1045,Fustat,deed of betrothal,
+"TS 18 J 5.10a,b + TS 10 J 27.6",P077,David b. Yesha'ya ha-Melammed,Witness,ACT07,Witness,עד חותם,reconstructed,1045,Fustat,deed of betrothal,"reading uncertain; possibly = father of bride in Mosseri Ia.2 | merged from 'David b. Yesha'ya' (probable: TS 18 J 5.10a,b + TS 10 J 27.6 comments: the witness 'may be identical with David ben Yesha'ya the scholar, the father of the bride in n.13')"
+"TS 18 J 5.10a,b + TS 10 J 27.6",P231,Nahum b. Nahum,Witness,ACT07,Witness,עד חותם,reconstructed,1045,Fustat,deed of betrothal,possibly brother of Alan b. Nahum; possibly = Nahum b. Nahum (TS AS 146.417r) | merged from '[...] b. Nahum' (probable: TS 20.42/TS AS 146.417r comments: 'may probably be identical with a certain Nahum ben Nahum')
+"TS 18 J 5.10a,b + TS 10 J 27.6",P074,David b. Semah (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1045,Fustat,deed of betrothal,"'our Lord, the great nasi, David'"
+TS 20.42,P126,Hizkiyahu b. Solomon (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1063,Fustat,deed of betrothal (fragment),"acting nasi in Fustat, 'nasi of the Land of Israel and Juda'"
+TS 20.42,P310,Solomon b. David (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1063,Fustat,deed of betrothal (fragment),deceased father in nasi clause
+TS J 3.47v,P065,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),Groom,ACT01,Groom,חתן,attested,1033,Fustat,"settlement of betrothal (draft, Arabic script)",Karaite notable of Fustat; commissioned Yehoshua b. Jehuda's Genesis commentary
+TS J 3.47v,P061,Daughter of Abu'l-Fadl,Bride,ACT02,Bride,כלה,attested,1033,Fustat,"settlement of betrothal (draft, Arabic script)",name not given
 TS J 3.47v,P030,Abu'l-Fadl,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1033,Fustat,"settlement of betrothal (draft, Arabic script)",also her agent
 TS J 3.47v,P030,Abu'l-Fadl,Agent,ACT05,Agent,שליח (פקיד),attested,1033,Fustat,"settlement of betrothal (draft, Arabic script)",
 TS J 3.47v,P001,'The exquisite scholar',WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1033,Fustat,"settlement of betrothal (draft, Arabic script)",anonymous
 TS J 3.47v,P031,Abu'l-Hasan b. al-Jabawi,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1033,Fustat,"settlement of betrothal (draft, Arabic script)",
-TS J 3.47v,P206,Mevorakh b. Amram,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1033,Fustat,"settlement of betrothal (draft, Arabic script)","brother of groom, learned Karaite of Fustat"
-TS J 3.47v,P340,Yehoshua b. Jehuda (Abu'l-Faraj Furqan ibn Asad),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1033,Fustat,"settlement of betrothal (draft, Arabic script)",Karaite scholar of Jerusalem who wrote commentary at groom's request
-TS AS 145.307r + TS Misc. 29.58a r,P144,Jabir b. Azhar ha-Kohen,Groom,ACT01,Groom,חתן,attested,1038,Fustat,deed of betrothal,probably wakil (merchants' representative) in Tinnis
+TS J 3.47v,P207,Mevorakh b. Amram,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1033,Fustat,"settlement of betrothal (draft, Arabic script)","brother of groom, learned Karaite of Fustat"
+TS J 3.47v,P341,Yehoshua b. Jehuda (Abu'l-Faraj Furqan ibn Asad),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1033,Fustat,"settlement of betrothal (draft, Arabic script)",Karaite scholar of Jerusalem who wrote commentary at groom's request
+TS AS 145.307r + TS Misc. 29.58a r,P145,Jabir b. Azhar ha-Kohen,Groom,ACT01,Groom,חתן,attested,1038,Fustat,deed of betrothal,probably wakil (merchants' representative) in Tinnis
 TS AS 145.307r + TS Misc. 29.58a r,P044,Azhar (father of Jabir),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1038,Fustat,deed of betrothal,
-TS AS 145.307r + TS Misc. 29.58a r,P129,Husn bt. Hayyim,Bride,ACT02,Bride,כלה,attested,1038,Fustat,deed of betrothal,granddaughter of Sahlawaya b. Hayyim
-TS AS 145.307r + TS Misc. 29.58a r,P118,Hayyim b. Sahlawaya,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1038,Fustat,deed of betrothal,purchased a Bible in Jerusalem in 1057
-TS AS 145.307r + TS Misc. 29.58a r,P260,Sahlawaya b. Hayyim,BrideGrandfather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1038,Fustat,deed of betrothal,prominent Karaite banker of Fustat (active 1011-1035); still alive
-TS AS 145.307r + TS Misc. 29.58a r,P086,El'azar b. Menashe,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1038,Fustat,deed of betrothal,
-TS AS 145.307r + TS Misc. 29.58a r,P232,Nathan b. [...],WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1038,Fustat,deed of betrothal,
-TS AS 145.307r + TS Misc. 29.58a r,P094,Eli b. Sahlawaya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,deed of betrothal,brother of Hayyim; donated Bible codex to Fustat Karaites
+TS AS 145.307r + TS Misc. 29.58a r,P130,Husn bt. Hayyim,Bride,ACT02,Bride,כלה,attested,1038,Fustat,deed of betrothal,granddaughter of Sahlawaya b. Hayyim
+TS AS 145.307r + TS Misc. 29.58a r,P119,Hayyim b. Sahlawaya,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1038,Fustat,deed of betrothal,purchased a Bible in Jerusalem in 1057
+TS AS 145.307r + TS Misc. 29.58a r,P261,Sahlawaya b. Hayyim,BrideGrandfather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1038,Fustat,deed of betrothal,prominent Karaite banker of Fustat (active 1011-1035); still alive
+TS AS 145.307r + TS Misc. 29.58a r,P087,El'azar b. Menashe,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1038,Fustat,deed of betrothal,
+TS AS 145.307r + TS Misc. 29.58a r,P233,Nathan b. [...],WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1038,Fustat,deed of betrothal,
+TS AS 145.307r + TS Misc. 29.58a r,P095,Eli b. Sahlawaya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,deed of betrothal,brother of Hayyim; donated Bible codex to Fustat Karaites
 TS AS 146.417r,P005,[...] b. Khalaf,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1045,Unknown,deed of betrothal (small fragment),
-TS AS 146.417r,P230,Nahum b. Nahum,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1045,Unknown,deed of betrothal (small fragment),"possibly = [...] b. Nahum of TS 18 J 5.10a,b + TS 10 J 27.6"
-ENA NS 17.24,P109,Halfon ha-Levi b. Daniel,Groom,ACT01,Groom,חתן,attested,1015,Cairo,deed of betrothal,
-ENA NS 17.24,P059,Daniel b. Bundar,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1015,Cairo,deed of betrothal,Persian grandfather name
+TS AS 146.417r,P231,Nahum b. Nahum,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1045,Unknown,deed of betrothal (small fragment),"possibly = [...] b. Nahum of TS 18 J 5.10a,b + TS 10 J 27.6"
+ENA NS 17.24,P110,Halfon ha-Levi b. Daniel,Groom,ACT01,Groom,חתן,attested,1015,Cairo,deed of betrothal,
+ENA NS 17.24,P060,Daniel b. Bundar,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1015,Cairo,deed of betrothal,Persian grandfather name
 ENA NS 17.24,P037,Ama al-Wahid bt. Halfon,Bride,ACT02,Bride,כלה,attested,1015,Cairo,deed of betrothal,
-ENA NS 17.24,P107,Halfon (father of Ama al-Wahid),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1015,Cairo,deed of betrothal,
-ENA NS 17.24,P227,Musafir b. Isaac ha-Kohen,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Cairo,deed of betrothal,
-ENA NS 17.24,P293,Shela b. Joseph,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Cairo,deed of betrothal,
-ENA NS 17.24,P121,Hillel (the elder),Agent,ACT05,Agent,שליח (פקיד),attested,1015,Cairo,deed of betrothal,
-Mosseri VII.90.1,P123,"Hizkiyahu (groom, OS12)",Groom,ACT01,Groom,חתן,attested,1041,Fustat,deed of betrothal (fragment),only name preserved
-Mosseri VII.90.1,P207,Mevorakh b. Barhun,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1041,Fustat,deed of betrothal (fragment),
-Mosseri VII.90.1,P277,Sedaqa b. Elun,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1041,Fustat,deed of betrothal (fragment),
-Mosseri VII.90.1,P073,David b. Semah (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,reconstructed,1041,Fustat,deed of betrothal (fragment),only father's name Semah preserved in clause
-Mosseri Ia.2,P292,Shela b. Amram al-Qirqisani,Groom,ACT01,Groom,חתן,attested,1051,Fustat,deed of betrothal (with deed of attorney),"resident of Tyre; family from Qirqisiya, Upper Mesopotamia"
+ENA NS 17.24,P108,Halfon (father of Ama al-Wahid),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1015,Cairo,deed of betrothal,
+ENA NS 17.24,P228,Musafir b. Isaac ha-Kohen,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Cairo,deed of betrothal,
+ENA NS 17.24,P294,Shela b. Joseph,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Cairo,deed of betrothal,
+ENA NS 17.24,P122,Hillel (the elder),Agent,ACT05,Agent,שליח (פקיד),attested,1015,Cairo,deed of betrothal,
+Mosseri VII.90.1,P124,"Hizkiyahu (groom, OS12)",Groom,ACT01,Groom,חתן,attested,1041,Fustat,deed of betrothal (fragment),only name preserved
+Mosseri VII.90.1,P208,Mevorakh b. Barhun,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1041,Fustat,deed of betrothal (fragment),
+Mosseri VII.90.1,P278,Sedaqa b. Elun,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1041,Fustat,deed of betrothal (fragment),
+Mosseri VII.90.1,P074,David b. Semah (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,reconstructed,1041,Fustat,deed of betrothal (fragment),only father's name Semah preserved in clause
+Mosseri Ia.2,P293,Shela b. Amram al-Qirqisani,Groom,ACT01,Groom,חתן,attested,1051,Fustat,deed of betrothal (with deed of attorney),"resident of Tyre; family from Qirqisiya, Upper Mesopotamia"
 Mosseri Ia.2,P039,Amram al-Qirqisani,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1051,Fustat,deed of betrothal (with deed of attorney),
-Mosseri Ia.2,P326,Yaman bt. David,Bride,ACT02,Bride,כלה,attested,1051,Fustat,deed of betrothal (with deed of attorney),
-Mosseri Ia.2,P076,David b. Yesha'ya ha-Melammed,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1051,Fustat,deed of betrothal (with deed of attorney),"'champion of the Torah'; possibly = witness of TS 18 J 5.10a,b + TS 10 J 27.6"
-Mosseri Ia.2,P307,Solomon b. Adiya b. Menashe (al-Qazzaz),GroomAgent,ACT05,Agent,שליח (פקיד),attested,1051,Fustat,deed of betrothal (with deed of attorney),of the al-Qazzaz family of Karaite Fatimid officials in Tyre
-Mosseri Ia.2,P329,Yefet [b. ? Solomon b. Abraham],WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1051,Fustat,deed of betrothal (with deed of attorney),witness to deed of attorney in Tyre; text damaged
-Mosseri Ia.2,P266,Samuel bar Rabbi Moses he-haver,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1051,Fustat,deed of betrothal (with deed of attorney),RABBANITE haver; witness of attorney in Tyre; also witness of Tyre Rabbanite court letter to Aleppo 1029
-Mosseri Ia.2,P073,David b. Semah (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1051,Fustat,deed of betrothal (with deed of attorney),"read, verified and certified the deed of attorney"
-Mosseri Ia.2,P073,David b. Semah (nasi),Judge,ACT10,Judge,דיין / אב בית דין,attested,1051,Fustat,deed of betrothal (with deed of attorney),
-Mosseri Ia.2,P289,Semah b. Asa (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1051,Fustat,deed of betrothal (with deed of attorney),deceased father in nasi clause
-Mosseri Ia.2,P317,Solomon b. Musafir,Agent,ACT05,Agent,שליח (פקיד),attested,1051,Fustat,deed of betrothal (with deed of attorney),bride's agent; signatory of Tyre court letter to Aleppo 1029; in Damascus deed of receipt 1031
+Mosseri Ia.2,P327,Yaman bt. David,Bride,ACT02,Bride,כלה,attested,1051,Fustat,deed of betrothal (with deed of attorney),
+Mosseri Ia.2,P077,David b. Yesha'ya ha-Melammed,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1051,Fustat,deed of betrothal (with deed of attorney),"'champion of the Torah'; possibly = witness of TS 18 J 5.10a,b + TS 10 J 27.6"
+Mosseri Ia.2,P308,Solomon b. Adiya b. Menashe (al-Qazzaz),GroomAgent,ACT05,Agent,שליח (פקיד),attested,1051,Fustat,deed of betrothal (with deed of attorney),of the al-Qazzaz family of Karaite Fatimid officials in Tyre
+Mosseri Ia.2,P330,Yefet [b. ? Solomon b. Abraham],WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1051,Fustat,deed of betrothal (with deed of attorney),witness to deed of attorney in Tyre; text damaged
+Mosseri Ia.2,P267,Samuel bar Rabbi Moses he-haver,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1051,Fustat,deed of betrothal (with deed of attorney),RABBANITE haver; witness of attorney in Tyre; also witness of Tyre Rabbanite court letter to Aleppo 1029
+Mosseri Ia.2,P074,David b. Semah (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1051,Fustat,deed of betrothal (with deed of attorney),"read, verified and certified the deed of attorney"
+Mosseri Ia.2,P074,David b. Semah (nasi),Judge,ACT10,Judge,דיין / אב בית דין,attested,1051,Fustat,deed of betrothal (with deed of attorney),
+Mosseri Ia.2,P290,Semah b. Asa (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1051,Fustat,deed of betrothal (with deed of attorney),deceased father in nasi clause
+Mosseri Ia.2,P318,Solomon b. Musafir,Agent,ACT05,Agent,שליח (פקיד),attested,1051,Fustat,deed of betrothal (with deed of attorney),bride's agent; signatory of Tyre court letter to Aleppo 1029; in Damascus deed of receipt 1031
 Mosseri Ia.2,P013,Aaron b. Semah ha-Kohen,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1051,Fustat,deed of betrothal (with deed of attorney),witness of bride's appointment
-Mosseri Ia.2,P285,Sedaqa b. Sa'adya,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1051,Fustat,deed of betrothal (with deed of attorney),witness of bride's appointment
-Mosseri Ia.2,P192,Mansur b. Mevasser,Witness,ACT07,Witness,עד חותם,attested,1051,Fustat,deed of betrothal (with deed of attorney),
-Mosseri Ia.2,P261,Samuel b. [...],Witness,ACT07,Witness,עד חותם,attested,1051,Fustat,deed of betrothal (with deed of attorney),
-Mosseri Ia.2,P174,Joseph ha-Kohen b. Jacob,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1051,Fustat,deed of betrothal (with deed of attorney),Rabbanite scribe of Tyre court; wrote/witnessed Karaite deeds from Tyre (TS AS 153.12+13 J 25.20)
-A.I.U. VII D 1r,P188,Mahfuz b. Menahem,Groom,ACT01,Groom,חתן,attested,1049,Fustat,deed of betrothal,
-A.I.U. VII D 1r,P195,Menahem (father of Mahfuz),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1049,Fustat,deed of betrothal,
-A.I.U. VII D 1r,P100,Fadla bt. Abraham,Bride,ACT02,Bride,כלה,attested,1049,Fustat,deed of betrothal,
+Mosseri Ia.2,P286,Sedaqa b. Sa'adya,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1051,Fustat,deed of betrothal (with deed of attorney),witness of bride's appointment
+Mosseri Ia.2,P193,Mansur b. Mevasser,Witness,ACT07,Witness,עד חותם,attested,1051,Fustat,deed of betrothal (with deed of attorney),
+Mosseri Ia.2,P262,Samuel b. [...],Witness,ACT07,Witness,עד חותם,attested,1051,Fustat,deed of betrothal (with deed of attorney),
+Mosseri Ia.2,P175,Joseph ha-Kohen b. Jacob,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1051,Fustat,deed of betrothal (with deed of attorney),Rabbanite scribe of Tyre court; wrote/witnessed Karaite deeds from Tyre (TS AS 153.12+13 J 25.20)
+A.I.U. VII D 1r,P189,Mahfuz b. Menahem,Groom,ACT01,Groom,חתן,attested,1049,Fustat,deed of betrothal,
+A.I.U. VII D 1r,P196,Menahem (father of Mahfuz),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1049,Fustat,deed of betrothal,
+A.I.U. VII D 1r,P101,Fadla bt. Abraham,Bride,ACT02,Bride,כלה,attested,1049,Fustat,deed of betrothal,
 A.I.U. VII D 1r,P026,Abraham b. Musallam,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1049,Fustat,deed of betrothal,professional scribe; scribe & witness of ENA 4020.38v; scribe of Karaite calendars
-TS 6 Ja 2,P221,Mu'ammala bt. Hayyim,Bride,ACT02,Bride,כלה,attested,1002,Palestine (region),ketubba (court copy),wife; copy made upon her declaration
-TS 6 Ja 2,P199,Menashe b. Mahbub ha-Levi (of Acre),Scribe,ACT08,Scribe,סופר,attested,1002,Palestine (region),ketubba (court copy),
+TS 6 Ja 2,P222,Mu'ammala bt. Hayyim,Bride,ACT02,Bride,כלה,attested,1002,Palestine (region),ketubba (court copy),wife; copy made upon her declaration
+TS 6 Ja 2,P200,Menashe b. Mahbub ha-Levi (of Acre),Scribe,ACT08,Scribe,סופר,attested,1002,Palestine (region),ketubba (court copy),
 TS 6 Ja 2,P047,Bahlul b. Isaac ha-Kohen,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
-TS 6 Ja 2,P133,Isaac b. Eliya ha-Kohen,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
-TS 6 Ja 2,P137,Isaac b. Samuel al-Fara,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
-TS 6 Ja 2,P093,Eli b. Mu'ammar,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),also witness CUL Add. 3430 (Jerusalem 1028); al-Sharabi 'maker of potions'
-TS 6 Ja 2,P171,Joseph b. Jacob,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
-TS 6 Ja 2,P134,Isaac b. Jacob,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
-TS 6 Ja 2,P251,Sa'adya b. Joseph,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
+TS 6 Ja 2,P134,Isaac b. Eliya ha-Kohen,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
+TS 6 Ja 2,P138,Isaac b. Samuel al-Fara,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
+TS 6 Ja 2,P094,Eli b. Mu'ammar,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),also witness CUL Add. 3430 (Jerusalem 1028); al-Sharabi 'maker of potions'
+TS 6 Ja 2,P172,Joseph b. Jacob,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
+TS 6 Ja 2,P135,Isaac b. Jacob,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
+TS 6 Ja 2,P252,Sa'adya b. Joseph,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
 TS 6 Ja 2,P022,Abraham b. Isaac,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
-TS 6 Ja 2,P075,David b. Solomon,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
-TS 6 Ja 2,P120,Hiba b. Khalaf al-Shinizi,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),family of Iranian origin (Shiniz in Fars)
-TS 6 Ja 2,P169,Joseph b. Isaac,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
-TS 6 Ja 2,P152,Jacob b. Isaac,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
-TS 8.152,P301,Sitt-al-Ahl bt. Joseph,Bride,ACT02,Bride,כלה,reconstructed,1050,Unknown,ketubba (fragment),name partly preserved
-TS 12.449,P294,Shela ha-Kohen b. Sadoq beRabbi [...],Witness,ACT07,Witness,עד חותם,attested,1020,Unknown,ketubba (fragment),Aramaic bar/beRabbi - likely Rabbanite
-TS 12.449,P185,Levi ha-Levi bar Joseph,Witness,ACT07,Witness,עד חותם,attested,1020,Unknown,ketubba (fragment),Aramaic bar - likely Rabbanite
-TS 12.621,P245,Rav Hesed,Groom,ACT01,Groom,חתן,attested,1038,Fustat,ketubba (fragment),father's name lost; identification with Hesed al-Tustari rejected by editor
-TS 12.621,P269,Sara bt. Sahlawaya,Bride,ACT02,Bride,כלה,reconstructed,1038,Fustat,ketubba (fragment),reading of name uncertain
-TS 12.621,P260,Sahlawaya b. Hayyim,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1038,Fustat,ketubba (fragment),the Fustat Karaite banker; father Hayyim already dead here
-TS 12.621,P074,David b. Shekhanya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,ketubba (fragment),Rabbanite cantor of Palestinian synagogue in Fustat who wrote poem honoring Sahlawaya
-TS 12.658,P190,Malka,Bride,ACT02,Bride,כלה,attested,1020,Unknown,"ketubba (fragment, trousseau)",only name preserved
+TS 6 Ja 2,P076,David b. Solomon,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
+TS 6 Ja 2,P121,Hiba b. Khalaf al-Shinizi,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),family of Iranian origin (Shiniz in Fars)
+TS 6 Ja 2,P170,Joseph b. Isaac,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
+TS 6 Ja 2,P153,Jacob b. Isaac,Witness,ACT07,Witness,עד חותם,attested,1002,Palestine (region),ketubba (court copy),
+TS 8.152,P302,Sitt-al-Ahl bt. Joseph,Bride,ACT02,Bride,כלה,reconstructed,1050,Unknown,ketubba (fragment),name partly preserved
+TS 12.449,P295,Shela ha-Kohen b. Sadoq beRabbi [...],Witness,ACT07,Witness,עד חותם,attested,1020,Unknown,ketubba (fragment),Aramaic bar/beRabbi - likely Rabbanite
+TS 12.449,P186,Levi ha-Levi bar Joseph,Witness,ACT07,Witness,עד חותם,attested,1020,Unknown,ketubba (fragment),Aramaic bar - likely Rabbanite
+TS 12.621,P246,Rav Hesed,Groom,ACT01,Groom,חתן,attested,1038,Fustat,ketubba (fragment),father's name lost; identification with Hesed al-Tustari rejected by editor
+TS 12.621,P270,Sara bt. Sahlawaya,Bride,ACT02,Bride,כלה,reconstructed,1038,Fustat,ketubba (fragment),reading of name uncertain
+TS 12.621,P261,Sahlawaya b. Hayyim,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1038,Fustat,ketubba (fragment),the Fustat Karaite banker; father Hayyim already dead here
+TS 12.621,P075,David b. Shekhanya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,ketubba (fragment),Rabbanite cantor of Palestinian synagogue in Fustat who wrote poem honoring Sahlawaya
+TS 12.658,P191,Malka,Bride,ACT02,Bride,כלה,attested,1020,Unknown,"ketubba (fragment, trousseau)",only name preserved
 TS 12.715 + Bodl. MS Heb. a.3.34,P024,Abraham b. Jacob,Groom,ACT01,Groom,חתן,attested,1130,Egypt (region),ketubba,
-TS 12.715 + Bodl. MS Heb. a.3.34,P145,"Jacob (father of Abraham, OS23)",GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1130,Egypt (region),ketubba,
-TS 12.715 + Bodl. MS Heb. a.3.34,P268,Sara bt. Sahl,Bride,ACT02,Bride,כלה,attested,1130,Egypt (region),ketubba,dowry totalling 3884 dinars
-TS 12.715 + Bodl. MS Heb. a.3.34,P256,"Sahl (father of Sara, OS23)",BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1130,Egypt (region),ketubba,
-TS 12.715 + Bodl. MS Heb. a.3.34,P255,Sa'id ha-Kohen b. Nahum,Witness,ACT07,Witness,עד חותם,attested,1130,Egypt (region),ketubba,reading partly damaged
-TS 13 J 37.11,P202,"Meshullam (groom, OS25)",Groom,ACT01,Groom,חתן,attested,1040,Fustat,ketubba (fragment),only name preserved
-TS 13 J 37.11,P154,Jacob b. Yesha'ya,Agent,ACT05,Agent,שליח (פקיד),attested,1040,Fustat,ketubba (fragment),bride's agent
-TS 16.67,P088,El'azar b. Shemen Tov,Groom,ACT01,Groom,חתן,attested,1201,Cairo,ketubba,
-TS 16.67,P297,Shemen Tov b. Shemarya,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1201,Cairo,ketubba,
-TS 16.67,P296,Shemarya b. Shemen Tov,GroomGrandfather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1201,Cairo,ketubba,
-TS 16.67,P249,Rivqa bt. Joseph,Bride,ACT02,Bride,כלה,attested,1201,Cairo,ketubba,father from Byzantium; no dowry - poor bride
-TS 16.67,P161,Joseph (father of Rivqa),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1201,Cairo,ketubba,'who was from Byzantium'
+TS 12.715 + Bodl. MS Heb. a.3.34,P146,"Jacob (father of Abraham, OS23)",GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1130,Egypt (region),ketubba,
+TS 12.715 + Bodl. MS Heb. a.3.34,P269,Sara bt. Sahl,Bride,ACT02,Bride,כלה,attested,1130,Egypt (region),ketubba,dowry totalling 3884 dinars
+TS 12.715 + Bodl. MS Heb. a.3.34,P257,"Sahl (father of Sara, OS23)",BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1130,Egypt (region),ketubba,
+TS 12.715 + Bodl. MS Heb. a.3.34,P256,Sa'id ha-Kohen b. Nahum,Witness,ACT07,Witness,עד חותם,attested,1130,Egypt (region),ketubba,reading partly damaged
+TS 13 J 37.11,P203,"Meshullam (groom, OS25)",Groom,ACT01,Groom,חתן,attested,1040,Fustat,ketubba (fragment),only name preserved
+TS 13 J 37.11,P155,Jacob b. Yesha'ya,Agent,ACT05,Agent,שליח (פקיד),attested,1040,Fustat,ketubba (fragment),bride's agent
+TS 16.67,P089,El'azar b. Shemen Tov,Groom,ACT01,Groom,חתן,attested,1201,Cairo,ketubba,
+TS 16.67,P298,Shemen Tov b. Shemarya,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1201,Cairo,ketubba,
+TS 16.67,P297,Shemarya b. Shemen Tov,GroomGrandfather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1201,Cairo,ketubba,
+TS 16.67,P250,Rivqa bt. Joseph,Bride,ACT02,Bride,כלה,attested,1201,Cairo,ketubba,father from Byzantium; no dowry - poor bride
+TS 16.67,P162,Joseph (father of Rivqa),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1201,Cairo,ketubba,'who was from Byzantium'
 TS 16.67,P040,Amram ha-Levi b. Joseph ha-Levi,Agent,ACT05,Agent,שליח (פקיד),attested,1201,Cairo,ketubba,bride's agent; grandfather Isaac ha-Levi
 TS 16.67,P003,[...] b. El'azar b. Halfon,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1201,Cairo,ketubba,first name lost
-TS 16.67,P138,Isaac b. Yefet,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1201,Cairo,ketubba,great-grandfather Isaac was 'a pious man from among the Rabbanites'
-TS 16.67,P139,Isaac bar Azaryahu,Scribe,ACT08,Scribe,סופר,attested,1201,Cairo,ketubba,"probably RABBANITE (cursive script, Aramaic bar)"
-TS 16.67,P139,Isaac bar Azaryahu,Witness,ACT07,Witness,עד חותם,attested,1201,Cairo,ketubba,
-TS 16.67,P238,Nathana'el ha-Kohen b. Meshullam,Witness,ACT07,Witness,עד חותם,attested,1201,Cairo,ketubba,
-TS 16.67,P098,Eliyahu b. Halfon,Witness,ACT07,Witness,עד חותם,attested,1201,Cairo,ketubba,
+TS 16.67,P139,Isaac b. Yefet,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1201,Cairo,ketubba,great-grandfather Isaac was 'a pious man from among the Rabbanites'
+TS 16.67,P140,Isaac bar Azaryahu,Scribe,ACT08,Scribe,סופר,attested,1201,Cairo,ketubba,"probably RABBANITE (cursive script, Aramaic bar)"
+TS 16.67,P140,Isaac bar Azaryahu,Witness,ACT07,Witness,עד חותם,attested,1201,Cairo,ketubba,
+TS 16.67,P239,Nathana'el ha-Kohen b. Meshullam,Witness,ACT07,Witness,עד חותם,attested,1201,Cairo,ketubba,
+TS 16.67,P099,Eliyahu b. Halfon,Witness,ACT07,Witness,עד חותם,attested,1201,Cairo,ketubba,
 TS 16.67,P038,Amaryahu Jehuda (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1201,Cairo,ketubba,"'the great nasi, nasi of those who bring testimony'"
-TS 16.67,P067,David b. Hasdai (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1201,Cairo,ketubba,father of Amaryahu Jehuda in nasi clause
-TS 16.67,P117,Hasdai Emmanuel (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1201,Cairo,ketubba,"co-mentioned nasi, son of Sar Shalom"
-TS 16.67,P267,Sar Shalom (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1201,Cairo,ketubba,possibly a second name of Hizkiyahu
-TS 16.80,P246,"Rayyisa (bride, OS27)",Bride,ACT02,Bride,כלה,attested,1050,Ramle,ketubba (fragment),only name preserved; dowry 1170 dinars
-TS 16.236,P215,Mevorakh b. Yehya,Groom,ACT01,Groom,חתן,attested,1050,Unknown,ketubba (fragment),
-TS 16.236,P225,"Mubaraka (bride, OS28)",Bride,ACT02,Bride,כלה,attested,1050,Unknown,ketubba (fragment),
+TS 16.67,P068,David b. Hasdai (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1201,Cairo,ketubba,father of Amaryahu Jehuda in nasi clause
+TS 16.67,P118,Hasdai Emmanuel (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1201,Cairo,ketubba,"co-mentioned nasi, son of Sar Shalom"
+TS 16.67,P268,Sar Shalom (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1201,Cairo,ketubba,possibly a second name of Hizkiyahu
+TS 16.80,P247,"Rayyisa (bride, OS27)",Bride,ACT02,Bride,כלה,attested,1050,Ramle,ketubba (fragment),only name preserved; dowry 1170 dinars
+TS 16.236,P216,Mevorakh b. Yehya,Groom,ACT01,Groom,חתן,attested,1050,Unknown,ketubba (fragment),
+TS 16.236,P226,"Mubaraka (bride, OS28)",Bride,ACT02,Bride,כלה,attested,1050,Unknown,ketubba (fragment),
 TS 16.236,P011,Aaron b. Mordekhai,Agent,ACT05,Agent,שליח (פקיד),attested,1050,Unknown,ketubba (fragment),bride's agent
-TS 20.2,P213,Mevorakh b. Samuel,Groom,ACT01,Groom,חתן,attested,1015,Tyre,ketubba,
-TS 20.2,P300,"Sitt-al-Ahl (bride, OS29)",Bride,ACT02,Bride,כלה,attested,1015,Tyre,ketubba,
-TS 20.2,P189,Maimon b. Fadl,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Tyre,ketubba,
-TS 20.2,P314,Solomon b. Maimon,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Tyre,ketubba,son of Maimon b. Fadl
-TS 20.2,P095,Eli b. Solomon,Agent,ACT05,Agent,שליח (פקיד),attested,1015,Tyre,ketubba,bride's agent
-TS 20.2,P291,Shala [?],Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,name uncertain
-TS 20.2,P224,Mubarak b. Husain,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,
-TS 20.2,P295,Shela ha-Kohen bar Rabbi Mevasser,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,RABBANITE (Aramaic elements in name)
-TS 20.2,P214,Mevorakh b. Yefet,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,probably = Karaite groom of mixed marriage contract Antonin 637
-TS 20.2,P203,Mevasser b. Abraham,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,
-TS 20.2,P054,Benjamin b. Hasson,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,per name index
-TS 20.156,P345,Yesha'ya b. Isaac,Groom,ACT01,Groom,חתן,attested,1015,Unknown,ketubba (fragment),
-TS 20.156,P103,Farajiyya bt. Jehuda,Bride,ACT02,Bride,כלה,attested,1015,Unknown,ketubba (fragment),
-TS 20.156,P155,Jehuda (father of Farajiyya),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1015,Unknown,ketubba (fragment),
-TS 20.156,P193,Mansur b. Yehai b. Abu'l-Shahaba,Agent,ACT05,Agent,שליח (פקיד),attested,1015,Unknown,ketubba (fragment),bride's agent
-TS 20.156,P113,Hasan (Yefet) b. Amram known as ben Shemun,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Unknown,ketubba (fragment),Hebrew translation Yefet written above
-TS 20.156,P315,Solomon b. Mansur,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Unknown,ketubba (fragment),
-TS 24.7,P316,Solomon b. Mevasser b. Sahl al-Ani,Groom,ACT01,Groom,חתן,attested,1004,Cairo,ketubba,prominent Karaite merchant family (from Ana on the Euphrates)
-TS 24.7,P204,Mevasser b. Sahl al-Ani,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1004,Cairo,ketubba,
-TS 24.7,P270,Sara bt. Yesha'ya,Bride,ACT02,Bride,כלה,attested,1004,Cairo,ketubba,first cousin of groom
-TS 24.7,P346,Yesha'ya b. Sahl al-Ani,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1004,Cairo,ketubba,received the payment; brother of Mevasser
-TS 24.7,P258,Sahl al-Ani,BrideGrandfather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1004,Cairo,ketubba,common grandfather
-TS 24.13,P194,Marzuq b. Yefet,Groom,ACT01,Groom,חתן,attested,1062,Fustat,ketubba,
-TS 24.13,P328,Yefet (father of Marzuq),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1062,Fustat,ketubba,
-TS 24.13,P104,Faras bt. Simha,Bride,ACT02,Bride,כלה,attested,1062,Fustat,ketubba,
-TS 24.13,P299,Simha (father of Faras),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1062,Fustat,ketubba,
-TS 24.13,P112,Hananya b. Elnathan,Agent,ACT05,Agent,שליח (פקיד),attested,1062,Fustat,ketubba,bride's agent; probably = legatee in Rabbanite deed TS 13 J 1.18 (Fustat 1078); possibly Abu'l-Zahir ibn al-Qatmani who sold book to Rabbanite synagogue
-TS 24.13,P237,Nathana'el b. Mevasser ha-Levi,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1062,Fustat,ketubba,
+TS 20.2,P214,Mevorakh b. Samuel,Groom,ACT01,Groom,חתן,attested,1015,Tyre,ketubba,
+TS 20.2,P301,"Sitt-al-Ahl (bride, OS29)",Bride,ACT02,Bride,כלה,attested,1015,Tyre,ketubba,
+TS 20.2,P190,Maimon b. Fadl,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Tyre,ketubba,
+TS 20.2,P315,Solomon b. Maimon,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Tyre,ketubba,son of Maimon b. Fadl
+TS 20.2,P096,Eli b. Solomon,Agent,ACT05,Agent,שליח (פקיד),attested,1015,Tyre,ketubba,bride's agent
+TS 20.2,P292,Shala [?],Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,name uncertain
+TS 20.2,P225,Mubarak b. Husain,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,
+TS 20.2,P296,Shela ha-Kohen bar Rabbi Mevasser,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,RABBANITE (Aramaic elements in name)
+TS 20.2,P215,Mevorakh b. Yefet,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,probably = Karaite groom of mixed marriage contract Antonin 637
+TS 20.2,P204,Mevasser b. Abraham,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,
+TS 20.2,P055,Benjamin b. Hasson,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,per name index
+TS 20.156,P346,Yesha'ya b. Isaac,Groom,ACT01,Groom,חתן,attested,1015,Unknown,ketubba (fragment),
+TS 20.156,P104,Farajiyya bt. Jehuda,Bride,ACT02,Bride,כלה,attested,1015,Unknown,ketubba (fragment),
+TS 20.156,P156,Jehuda (father of Farajiyya),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1015,Unknown,ketubba (fragment),
+TS 20.156,P194,Mansur b. Yehai b. Abu'l-Shahaba,Agent,ACT05,Agent,שליח (פקיד),attested,1015,Unknown,ketubba (fragment),bride's agent
+TS 20.156,P114,Hasan (Yefet) b. Amram known as ben Shemun,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Unknown,ketubba (fragment),Hebrew translation Yefet written above
+TS 20.156,P316,Solomon b. Mansur,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Unknown,ketubba (fragment),
+TS 24.7,P317,Solomon b. Mevasser b. Sahl al-Ani,Groom,ACT01,Groom,חתן,attested,1004,Cairo,ketubba,prominent Karaite merchant family (from Ana on the Euphrates)
+TS 24.7,P205,Mevasser b. Sahl al-Ani,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1004,Cairo,ketubba,
+TS 24.7,P271,Sara bt. Yesha'ya,Bride,ACT02,Bride,כלה,attested,1004,Cairo,ketubba,first cousin of groom
+TS 24.7,P347,Yesha'ya b. Sahl al-Ani,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1004,Cairo,ketubba,received the payment; brother of Mevasser
+TS 24.7,P259,Sahl al-Ani,BrideGrandfather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1004,Cairo,ketubba,common grandfather
+TS 24.13,P195,Marzuq b. Yefet,Groom,ACT01,Groom,חתן,attested,1062,Fustat,ketubba,
+TS 24.13,P329,Yefet (father of Marzuq),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1062,Fustat,ketubba,
+TS 24.13,P105,Faras bt. Simha,Bride,ACT02,Bride,כלה,attested,1062,Fustat,ketubba,
+TS 24.13,P300,Simha (father of Faras),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1062,Fustat,ketubba,
+TS 24.13,P113,Hananya b. Elnathan,Agent,ACT05,Agent,שליח (פקיד),attested,1062,Fustat,ketubba,bride's agent; probably = legatee in Rabbanite deed TS 13 J 1.18 (Fustat 1078); possibly Abu'l-Zahir ibn al-Qatmani who sold book to Rabbanite synagogue
+TS 24.13,P238,Nathana'el b. Mevasser ha-Levi,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1062,Fustat,ketubba,
 TS 24.13,P025,Abraham b. Joseph b. Anan ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1062,Fustat,ketubba,mentioned as deceased in Rabbanite deed TS 13 J 1.18
 TS 24.13,P034,Alan b. Nahum,Witness,ACT07,Witness,עד חותם,attested,1062,Fustat,ketubba,here with honorific for the dead
-TS 24.13,P087,El'azar b. Samuel b. Sahl ha-Eved,Witness,ACT07,Witness,עד חותם,attested,1062,Fustat,ketubba,also TS 16.109 + TS AS 153.489; here with honorific for the dead
+TS 24.13,P088,El'azar b. Samuel b. Sahl ha-Eved,Witness,ACT07,Witness,עד חותם,attested,1062,Fustat,ketubba,also TS 16.109 + TS AS 153.489; here with honorific for the dead
 TS 24.13,P002,[...] b. Efraim,Witness,ACT07,Witness,עד חותם,attested,1062,Fustat,ketubba,deceased
-TS 24.13,P252,Sa'adya b. Razi'el,Witness,ACT07,Witness,עד חותם,attested,1062,Fustat,ketubba,
-TS 24.13,P282,Sedaqa b. Menashe,Witness,ACT07,Witness,עד חותם,attested,1062,Fustat,ketubba,
-TS 24.13,P272,Saul b. Abraham,Witness,ACT07,Witness,עד חותם,attested,1062,Fustat,ketubba,
-TS 24.45 + TS NS J 86,P198,"Menashe (groom, OS33)",Groom,ACT01,Groom,חתן,attested,1088,Fustat,ketubba,first cousin of the bride; son of the elder Aaron ha-Kohen
+TS 24.13,P253,Sa'adya b. Razi'el,Witness,ACT07,Witness,עד חותם,attested,1062,Fustat,ketubba,
+TS 24.13,P283,Sedaqa b. Menashe,Witness,ACT07,Witness,עד חותם,attested,1062,Fustat,ketubba,
+TS 24.13,P273,Saul b. Abraham,Witness,ACT07,Witness,עד חותם,attested,1062,Fustat,ketubba,
+TS 24.45 + TS NS J 86,P199,"Menashe (groom, OS33)",Groom,ACT01,Groom,חתן,attested,1088,Fustat,ketubba,first cousin of the bride; son of the elder Aaron ha-Kohen
 TS 24.45 + TS NS J 86,P015,Aaron ha-Kohen (father of Menashe),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1088,Fustat,ketubba,deceased
-TS 24.45 + TS NS J 86,P303,Sitt-al-Husn bt. Moses ha-Kohen,Bride,ACT02,Bride,כלה,attested,1088,Fustat,ketubba,widow; first husband Abu Imran Moses b. Yefet
-TS 24.45 + TS NS J 86,P220,Moses ha-Kohen b. Aaron,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1088,Fustat,ketubba,"'the mighty prince', prominent Karaite courtier of Fustat; d. 1085; will preserved"
+TS 24.45 + TS NS J 86,P304,Sitt-al-Husn bt. Moses ha-Kohen,Bride,ACT02,Bride,כלה,attested,1088,Fustat,ketubba,widow; first husband Abu Imran Moses b. Yefet
+TS 24.45 + TS NS J 86,P221,Moses ha-Kohen b. Aaron,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1088,Fustat,ketubba,"'the mighty prince', prominent Karaite courtier of Fustat; d. 1085; will preserved"
 TS 24.45 + TS NS J 86,P016,"Aaron ha-Kohen (grandfather, OS33)",BrideGrandfather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1088,Fustat,ketubba,
-TS 24.45 + TS NS J 86,P091,Eli b. Hillel,Agent,ACT05,Agent,שליח (פקיד),attested,1088,Fustat,ketubba,bride's agent
-TS 24.45 + TS NS J 86,P219,Moses b. Yefet (Abu Imran),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1088,Fustat,ketubba,first husband of Sitt-al-Husn; deceased
-TS 24.45 + TS NS J 86,P231,Nasiya bt. Moses ha-Kohen,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1088,Fustat,ketubba,sister of bride; married David b. Daniel b. Azarya (Rabbanite Gaon family) in 1082 (TS 24.1)
-TS 24.45 + TS NS J 86,P066,David b. Daniel b. Azarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1088,Fustat,ketubba,"RABBANITE; controversial Gaon, of the Exilarch family; husband of Nasiya"
-TS AS 146.34,P156,"Jehuda (groom, OS34)",Groom,ACT01,Groom,חתן,attested,1050,Unknown,ketubba (small fragment),
-TS AS 146.34,P302,Sitt-al-Fadl,Bride,ACT02,Bride,כלה,attested,1050,Unknown,ketubba (small fragment),
-TS AS 146.34,P305,"Solomon b. [...] (agent, OS34)",Agent,ACT05,Agent,שליח (פקיד),attested,1050,Unknown,ketubba (small fragment),name partly erased
-TS AS 147.120,P242,Ovadya b. Sedaqa,Groom,ACT01,Groom,חתן,attested,1080,Fustat,ketubba (fragment),
-TS AS 147.120,P278,Sedaqa b. Halfon b. Elun,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1080,Fustat,ketubba (fragment),deceased
+TS 24.45 + TS NS J 86,P092,Eli b. Hillel,Agent,ACT05,Agent,שליח (פקיד),attested,1088,Fustat,ketubba,bride's agent
+TS 24.45 + TS NS J 86,P220,Moses b. Yefet (Abu Imran),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1088,Fustat,ketubba,first husband of Sitt-al-Husn; deceased
+TS 24.45 + TS NS J 86,P232,Nasiya bt. Moses ha-Kohen,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1088,Fustat,ketubba,sister of bride; married David b. Daniel b. Azarya (Rabbanite Gaon family) in 1082 (TS 24.1)
+TS 24.45 + TS NS J 86,P067,David b. Daniel b. Azarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1088,Fustat,ketubba,"RABBANITE; controversial Gaon, of the Exilarch family; husband of Nasiya"
+TS AS 146.34,P157,"Jehuda (groom, OS34)",Groom,ACT01,Groom,חתן,attested,1050,Unknown,ketubba (small fragment),
+TS AS 146.34,P303,Sitt-al-Fadl,Bride,ACT02,Bride,כלה,attested,1050,Unknown,ketubba (small fragment),
+TS AS 146.34,P306,"Solomon b. [...] (agent, OS34)",Agent,ACT05,Agent,שליח (פקיד),attested,1050,Unknown,ketubba (small fragment),name partly erased
+TS AS 147.120,P243,Ovadya b. Sedaqa,Groom,ACT01,Groom,חתן,attested,1080,Fustat,ketubba (fragment),
+TS AS 147.120,P279,Sedaqa b. Halfon b. Elun,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1080,Fustat,ketubba (fragment),deceased
 TS AS 147.120,P033,al-Tifrat bt. Tovya,Bride,ACT02,Bride,כלה,attested,1080,Fustat,ketubba (fragment),
-TS AS 147.120,P322,Tovya (father of al-Tifrat),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1080,Fustat,ketubba (fragment),
-TS AS 147.120,P333,Yefet b. Menashe,Agent,ACT05,Agent,שליח (פקיד),attested,1080,Fustat,ketubba (fragment),bride's agent
-"TS NS 320.34a,b",P320,Thabit b. Jacob,Groom,ACT01,Groom,חתן,attested,1050,Unknown,ketubba (two fragments),
-"TS NS 320.34a,b",P147,Jacob (father of Thabit),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1050,Unknown,ketubba (two fragments),
-"TS NS 320.34a,b",P105,Ghaliya bt. Joseph,Bride,ACT02,Bride,כלה,attested,1050,Unknown,ketubba (two fragments),wealthy; dowry at least 374 dinars incl. house
-"TS NS 320.34a,b",P165,Joseph b. Abraham (father of Ghaliya),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1050,Unknown,ketubba (two fragments),also her agent
-"TS NS 320.34a,b",P165,Joseph b. Abraham (father of Ghaliya),Agent,ACT05,Agent,שליח (פקיד),attested,1050,Unknown,ketubba (two fragments),
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P149,Jacob b. David al-Shulhani,Groom,ACT01,Groom,חתן,attested,1006,Ramle,ketubba,banker/money-changer family
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P063,David al-Shulhani,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1006,Ramle,ketubba,
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P274,Sayyida bt. Wahb,Bride,ACT02,Bride,כלה,attested,1006,Ramle,ketubba,very wealthy; dowry incl. two houses in Ramle (400 dinars)
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P325,Wahb al-Arri [?],BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1006,Ramle,ketubba,deceased
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P197,Menahem b. Job al-Halabi,Agent,ACT05,Agent,שליח (פקיד),attested,1006,Ramle,ketubba,bride's agent; family from Aleppo
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P069,David b. Isaac ha-Kohen (the scribe),WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1006,Ramle,ketubba,also witness of court copy Bodl. MS Heb. a.3.4v (Ramle)
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P181,Khalaf [...] (OS38),WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1006,Ramle,ketubba,name damaged
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P101,Faraj b. Mevasser ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1006,Ramle,ketubba,
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P288,Semah [...] (OS38),Witness,ACT07,Witness,עד חותם,attested,1006,Ramle,ketubba,name damaged
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P079,Efraim b. Jehuda,Witness,ACT07,Witness,עד חותם,attested,1006,Ramle,ketubba,
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P162,Joseph [...] (OS38),Witness,ACT07,Witness,עד חותם,attested,1006,Ramle,ketubba,name damaged
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P148,Jacob [...] (OS38),Witness,ACT07,Witness,עד חותם,attested,1006,Ramle,ketubba,name damaged
-"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P312,Solomon b. Hayyim (Ramle),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1006,Ramle,ketubba,owner of house next to the dowry houses in Ramle
-CUL Add. 3430,P124,Hizkiyahu b. Benjamin,Groom,ACT01,Groom,חתן,attested,1028,Jerusalem,ketubba,
-CUL Add. 3430,P053,"Benjamin (father of Hizkiyahu, OS39)",GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1028,Jerusalem,ketubba,
-CUL Add. 3430,P271,Sarwa bt. Sedaqa,Bride,ACT02,Bride,כלה,attested,1028,Jerusalem,ketubba,
-CUL Add. 3430,P280,Sedaqa b. Jarir,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1028,Jerusalem,ketubba,
-CUL Add. 3430,P167,Joseph b. Abraham ha-Kohen,Agent,ACT05,Agent,שליח (פקיד),attested,1028,Jerusalem,ketubba,bride's agent; tentatively identified with the Karaite philosopher Joseph al-Basir
-CUL Add. 3430,P208,Mevorakh b. David,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1028,Jerusalem,ketubba,
-CUL Add. 3430,P150,Jacob b. Fadlan,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1028,Jerusalem,ketubba,
-CUL Add. 3430,P311,Solomon b. David ha-Kohen (the scholar),Scribe,ACT08,Scribe,סופר,attested,1028,Jerusalem,ketubba,scribe; signed first
-CUL Add. 3430,P311,Solomon b. David ha-Kohen (the scholar),Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,
-CUL Add. 3430,P339,Yehoshua b. Eli ha-Kohen b. Zita,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,"descendant of the Karaite scholar Eli ha-Kohen b. Zita; brother of Yefet (TS 12.644, ENA NS 18.37)"
-CUL Add. 3430,P236,Nathan ha-Kohen bar Yehai,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,Aramaic bar - possibly Rabbanite
-CUL Add. 3430,P338,Yehoshua b. Adiya ha-Kohen,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,
-CUL Add. 3430,P056,Bishr b. Abraham ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,also witness of court copy Bodl. MS Heb. a.3.4v
-CUL Add. 3430,P235,Nathan b. Nisan ha-Levi (the scholar),Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,probably father of Mevorakh b. Nathan b. Nisan (letter of 1100)
-CUL Add. 3430,P093,Eli b. Mu'ammar,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,al-Sharabi; also witness TS 6 Ja 2 (1002)
-CUL Add. 3430,P241,Omar b. Yehoshua,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,
-CUL Add. 3430,P173,Joseph b. Samuel,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,
-CUL Add. 3430,P286,Sedaqa b. Zakharya,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,
-Bodl. MS Heb. a.3.44,P158,Jehuda b. Khalaf,Groom,ACT01,Groom,חתן,attested,1037,Fustat,ketubba,possibly = witness of II Firk. Heb. A. 717r
-Bodl. MS Heb. a.3.44,P180,"Khalaf (father of Jehuda, OS40)",GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1037,Fustat,ketubba,
-Bodl. MS Heb. a.3.44,P216,Miriam bt. Solomon,Bride,ACT02,Bride,כלה,attested,1037,Fustat,ketubba,widow
-Bodl. MS Heb. a.3.44,P304,"Solomon (father of Miriam, OS40)",BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1037,Fustat,ketubba,
-Bodl. MS Heb. a.3.44,P102,Faraj b. Solomon,Agent,ACT05,Agent,שליח (פקיד),attested,1037,Fustat,ketubba,bride's agent; possibly her brother
+TS AS 147.120,P323,Tovya (father of al-Tifrat),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1080,Fustat,ketubba (fragment),
+TS AS 147.120,P334,Yefet b. Menashe,Agent,ACT05,Agent,שליח (פקיד),attested,1080,Fustat,ketubba (fragment),bride's agent
+"TS NS 320.34a,b",P321,Thabit b. Jacob,Groom,ACT01,Groom,חתן,attested,1050,Unknown,ketubba (two fragments),
+"TS NS 320.34a,b",P148,Jacob (father of Thabit),GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1050,Unknown,ketubba (two fragments),
+"TS NS 320.34a,b",P106,Ghaliya bt. Joseph,Bride,ACT02,Bride,כלה,attested,1050,Unknown,ketubba (two fragments),wealthy; dowry at least 374 dinars incl. house
+"TS NS 320.34a,b",P166,Joseph b. Abraham (father of Ghaliya),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1050,Unknown,ketubba (two fragments),also her agent
+"TS NS 320.34a,b",P166,Joseph b. Abraham (father of Ghaliya),Agent,ACT05,Agent,שליח (פקיד),attested,1050,Unknown,ketubba (two fragments),
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P150,Jacob b. David al-Shulhani,Groom,ACT01,Groom,חתן,attested,1006,Ramle,ketubba,banker/money-changer family
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P064,David al-Shulhani,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1006,Ramle,ketubba,
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P275,Sayyida bt. Wahb,Bride,ACT02,Bride,כלה,attested,1006,Ramle,ketubba,very wealthy; dowry incl. two houses in Ramle (400 dinars)
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P326,Wahb al-Arri [?],BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1006,Ramle,ketubba,deceased
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P198,Menahem b. Job al-Halabi,Agent,ACT05,Agent,שליח (פקיד),attested,1006,Ramle,ketubba,bride's agent; family from Aleppo
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P070,David b. Isaac ha-Kohen (the scribe),WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1006,Ramle,ketubba,also witness of court copy Bodl. MS Heb. a.3.4v (Ramle)
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P182,Khalaf [...] (OS38),WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1006,Ramle,ketubba,name damaged
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P102,Faraj b. Mevasser ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1006,Ramle,ketubba,
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P289,Semah [...] (OS38),Witness,ACT07,Witness,עד חותם,attested,1006,Ramle,ketubba,name damaged
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P080,Efraim b. Jehuda,Witness,ACT07,Witness,עד חותם,attested,1006,Ramle,ketubba,
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P163,Joseph [...] (OS38),Witness,ACT07,Witness,עד חותם,attested,1006,Ramle,ketubba,name damaged
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P149,Jacob [...] (OS38),Witness,ACT07,Witness,עד חותם,attested,1006,Ramle,ketubba,name damaged
+"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",P313,Solomon b. Hayyim (Ramle),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1006,Ramle,ketubba,owner of house next to the dowry houses in Ramle
+CUL Add. 3430,P125,Hizkiyahu b. Benjamin,Groom,ACT01,Groom,חתן,attested,1028,Jerusalem,ketubba,
+CUL Add. 3430,P054,"Benjamin (father of Hizkiyahu, OS39)",GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1028,Jerusalem,ketubba,
+CUL Add. 3430,P272,Sarwa bt. Sedaqa,Bride,ACT02,Bride,כלה,attested,1028,Jerusalem,ketubba,
+CUL Add. 3430,P281,Sedaqa b. Jarir,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1028,Jerusalem,ketubba,
+CUL Add. 3430,P168,Joseph b. Abraham ha-Kohen,Agent,ACT05,Agent,שליח (פקיד),attested,1028,Jerusalem,ketubba,bride's agent; tentatively identified with the Karaite philosopher Joseph al-Basir
+CUL Add. 3430,P209,Mevorakh b. David,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1028,Jerusalem,ketubba,
+CUL Add. 3430,P151,Jacob b. Fadlan,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1028,Jerusalem,ketubba,
+CUL Add. 3430,P312,Solomon b. David ha-Kohen (the scholar),Scribe,ACT08,Scribe,סופר,attested,1028,Jerusalem,ketubba,scribe; signed first
+CUL Add. 3430,P312,Solomon b. David ha-Kohen (the scholar),Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,
+CUL Add. 3430,P340,Yehoshua b. Eli ha-Kohen b. Zita,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,"descendant of the Karaite scholar Eli ha-Kohen b. Zita; brother of Yefet (TS 12.644, ENA NS 18.37)"
+CUL Add. 3430,P237,Nathan ha-Kohen bar Yehai,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,Aramaic bar - possibly Rabbanite
+CUL Add. 3430,P339,Yehoshua b. Adiya ha-Kohen,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,
+CUL Add. 3430,P057,Bishr b. Abraham ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,also witness of court copy Bodl. MS Heb. a.3.4v
+CUL Add. 3430,P236,Nathan b. Nisan ha-Levi (the scholar),Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,probably father of Mevorakh b. Nathan b. Nisan (letter of 1100)
+CUL Add. 3430,P094,Eli b. Mu'ammar,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,al-Sharabi; also witness TS 6 Ja 2 (1002)
+CUL Add. 3430,P242,Omar b. Yehoshua,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,
+CUL Add. 3430,P174,Joseph b. Samuel,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,
+CUL Add. 3430,P287,Sedaqa b. Zakharya,Witness,ACT07,Witness,עד חותם,attested,1028,Jerusalem,ketubba,
+Bodl. MS Heb. a.3.44,P159,Jehuda b. Khalaf,Groom,ACT01,Groom,חתן,attested,1037,Fustat,ketubba,possibly = witness of II Firk. Heb. A. 717r
+Bodl. MS Heb. a.3.44,P181,"Khalaf (father of Jehuda, OS40)",GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1037,Fustat,ketubba,
+Bodl. MS Heb. a.3.44,P217,Miriam bt. Solomon,Bride,ACT02,Bride,כלה,attested,1037,Fustat,ketubba,widow
+Bodl. MS Heb. a.3.44,P305,"Solomon (father of Miriam, OS40)",BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1037,Fustat,ketubba,
+Bodl. MS Heb. a.3.44,P103,Faraj b. Solomon,Agent,ACT05,Agent,שליח (פקיד),attested,1037,Fustat,ketubba,bride's agent; possibly her brother
 Bodl. MS Heb. a.3.44,P020,Abraham al-Awalani,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1037,Fustat,ketubba,
-Bodl. MS Heb. a.3.44,P289,Semah b. Asa (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1037,Fustat,ketubba,"nasi of Fustat, basis for dating to 1037"
-Bodl. MS Heb. a.3.4v,P308,Solomon b. Amram (OS41),Groom,ACT01,Groom,חתן,attested,1015,Ramle,ketubba (court copy),husband
-Bodl. MS Heb. a.3.4v,P128,Husn bt. David (OS41),Bride,ACT02,Bride,כלה,attested,1015,Ramle,ketubba (court copy),wife
-Bodl. MS Heb. a.3.4v,P092,Eli b. Isma'il al-Bairuti (the scholar),Declarant,ACT09,Declarant,מצהיר בפני בית דין,attested,1015,Ramle,ketubba (court copy),declared the copy conforms to the original
-Bodl. MS Heb. a.3.4v,P335,Yehai b. Eli ha-Kohen,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original ketubba
-Bodl. MS Heb. a.3.4v,P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original; deceased
+Bodl. MS Heb. a.3.44,P290,Semah b. Asa (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1037,Fustat,ketubba,"nasi of Fustat, basis for dating to 1037"
+Bodl. MS Heb. a.3.4v,P309,Solomon b. Amram (OS41),Groom,ACT01,Groom,חתן,attested,1015,Ramle,ketubba (court copy),husband
+Bodl. MS Heb. a.3.4v,P129,Husn bt. David (OS41),Bride,ACT02,Bride,כלה,attested,1015,Ramle,ketubba (court copy),wife
+Bodl. MS Heb. a.3.4v,P093,Eli b. Isma'il al-Bairuti (the scholar),Declarant,ACT09,Declarant,מצהיר בפני בית דין,attested,1015,Ramle,ketubba (court copy),declared the copy conforms to the original
+Bodl. MS Heb. a.3.4v,P336,Yehai b. Eli ha-Kohen,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original ketubba
+Bodl. MS Heb. a.3.4v,P350,Yeshu'a b. Thabit ha-Levi ha-Shulhani,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original; deceased
 Bodl. MS Heb. a.3.4v,P004,[...] b. Isaac ha-Levi al-Qata'if,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original; 'maker of almond cakes'
-Bodl. MS Heb. a.3.4v,P186,Mahbub [?] (OS41),Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original
-Bodl. MS Heb. a.3.4v,P082,Efraim b. Moses,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original
-Bodl. MS Heb. a.3.4v,P348,Yeshu'a b. Khatim,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original
-Bodl. MS Heb. a.3.4v,P196,Menahem b. Isaac,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original; beadle of the Middle Synagogue in Ramle; summoned to the court in Ramle to certify
-Bodl. MS Heb. a.3.4v,P196,Menahem b. Isaac,Declarant,ACT09,Declarant,מצהיר בפני בית דין,attested,1015,Ramle,ketubba (court copy),certified correctness before the Ramle court
-Bodl. MS Heb. a.3.4v,P069,David b. Isaac ha-Kohen (the scribe),Scribe,ACT08,Scribe,סופר,attested,1015,Ramle,ketubba (court copy),"scribe & witness of the copy; also WitnessOfAgency in TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
-Bodl. MS Heb. a.3.4v,P069,David b. Isaac ha-Kohen (the scribe),Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),
-Bodl. MS Heb. a.3.4v,P157,Jehuda [?] (OS41),Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy
-Bodl. MS Heb. a.3.4v,P056,Bishr b. Abraham ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy; also CUL Add. 3430
-Bodl. MS Heb. a.3.4v,P243,Parhon b. Mevorakh ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy
-Bodl. MS Heb. a.3.4v,P211,Mevorakh b. Nathan,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy
-Bodl. MS Heb. a.3.4v,P131,Isaac b. [...] (OS41),Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy
-Bodl. MS Heb. a.3.4v,P106,Habib b. David (Abu Ali),Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy
-Bodl. MS Heb. b.12.31,P136,"Isaac b. Joseph (groom, OS42)",Groom,ACT01,Groom,חתן,attested,1050,Fustat,ketubba,
-Bodl. MS Heb. b.12.31,P160,"Joseph (father of Isaac, OS42)",GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1050,Fustat,ketubba,
-Bodl. MS Heb. b.12.31,P178,Karima bt. Abraham,Bride,ACT02,Bride,כלה,attested,1050,Fustat,ketubba,
+Bodl. MS Heb. a.3.4v,P187,Mahbub [?] (OS41),Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original
+Bodl. MS Heb. a.3.4v,P083,Efraim b. Moses,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original
+Bodl. MS Heb. a.3.4v,P349,Yeshu'a b. Khatim,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original
+Bodl. MS Heb. a.3.4v,P197,Menahem b. Isaac,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of original; beadle of the Middle Synagogue in Ramle; summoned to the court in Ramle to certify
+Bodl. MS Heb. a.3.4v,P197,Menahem b. Isaac,Declarant,ACT09,Declarant,מצהיר בפני בית דין,attested,1015,Ramle,ketubba (court copy),certified correctness before the Ramle court
+Bodl. MS Heb. a.3.4v,P070,David b. Isaac ha-Kohen (the scribe),Scribe,ACT08,Scribe,סופר,attested,1015,Ramle,ketubba (court copy),"scribe & witness of the copy; also WitnessOfAgency in TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+Bodl. MS Heb. a.3.4v,P070,David b. Isaac ha-Kohen (the scribe),Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),
+Bodl. MS Heb. a.3.4v,P158,Jehuda [?] (OS41),Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy
+Bodl. MS Heb. a.3.4v,P057,Bishr b. Abraham ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy; also CUL Add. 3430
+Bodl. MS Heb. a.3.4v,P244,Parhon b. Mevorakh ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy
+Bodl. MS Heb. a.3.4v,P212,Mevorakh b. Nathan,Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy
+Bodl. MS Heb. a.3.4v,P132,Isaac b. [...] (OS41),Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy
+Bodl. MS Heb. a.3.4v,P107,Habib b. David (Abu Ali),Witness,ACT07,Witness,עד חותם,attested,1015,Ramle,ketubba (court copy),witness of copy
+Bodl. MS Heb. b.12.31,P137,"Isaac b. Joseph (groom, OS42)",Groom,ACT01,Groom,חתן,attested,1050,Fustat,ketubba,
+Bodl. MS Heb. b.12.31,P161,"Joseph (father of Isaac, OS42)",GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1050,Fustat,ketubba,
+Bodl. MS Heb. b.12.31,P179,Karima bt. Abraham,Bride,ACT02,Bride,כלה,attested,1050,Fustat,ketubba,
 Bodl. MS Heb. b.12.31,P018,Abraham (father of Karima),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1050,Fustat,ketubba,also her agent; received the mohar
 Bodl. MS Heb. b.12.31,P018,Abraham (father of Karima),Agent,ACT05,Agent,שליח (פקיד),attested,1050,Fustat,ketubba,
-Bodl. MS Heb. b.12.31,P151,Jacob b. Hillel b. Awkal,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1050,Fustat,ketubba,descendant of the great RABBANITE merchant Joseph ibn Awkal
-Bodl. MS Heb. b.12.31,P136,"Isaac b. Joseph (groom, OS42)",WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1050,Fustat,ketubba,the groom named among those who came for the appointment
-ENA 4020.38v,P275,"Sedaqa (groom, OS43)",Groom,ACT01,Groom,חתן,attested,1030,Fustat,ketubba (fragment),other names lost
+Bodl. MS Heb. b.12.31,P152,Jacob b. Hillel b. Awkal,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1050,Fustat,ketubba,descendant of the great RABBANITE merchant Joseph ibn Awkal
+Bodl. MS Heb. b.12.31,P137,"Isaac b. Joseph (groom, OS42)",WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1050,Fustat,ketubba,the groom named among those who came for the appointment
+ENA 4020.38v,P276,"Sedaqa (groom, OS43)",Groom,ACT01,Groom,חתן,attested,1030,Fustat,ketubba (fragment),other names lost
 ENA 4020.38v,P026,Abraham b. Musallam,Scribe,ACT08,Scribe,סופר,attested,1030,Fustat,ketubba (fragment),wrote the deed; father of bride of A.I.U. VII D 1r
 ENA 4020.38v,P026,Abraham b. Musallam,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,ketubba (fragment),
 ENA 4020.38v,P029,Abraham ha-Kohen b. Khalaf,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,ketubba (fragment),
-ENA 4020.38v,P239,Nathana'el ha-Levi b. Rawh,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,ketubba (fragment),addressee of letters of Nathan b. Abraham (Rabbanite Gaon contender who courted Karaite support)
+ENA 4020.38v,P240,Nathana'el ha-Levi b. Rawh,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,ketubba (fragment),addressee of letters of Nathan b. Abraham (Rabbanite Gaon contender who courted Karaite support)
 ENA 4020.38v,P052,Barakat b. Mubarak,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,ketubba (fragment),
 ENA 4020.38v,P009,[...] ha-Kohen b. Joseph,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,ketubba (fragment),
-ENA 4020.38v,P184,Levi ha-Levi bar Jacob,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,ketubba (fragment),RABBANITE (Aramaic bar); known from Fustat Rabbanite court documents; d. before 1044
+ENA 4020.38v,P185,Levi ha-Levi bar Jacob,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,ketubba (fragment),RABBANITE (Aramaic bar); known from Fustat Rabbanite court documents; d. before 1044
 ENA 4020.38v,P049,Barakat b. Benjamin,Witness,ACT07,Witness,עד חותם,attested,1030,Fustat,ketubba (fragment),per name index
-ENA 4020.38v,P055,Berakha b. Rawh (Abu'l-Barakat),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,ketubba (fragment),brother of Nathana'el; also courted by Nathan b. Abraham
-ENA NS 3.23 + ENA NS 3.27,P062,"David (groom, OS44)",Groom,ACT01,Groom,חתן,reconstructed,1020,Unknown,ketubba (two fragments),identification uncertain
-ENA NS 3.23 + ENA NS 3.27,P126,"Husn (bride, OS44)",Bride,ACT02,Bride,כלה,attested,1020,Unknown,ketubba (two fragments),
-II Firk. Heb. A. 717r,P127,"Husn (bride, OS46)",Bride,ACT02,Bride,כלה,attested,1050,Unknown,ketubba (fragment),only name preserved
+ENA 4020.38v,P056,Berakha b. Rawh (Abu'l-Barakat),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,ketubba (fragment),brother of Nathana'el; also courted by Nathan b. Abraham
+ENA NS 3.23 + ENA NS 3.27,P063,"David (groom, OS44)",Groom,ACT01,Groom,חתן,reconstructed,1020,Unknown,ketubba (two fragments),identification uncertain
+ENA NS 3.23 + ENA NS 3.27,P127,"Husn (bride, OS44)",Bride,ACT02,Bride,כלה,attested,1020,Unknown,ketubba (two fragments),
+II Firk. Heb. A. 717r,P128,"Husn (bride, OS46)",Bride,ACT02,Bride,כלה,attested,1050,Unknown,ketubba (fragment),only name preserved
 II Firk. Heb. A. 717r,P008,[...] ha-Kohen (OS46),Witness,ACT07,Witness,עד חותם,attested,1050,Unknown,ketubba (fragment),
-II Firk. Heb. A. 717r,P158,Jehuda b. Khalaf,Witness,ACT07,Witness,עד חותם,reconstructed,1050,Unknown,ketubba (fragment),probably; possibly = groom of Bodl. MS Heb. a.3.44
-Bodl. MS Heb. d.66.49v-50r,P289,Semah b. Asa (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1036,Fustat,formulary of betrothal with mixed-marriage clauses,"'Semah the nasi, son of the nasi Asa'; formula for Karaite woman + Rabbanite man"
-Brit. Mus. Or. 5532,P327,Yedidya (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1081,Egypt (region),book of prayers with marriage formula,replaced name Anan; not in known nasi lists; perhaps son of Hizkiyahu or Joshya
-Bodl. MS Heb. a.3.42,P344,Yehya b. Abraham,Groom,ACT01,Groom,חתן,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),RABBANITE; son of the physician Abraham; remarriage after divorce
+II Firk. Heb. A. 717r,P159,Jehuda b. Khalaf,Witness,ACT07,Witness,עד חותם,reconstructed,1050,Unknown,ketubba (fragment),probably; possibly = groom of Bodl. MS Heb. a.3.44
+Bodl. MS Heb. d.66.49v-50r,P290,Semah b. Asa (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1036,Fustat,formulary of betrothal with mixed-marriage clauses,"'Semah the nasi, son of the nasi Asa'; formula for Karaite woman + Rabbanite man"
+Brit. Mus. Or. 5532,P328,Yedidya (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1081,Egypt (region),book of prayers with marriage formula,replaced name Anan; not in known nasi lists; perhaps son of Hizkiyahu or Joshya
+Bodl. MS Heb. a.3.42,P345,Yehya b. Abraham,Groom,ACT01,Groom,חתן,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),RABBANITE; son of the physician Abraham; remarriage after divorce
 Bodl. MS Heb. a.3.42,P019,"Abraham (physician, father of Yehya)",GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),'the esteemed physician'
-Bodl. MS Heb. a.3.42,P247,Rayyisa bt. Sa'adya,Bride,ACT02,Bride,כלה,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),"KARAITE; widow, then divorcee remarrying same husband; dowry 719 dinars; had daughter from first marriage"
-Bodl. MS Heb. a.3.42,P250,Sa'adya b. David (father of Rayyisa),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),deceased
-Bodl. MS Heb. a.3.42,P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,Agent,ACT05,Agent,שליח (פקיד),attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),bride's agent; 'our Great Prince'; grandfather Yehoshua ha-Kohen the esteemed prince
-Bodl. MS Heb. a.3.42,P234,Nathan b. Joseph b. Nahorai,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),deceased when signed? honorific for dead
-Bodl. MS Heb. a.3.42,P140,Isaac ha-Parnas b. Sedaqa,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),
-Bodl. MS Heb. a.3.42,P078,David ha-Kohen b. Sedaqa ha-Kohen,Witness,ACT07,Witness,עד חותם,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),probably brother of the agent
-Bodl. MS Heb. a.3.42,P287,Sedaqa ha-Levi b. Efraim,Witness,ACT07,Witness,עד חותם,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),
-Bodl. MS Heb. a.3.42,P209,Mevorakh b. El'azar b. [...] Yehoshua,Witness,ACT07,Witness,עד חותם,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),
-Bodl. MS Heb. a.3.42,P116,Hasdai b. Hizkiyahu (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),acting nasi in Fustat 1117
-Bodl. MS Heb. a.3.42,P125,Hizkiyahu b. Solomon (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),deceased father in nasi clause ('chief of the exile')
+Bodl. MS Heb. a.3.42,P248,Rayyisa bt. Sa'adya,Bride,ACT02,Bride,כלה,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),"KARAITE; widow, then divorcee remarrying same husband; dowry 719 dinars; had daughter from first marriage"
+Bodl. MS Heb. a.3.42,P251,Sa'adya b. David (father of Rayyisa),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),deceased
+Bodl. MS Heb. a.3.42,P342,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,Agent,ACT05,Agent,שליח (פקיד),attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),bride's agent; 'our Great Prince'; grandfather Yehoshua ha-Kohen the esteemed prince
+Bodl. MS Heb. a.3.42,P235,Nathan b. Joseph b. Nahorai,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),deceased when signed? honorific for dead
+Bodl. MS Heb. a.3.42,P141,Isaac ha-Parnas b. Sedaqa,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),
+Bodl. MS Heb. a.3.42,P079,David ha-Kohen b. Sedaqa ha-Kohen,Witness,ACT07,Witness,עד חותם,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),probably brother of the agent
+Bodl. MS Heb. a.3.42,P288,Sedaqa ha-Levi b. Efraim,Witness,ACT07,Witness,עד חותם,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),
+Bodl. MS Heb. a.3.42,P210,Mevorakh b. El'azar b. [...] Yehoshua,Witness,ACT07,Witness,עד חותם,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),
+Bodl. MS Heb. a.3.42,P117,Hasdai b. Hizkiyahu (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),acting nasi in Fustat 1117
+Bodl. MS Heb. a.3.42,P126,Hizkiyahu b. Solomon (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1117,Fustat,mixed Karaite-Rabbanite ketubba (Karaite formula),deceased father in nasi clause ('chief of the exile')
 ENA NS 18.37,P006,"[...] b. Mansur (groom, OS57)",Groom,ACT01,Groom,חתן,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),RABBANITE; first name lost
-ENA NS 18.37,P191,"Mansur (father of groom, OS57)",GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
-ENA NS 18.37,P179,Karima bt. Hasan,Bride,ACT02,Bride,כלה,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),KARAITE
-ENA NS 18.37,P114,Hasan b. Moses,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),also her agent
-ENA NS 18.37,P114,Hasan b. Moses,Agent,ACT05,Agent,שליח (פקיד),attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
-ENA NS 18.37,P284,Sedaqa b. Nahum ha-Kohen,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),also witness in Karaite bill of divorce TS 10 J 2.4 (Fustat 1029)
-ENA NS 18.37,P218,Moses b. Siba'a,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),travelled between Tyre and Fustat; agent in Tyre deed 1019 (PER H 83); witness in Karaite deed of appointment for daughter of David b. Isaac ha-Levi
-ENA NS 18.37,P334,Yefet ha-Kohen b. Eli b. Zita,Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),also witness TS 12.644
-ENA NS 18.37,P135,Isaac b. Jehuda ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),possibly brother of Joseph b. Jehuda ha-Levi (TS 12.644)
-ENA NS 18.37,P260,Sahlawaya b. Hayyim,Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),the Fustat Karaite banker; ancestor name Abda in signature decoration
-ENA NS 18.37,P072,David b. Moses (OS57),Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
-ENA NS 18.37,P253,Sa'id b. [...] (OS57),Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
-ENA NS 18.37,P081,Efraim b. Mevasser b. Solomon,Scribe,ACT08,Scribe,סופר,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),identified as scribe by handwriting
-ENA NS 18.37,P081,Efraim b. Mevasser b. Solomon,Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
-ENA NS 18.37,P223,Mu'ammar b. S[edaqa],Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
-ENA NS 18.37,P070,David b. Isaac ha-Levi (Abu Nasr),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),prominent Karaite courtier; his daughter's deed of appointment witnessed by Moses b. Siba'a
-Mosseri VII.43 + TS Ar.53.53,P089,Eli b. Amram (he-haver),Judge,ACT10,Judge,דיין / אב בית דין,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),RABBANITE judge ('bet din') appointed by the Palestinian yeshiva; leader of Palestinian congregation in Fustat; writer of draft A
-Mosseri VII.43 + TS Ar.53.53,P177,Josiah b. Solomon (nasi),Judge,ACT10,Judge,דיין / אב בית דין,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),KARAITE nasi; the session held at his majlis (moshav); brother of Hizkiyahu b. Solomon
-Mosseri VII.43 + TS Ar.53.53,P177,Josiah b. Solomon (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),
-Mosseri VII.43 + TS Ar.53.53,P309,Solomon b. David (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),deceased father of Josiah in the protocol
-Mosseri VII.43 + TS Ar.53.53,P210,Mevorakh b. Israel (heir),Party,ACT03,LegalParty,צד משפטי,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),"heir, parallel cousin of Samuel; accepted jurisdiction of Jewish courts by qinyan"
-Mosseri VII.43 + TS Ar.53.53,P265,Samuel b. Yehuda (the orphan),Party,ACT03,LegalParty,צד משפטי,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),minor heir
-Mosseri VII.43 + TS Ar.53.53,P324,Umm Samuel bt. Aaron,Party,ACT03,LegalParty,צד משפטי,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),"mother of Samuel, divorcee of Yehuda b. Tammam; guaranteed not to seek Muslim courts"
+ENA NS 18.37,P192,"Mansur (father of groom, OS57)",GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
+ENA NS 18.37,P180,Karima bt. Hasan,Bride,ACT02,Bride,כלה,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),KARAITE
+ENA NS 18.37,P115,Hasan b. Moses,BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),also her agent
+ENA NS 18.37,P115,Hasan b. Moses,Agent,ACT05,Agent,שליח (פקיד),attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
+ENA NS 18.37,P285,Sedaqa b. Nahum ha-Kohen,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),also witness in Karaite bill of divorce TS 10 J 2.4 (Fustat 1029)
+ENA NS 18.37,P219,Moses b. Siba'a,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),travelled between Tyre and Fustat; agent in Tyre deed 1019 (PER H 83); witness in Karaite deed of appointment for daughter of David b. Isaac ha-Levi
+ENA NS 18.37,P335,Yefet ha-Kohen b. Eli b. Zita,Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),also witness TS 12.644
+ENA NS 18.37,P136,Isaac b. Jehuda ha-Levi,Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),possibly brother of Joseph b. Jehuda ha-Levi (TS 12.644)
+ENA NS 18.37,P261,Sahlawaya b. Hayyim,Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),the Fustat Karaite banker; ancestor name Abda in signature decoration
+ENA NS 18.37,P073,David b. Moses (OS57),Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
+ENA NS 18.37,P254,Sa'id b. [...] (OS57),Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
+ENA NS 18.37,P082,Efraim b. Mevasser b. Solomon,Scribe,ACT08,Scribe,סופר,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),identified as scribe by handwriting
+ENA NS 18.37,P082,Efraim b. Mevasser b. Solomon,Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
+ENA NS 18.37,P224,Mu'ammar b. S[edaqa],Witness,ACT07,Witness,עד חותם,attested,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),
+ENA NS 18.37,P071,David b. Isaac ha-Levi (Abu Nasr),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1035,Fustat,mixed Karaite-Rabbanite deed of betrothal (Karaite formula),prominent Karaite courtier; his daughter's deed of appointment witnessed by Moses b. Siba'a
+Mosseri VII.43 + TS Ar.53.53,P090,Eli b. Amram (he-haver),Judge,ACT10,Judge,דיין / אב בית דין,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),RABBANITE judge ('bet din') appointed by the Palestinian yeshiva; leader of Palestinian congregation in Fustat; writer of draft A
+Mosseri VII.43 + TS Ar.53.53,P178,Josiah b. Solomon (nasi),Judge,ACT10,Judge,דיין / אב בית דין,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),KARAITE nasi; the session held at his majlis (moshav); brother of Hizkiyahu b. Solomon
+Mosseri VII.43 + TS Ar.53.53,P178,Josiah b. Solomon (nasi),Nasi,ACT12,NamedNasi,נשיא מכהן,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),
+Mosseri VII.43 + TS Ar.53.53,P310,Solomon b. David (nasi),Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),deceased father of Josiah in the protocol
+Mosseri VII.43 + TS Ar.53.53,P211,Mevorakh b. Israel (heir),Party,ACT03,LegalParty,צד משפטי,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),"heir, parallel cousin of Samuel; accepted jurisdiction of Jewish courts by qinyan"
+Mosseri VII.43 + TS Ar.53.53,P266,Samuel b. Yehuda (the orphan),Party,ACT03,LegalParty,צד משפטי,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),minor heir
+Mosseri VII.43 + TS Ar.53.53,P325,Umm Samuel bt. Aaron,Party,ACT03,LegalParty,צד משפטי,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),"mother of Samuel, divorcee of Yehuda b. Tammam; guaranteed not to seek Muslim courts"
 Mosseri VII.43 + TS Ar.53.53,P010,Aaron b. Isaac,Guarantor,ACT04,Guarantor,ערב,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),maternal grandfather of the orphan; stands surety (daman al-darak) for his daughter
-Mosseri VII.43 + TS Ar.53.53,P342,Yehuda b. Tammam,Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),deceased father of Samuel
-Mosseri VII.43 + TS Ar.53.53,P248,Rayyisa bt. Tammam,Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),deceased aunt; apparently a pawnbroker
-Mosseri VII.43 + TS Ar.53.53,P244,Rahma bt. Tammam,Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),deceased aunt; left real estate incl. a new house; gave deed of gift to Mevorakh
-Mosseri VII.43 + TS Ar.53.53,P143,Israel b. Tammam [?],Mentioned,ACT14,DocumentMention,נזכר במסמך,reconstructed,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),father of Mevorakh; presumed son of Tammam (parallel cousins)
-Mosseri VII.43 + TS Ar.53.53,P319,Tammam,Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),deceased grandfather; the inheritance is of 'the children of Tammam'
+Mosseri VII.43 + TS Ar.53.53,P343,Yehuda b. Tammam,Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),deceased father of Samuel
+Mosseri VII.43 + TS Ar.53.53,P249,Rayyisa bt. Tammam,Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),deceased aunt; apparently a pawnbroker
+Mosseri VII.43 + TS Ar.53.53,P245,Rahma bt. Tammam,Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),deceased aunt; left real estate incl. a new house; gave deed of gift to Mevorakh
+Mosseri VII.43 + TS Ar.53.53,P144,Israel b. Tammam [?],Mentioned,ACT14,DocumentMention,נזכר במסמך,reconstructed,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),father of Mevorakh; presumed son of Tammam (parallel cousins)
+Mosseri VII.43 + TS Ar.53.53,P320,Tammam,Mentioned,ACT14,DocumentMention,נזכר במסמך,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),deceased grandfather; the inheritance is of 'the children of Tammam'
 Mosseri VII.43 + TS Ar.53.53,P027,Abraham b. Solomon (Abu Kathir),Trustee,ACT11,Trustee,נאמן בית דין,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),RABBANITE court trustee
-Mosseri VII.43 + TS Ar.53.53,P229,Nahray b. Nissim,Trustee,ACT11,Trustee,נאמן בית דין,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),RABBANITE; the famous merchant-scholar of Fustat
-Mosseri VII.43 + TS Ar.53.53,P097,Eli ha-Kohen ha-parnas b. Ya'ish,Trustee,ACT11,Trustee,נאמן בית דין,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),RABBANITE parnas; this document extends his attested activity back to 1055
-Mosseri VII.43 + TS Ar.53.53,P071,David b. Josiah,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),son of the nasi Josiah; lived in Fustat; betrothed Bahiyya bt. Solomon b. Sa'adya (L-G Glass 40v)
-TS 16.50,P084,Efraim b. Shemarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1043,Fustat,deed of betrothal (draft) + deed of attorney,leader of the Palestinians in Fustat; his draft letter TS 13 J 8.14 lists Karaites (incl. Ezra b. Samuel b. Ezra and the 'elders Tustari') who helped the Jerusalem community
-TS 12.621,P084,Efraim b. Shemarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,ketubba (fragment),his letter of thanks (~1035) names Sahlawaya b. Hayyim among the benefactors
-TS 24.13,P084,Efraim b. Shemarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1062,Fustat,ketubba,Samuel b. Sahl signed a document of his Rabbanite court together with other Karaites (~1042)
-ENA 4020.38v,P084,Efraim b. Shemarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,ketubba (fragment),recipient of Solomon b. Jehuda's complaints about Nathan b. Abraham's Karaite connections
-Mosseri VII.43 + TS Ar.53.53,P084,Efraim b. Shemarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),his death in 1055 opened the leadership contest in Fustat; Eli b. Amram succeeded him
-TS 12.644,P313,Solomon b. Jehuda (Gaon),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,deed of betrothal,his letter to Efraim b. Shemarya reports the death of the witness Samuel b. Joseph al-Basri (~1028)
-ENA 4020.38v,P313,Solomon b. Jehuda (Gaon),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,ketubba (fragment),complained about the Karaite connections of his rival Nathan b. Abraham
-Mosseri VII.43 + TS Ar.53.53,P313,Solomon b. Jehuda (Gaon),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),Gaon 1025-1051; granted Eli b. Amram the title he-haver ha-me'ulle (Zinger n.6)
-ENA 4020.38v,P233,Nathan b. Abraham (Gaon),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,ketubba (fragment),contender for the gaonate 1038-1042; wrote to Nathana'el ha-Levi b. Rawh and to his brother Berakha seeking Karaite support
+Mosseri VII.43 + TS Ar.53.53,P230,Nahray b. Nissim,Trustee,ACT11,Trustee,נאמן בית דין,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),RABBANITE; the famous merchant-scholar of Fustat
+Mosseri VII.43 + TS Ar.53.53,P098,Eli ha-Kohen ha-parnas b. Ya'ish,Trustee,ACT11,Trustee,נאמן בית דין,attested,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),RABBANITE parnas; this document extends his attested activity back to 1055
+Mosseri VII.43 + TS Ar.53.53,P072,David b. Josiah,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),son of the nasi Josiah; lived in Fustat; betrothed Bahiyya bt. Solomon b. Sa'adya (L-G Glass 40v)
+TS 16.50,P085,Efraim b. Shemarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1043,Fustat,deed of betrothal (draft) + deed of attorney,leader of the Palestinians in Fustat; his draft letter TS 13 J 8.14 lists Karaites (incl. Ezra b. Samuel b. Ezra and the 'elders Tustari') who helped the Jerusalem community
+TS 12.621,P085,Efraim b. Shemarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,ketubba (fragment),his letter of thanks (~1035) names Sahlawaya b. Hayyim among the benefactors
+TS 24.13,P085,Efraim b. Shemarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1062,Fustat,ketubba,Samuel b. Sahl signed a document of his Rabbanite court together with other Karaites (~1042)
+ENA 4020.38v,P085,Efraim b. Shemarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,ketubba (fragment),recipient of Solomon b. Jehuda's complaints about Nathan b. Abraham's Karaite connections
+Mosseri VII.43 + TS Ar.53.53,P085,Efraim b. Shemarya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),his death in 1055 opened the leadership contest in Fustat; Eli b. Amram succeeded him
+TS 12.644,P314,Solomon b. Jehuda (Gaon),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,deed of betrothal,his letter to Efraim b. Shemarya reports the death of the witness Samuel b. Joseph al-Basri (~1028)
+ENA 4020.38v,P314,Solomon b. Jehuda (Gaon),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,ketubba (fragment),complained about the Karaite connections of his rival Nathan b. Abraham
+Mosseri VII.43 + TS Ar.53.53,P314,Solomon b. Jehuda (Gaon),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),Gaon 1025-1051; granted Eli b. Amram the title he-haver ha-me'ulle (Zinger n.6)
+ENA 4020.38v,P234,Nathan b. Abraham (Gaon),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,ketubba (fragment),contender for the gaonate 1038-1042; wrote to Nathana'el ha-Levi b. Rawh and to his brother Berakha seeking Karaite support
 TS 24.13,P028,Abraham b. Solomon Gaon,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1062,Fustat,ketubba,son of the Gaon Solomon b. Jehuda; his 1040 letter mentions Samuel b. Sahl of Khurasan as letter-carrier between Palestine and Fustat
-ENA 4020.38v,P110,Halfon ha-Levi b. Solomon,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,ketubba (fragment),grandson of the witness Levi ha-Levi bar Jacob; issued a deed of release in Fustat 1044 that shows Levi was already dead
-TS 24.45 + TS NS J 86,P108,Halfon b. Menashe,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1088,Fustat,ketubba,Rabbanite court scribe (documents 1100-1138); his document TS 12.104 mentions Sitt-al-Husn and her first husband
-TS 12.644,P077,David ha-Kohen b. Babad,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,deed of betrothal,probably mentioned in the Rabbanite marriage contract TS 12.600 + TS 8.253; likely son of the witness Babad ha-Kohen b. David
-CUL Add. 3430,P212,Mevorakh b. Nathan b. Nisan,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1028,Jerusalem,ketubba,"Abu'l-Khayr Mubarak b. Hiba b. Nisan, Karaite mentioned in a letter of 1100; probably son of the witness Nathan b. Nisan ha-Levi"
-TS AS 145.307r + TS Misc. 29.58a r,P323,Tovya b. Moses,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,deed of betrothal,"Byzantine Karaite scholar, disciple of Yehoshua b. Jehuda; the handwriting of TS AS 145.307r + TS Misc. 29.58a r was once (wrongly) attributed to him"
-Brit. Mus. Or. 5532,P350,Zakkai b. Yedidya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1081,Egypt (region),book of prayers with marriage formula,nasi who wrote a letter to Abraham ha-Kohen (TS 13 J 15.14); Mann tentatively made him a son of the nasi Yedidya
-TS 16.67,P310,Solomon b. David b. Hasdai (nasi),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1201,Cairo,ketubba,distinguished nasi and scholar (work on Karaite incest law); very likely the unnamed brother of Amaryahu Jehuda in the nasi clause
-Chapter 9 (Olszowy-Schlanger),P318,Solomon Yedidya (nasi),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"nasi who presided over a circumcision in Cairo, 1236 (II Firk. A. 1321); descendant of Solomon b. David b. Hasdai"
-Chapter 3 (Olszowy-Schlanger),P170,Joseph b. Israel al-Tustari,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"Abu Ya'qub, first-generation Tustari brother in Egypt with Baghdad trade links"
-Chapter 3 (Olszowy-Schlanger),P254,Sa'id b. Israel al-Tustari,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"Abu Sahl, first-generation Tustari brother"
-Chapter 3 (Olszowy-Schlanger),P111,Hana bt. Israel al-Tustari,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,sister of the three first-generation Tustari brothers; lived in Ahwaz
-Chapter 3 (Olszowy-Schlanger),P321,Tov b. David (Abu'l-Tayyib),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,son of Hana; carried the 1011 Aleppo letter to his Tustari uncles
-Chapter 3 (Olszowy-Schlanger),P083,Efraim b. Sa'id b. Malachi,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,agent of the Tustaris in Ahwaz; his 1026 letter deals with selling two Tustari shops there
-Chapter 3 (Olszowy-Schlanger),P306,Solomon b. Aaron al-Baghdadi,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,banker in Baghdad who issued suftajas drawn on the Tustaris and on Sahlawaya b. Hayyim (letter of 1011)
-Chapter 3 (Olszowy-Schlanger),P276,Sedaqa b. Amram (Damascus),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,correspondent in Damascus who cashed suftajas and informed the Tustaris (letter of 1011)
-Chapter 3 (Olszowy-Schlanger),P201,Menashe ibn al-Qazzaz,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"head of the al-Qazzaz family; served the Fatimids, appointed governor in Syria in 990"
+ENA 4020.38v,P111,Halfon ha-Levi b. Solomon,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,ketubba (fragment),grandson of the witness Levi ha-Levi bar Jacob; issued a deed of release in Fustat 1044 that shows Levi was already dead
+TS 24.45 + TS NS J 86,P109,Halfon b. Menashe,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1088,Fustat,ketubba,Rabbanite court scribe (documents 1100-1138); his document TS 12.104 mentions Sitt-al-Husn and her first husband
+TS 12.644,P078,David ha-Kohen b. Babad,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1030,Fustat,deed of betrothal,probably mentioned in the Rabbanite marriage contract TS 12.600 + TS 8.253; likely son of the witness Babad ha-Kohen b. David
+CUL Add. 3430,P213,Mevorakh b. Nathan b. Nisan,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1028,Jerusalem,ketubba,"Abu'l-Khayr Mubarak b. Hiba b. Nisan, Karaite mentioned in a letter of 1100; probably son of the witness Nathan b. Nisan ha-Levi"
+TS AS 145.307r + TS Misc. 29.58a r,P324,Tovya b. Moses,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,deed of betrothal,"Byzantine Karaite scholar, disciple of Yehoshua b. Jehuda; the handwriting of TS AS 145.307r + TS Misc. 29.58a r was once (wrongly) attributed to him"
+Brit. Mus. Or. 5532,P351,Zakkai b. Yedidya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1081,Egypt (region),book of prayers with marriage formula,nasi who wrote a letter to Abraham ha-Kohen (TS 13 J 15.14); Mann tentatively made him a son of the nasi Yedidya
+TS 16.67,P311,Solomon b. David b. Hasdai (nasi),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1201,Cairo,ketubba,distinguished nasi and scholar (work on Karaite incest law); very likely the unnamed brother of Amaryahu Jehuda in the nasi clause
+Chapter 9 (Olszowy-Schlanger),P319,Solomon Yedidya (nasi),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"nasi who presided over a circumcision in Cairo, 1236 (II Firk. A. 1321); descendant of Solomon b. David b. Hasdai"
+Chapter 3 (Olszowy-Schlanger),P171,Joseph b. Israel al-Tustari,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"Abu Ya'qub, first-generation Tustari brother in Egypt with Baghdad trade links"
+Chapter 3 (Olszowy-Schlanger),P255,Sa'id b. Israel al-Tustari,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"Abu Sahl, first-generation Tustari brother"
+Chapter 3 (Olszowy-Schlanger),P112,Hana bt. Israel al-Tustari,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,sister of the three first-generation Tustari brothers; lived in Ahwaz
+Chapter 3 (Olszowy-Schlanger),P322,Tov b. David (Abu'l-Tayyib),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,son of Hana; carried the 1011 Aleppo letter to his Tustari uncles
+Chapter 3 (Olszowy-Schlanger),P084,Efraim b. Sa'id b. Malachi,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,agent of the Tustaris in Ahwaz; his 1026 letter deals with selling two Tustari shops there
+Chapter 3 (Olszowy-Schlanger),P053,Ben Solomon of Amwal (Tabaristan),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"the traveller from Tabaristan whose 1011 letter from Aleppo to the Tustari brothers documents the Karaite suftaja network between Baghdad, Damascus and Fustat"
+Chapter 3 (Olszowy-Schlanger),P307,Solomon b. Aaron al-Baghdadi,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,banker in Baghdad who issued suftajas drawn on the Tustaris and on Sahlawaya b. Hayyim (letter of 1011)
+Chapter 3 (Olszowy-Schlanger),P277,Sedaqa b. Amram (Damascus),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,correspondent in Damascus who cashed suftajas and informed the Tustaris (letter of 1011)
+Chapter 3 (Olszowy-Schlanger),P202,Menashe ibn al-Qazzaz,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"head of the al-Qazzaz family; served the Fatimids, appointed governor in Syria in 990"
 Chapter 3 (Olszowy-Schlanger),P032,Adiya b. Menashe (al-Qazzaz),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"'the prince', son of Menashe al-Qazzaz; father of the agent Solomon b. Adiya (Mosseri Ia.2)"
-TS 12.621,P263,Samuel b. Menashe (al-Qazzaz),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,ketubba (fragment),"son of Menashe al-Qazzaz; father of Mu'ammala (Tyre inheritance document, 1020s)"
-TS 12.621,P222,Mu'ammala bt. Samuel (al-Qazzaz),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,ketubba (fragment),her Tyre inheritance document (Bodl. e.108.70) mentions Sahlawaya b. Hayyim
-Chapter 9 (Olszowy-Schlanger),P130,Husn bt. Jacob b. Joseph,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"donated a codex of the Prophets (written in Egypt) to the Karaite community in Jerusalem in 1016, with blessings for the nesi'im Solomon, Hizkiyahu and Joshya"
-Chapter 9 (Olszowy-Schlanger),P142,Israel b. Simha of Basra,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"donated the Aleppo Codex to the Karaite community of Jerusalem, entrusted to the care of the nesi'im Hizkiyahu and Josiah (1040s)"
-TS 24.7,P298,Siba'a b. Moses,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1004,Cairo,ketubba,the codex of Solomon b. Mevasser al-Ani passed to Siba'a b. Moses and his sons (TS K 6.148); son of Moses b. Siba'a
-TS 24.7,P085,Efraim b. Siba'a,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1004,Cairo,ketubba,son of Siba'a b. Moses (colophon TS K 6.148)
-TS 24.7,P200,Menashe b. Siba'a,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1004,Cairo,ketubba,son of Siba'a b. Moses (colophon TS K 6.148)
-Bodl. MS Heb. b.12.31,P175,Joseph ibn Awkal,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1050,Fustat,ketubba,the great Rabbanite merchant of early 11th-c. Fustat; ancestor of the witness Jacob b. Hillel b. Awkal
-Bodl. MS Heb. b.12.31,P122,Hillel b. Awkal,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1050,Fustat,ketubba,father of the witness Jacob b. Hillel; documented in the first four decades of the 11th c.
-TS 12.621,P175,Joseph ibn Awkal,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,ketubba (fragment),Goitein suggested Hesed al-Tustari was Joseph ibn Awkal's son-in-law (relevant to rejecting the identification of the groom Rav Hesed)
+TS 12.621,P264,Samuel b. Menashe (al-Qazzaz),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,ketubba (fragment),"son of Menashe al-Qazzaz; father of Mu'ammala (Tyre inheritance document, 1020s)"
+TS 12.621,P223,Mu'ammala bt. Samuel (al-Qazzaz),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,ketubba (fragment),her Tyre inheritance document (Bodl. e.108.70) mentions Sahlawaya b. Hayyim
+Chapter 9 (Olszowy-Schlanger),P131,Husn bt. Jacob b. Joseph,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"donated a codex of the Prophets (written in Egypt) to the Karaite community in Jerusalem in 1016, with blessings for the nesi'im Solomon, Hizkiyahu and Joshya"
+Chapter 9 (Olszowy-Schlanger),P143,Israel b. Simha of Basra,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,,Unknown,secondary source unit,"donated the Aleppo Codex to the Karaite community of Jerusalem, entrusted to the care of the nesi'im Hizkiyahu and Josiah (1040s)"
+TS 24.7,P299,Siba'a b. Moses,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1004,Cairo,ketubba,the codex of Solomon b. Mevasser al-Ani passed to Siba'a b. Moses and his sons (TS K 6.148); son of Moses b. Siba'a
+TS 24.7,P086,Efraim b. Siba'a,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1004,Cairo,ketubba,son of Siba'a b. Moses (colophon TS K 6.148)
+TS 24.7,P201,Menashe b. Siba'a,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1004,Cairo,ketubba,son of Siba'a b. Moses (colophon TS K 6.148)
+Bodl. MS Heb. b.12.31,P176,Joseph ibn Awkal,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1050,Fustat,ketubba,the great Rabbanite merchant of early 11th-c. Fustat; ancestor of the witness Jacob b. Hillel b. Awkal
+Bodl. MS Heb. b.12.31,P123,Hillel b. Awkal,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1050,Fustat,ketubba,father of the witness Jacob b. Hillel; documented in the first four decades of the 11th c.
+TS 12.621,P176,Joseph ibn Awkal,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1038,Fustat,ketubba (fragment),Goitein suggested Hesed al-Tustari was Joseph ibn Awkal's son-in-law (relevant to rejecting the identification of the groom Rav Hesed)
 Mosseri VII.43 + TS Ar.53.53,P023,Abraham b. Isaac b. Furat,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),"prominent Rabbanite leader; rival courted by Eli b. Amram with praises and excuses (TS 13J31.5; Zinger nn.8, 23)"
-Mosseri VII.43 + TS Ar.53.53,P343,Yehuda ha-Kohen b. Joseph (ha-Rav),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),'ha-Rav'; a player in the Fustat leadership contest around 1055 (Zinger n.23)
-Mosseri VII.43 + TS Ar.53.53,P347,Yeshu'a b. Joseph (Alexandria),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),Alexandrian leader involved in the 1055 leadership contest (Zinger n.23)
+Mosseri VII.43 + TS Ar.53.53,P344,Yehuda ha-Kohen b. Joseph (ha-Rav),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),'ha-Rav'; a player in the Fustat leadership contest around 1055 (Zinger n.23)
+Mosseri VII.43 + TS Ar.53.53,P348,Yeshu'a b. Joseph (Alexandria),Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),Alexandrian leader involved in the 1055 leadership contest (Zinger n.23)
 Mosseri VII.43 + TS Ar.53.53,P046,Bahiyya bt. Solomon b. Sa'adya,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1055,Fustat,record of joint Karaite-Rabbanite court session (two drafts),"betrothed to David b. Josiah, son of the nasi (L-G Glass 40v; Zinger n.7)"
-TS 24.13,P090,Eli b. Ephraim,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1062,Fustat,ketubba,"Rabbanite trustee in TS 13 J 1.18 (Fustat 1078), the inheritance case of a deceased Karaite in which Hananya b. Elnathan was legatee and Abraham b. Joseph b. Anan is mentioned (Zinger n.22)"
+TS 24.13,P091,Eli b. Ephraim,Mentioned,ACT15,ScholarlyMention,נזכר בהערות המהדיר,contextual,1062,Fustat,ketubba,"Rabbanite trustee in TS 13 J 1.18 (Fustat 1078), the inheritance case of a deceased Karaite in which Hananya b. Elnathan was legatee and Abraham b. Joseph b. Anan is mentioned (Zinger n.22)"

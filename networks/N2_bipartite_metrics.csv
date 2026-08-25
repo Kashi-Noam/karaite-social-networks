@@ -19,7 +19,7 @@
 ,ENA NS 17.24,unknown,5,5,0.00025,0.01754,0.0,0.00992,6
 ,TS 20.156,unknown,5,5,0.00025,0.01754,0.0,0.00992,19
 ,Bodl. MS Heb. a.3.44,unknown,5,5,0.00072,0.01895,0.0,0.00898,28
-P073,David b. Semah (nasi),Karaite,4,6,0.03289,0.07759,0.00045,0.00854,2
+P074,David b. Semah (nasi),Karaite,4,6,0.03289,0.07759,0.00045,0.00854,2
 ,TS AS 145.307r + TS Misc. 29.58a r,unknown,4,4,0.00015,0.01404,0.0,0.00832,4
 ,Bodl. MS Heb. b.12.31,unknown,4,5,0.00015,0.01604,0.0,0.00832,30
 ,TS 20.47r,unknown,5,5,0.00327,0.03724,0.0,0.00751,0
@@ -37,251 +37,251 @@ P073,David b. Semah (nasi),Karaite,4,6,0.03289,0.07759,0.00045,0.00854,2
 ,TS 13 J 37.11,unknown,2,2,2e-05,0.00702,0.0,0.0051,14
 ,TS 24.7,unknown,2,2,2e-05,0.00702,0.0,0.0051,20
 ,ENA NS 3.23 + ENA NS 3.27,unknown,2,2,2e-05,0.00702,0.0,0.0051,32
-P069,David b. Isaac ha-Kohen (the scribe),Karaite (presumed),2,3,0.01137,0.06473,0.30492,0.00446,29
-P289,Semah b. Asa (nasi),Karaite,2,2,0.0002,0.01353,0.0,0.00391,28
+P070,David b. Isaac ha-Kohen (the scribe),Karaite (presumed),2,3,0.01137,0.06473,0.30492,0.00446,29
+P290,Semah b. Asa (nasi),Karaite,2,2,0.0002,0.01353,0.0,0.00391,28
 ,TS AS 146.417r,unknown,2,2,0.00163,0.04938,1e-05,0.00384,5
-P158,Jehuda b. Khalaf,Karaite (presumed),2,2,0.00044,0.01672,0.0,0.00368,28
-P125,Hizkiyahu b. Solomon (nasi),Karaite,2,2,0.00163,0.05469,0.0001,0.00357,2
+P159,Jehuda b. Khalaf,Karaite (presumed),2,2,0.00044,0.01672,0.0,0.00368,28
+P126,Hizkiyahu b. Solomon (nasi),Karaite,2,2,0.00163,0.05469,0.0001,0.00357,2
 ,TS 8.152,unknown,1,1,0.0,0.00351,0.0,0.0035,9
-P301,Sitt-al-Ahl bt. Joseph,Karaite (presumed),1,1,0.0,0.00351,0.0,0.0035,9
+P302,Sitt-al-Ahl bt. Joseph,Karaite (presumed),1,1,0.0,0.00351,0.0,0.0035,9
 ,TS 12.658,unknown,1,1,0.0,0.00351,0.0,0.0035,12
-P190,Malka,Karaite (presumed),1,1,0.0,0.00351,0.0,0.0035,12
+P191,Malka,Karaite (presumed),1,1,0.0,0.00351,0.0,0.0035,12
 ,TS 16.80,unknown,1,1,0.0,0.00351,0.0,0.0035,16
-P246,"Rayyisa (bride, OS27)",Karaite (presumed),1,1,0.0,0.00351,0.0,0.0035,16
+P247,"Rayyisa (bride, OS27)",Karaite (presumed),1,1,0.0,0.00351,0.0,0.0035,16
 ,Brit. Mus. Or. 5532,unknown,1,1,0.0,0.00351,0.0,0.0035,33
-P327,Yedidya (nasi),Karaite,1,1,0.0,0.00351,0.0,0.0035,33
-P230,Nahum b. Nahum,Karaite (presumed),2,2,0.00321,0.06177,5e-05,0.00348,5
-P136,"Isaac b. Joseph (groom, OS42)",Karaite (presumed),1,2,0.0,0.01123,0.0,0.00335,30
+P328,Yedidya (nasi),Karaite,1,1,0.0,0.00351,0.0,0.0035,33
+P231,Nahum b. Nahum,Karaite (presumed),2,2,0.00321,0.06177,5e-05,0.00348,5
+P137,"Isaac b. Joseph (groom, OS42)",Karaite (presumed),1,2,0.0,0.01123,0.0,0.00335,30
 P026,Abraham b. Musallam,Karaite,1,2,0.0,0.02041,0.0,0.00331,31
-P139,Isaac bar Azaryahu,Rabbanite (probable),1,2,0.0,0.02274,0.0,0.0033,15
-P177,Josiah b. Solomon (nasi),Karaite,1,2,0.0,0.02274,0.0,0.0033,36
-P093,Eli b. Mu'ammar,Karaite (presumed),2,2,0.01453,0.0627,0.02918,0.00325,8
+P140,Isaac bar Azaryahu,Rabbanite (probable),1,2,0.0,0.02274,0.0,0.0033,15
+P178,Josiah b. Solomon (nasi),Karaite,1,2,0.0,0.02274,0.0,0.0033,36
+P094,Eli b. Mu'ammar,Karaite (presumed),2,2,0.01453,0.0627,0.02918,0.00325,8
 P034,Alan b. Nahum,Karaite (presumed),2,2,0.02595,0.07536,5e-05,0.00322,21
-P087,El'azar b. Samuel b. Sahl ha-Eved,Karaite,2,2,0.01833,0.05944,1e-05,0.00317,0
-P081,Efraim b. Mevasser b. Solomon,Karaite (presumed),1,2,0.0,0.03328,0.0,0.00317,35
-P311,Solomon b. David ha-Kohen (the scholar),Karaite (presumed),1,2,0.0,0.06252,0.05279,0.00313,27
-P056,Bishr b. Abraham ha-Levi,Karaite (presumed),2,2,0.01935,0.0736,0.16833,0.00309,27
+P088,El'azar b. Samuel b. Sahl ha-Eved,Karaite,2,2,0.01833,0.05944,1e-05,0.00317,0
+P082,Efraim b. Mevasser b. Solomon,Karaite (presumed),1,2,0.0,0.03328,0.0,0.00317,35
+P312,Solomon b. David ha-Kohen (the scholar),Karaite (presumed),1,2,0.0,0.06252,0.05279,0.00313,27
+P057,Bishr b. Abraham ha-Levi,Karaite (presumed),2,2,0.01935,0.0736,0.16833,0.00309,27
 P050,Barakat b. David,Karaite (presumed),2,2,0.00153,0.04315,0.0,0.00308,0
-P228,Na'ama bt. Nisi,Karaite (presumed),2,2,0.00153,0.04315,0.0,0.00308,0
-P240,Nisi b. Jacob,Karaite (presumed),2,2,0.00153,0.04315,0.0,0.00308,0
-P334,Yefet ha-Kohen b. Eli b. Zita,Karaite,2,2,0.00267,0.04019,0.0,0.00306,1
-P196,Menahem b. Isaac,Karaite (presumed),1,2,0.0,0.06113,0.28386,0.00305,29
-P159,Jehuda ha-Levi b. Nisi ha-Melammed,Karaite (presumed),1,2,0.0,0.02947,0.0,0.00295,1
-P172,Joseph b. Jehuda ha-Levi,Karaite (presumed),1,2,0.0,0.02947,0.0,0.00295,1
-P188,Mahfuz b. Menahem,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,7
-P100,Fadla bt. Abraham,Karaite,1,1,0.0,0.00468,0.0,0.00269,7
-P294,Shela ha-Kohen b. Sadoq beRabbi [...],Rabbanite (probable),1,1,0.0,0.00468,0.0,0.00269,10
-P185,Levi ha-Levi bar Joseph,Rabbanite (probable),1,1,0.0,0.00468,0.0,0.00269,10
-P245,Rav Hesed,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,11
-P269,Sara bt. Sahlawaya,Karaite,1,1,0.0,0.00468,0.0,0.00269,11
-P202,"Meshullam (groom, OS25)",Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,14
-P154,Jacob b. Yesha'ya,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,14
-P316,Solomon b. Mevasser b. Sahl al-Ani,Karaite,1,1,0.0,0.00468,0.0,0.00269,20
-P270,Sara bt. Yesha'ya,Karaite,1,1,0.0,0.00468,0.0,0.00269,20
-P062,"David (groom, OS44)",Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,32
-P126,"Husn (bride, OS44)",Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,32
+P229,Na'ama bt. Nisi,Karaite (presumed),2,2,0.00153,0.04315,0.0,0.00308,0
+P241,Nisi b. Jacob,Karaite (presumed),2,2,0.00153,0.04315,0.0,0.00308,0
+P335,Yefet ha-Kohen b. Eli b. Zita,Karaite,2,2,0.00267,0.04019,0.0,0.00306,1
+P197,Menahem b. Isaac,Karaite (presumed),1,2,0.0,0.06113,0.28386,0.00305,29
+P160,Jehuda ha-Levi b. Nisi ha-Melammed,Karaite (presumed),1,2,0.0,0.02947,0.0,0.00295,1
+P173,Joseph b. Jehuda ha-Levi,Karaite (presumed),1,2,0.0,0.02947,0.0,0.00295,1
+P189,Mahfuz b. Menahem,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,7
+P101,Fadla bt. Abraham,Karaite,1,1,0.0,0.00468,0.0,0.00269,7
+P295,Shela ha-Kohen b. Sadoq beRabbi [...],Rabbanite (probable),1,1,0.0,0.00468,0.0,0.00269,10
+P186,Levi ha-Levi bar Joseph,Rabbanite (probable),1,1,0.0,0.00468,0.0,0.00269,10
+P246,Rav Hesed,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,11
+P270,Sara bt. Sahlawaya,Karaite,1,1,0.0,0.00468,0.0,0.00269,11
+P203,"Meshullam (groom, OS25)",Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,14
+P155,Jacob b. Yesha'ya,Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,14
+P317,Solomon b. Mevasser b. Sahl al-Ani,Karaite,1,1,0.0,0.00468,0.0,0.00269,20
+P271,Sara bt. Yesha'ya,Karaite,1,1,0.0,0.00468,0.0,0.00269,20
+P063,"David (groom, OS44)",Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,32
+P127,"Husn (bride, OS44)",Karaite (presumed),1,1,0.0,0.00468,0.0,0.00269,32
 P024,Abraham b. Jacob,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,13
-P268,Sara bt. Sahl,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,13
-P255,Sa'id ha-Kohen b. Nahum,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,13
-P215,Mevorakh b. Yehya,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,17
-P225,"Mubaraka (bride, OS28)",Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,17
+P269,Sara bt. Sahl,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,13
+P256,Sa'id ha-Kohen b. Nahum,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,13
+P216,Mevorakh b. Yehya,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,17
+P226,"Mubaraka (bride, OS28)",Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,17
 P011,Aaron b. Mordekhai,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,17
-P198,"Menashe (groom, OS33)",Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,22
-P303,Sitt-al-Husn bt. Moses ha-Kohen,Karaite,1,1,0.0,0.00632,0.0,0.00243,22
-P091,Eli b. Hillel,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,22
-P156,"Jehuda (groom, OS34)",Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,23
-P302,Sitt-al-Fadl,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,23
-P305,"Solomon b. [...] (agent, OS34)",Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,23
-P242,Ovadya b. Sedaqa,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,24
+P199,"Menashe (groom, OS33)",Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,22
+P304,Sitt-al-Husn bt. Moses ha-Kohen,Karaite,1,1,0.0,0.00632,0.0,0.00243,22
+P092,Eli b. Hillel,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,22
+P157,"Jehuda (groom, OS34)",Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,23
+P303,Sitt-al-Fadl,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,23
+P306,"Solomon b. [...] (agent, OS34)",Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,23
+P243,Ovadya b. Sedaqa,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,24
 P033,al-Tifrat bt. Tovya,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,24
-P333,Yefet b. Menashe,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,24
-P320,Thabit b. Jacob,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,25
-P105,Ghaliya bt. Joseph,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,25
-P165,Joseph b. Abraham (father of Ghaliya),Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,25
-P144,Jabir b. Azhar ha-Kohen,Karaite (presumed),1,1,0.0,0.00802,0.0,0.00229,4
-P129,Husn bt. Hayyim,Karaite,1,1,0.0,0.00802,0.0,0.00229,4
-P086,El'azar b. Menashe,Karaite (presumed),1,1,0.0,0.00802,0.0,0.00229,4
-P232,Nathan b. [...],Karaite (presumed),1,1,0.0,0.00802,0.0,0.00229,4
-P064,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),Karaite,1,1,0.0,0.00975,0.0,0.00221,3
-P060,Daughter of Abu'l-Fadl,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,3
+P334,Yefet b. Menashe,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,24
+P321,Thabit b. Jacob,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,25
+P106,Ghaliya bt. Joseph,Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,25
+P166,Joseph b. Abraham (father of Ghaliya),Karaite (presumed),1,1,0.0,0.00632,0.0,0.00243,25
+P145,Jabir b. Azhar ha-Kohen,Karaite (presumed),1,1,0.0,0.00802,0.0,0.00229,4
+P130,Husn bt. Hayyim,Karaite,1,1,0.0,0.00802,0.0,0.00229,4
+P087,El'azar b. Menashe,Karaite (presumed),1,1,0.0,0.00802,0.0,0.00229,4
+P233,Nathan b. [...],Karaite (presumed),1,1,0.0,0.00802,0.0,0.00229,4
+P065,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),Karaite,1,1,0.0,0.00975,0.0,0.00221,3
+P061,Daughter of Abu'l-Fadl,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,3
 P030,Abu'l-Fadl,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,3
 P001,'The exquisite scholar',Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,3
 P031,Abu'l-Hasan b. al-Jabawi,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,3
-P109,Halfon ha-Levi b. Daniel,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,6
+P110,Halfon ha-Levi b. Daniel,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,6
 P037,Ama al-Wahid bt. Halfon,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,6
-P227,Musafir b. Isaac ha-Kohen,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,6
-P293,Shela b. Joseph,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,6
-P121,Hillel (the elder),Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,6
-P345,Yesha'ya b. Isaac,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,19
-P103,Farajiyya bt. Jehuda,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,19
-P193,Mansur b. Yehai b. Abu'l-Shahaba,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,19
-P113,Hasan (Yefet) b. Amram known as ben Shemun,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,19
-P315,Solomon b. Mansur,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,19
+P228,Musafir b. Isaac ha-Kohen,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,6
+P294,Shela b. Joseph,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,6
+P122,Hillel (the elder),Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,6
+P346,Yesha'ya b. Isaac,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,19
+P104,Farajiyya bt. Jehuda,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,19
+P194,Mansur b. Yehai b. Abu'l-Shahaba,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,19
+P114,Hasan (Yefet) b. Amram known as ben Shemun,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,19
+P316,Solomon b. Mansur,Karaite (presumed),1,1,0.0,0.00975,0.0,0.00221,19
 ,Bodl. MS Heb. d.66.49v-50r,unknown,1,1,0.0,0.0098,0.0,0.00219,28
 P005,[...] b. Khalaf,Karaite (presumed),1,1,0.0,0.04091,0.0,0.00216,5
-P127,"Husn (bride, OS46)",Karaite (presumed),1,1,0.0,0.0098,0.0,0.00215,28
+P128,"Husn (bride, OS46)",Karaite (presumed),1,1,0.0,0.0098,0.0,0.00215,28
 P008,[...] ha-Kohen (OS46),Karaite (presumed),1,1,0.0,0.0098,0.0,0.00215,28
-P344,Yehya b. Abraham,Rabbanite,1,1,0.0,0.01672,0.0,0.00207,34
-P247,Rayyisa bt. Sa'adya,Karaite,1,1,0.0,0.01672,0.0,0.00207,34
-P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
-P234,Nathan b. Joseph b. Nahorai,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
-P140,Isaac ha-Parnas b. Sedaqa,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
-P078,David ha-Kohen b. Sedaqa ha-Kohen,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
-P287,Sedaqa ha-Levi b. Efraim,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
-P209,Mevorakh b. El'azar b. [...] Yehoshua,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
-P116,Hasdai b. Hizkiyahu (nasi),Karaite,1,1,0.0,0.01672,0.0,0.00207,34
-P216,Miriam bt. Solomon,Karaite (presumed),1,1,0.0,0.01236,0.0,0.00205,28
-P102,Faraj b. Solomon,Karaite (presumed),1,1,0.0,0.01236,0.0,0.00205,28
+P345,Yehya b. Abraham,Rabbanite,1,1,0.0,0.01672,0.0,0.00207,34
+P248,Rayyisa bt. Sa'adya,Karaite,1,1,0.0,0.01672,0.0,0.00207,34
+P342,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
+P235,Nathan b. Joseph b. Nahorai,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
+P141,Isaac ha-Parnas b. Sedaqa,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
+P079,David ha-Kohen b. Sedaqa ha-Kohen,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
+P288,Sedaqa ha-Levi b. Efraim,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
+P210,Mevorakh b. El'azar b. [...] Yehoshua,Karaite (presumed),1,1,0.0,0.01672,0.0,0.00207,34
+P117,Hasdai b. Hizkiyahu (nasi),Karaite,1,1,0.0,0.01672,0.0,0.00207,34
+P217,Miriam bt. Solomon,Karaite (presumed),1,1,0.0,0.01236,0.0,0.00205,28
+P103,Faraj b. Solomon,Karaite (presumed),1,1,0.0,0.01236,0.0,0.00205,28
 P020,Abraham al-Awalani,Karaite (presumed),1,1,0.0,0.01236,0.0,0.00205,28
 ,TS 20.42,unknown,1,1,0.0,0.04449,2e-05,0.00204,2
-P213,Mevorakh b. Samuel,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
-P300,"Sitt-al-Ahl (bride, OS29)",Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
-P189,Maimon b. Fadl,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
-P314,Solomon b. Maimon,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
-P095,Eli b. Solomon,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
-P291,Shala [?],Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
-P224,Mubarak b. Husain,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
-P295,Shela ha-Kohen bar Rabbi Mevasser,Rabbanite,1,1,0.0,0.02022,0.0,0.00204,18
-P214,Mevorakh b. Yefet,Karaite,1,1,0.0,0.02022,0.0,0.00204,18
-P203,Mevasser b. Abraham,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
-P054,Benjamin b. Hasson,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
-P123,"Hizkiyahu (groom, OS12)",Karaite (presumed),1,1,0.0,0.04788,3e-05,0.00195,2
-P207,Mevorakh b. Barhun,Karaite (presumed),1,1,0.0,0.04788,3e-05,0.00195,2
-P277,Sedaqa b. Elun,Karaite (presumed),1,1,0.0,0.04788,3e-05,0.00195,2
-P221,Mu'ammala bt. Hayyim,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
-P199,Menashe b. Mahbub ha-Levi (of Acre),Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
+P214,Mevorakh b. Samuel,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
+P301,"Sitt-al-Ahl (bride, OS29)",Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
+P190,Maimon b. Fadl,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
+P315,Solomon b. Maimon,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
+P096,Eli b. Solomon,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
+P292,Shala [?],Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
+P225,Mubarak b. Husain,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
+P296,Shela ha-Kohen bar Rabbi Mevasser,Rabbanite,1,1,0.0,0.02022,0.0,0.00204,18
+P215,Mevorakh b. Yefet,Karaite,1,1,0.0,0.02022,0.0,0.00204,18
+P204,Mevasser b. Abraham,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
+P055,Benjamin b. Hasson,Karaite (presumed),1,1,0.0,0.02022,0.0,0.00204,18
+P124,"Hizkiyahu (groom, OS12)",Karaite (presumed),1,1,0.0,0.04788,3e-05,0.00195,2
+P208,Mevorakh b. Barhun,Karaite (presumed),1,1,0.0,0.04788,3e-05,0.00195,2
+P278,Sedaqa b. Elun,Karaite (presumed),1,1,0.0,0.04788,3e-05,0.00195,2
+P222,Mu'ammala bt. Hayyim,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
+P200,Menashe b. Mahbub ha-Levi (of Acre),Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
 P047,Bahlul b. Isaac ha-Kohen,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
-P133,Isaac b. Eliya ha-Kohen,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
-P137,Isaac b. Samuel al-Fara,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
-P171,Joseph b. Jacob,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
-P134,Isaac b. Jacob,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
-P251,Sa'adya b. Joseph,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
+P134,Isaac b. Eliya ha-Kohen,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
+P138,Isaac b. Samuel al-Fara,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
+P172,Joseph b. Jacob,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
+P135,Isaac b. Jacob,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
+P252,Sa'adya b. Joseph,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
 P022,Abraham b. Isaac,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
-P075,David b. Solomon,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
-P120,Hiba b. Khalaf al-Shinizi,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
-P169,Joseph b. Isaac,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
-P152,Jacob b. Isaac,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
-P178,Karima bt. Abraham,Karaite (presumed),1,1,0.0,0.00864,0.0,0.00194,30
+P076,David b. Solomon,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
+P121,Hiba b. Khalaf al-Shinizi,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
+P170,Joseph b. Isaac,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
+P153,Jacob b. Isaac,Karaite (presumed),1,1,0.0,0.0424,0.00278,0.00194,8
+P179,Karima bt. Abraham,Karaite (presumed),1,1,0.0,0.00864,0.0,0.00194,30
 P018,Abraham (father of Karima),Karaite (presumed),1,1,0.0,0.00864,0.0,0.00194,30
-P151,Jacob b. Hillel b. Awkal,Rabbanite (probable),1,1,0.0,0.00864,0.0,0.00194,30
-P149,Jacob b. David al-Shulhani,Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
-P274,Sayyida bt. Wahb,Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
-P197,Menahem b. Job al-Halabi,Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
-P181,Khalaf [...] (OS38),Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
-P101,Faraj b. Mevasser ha-Levi,Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
-P288,Semah [...] (OS38),Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
-P079,Efraim b. Jehuda,Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
-P162,Joseph [...] (OS38),Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
-P148,Jacob [...] (OS38),Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
-P275,"Sedaqa (groom, OS43)",Karaite (presumed),1,1,0.0,0.01549,0.0,0.00192,31
+P152,Jacob b. Hillel b. Awkal,Rabbanite (probable),1,1,0.0,0.00864,0.0,0.00194,30
+P150,Jacob b. David al-Shulhani,Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
+P275,Sayyida bt. Wahb,Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
+P198,Menahem b. Job al-Halabi,Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
+P182,Khalaf [...] (OS38),Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
+P102,Faraj b. Mevasser ha-Levi,Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
+P289,Semah [...] (OS38),Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
+P080,Efraim b. Jehuda,Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
+P163,Joseph [...] (OS38),Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
+P149,Jacob [...] (OS38),Karaite (presumed),1,1,0.0,0.042,0.02105,0.00193,26
+P276,"Sedaqa (groom, OS43)",Karaite (presumed),1,1,0.0,0.01549,0.0,0.00192,31
 P029,Abraham ha-Kohen b. Khalaf,Karaite (presumed),1,1,0.0,0.01549,0.0,0.00192,31
-P239,Nathana'el ha-Levi b. Rawh,Karaite,1,1,0.0,0.01549,0.0,0.00192,31
+P240,Nathana'el ha-Levi b. Rawh,Karaite,1,1,0.0,0.01549,0.0,0.00192,31
 P052,Barakat b. Mubarak,Karaite (presumed),1,1,0.0,0.01549,0.0,0.00192,31
 P009,[...] ha-Kohen b. Joseph,Karaite (presumed),1,1,0.0,0.01549,0.0,0.00192,31
-P184,Levi ha-Levi bar Jacob,Rabbanite,1,1,0.0,0.01549,0.0,0.00192,31
+P185,Levi ha-Levi bar Jacob,Rabbanite,1,1,0.0,0.01549,0.0,0.00192,31
 P049,Barakat b. Benjamin,Karaite (presumed),1,1,0.0,0.01549,0.0,0.00192,31
-P088,El'azar b. Shemen Tov,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
-P249,Rivqa bt. Joseph,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
+P089,El'azar b. Shemen Tov,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
+P250,Rivqa bt. Joseph,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
 P040,Amram ha-Levi b. Joseph ha-Levi,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
 P003,[...] b. El'azar b. Halfon,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
-P138,Isaac b. Yefet,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
-P238,Nathana'el ha-Kohen b. Meshullam,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
-P098,Eliyahu b. Halfon,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
+P139,Isaac b. Yefet,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
+P239,Nathana'el ha-Kohen b. Meshullam,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
+P099,Eliyahu b. Halfon,Karaite (presumed),1,1,0.0,0.01722,0.0,0.00191,15
 P038,Amaryahu Jehuda (nasi),Karaite,1,1,0.0,0.01722,0.0,0.00191,15
-P089,Eli b. Amram (he-haver),Rabbanite,1,1,0.0,0.01722,0.0,0.00191,36
-P210,Mevorakh b. Israel (heir),unknown,1,1,0.0,0.01722,0.0,0.00191,36
-P265,Samuel b. Yehuda (the orphan),unknown,1,1,0.0,0.01722,0.0,0.00191,36
-P324,Umm Samuel bt. Aaron,unknown,1,1,0.0,0.01722,0.0,0.00191,36
+P090,Eli b. Amram (he-haver),Rabbanite,1,1,0.0,0.01722,0.0,0.00191,36
+P211,Mevorakh b. Israel (heir),unknown,1,1,0.0,0.01722,0.0,0.00191,36
+P266,Samuel b. Yehuda (the orphan),unknown,1,1,0.0,0.01722,0.0,0.00191,36
+P325,Umm Samuel bt. Aaron,unknown,1,1,0.0,0.01722,0.0,0.00191,36
 P010,Aaron b. Isaac,unknown,1,1,0.0,0.01722,0.0,0.00191,36
 P027,Abraham b. Solomon (Abu Kathir),Rabbanite,1,1,0.0,0.01722,0.0,0.00191,36
-P229,Nahray b. Nissim,Rabbanite,1,1,0.0,0.01722,0.0,0.00191,36
-P097,Eli ha-Kohen ha-parnas b. Ya'ish,Rabbanite,1,1,0.0,0.01722,0.0,0.00191,36
-P194,Marzuq b. Yefet,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
-P104,Faras bt. Simha,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
-P112,Hananya b. Elnathan,unknown,1,1,0.0,0.05376,1e-05,0.0019,21
-P237,Nathana'el b. Mevasser ha-Levi,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
+P230,Nahray b. Nissim,Rabbanite,1,1,0.0,0.01722,0.0,0.00191,36
+P098,Eli ha-Kohen ha-parnas b. Ya'ish,Rabbanite,1,1,0.0,0.01722,0.0,0.00191,36
+P195,Marzuq b. Yefet,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
+P105,Faras bt. Simha,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
+P113,Hananya b. Elnathan,unknown,1,1,0.0,0.05376,1e-05,0.0019,21
+P238,Nathana'el b. Mevasser ha-Levi,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
 P025,Abraham b. Joseph b. Anan ha-Levi,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
 P002,[...] b. Efraim,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
-P252,Sa'adya b. Razi'el,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
-P282,Sedaqa b. Menashe,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
-P272,Saul b. Abraham,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
-P182,Khalaf b. Mahfuz,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
+P253,Sa'adya b. Razi'el,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
+P283,Sedaqa b. Menashe,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
+P273,Saul b. Abraham,Karaite (presumed),1,1,0.0,0.05376,1e-05,0.0019,21
+P183,Khalaf b. Mahfuz,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
 P036,Ama al-Qadar bt. Efraim,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
-P080,Efraim b. Mansur b. Furat,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
-P281,Sedaqa b. Masliah b. Sahl ha-Levi,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
+P081,Efraim b. Mansur b. Furat,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
+P282,Sedaqa b. Masliah b. Sahl ha-Levi,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
 P051,Barakat b. Menahem ha-Kohen,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
-P331,Yefet b. Abraham ha-Levi,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
-P068,David b. Isaac b. Moses ha-Levi,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
-P163,Joseph b. [...] b. Efraim,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
-P076,David b. Yesha'ya ha-Melammed,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
+P332,Yefet b. Abraham ha-Levi,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
+P069,David b. Isaac b. Moses ha-Levi,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
+P164,Joseph b. [...] b. Efraim,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
+P077,David b. Yesha'ya ha-Melammed,Karaite (presumed),1,1,0.0,0.06081,5e-05,0.00185,5
 P006,"[...] b. Mansur (groom, OS57)",Rabbanite,1,1,0.0,0.02739,0.0,0.00185,35
-P179,Karima bt. Hasan,Karaite,1,1,0.0,0.02739,0.0,0.00185,35
-P114,Hasan b. Moses,Karaite,1,1,0.0,0.02739,0.0,0.00185,35
-P284,Sedaqa b. Nahum ha-Kohen,Karaite,1,1,0.0,0.02739,0.0,0.00185,35
-P218,Moses b. Siba'a,Karaite,1,1,0.0,0.02739,0.0,0.00185,35
-P135,Isaac b. Jehuda ha-Levi,Karaite (presumed),1,1,0.0,0.02739,0.0,0.00185,35
-P260,Sahlawaya b. Hayyim,Karaite,1,1,0.0,0.02739,0.0,0.00185,35
-P072,David b. Moses (OS57),Karaite (presumed),1,1,0.0,0.02739,0.0,0.00185,35
-P253,Sa'id b. [...] (OS57),Karaite (presumed),1,1,0.0,0.02739,0.0,0.00185,35
-P223,Mu'ammar b. S[edaqa],Karaite (presumed),1,1,0.0,0.02739,0.0,0.00185,35
-P292,Shela b. Amram al-Qirqisani,Karaite (probable),1,1,0.0,0.05394,9e-05,0.00184,2
-P326,Yaman bt. David,Karaite (presumed),1,1,0.0,0.05394,9e-05,0.00184,2
-P307,Solomon b. Adiya b. Menashe (al-Qazzaz),Karaite,1,1,0.0,0.05394,9e-05,0.00184,2
-P329,Yefet [b. ? Solomon b. Abraham],Karaite (presumed),1,1,0.0,0.05394,9e-05,0.00184,2
-P266,Samuel bar Rabbi Moses he-haver,Rabbanite,1,1,0.0,0.05394,9e-05,0.00184,2
-P317,Solomon b. Musafir,unknown,1,1,0.0,0.05394,9e-05,0.00184,2
+P180,Karima bt. Hasan,Karaite,1,1,0.0,0.02739,0.0,0.00185,35
+P115,Hasan b. Moses,Karaite,1,1,0.0,0.02739,0.0,0.00185,35
+P285,Sedaqa b. Nahum ha-Kohen,Karaite,1,1,0.0,0.02739,0.0,0.00185,35
+P219,Moses b. Siba'a,Karaite,1,1,0.0,0.02739,0.0,0.00185,35
+P136,Isaac b. Jehuda ha-Levi,Karaite (presumed),1,1,0.0,0.02739,0.0,0.00185,35
+P261,Sahlawaya b. Hayyim,Karaite,1,1,0.0,0.02739,0.0,0.00185,35
+P073,David b. Moses (OS57),Karaite (presumed),1,1,0.0,0.02739,0.0,0.00185,35
+P254,Sa'id b. [...] (OS57),Karaite (presumed),1,1,0.0,0.02739,0.0,0.00185,35
+P224,Mu'ammar b. S[edaqa],Karaite (presumed),1,1,0.0,0.02739,0.0,0.00185,35
+P293,Shela b. Amram al-Qirqisani,Karaite (probable),1,1,0.0,0.05394,9e-05,0.00184,2
+P327,Yaman bt. David,Karaite (presumed),1,1,0.0,0.05394,9e-05,0.00184,2
+P308,Solomon b. Adiya b. Menashe (al-Qazzaz),Karaite,1,1,0.0,0.05394,9e-05,0.00184,2
+P330,Yefet [b. ? Solomon b. Abraham],Karaite (presumed),1,1,0.0,0.05394,9e-05,0.00184,2
+P267,Samuel bar Rabbi Moses he-haver,Rabbanite,1,1,0.0,0.05394,9e-05,0.00184,2
+P318,Solomon b. Musafir,unknown,1,1,0.0,0.05394,9e-05,0.00184,2
 P013,Aaron b. Semah ha-Kohen,Karaite (presumed),1,1,0.0,0.05394,9e-05,0.00184,2
-P285,Sedaqa b. Sa'adya,Karaite (presumed),1,1,0.0,0.05394,9e-05,0.00184,2
-P192,Mansur b. Mevasser,Karaite (presumed),1,1,0.0,0.05394,9e-05,0.00184,2
-P261,Samuel b. [...],Karaite (presumed),1,1,0.0,0.05394,9e-05,0.00184,2
-P330,Yefet b. Abraham al-Tustari,Karaite,1,1,0.0,0.05431,0.0001,0.00184,2
+P286,Sedaqa b. Sa'adya,Karaite (presumed),1,1,0.0,0.05394,9e-05,0.00184,2
+P193,Mansur b. Mevasser,Karaite (presumed),1,1,0.0,0.05394,9e-05,0.00184,2
+P262,Samuel b. [...],Karaite (presumed),1,1,0.0,0.05394,9e-05,0.00184,2
+P331,Yefet b. Abraham al-Tustari,Karaite,1,1,0.0,0.05431,0.0001,0.00184,2
 P035,Ama al-Aziz bt. Hizkiyahu,Karaite,1,1,0.0,0.05431,0.0001,0.00184,2
-P099,Ezra b. Ishma'el b. Ezra,Karaite,1,1,0.0,0.05431,0.0001,0.00184,2
+P100,Ezra b. Ishma'el b. Ezra,Karaite,1,1,0.0,0.05431,0.0001,0.00184,2
 P012,Aaron b. Sahl al-Tustari,Karaite,1,1,0.0,0.05431,0.0001,0.00184,2
 P014,Aaron b. Yehoshua,Karaite,1,1,0.0,0.05431,0.0001,0.00184,2
 P043,Azarya b. Salih,Karaite (presumed),1,1,0.0,0.05431,0.0001,0.00184,2
-P183,Khatabya b. al-Tabat,Karaite (presumed),1,1,0.0,0.05431,0.0001,0.00184,2
-P259,Sahl b. Sa'adya al-Baghdadi,Karaite (presumed),1,1,0.0,0.05431,0.0001,0.00184,2
-P166,Joseph b. Abraham b. al-Fara,Karaite (presumed),1,1,0.0,0.05431,0.0001,0.00184,2
+P184,Khatabya b. al-Tabat,Karaite (presumed),1,1,0.0,0.05431,0.0001,0.00184,2
+P260,Sahl b. Sa'adya al-Baghdadi,Karaite (presumed),1,1,0.0,0.05431,0.0001,0.00184,2
+P167,Joseph b. Abraham b. al-Fara,Karaite (presumed),1,1,0.0,0.05431,0.0001,0.00184,2
 P021,Abraham b. al-Fara,Karaite (presumed),1,1,0.0,0.05431,0.0001,0.00184,2
-P124,Hizkiyahu b. Benjamin,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
-P271,Sarwa bt. Sedaqa,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
-P167,Joseph b. Abraham ha-Kohen,Karaite,1,1,0.0,0.05407,0.0264,0.00183,27
-P208,Mevorakh b. David,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
-P150,Jacob b. Fadlan,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
-P339,Yehoshua b. Eli ha-Kohen b. Zita,Karaite,1,1,0.0,0.05407,0.0264,0.00183,27
-P236,Nathan ha-Kohen bar Yehai,Rabbanite (probable),1,1,0.0,0.05407,0.0264,0.00183,27
-P338,Yehoshua b. Adiya ha-Kohen,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
-P235,Nathan b. Nisan ha-Levi (the scholar),Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
-P241,Omar b. Yehoshua,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
-P173,Joseph b. Samuel,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
-P286,Sedaqa b. Zakharya,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
+P125,Hizkiyahu b. Benjamin,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
+P272,Sarwa bt. Sedaqa,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
+P168,Joseph b. Abraham ha-Kohen,Karaite,1,1,0.0,0.05407,0.0264,0.00183,27
+P209,Mevorakh b. David,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
+P151,Jacob b. Fadlan,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
+P340,Yehoshua b. Eli ha-Kohen b. Zita,Karaite,1,1,0.0,0.05407,0.0264,0.00183,27
+P237,Nathan ha-Kohen bar Yehai,Rabbanite (probable),1,1,0.0,0.05407,0.0264,0.00183,27
+P339,Yehoshua b. Adiya ha-Kohen,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
+P236,Nathan b. Nisan ha-Levi (the scholar),Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
+P242,Omar b. Yehoshua,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
+P174,Joseph b. Samuel,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
+P287,Sedaqa b. Zakharya,Karaite (presumed),1,1,0.0,0.05407,0.0264,0.00183,27
 P007,[...] b. Yesha'ya ha-Kohen,Karaite (presumed),1,1,0.0,0.03221,0.0,0.0018,0
 P048,Barakat b. Azarya,Karaite (presumed),1,1,0.0,0.03221,0.0,0.0018,0
-P336,Yehezqel b. Benjamin ha-Levi,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
-P168,Joseph b. Azarya,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
-P115,Hasan b. Sedaqa ha-Kohen,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
-P279,Sedaqa b. Isaac,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
-P332,Yefet b. Jacob,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
-P217,Moses b. A[...],Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
-P153,Jacob b. Joseph,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
-P308,Solomon b. Amram (OS41),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P128,Husn bt. David (OS41),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P092,Eli b. Isma'il al-Bairuti (the scholar),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P335,Yehai b. Eli ha-Kohen,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P349,Yeshu'a b. Thabit ha-Levi ha-Shulhani,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P337,Yehezqel b. Benjamin ha-Levi,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
+P169,Joseph b. Azarya,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
+P116,Hasan b. Sedaqa ha-Kohen,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
+P280,Sedaqa b. Isaac,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
+P333,Yefet b. Jacob,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
+P218,Moses b. A[...],Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
+P154,Jacob b. Joseph,Karaite (presumed),1,1,0.0,0.04246,0.0,0.0018,0
+P309,Solomon b. Amram (OS41),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P129,Husn bt. David (OS41),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P093,Eli b. Isma'il al-Bairuti (the scholar),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P336,Yehai b. Eli ha-Kohen,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P350,Yeshu'a b. Thabit ha-Levi ha-Shulhani,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
 P004,[...] b. Isaac ha-Levi al-Qata'if,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P186,Mahbub [?] (OS41),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P082,Efraim b. Moses,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P348,Yeshu'a b. Khatim,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P157,Jehuda [?] (OS41),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P243,Parhon b. Mevorakh ha-Levi,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P211,Mevorakh b. Nathan,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P131,Isaac b. [...] (OS41),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P106,Habib b. David (Abu Ali),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
-P132,Isaac b. Eli,Karaite (presumed),1,1,0.0,0.02476,0.0,0.00174,1
-P226,Mubaraka bt. [...],Karaite (presumed),1,1,0.0,0.02476,0.0,0.00174,1
+P187,Mahbub [?] (OS41),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P083,Efraim b. Moses,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P349,Yeshu'a b. Khatim,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P158,Jehuda [?] (OS41),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P244,Parhon b. Mevorakh ha-Levi,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P212,Mevorakh b. Nathan,Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P132,Isaac b. [...] (OS41),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P107,Habib b. David (Abu Ali),Karaite (presumed),1,1,0.0,0.05303,0.14193,0.00179,29
+P133,Isaac b. Eli,Karaite (presumed),1,1,0.0,0.02476,0.0,0.00174,1
+P227,Mubaraka bt. [...],Karaite (presumed),1,1,0.0,0.02476,0.0,0.00174,1
 P045,Babad ha-Kohen b. David,Karaite (presumed),1,1,0.0,0.02476,0.0,0.00174,1
-P262,Samuel b. Joseph al-Basri,Karaite (presumed),1,1,0.0,0.02476,0.0,0.00174,1
-P283,Sedaqa b. Moses,Karaite (presumed),1,1,0.0,0.02476,0.0,0.00174,1
-P164,Joseph b. Aaron ha-Levi,Karaite (presumed),1,1,0.0,0.02476,0.0,0.00174,1
+P263,Samuel b. Joseph al-Basri,Karaite (presumed),1,1,0.0,0.02476,0.0,0.00174,1
+P284,Sedaqa b. Moses,Karaite (presumed),1,1,0.0,0.02476,0.0,0.00174,1
+P165,Joseph b. Aaron ha-Levi,Karaite (presumed),1,1,0.0,0.02476,0.0,0.00174,1

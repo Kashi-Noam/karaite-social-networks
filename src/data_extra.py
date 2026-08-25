@@ -8,6 +8,41 @@ EXTRA_DOCS = [
  ("SRC_CH9","Olszowy-Schlanger 1998, chapter 9 (The Karaite Nesi'im)","secondary source unit","genealogy of the Karaite nesi'im; codex dedications","",None,"",""),
 ]
 
+
+# PERSON_META: attestation drawn from sources that are NOT part of the corpus.
+# These two letters are the only Geniza items chapter 3 cites by shelfmark for
+# the Tustari family, and both carry a published edition and a PGP translation.
+# We deliberately do not add them as documents — the corpus stays "57 marriage
+# deeds + the Zinger court session" — but the dates and roles they establish for
+# people we already track are recorded here, in columns of their own, so that
+# nothing derived from the corpus is disturbed.
+#   name: (attested_from, attested_to, evidence, extra_note)
+MEUNIER = "MS Meunier, Aleppo 1011 (ed. Ben-Zevi 1937-38, pp. 179-182; Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"
+AHWAZ   = "TS 13 J 25.18, Ahwaz 1026 (ed. Gil 1981 no. 3, pp. 76-79; Olszowy-Schlanger 1998, p. 43 n. 14)"
+
+PERSON_META = {
+ "Sahl (Yashar) b. Israel al-Tustari": (1011, 1011, MEUNIER,
+   "addressed as Abu'l-Fadl, senior of the three first-generation brothers, in the 1011 Aleppo letter"),
+ "Joseph b. Israel al-Tustari": (1011, 1011, MEUNIER,
+   "addressed as Abu Ya'qub in the 1011 Aleppo letter"),
+ "Sa'id b. Israel al-Tustari": (1011, 1011, MEUNIER,
+   "addressed as Abu Sahl in the 1011 Aleppo letter"),
+ "Solomon b. Aaron al-Baghdadi": (1011, 1011, MEUNIER,
+   "the Baghdad banker who issued the suftaja, drawn 100 dinars on the Tustaris and 50 on Sahlawaya b. Hayyim"),
+ "Sedaqa b. Amram (Damascus)": (1011, 1011, MEUNIER,
+   "the Damascus correspondent who was to cash the suftaja and notify the Tustaris"),
+ "Sahlawaya b. Hayyim": (1011, 1035, MEUNIER,
+   "the 1011 Aleppo letter is his earliest attestation: fifty dinars of the suftaja were drawn on him in Fustat"),
+ "Ben Solomon of Amwal (Tabaristan)": (1011, 1011, MEUNIER,
+   "the eighty-year-old traveller who dictated the letter after a year of robbery and delay; his given name is not preserved"),
+ "Efraim b. Sa'id b. Malachi": (1026, 1026, AHWAZ,
+   "wrote from Ahwaz as the Tustaris' agent there, about selling two shops belonging to them"),
+ "Abraham (Abu Sa'ad) b. Sahl al-Tustari": (1026, 1047, AHWAZ,
+   "principal behind the 1026 Ahwaz sale; financial adviser to the mother of Caliph al-Mustansir; died violently in 1047"),
+ "Hesed (Abu Nasr) b. Sahl al-Tustari": (1026, 1048, AHWAZ,
+   "principal behind the 1026 Ahwaz sale; killed in 1048"),
+}
+
 # MERGES: rename appearance-name -> canonical name (same individual per the editors)
 MERGES = {
  "David b. Yesha'ya": ("David b. Yesha'ya ha-Melammed","probable","OS05 comments: the witness 'may be identical with David ben Yesha'ya the scholar, the father of the bride in n.13'"),
@@ -41,6 +76,7 @@ EXTRA_APPEARANCES = [
  ("SRC_CH3","Hana bt. Israel al-Tustari","Mentioned","contextual","sister of the three first-generation Tustari brothers; lived in Ahwaz"),
  ("SRC_CH3","Tov b. David (Abu'l-Tayyib)","Mentioned","contextual","son of Hana; carried the 1011 Aleppo letter to his Tustari uncles"),
  ("SRC_CH3","Efraim b. Sa'id b. Malachi","Mentioned","contextual","agent of the Tustaris in Ahwaz; his 1026 letter deals with selling two Tustari shops there"),
+ ("SRC_CH3","Ben Solomon of Amwal (Tabaristan)","Mentioned","contextual","the traveller from Tabaristan whose 1011 letter from Aleppo to the Tustari brothers documents the Karaite suftaja network between Baghdad, Damascus and Fustat"),
  ("SRC_CH3","Solomon b. Aaron al-Baghdadi","Mentioned","contextual","banker in Baghdad who issued suftajas drawn on the Tustaris and on Sahlawaya b. Hayyim (letter of 1011)"),
  ("SRC_CH3","Sedaqa b. Amram (Damascus)","Mentioned","contextual","correspondent in Damascus who cashed suftajas and informed the Tustaris (letter of 1011)"),
  ("SRC_CH3","Menashe ibn al-Qazzaz","Mentioned","contextual","head of the al-Qazzaz family; served the Fatimids, appointed governor in Syria in 990"),

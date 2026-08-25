@@ -6,7 +6,7 @@ from collections import defaultdict, Counter
 from data_docs import DOCUMENTS
 from data_appearances import A as BASE_A
 from data_persons_relations import SECT as BASE_SECT, RELATIONS as BASE_RELATIONS
-from data_extra import EXTRA_DOCS, EXTRA_APPEARANCES, EXTRA_SECT, EXTRA_RELATIONS, MERGES, VARIANTS, PRINCETON_MATCHES
+from data_extra import EXTRA_DOCS, EXTRA_APPEARANCES, EXTRA_SECT, EXTRA_RELATIONS, MERGES, VARIANTS, PRINCETON_MATCHES, PERSON_META
 from data_places_actions import PLACES, DOC_PLACE, PERSON_ORIGIN, ACTIONS, ROLE2ACTION, RELATION_TYPES
 
 MNT = "../data/external"
@@ -180,17 +180,24 @@ for name in sorted(persons, key=lambda s:s.lower()):
     pm = PRINCETON_MATCHES.get(name)
     pgp = pgp_people.get(pm[0]) if pm else None
     origin = PERSON_ORIGIN.get(name,"")
+    # attestation from sources outside the corpus (see PERSON_META)
+    meta = PERSON_META.get(name)
+    att_range = ("" if not meta else (str(meta[0]) if meta[0]==meta[1] else f"{meta[0]}-{meta[1]}"))
+    att_ev = meta[2] if meta else ""
+    if meta and meta[3]:
+        info["notes"].add(meta[3])
     person_rows.append([pid_of[name],name,ref(VARIANTS.get(name,"")),sect,ref(ev),gender_of(name,info),
         roles,"; ".join(acts),len(info["docs"]),"; ".join(SHELF[x] for x in sorted(info["docs"])),
         min(info["years"]) if info["years"] else "",max(info["years"]) if info["years"] else "",
         "; ".join(sorted(PLACES[p][0] for p in info["place_ids"])),
         PLACES[origin][0] if origin else "",
         pm[0] if pm else "", pm[1] if pm else "", pgp["url"] if pgp else "",
-        ref(" | ".join(sorted(info["notes"])))])
+        ref(" | ".join(sorted(info["notes"]))), att_range, att_ev])
 persons_table = wcsv("persons.csv",
  ["person_id","canonical_name","name_variants","sect","sect_evidence","gender","roles","actions",
   "num_docs","docs","year_min","year_max","doc_places","origin_or_nisba_place",
-  "princeton_name","princeton_match_certainty","princeton_url","notes"],person_rows)
+  "princeton_name","princeton_match_certainty","princeton_url","notes",
+  "attested_outside_corpus","attested_outside_evidence"],person_rows)
 
 # relations
 rel_rows=[]
