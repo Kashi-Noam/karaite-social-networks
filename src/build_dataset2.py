@@ -105,13 +105,27 @@ ROLE_ORDER = ["Groom","Bride","GroomFather","BrideFather","BrideGrandfather","Gr
               "Guarantor","Party","Declarant","Mentioned"]
 CLOSED_SECTS={"Karaite","Karaite (presumed)","Karaite (probable)","Rabbanite","Rabbanite (probable)","unknown"}
 
-FEMALE_MARKERS=["bt.","Sitt","Ama ","Amat","Umm ","Daughter","Mu'ammala","Rayyisa (","Malka","Husn (","Hana ",
- "Na'ama","Mubaraka","Sara","Miriam","Rivqa","Karima","Sayyida","Ghaliya","Faras","Fadla","Farajiyya","Sarwa",
- "Yaman","Nasiya","al-Tifrat","Bahiyya","Wife"]
+FEMALE_MARKERS=["bt.","Sitt","Sitt-al-Ahl","Sitt-al-Husn","Sitt-al-Fadl","Ama","Amat","Umm","Daughter",
+ "Mu'ammala","Rayyisa","Malka","Husn","Hana","Na'ama","Mubaraka","Sara","Miriam","Rivqa","Karima","Sayyida",
+ "Ghaliya","Faras","Fadla","Farajiyya","Sarwa","Yaman","Nasiya","al-Tifrat","Bahiyya","Wife"]
+# Roles that only men fill anywhere in this corpus. Checked before any guess
+# from the name, because a person labelled "Simha (father of Faras)" is a man
+# however feminine his daughter's name is.
+MALE_ROLES={"Groom","GroomFather","BrideFather","GroomGrandfather","BrideGrandfather","GroomAgent",
+ "Witness","WitnessOfAgency","Scribe","Nasi","Judge","Trustee","Guarantor"}
+
 def gender_of(name, info):
-    if "Bride" in info["roles"]: return "F"
-    if any(m in name for m in FEMALE_MARKERS): return "F"
-    if "mother_of" in [r[1] for r in RELS if r[0]==name]: return "F"
+    roles=set(info["roles"])
+    if "Bride" in roles: return "F"
+    if roles & MALE_ROLES: return "M"
+    if re.search(r"\bfather of\b", name, re.I): return "M"
+    if re.search(r"\bmother of\b", name, re.I): return "F"
+    rels=[r[1] for r in RELS if r[0]==name]
+    if "mother_of" in rels: return "F"
+    if "father_of" in rels: return "M"
+    # Name morphology, matched on whole words only: plain substring matching
+    # made "Fadla" catch "Fadlan" and "Faras" catch "(father of Faras)".
+    if any(re.search(r"(?<![\w'])"+re.escape(m)+r"(?![\w'])", name) for m in FEMALE_MARKERS): return "F"
     return "M"
 
 def action_of(role, cert):
