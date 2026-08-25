@@ -1,5 +1,5 @@
 ﻿place_id,name_en,name_he,category,num_documents,princeton_name,coordinates,princeton_url,princeton_name_variants
-PL00,Unknown,לא ידוע,document_place,17,,,,
+PL00,Unknown,לא ידוע,document_place,19,,,,
 PL01,Fustat,פוסטאט,document_place,24,Fustat,"30° 0′ 17″ N, 31° 14′ 15″ E",https://geniza.princeton.edu/places/fustat/,"Fusṭāṭ, Miṣr al-Qadīma, פסטאט, فسطاط"
 PL02,Cairo,קהיר,document_place,3,Cairo,"30° 3′ 6″ N, 31° 15′ 41″ E",https://geniza.princeton.edu/places/cairo/,"New Cairo, al-Muʿizziyya, al-Qāhira"
 PL03,Jerusalem,ירושלים,document_place,5,Jerusalem,"31° 46′ 36″ N, 35° 14′ 3″ E",https://geniza.princeton.edu/places/jerusalem/,

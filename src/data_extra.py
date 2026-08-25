@@ -6,6 +6,17 @@ identity merges, name variants, Princeton Geniza Lab matches."""
 EXTRA_DOCS = [
  ("SRC_CH3","Olszowy-Schlanger 1998, chapter 3 (Historical Background)","secondary source unit","prosopography: Tustari family, Karaite banking network, al-Qazzaz, Jerusalem community","",None,"",""),
  ("SRC_CH9","Olszowy-Schlanger 1998, chapter 9 (The Karaite Nesi'im)","secondary source unit","genealogy of the Karaite nesi'im; codex dedications","",None,"",""),
+ # --- Tustari banking letters. Not marriage documents: these two are the only
+ # Geniza items chapter 3 cites by shelfmark for the Tustari family, and both
+ # carry a published edition and a translation (Gil 1981 no. 3; Ben-Zevi 1937-38),
+ # so they can be harvested at the same evidential standard as the rest.
+ ("TUS01","TS 13 J 25.18","letter (business)","1026",1026,"Ahwaz",
+  "Efraim b. Sa'id b. Malachi, the Tustaris' agent in Ahwaz, on selling two shops belonging to them; "
+  "ed. Gil 1981 no. 3, pp. 76-79 (Olszowy-Schlanger 1998, p. 43 n. 14)"),
+ ("TUS02","MS Meunier","letter (business)","1011",1011,"Aleppo",
+  "Aleppo letter of an impoverished traveller from Tabaristan to the three first-generation Tustari "
+  "brothers, describing a suftaja drawn on Karaite bankers in Baghdad, Damascus and Fustat; "
+  "ed. Ben-Zevi 1937-38, pp. 179-182 (Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"),
 ]
 
 # MERGES: rename appearance-name -> canonical name (same individual per the editors)
@@ -16,6 +27,19 @@ MERGES = {
 
 # EXTRA_APPEARANCES: (doc_id, person, role, certainty, note)
 EXTRA_APPEARANCES = [
+ # --- Tustari banking letters (see EXTRA_DOCS). Roles use the existing closed
+ # vocabulary: the corpus has no Sender/Recipient action, so the letter's
+ # principals are recorded as Agent (acting for another) or Mentioned.
+ ("TUS01","Efraim b. Sa'id b. Malachi","Agent","attested","the Tustaris' agent in Ahwaz; wrote this letter in 1026 about selling two shops of theirs"),
+ ("TUS01","Abraham (Abu Sa'ad) b. Sahl al-Tustari","Mentioned","attested","principal on whose behalf the shops were being sold"),
+ ("TUS01","Hesed (Abu Nasr) b. Sahl al-Tustari","Mentioned","attested","principal on whose behalf the shops were being sold"),
+ ("TUS02","Ben Solomon of Amwal (Tabaristan)","Declarant","attested","the eighty-year-old traveller who dictated the letter; his given name is not preserved"),
+ ("TUS02","Sahl (Yashar) b. Israel al-Tustari","Mentioned","attested","one of the three addressees, called Abu'l-Fadl"),
+ ("TUS02","Joseph b. Israel al-Tustari","Mentioned","attested","one of the three addressees, called Abu Ya'qub"),
+ ("TUS02","Sa'id b. Israel al-Tustari","Mentioned","attested","one of the three addressees, called Abu Sahl"),
+ ("TUS02","Solomon b. Aaron al-Baghdadi","Mentioned","attested","the Baghdad banker who issued the suftaja drawn on the Tustaris and on Sahlawaya"),
+ ("TUS02","Sahlawaya b. Hayyim","Mentioned","attested","the Fustat Karaite banker on whom fifty of the dinars were drawn"),
+ ("TUS02","Sedaqa b. Amram (Damascus)","Mentioned","attested","the Damascus banker who was to cash the suftaja and notify the Tustaris"),
  # --- Rabbanite communal leaders known from the editors' comments
  ("OS04","Efraim b. Shemarya","Mentioned","contextual","leader of the Palestinians in Fustat; his draft letter TS 13 J 8.14 lists Karaites (incl. Ezra b. Samuel b. Ezra and the 'elders Tustari') who helped the Jerusalem community"),
  ("OS20","Efraim b. Shemarya","Mentioned","contextual","his letter of thanks (~1035) names Sahlawaya b. Hayyim among the benefactors"),

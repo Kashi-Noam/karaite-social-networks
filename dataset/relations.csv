@@ -1,213 +1,213 @@
 ﻿source_id,source,relation,relation_he,target_id,target,evidence,derivation,note
-P050,Barakat b. David,betrothed,מאורסים,P228,Na'ama bt. Nisi,TS 16.109 + TS AS 153.489,explicit,then married (TS 20.47r)
-P050,Barakat b. David,married,בני זוג נשואים,P228,Na'ama bt. Nisi,TS 20.47r,explicit,
-P132,Isaac b. Eli,betrothed,מאורסים,P226,Mubaraka bt. [...],TS 12.644,explicit,
-P330,Yefet b. Abraham al-Tustari,betrothed,מאורסים,P035,Ama al-Aziz bt. Hizkiyahu,TS 16.50,explicit,Tustari-nesi'im alliance
-P182,Khalaf b. Mahfuz,betrothed,מאורסים,P036,Ama al-Qadar bt. Efraim,"TS 18 J 5.10a,b + TS 10 J 27.6",explicit,
-P064,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),betrothed,מאורסים,P060,Daughter of Abu'l-Fadl,TS J 3.47v,explicit,
-P144,Jabir b. Azhar ha-Kohen,betrothed,מאורסים,P129,Husn bt. Hayyim,TS AS 145.307r + TS Misc. 29.58a r,explicit,
-P109,Halfon ha-Levi b. Daniel,betrothed,מאורסים,P037,Ama al-Wahid bt. Halfon,ENA NS 17.24,explicit,
-P292,Shela b. Amram al-Qirqisani,betrothed,מאורסים,P326,Yaman bt. David,Mosseri Ia.2,explicit,"double proxy: groom in Tyre, bride in Fustat"
-P188,Mahfuz b. Menahem,betrothed,מאורסים,P100,Fadla bt. Abraham,A.I.U. VII D 1r,explicit,
-P245,Rav Hesed,married,בני זוג נשואים,P269,Sara bt. Sahlawaya,TS 12.621,explicit,
-P024,Abraham b. Jacob,married,בני זוג נשואים,P268,Sara bt. Sahl,TS 12.715 + Bodl. MS Heb. a.3.34,explicit,
-P088,El'azar b. Shemen Tov,married,בני זוג נשואים,P249,Rivqa bt. Joseph,TS 16.67,explicit,
-P215,Mevorakh b. Yehya,married,בני זוג נשואים,P225,"Mubaraka (bride, OS28)",TS 16.236,explicit,
-P213,Mevorakh b. Samuel,married,בני זוג נשואים,P300,"Sitt-al-Ahl (bride, OS29)",TS 20.2,explicit,
-P345,Yesha'ya b. Isaac,married,בני זוג נשואים,P103,Farajiyya bt. Jehuda,TS 20.156,explicit,
-P316,Solomon b. Mevasser b. Sahl al-Ani,married,בני זוג נשואים,P270,Sara bt. Yesha'ya,TS 24.7,explicit,first cousins
-P194,Marzuq b. Yefet,married,בני זוג נשואים,P104,Faras bt. Simha,TS 24.13,explicit,
-P198,"Menashe (groom, OS33)",married,בני זוג נשואים,P303,Sitt-al-Husn bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,her second marriage; first cousins
-P156,"Jehuda (groom, OS34)",married,בני זוג נשואים,P302,Sitt-al-Fadl,TS AS 146.34,explicit,
-P242,Ovadya b. Sedaqa,married,בני זוג נשואים,P033,al-Tifrat bt. Tovya,TS AS 147.120,explicit,
-P320,Thabit b. Jacob,married,בני זוג נשואים,P105,Ghaliya bt. Joseph,"TS NS 320.34a,b",explicit,
-P149,Jacob b. David al-Shulhani,married,בני זוג נשואים,P274,Sayyida bt. Wahb,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",explicit,
-P124,Hizkiyahu b. Benjamin,married,בני זוג נשואים,P271,Sarwa bt. Sedaqa,CUL Add. 3430,explicit,
-P158,Jehuda b. Khalaf,married,בני זוג נשואים,P216,Miriam bt. Solomon,Bodl. MS Heb. a.3.44,explicit,widow bride
-P308,Solomon b. Amram (OS41),married,בני זוג נשואים,P128,Husn bt. David (OS41),Bodl. MS Heb. a.3.4v,explicit,
-P136,"Isaac b. Joseph (groom, OS42)",married,בני זוג נשואים,P178,Karima bt. Abraham,Bodl. MS Heb. b.12.31,explicit,
-P062,"David (groom, OS44)",married,בני זוג נשואים,P126,"Husn (bride, OS44)",ENA NS 3.23 + ENA NS 3.27,explicit,
-P344,Yehya b. Abraham,married,בני זוג נשואים,P247,Rayyisa bt. Sa'adya,Bodl. MS Heb. a.3.42,explicit,MIXED Rabbanite-Karaite; remarriage after divorce
-P344,Yehya b. Abraham,divorced,גרושים,P247,Rayyisa bt. Sa'adya,Bodl. MS Heb. a.3.42,explicit,earlier divorce of the same couple
-P006,"[...] b. Mansur (groom, OS57)",betrothed,מאורסים,P179,Karima bt. Hasan,ENA NS 18.37,explicit,MIXED Rabbanite-Karaite
-P219,Moses b. Yefet (Abu Imran),first_husband_of,בעל ראשון של,P303,Sitt-al-Husn bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,contextual (TS 12.104)
-P066,David b. Daniel b. Azarya,married,בני זוג נשואים,P231,Nasiya bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,"MIXED: Rabbanite Gaon-family groom, Karaite bride, 1082 (TS 24.1)"
-P342,Yehuda b. Tammam,divorced,גרושים,P324,Umm Samuel bt. Aaron,Mosseri VII.43 + TS Ar.53.53,explicit,
-P071,David b. Josiah,betrothed,מאורסים,P046,Bahiyya bt. Solomon b. Sa'adya,Mosseri VII.43 + TS Ar.53.53,explicit,contextual (L-G Glass 40v)
-P146,Jacob (father of Nisi),father_of,אב של,P240,Nisi b. Jacob,TS 16.109 + TS AS 153.489,explicit,
-P260,Sahlawaya b. Hayyim,father_of,אב של,P118,Hayyim b. Sahlawaya,TS AS 145.307r + TS Misc. 29.58a r,explicit,
-P260,Sahlawaya b. Hayyim,father_of,אב של,P269,Sara bt. Sahlawaya,TS 12.621,explicit,
-P260,Sahlawaya b. Hayyim,father_of,אב של,P094,Eli b. Sahlawaya,TS AS 145.307r + TS Misc. 29.58a r,explicit,contextual
-P118,Hayyim b. Sahlawaya,father_of,אב של,P129,Husn bt. Hayyim,TS AS 145.307r + TS Misc. 29.58a r,explicit,
-P159,Jehuda ha-Levi b. Nisi ha-Melammed,father_of,אב של,P172,Joseph b. Jehuda ha-Levi,TS 12.644,explicit,
-P264,Samuel b. Sahl,father_of,אב של,P087,El'azar b. Samuel b. Sahl ha-Eved,TS 16.109 + TS AS 153.489,explicit,contextual
-P258,Sahl al-Ani,father_of,אב של,P346,Yesha'ya b. Sahl al-Ani,TS 24.7,explicit,
-P258,Sahl al-Ani,father_of,אב של,P204,Mevasser b. Sahl al-Ani,TS 24.7,explicit,
-P189,Maimon b. Fadl,father_of,אב של,P314,Solomon b. Maimon,TS 20.2,explicit,
-P016,"Aaron ha-Kohen (grandfather, OS33)",father_of,אב של,P220,Moses ha-Kohen b. Aaron,TS 24.45 + TS NS J 86,explicit,
-P220,Moses ha-Kohen b. Aaron,father_of,אב של,P303,Sitt-al-Husn bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,
-P220,Moses ha-Kohen b. Aaron,father_of,אב של,P231,Nasiya bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,contextual
-P296,Shemarya b. Shemen Tov,father_of,אב של,P297,Shemen Tov b. Shemarya,TS 16.67,explicit,
-P205,Mevasser b. Solomon,father_of,אב של,P081,Efraim b. Mevasser b. Solomon,ENA NS 18.37,explicit,
-P010,Aaron b. Isaac,father_of,אב של,P324,Umm Samuel bt. Aaron,Mosseri VII.43 + TS Ar.53.53,explicit,
-P324,Umm Samuel bt. Aaron,mother_of,אם של,P265,Samuel b. Yehuda (the orphan),Mosseri VII.43 + TS Ar.53.53,explicit,
-P342,Yehuda b. Tammam,father_of,אב של,P265,Samuel b. Yehuda (the orphan),Mosseri VII.43 + TS Ar.53.53,explicit,
-P143,Israel b. Tammam [?],father_of,אב של,P210,Mevorakh b. Israel (heir),Mosseri VII.43 + TS Ar.53.53,explicit,
-P319,Tammam,father_of,אב של,P342,Yehuda b. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
-P319,Tammam,father_of,אב של,P248,Rayyisa bt. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
-P319,Tammam,father_of,אב של,P244,Rahma bt. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
-P319,Tammam,father_of,אב של,P143,Israel b. Tammam [?],Mosseri VII.43 + TS Ar.53.53,explicit,reconstructed
-P244,Rahma bt. Tammam,gave_gift_to,העניק מתנה ל,P210,Mevorakh b. Israel (heir),Mosseri VII.43 + TS Ar.53.53,explicit,deed of gift: her third of the house of Yehuda
-P168,Joseph b. Azarya,sibling_of,אח/אחות של,P048,Barakat b. Azarya,TS 20.47r,explicit,possible brothers (editor's suggestion)
-P334,Yefet ha-Kohen b. Eli b. Zita,sibling_of,אח/אחות של,P339,Yehoshua b. Eli ha-Kohen b. Zita,CUL Add. 3430,explicit,brothers; father Eli b. Zita
-P034,Alan b. Nahum,sibling_of,אח/אחות של,P230,Nahum b. Nahum,"TS 18 J 5.10a,b + TS 10 J 27.6",explicit,possible brothers
-P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,sibling_of,אח/אחות של,P119,Hesed (Abu Nasr) b. Sahl al-Tustari,TS 16.50,explicit,
+P050,Barakat b. David,betrothed,מאורסים,P229,Na'ama bt. Nisi,TS 16.109 + TS AS 153.489,explicit,then married (TS 20.47r)
+P050,Barakat b. David,married,בני זוג נשואים,P229,Na'ama bt. Nisi,TS 20.47r,explicit,
+P133,Isaac b. Eli,betrothed,מאורסים,P227,Mubaraka bt. [...],TS 12.644,explicit,
+P331,Yefet b. Abraham al-Tustari,betrothed,מאורסים,P035,Ama al-Aziz bt. Hizkiyahu,TS 16.50,explicit,Tustari-nesi'im alliance
+P183,Khalaf b. Mahfuz,betrothed,מאורסים,P036,Ama al-Qadar bt. Efraim,"TS 18 J 5.10a,b + TS 10 J 27.6",explicit,
+P065,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),betrothed,מאורסים,P061,Daughter of Abu'l-Fadl,TS J 3.47v,explicit,
+P145,Jabir b. Azhar ha-Kohen,betrothed,מאורסים,P130,Husn bt. Hayyim,TS AS 145.307r + TS Misc. 29.58a r,explicit,
+P110,Halfon ha-Levi b. Daniel,betrothed,מאורסים,P037,Ama al-Wahid bt. Halfon,ENA NS 17.24,explicit,
+P293,Shela b. Amram al-Qirqisani,betrothed,מאורסים,P327,Yaman bt. David,Mosseri Ia.2,explicit,"double proxy: groom in Tyre, bride in Fustat"
+P189,Mahfuz b. Menahem,betrothed,מאורסים,P101,Fadla bt. Abraham,A.I.U. VII D 1r,explicit,
+P246,Rav Hesed,married,בני זוג נשואים,P270,Sara bt. Sahlawaya,TS 12.621,explicit,
+P024,Abraham b. Jacob,married,בני זוג נשואים,P269,Sara bt. Sahl,TS 12.715 + Bodl. MS Heb. a.3.34,explicit,
+P089,El'azar b. Shemen Tov,married,בני זוג נשואים,P250,Rivqa bt. Joseph,TS 16.67,explicit,
+P216,Mevorakh b. Yehya,married,בני זוג נשואים,P226,"Mubaraka (bride, OS28)",TS 16.236,explicit,
+P214,Mevorakh b. Samuel,married,בני זוג נשואים,P301,"Sitt-al-Ahl (bride, OS29)",TS 20.2,explicit,
+P346,Yesha'ya b. Isaac,married,בני זוג נשואים,P104,Farajiyya bt. Jehuda,TS 20.156,explicit,
+P317,Solomon b. Mevasser b. Sahl al-Ani,married,בני זוג נשואים,P271,Sara bt. Yesha'ya,TS 24.7,explicit,first cousins
+P195,Marzuq b. Yefet,married,בני זוג נשואים,P105,Faras bt. Simha,TS 24.13,explicit,
+P199,"Menashe (groom, OS33)",married,בני זוג נשואים,P304,Sitt-al-Husn bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,her second marriage; first cousins
+P157,"Jehuda (groom, OS34)",married,בני זוג נשואים,P303,Sitt-al-Fadl,TS AS 146.34,explicit,
+P243,Ovadya b. Sedaqa,married,בני זוג נשואים,P033,al-Tifrat bt. Tovya,TS AS 147.120,explicit,
+P321,Thabit b. Jacob,married,בני זוג נשואים,P106,Ghaliya bt. Joseph,"TS NS 320.34a,b",explicit,
+P150,Jacob b. David al-Shulhani,married,בני זוג נשואים,P275,Sayyida bt. Wahb,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",explicit,
+P125,Hizkiyahu b. Benjamin,married,בני זוג נשואים,P272,Sarwa bt. Sedaqa,CUL Add. 3430,explicit,
+P159,Jehuda b. Khalaf,married,בני זוג נשואים,P217,Miriam bt. Solomon,Bodl. MS Heb. a.3.44,explicit,widow bride
+P309,Solomon b. Amram (OS41),married,בני זוג נשואים,P129,Husn bt. David (OS41),Bodl. MS Heb. a.3.4v,explicit,
+P137,"Isaac b. Joseph (groom, OS42)",married,בני זוג נשואים,P179,Karima bt. Abraham,Bodl. MS Heb. b.12.31,explicit,
+P063,"David (groom, OS44)",married,בני זוג נשואים,P127,"Husn (bride, OS44)",ENA NS 3.23 + ENA NS 3.27,explicit,
+P345,Yehya b. Abraham,married,בני זוג נשואים,P248,Rayyisa bt. Sa'adya,Bodl. MS Heb. a.3.42,explicit,MIXED Rabbanite-Karaite; remarriage after divorce
+P345,Yehya b. Abraham,divorced,גרושים,P248,Rayyisa bt. Sa'adya,Bodl. MS Heb. a.3.42,explicit,earlier divorce of the same couple
+P006,"[...] b. Mansur (groom, OS57)",betrothed,מאורסים,P180,Karima bt. Hasan,ENA NS 18.37,explicit,MIXED Rabbanite-Karaite
+P220,Moses b. Yefet (Abu Imran),first_husband_of,בעל ראשון של,P304,Sitt-al-Husn bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,contextual (TS 12.104)
+P067,David b. Daniel b. Azarya,married,בני זוג נשואים,P232,Nasiya bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,"MIXED: Rabbanite Gaon-family groom, Karaite bride, 1082 (TS 24.1)"
+P343,Yehuda b. Tammam,divorced,גרושים,P325,Umm Samuel bt. Aaron,Mosseri VII.43 + TS Ar.53.53,explicit,
+P072,David b. Josiah,betrothed,מאורסים,P046,Bahiyya bt. Solomon b. Sa'adya,Mosseri VII.43 + TS Ar.53.53,explicit,contextual (L-G Glass 40v)
+P147,Jacob (father of Nisi),father_of,אב של,P241,Nisi b. Jacob,TS 16.109 + TS AS 153.489,explicit,
+P261,Sahlawaya b. Hayyim,father_of,אב של,P119,Hayyim b. Sahlawaya,TS AS 145.307r + TS Misc. 29.58a r,explicit,
+P261,Sahlawaya b. Hayyim,father_of,אב של,P270,Sara bt. Sahlawaya,TS 12.621,explicit,
+P261,Sahlawaya b. Hayyim,father_of,אב של,P095,Eli b. Sahlawaya,TS AS 145.307r + TS Misc. 29.58a r,explicit,contextual
+P119,Hayyim b. Sahlawaya,father_of,אב של,P130,Husn bt. Hayyim,TS AS 145.307r + TS Misc. 29.58a r,explicit,
+P160,Jehuda ha-Levi b. Nisi ha-Melammed,father_of,אב של,P173,Joseph b. Jehuda ha-Levi,TS 12.644,explicit,
+P265,Samuel b. Sahl,father_of,אב של,P088,El'azar b. Samuel b. Sahl ha-Eved,TS 16.109 + TS AS 153.489,explicit,contextual
+P259,Sahl al-Ani,father_of,אב של,P347,Yesha'ya b. Sahl al-Ani,TS 24.7,explicit,
+P259,Sahl al-Ani,father_of,אב של,P205,Mevasser b. Sahl al-Ani,TS 24.7,explicit,
+P190,Maimon b. Fadl,father_of,אב של,P315,Solomon b. Maimon,TS 20.2,explicit,
+P016,"Aaron ha-Kohen (grandfather, OS33)",father_of,אב של,P221,Moses ha-Kohen b. Aaron,TS 24.45 + TS NS J 86,explicit,
+P221,Moses ha-Kohen b. Aaron,father_of,אב של,P304,Sitt-al-Husn bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,
+P221,Moses ha-Kohen b. Aaron,father_of,אב של,P232,Nasiya bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,contextual
+P297,Shemarya b. Shemen Tov,father_of,אב של,P298,Shemen Tov b. Shemarya,TS 16.67,explicit,
+P206,Mevasser b. Solomon,father_of,אב של,P082,Efraim b. Mevasser b. Solomon,ENA NS 18.37,explicit,
+P010,Aaron b. Isaac,father_of,אב של,P325,Umm Samuel bt. Aaron,Mosseri VII.43 + TS Ar.53.53,explicit,
+P325,Umm Samuel bt. Aaron,mother_of,אם של,P266,Samuel b. Yehuda (the orphan),Mosseri VII.43 + TS Ar.53.53,explicit,
+P343,Yehuda b. Tammam,father_of,אב של,P266,Samuel b. Yehuda (the orphan),Mosseri VII.43 + TS Ar.53.53,explicit,
+P144,Israel b. Tammam [?],father_of,אב של,P211,Mevorakh b. Israel (heir),Mosseri VII.43 + TS Ar.53.53,explicit,
+P320,Tammam,father_of,אב של,P343,Yehuda b. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
+P320,Tammam,father_of,אב של,P249,Rayyisa bt. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
+P320,Tammam,father_of,אב של,P245,Rahma bt. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
+P320,Tammam,father_of,אב של,P144,Israel b. Tammam [?],Mosseri VII.43 + TS Ar.53.53,explicit,reconstructed
+P245,Rahma bt. Tammam,gave_gift_to,העניק מתנה ל,P211,Mevorakh b. Israel (heir),Mosseri VII.43 + TS Ar.53.53,explicit,deed of gift: her third of the house of Yehuda
+P169,Joseph b. Azarya,sibling_of,אח/אחות של,P048,Barakat b. Azarya,TS 20.47r,explicit,possible brothers (editor's suggestion)
+P335,Yefet ha-Kohen b. Eli b. Zita,sibling_of,אח/אחות של,P340,Yehoshua b. Eli ha-Kohen b. Zita,CUL Add. 3430,explicit,brothers; father Eli b. Zita
+P034,Alan b. Nahum,sibling_of,אח/אחות של,P231,Nahum b. Nahum,"TS 18 J 5.10a,b + TS 10 J 27.6",explicit,possible brothers
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,sibling_of,אח/אחות של,P120,Hesed (Abu Nasr) b. Sahl al-Tustari,TS 16.50,explicit,
 P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,sibling_of,אח/אחות של,P012,Aaron b. Sahl al-Tustari,TS 16.50,explicit,
-P119,Hesed (Abu Nasr) b. Sahl al-Tustari,sibling_of,אח/אחות של,P012,Aaron b. Sahl al-Tustari,TS 16.50,explicit,
-P346,Yesha'ya b. Sahl al-Ani,sibling_of,אח/אחות של,P204,Mevasser b. Sahl al-Ani,TS 24.7,explicit,
-P118,Hayyim b. Sahlawaya,sibling_of,אח/אחות של,P094,Eli b. Sahlawaya,TS AS 145.307r + TS Misc. 29.58a r,explicit,
-P239,Nathana'el ha-Levi b. Rawh,sibling_of,אח/אחות של,P055,Berakha b. Rawh (Abu'l-Barakat),ENA 4020.38v,explicit,
-P135,Isaac b. Jehuda ha-Levi,sibling_of,אח/אחות של,P172,Joseph b. Jehuda ha-Levi,ENA NS 18.37,explicit,possible brothers (editor's suggestion)
-P125,Hizkiyahu b. Solomon (nasi),sibling_of,אח/אחות של,P177,Josiah b. Solomon (nasi),Mosseri VII.43 + TS Ar.53.53,explicit,"brothers, sons of Solomon b. David (ch.9)"
-P342,Yehuda b. Tammam,sibling_of,אח/אחות של,P248,Rayyisa bt. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
-P342,Yehuda b. Tammam,sibling_of,אח/אחות של,P244,Rahma bt. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
-P248,Rayyisa bt. Tammam,sibling_of,אח/אחות של,P244,Rahma bt. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
-P303,Sitt-al-Husn bt. Moses ha-Kohen,sibling_of,אח/אחות של,P231,Nasiya bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,
-P316,Solomon b. Mevasser b. Sahl al-Ani,first_cousin_of,בן/בת דוד של,P270,Sara bt. Yesha'ya,TS 24.7,explicit,
-P198,"Menashe (groom, OS33)",first_cousin_of,בן/בת דוד של,P303,Sitt-al-Husn bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,
-P210,Mevorakh b. Israel (heir),first_cousin_of,בן/בת דוד של,P265,Samuel b. Yehuda (the orphan),Mosseri VII.43 + TS Ar.53.53,explicit,parallel cousins
-P012,Aaron b. Sahl al-Tustari,uncle_of,דוד של,P330,Yefet b. Abraham al-Tustari,TS 16.50,explicit,
-P041,Anan b. David,father_of,אב של,P273,Saul b. Anan,Chapter 9 (Olszowy-Schlanger),explicit,
-P273,Saul b. Anan,father_of,אב של,P176,Joshya b. Saul,Chapter 9 (Olszowy-Schlanger),explicit,
-P176,Joshya b. Saul,father_of,אב של,P290,Semah b. Joshya,Chapter 9 (Olszowy-Schlanger),explicit,
-P176,Joshya b. Saul,father_of,אב של,P337,Yehoshafat b. Joshya,Chapter 9 (Olszowy-Schlanger),explicit,
-P290,Semah b. Joshya,sibling_of,אח/אחות של,P337,Yehoshafat b. Joshya,Chapter 9 (Olszowy-Schlanger),explicit,
-P337,Yehoshafat b. Joshya,father_of,אב של,P057,Boaz b. Yehoshafat,Chapter 9 (Olszowy-Schlanger),explicit,
-P057,Boaz b. Yehoshafat,father_of,אב של,P065,David b. Boaz (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
-P065,David b. Boaz (nasi),father_of,אב של,P309,Solomon b. David (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
-P309,Solomon b. David (nasi),father_of,אב של,P125,Hizkiyahu b. Solomon (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
-P309,Solomon b. David (nasi),father_of,אב של,P177,Josiah b. Solomon (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
-P177,Josiah b. Solomon (nasi),father_of,אב של,P071,David b. Josiah,Chapter 9 (Olszowy-Schlanger),explicit,
-P125,Hizkiyahu b. Solomon (nasi),father_of,אב של,P035,Ama al-Aziz bt. Hizkiyahu,TS 16.50,explicit,
-P125,Hizkiyahu b. Solomon (nasi),father_of,אב של,P116,Hasdai b. Hizkiyahu (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
-P116,Hasdai b. Hizkiyahu (nasi),father_of,אב של,P067,David b. Hasdai (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
-P067,David b. Hasdai (nasi),father_of,אב של,P038,Amaryahu Jehuda (nasi),TS 16.67,explicit,
-P267,Sar Shalom (nasi),father_of,אב של,P117,Hasdai Emmanuel (nasi),TS 16.67,explicit,
-P042,"Asa (nasi, father of Semah)",father_of,אב של,P289,Semah b. Asa (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
-P289,Semah b. Asa (nasi),father_of,אב של,P073,David b. Semah (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
-P141,Israel b. Jacob al-Tustari,father_of,אב של,P257,Sahl (Yashar) b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
-P257,Sahl (Yashar) b. Israel al-Tustari,father_of,אב של,P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
-P257,Sahl (Yashar) b. Israel al-Tustari,father_of,אב של,P119,Hesed (Abu Nasr) b. Sahl al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
-P257,Sahl (Yashar) b. Israel al-Tustari,father_of,אב של,P012,Aaron b. Sahl al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
-P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,father_of,אב של,P330,Yefet b. Abraham al-Tustari,TS 16.50,explicit,
-P096,Eli ha-Kohen b. Zita (Abu'l-Surri),father_of,אב של,P334,Yefet ha-Kohen b. Eli b. Zita,TS 12.644,explicit,contextual
-P096,Eli ha-Kohen b. Zita (Abu'l-Surri),father_of,אב של,P339,Yehoshua b. Eli ha-Kohen b. Zita,CUL Add. 3430,explicit,contextual
-P064,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),sibling_of,אח/אחות של,P206,Mevorakh b. Amram,TS J 3.47v,explicit,
-P058,Daniel b. Azarya (Gaon),father_of,אב של,P066,David b. Daniel b. Azarya,TS 24.45 + TS NS J 86,explicit,"PGP: David b. Daniel, Head of the Jews 1082-94"
-P175,Joseph ibn Awkal,father_of,אב של,P122,Hillel b. Awkal,Bodl. MS Heb. b.12.31,explicit,PGP: Hilal b. Yusuf Ibn Awkal
-P122,Hillel b. Awkal,father_of,אב של,P151,Jacob b. Hillel b. Awkal,Bodl. MS Heb. b.12.31,explicit,
-P119,Hesed (Abu Nasr) b. Sahl al-Tustari,son_in_law_of,חתן של,P175,Joseph ibn Awkal,TS 12.621,explicit,Goitein's suggestion; possible
-P141,Israel b. Jacob al-Tustari,father_of,אב של,P170,Joseph b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
-P141,Israel b. Jacob al-Tustari,father_of,אב של,P254,Sa'id b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
-P141,Israel b. Jacob al-Tustari,father_of,אב של,P111,Hana bt. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
-P111,Hana bt. Israel al-Tustari,mother_of,אם של,P321,Tov b. David (Abu'l-Tayyib),Chapter 3 (Olszowy-Schlanger),explicit,
-P257,Sahl (Yashar) b. Israel al-Tustari,sibling_of,אח/אחות של,P170,Joseph b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
-P257,Sahl (Yashar) b. Israel al-Tustari,sibling_of,אח/אחות של,P254,Sa'id b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
-P257,Sahl (Yashar) b. Israel al-Tustari,sibling_of,אח/אחות של,P111,Hana bt. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
-P083,Efraim b. Sa'id b. Malachi,business_associate_of,שותף עסקי של,P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,"agent of the Tustaris in Ahwaz, 1026"
-P083,Efraim b. Sa'id b. Malachi,business_associate_of,שותף עסקי של,P119,Hesed (Abu Nasr) b. Sahl al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
-P306,Solomon b. Aaron al-Baghdadi,business_associate_of,שותף עסקי של,P257,Sahl (Yashar) b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,"suftaja drawn on the first-generation Tustaris, 1011"
-P306,Solomon b. Aaron al-Baghdadi,business_associate_of,שותף עסקי של,P260,Sahlawaya b. Hayyim,Chapter 3 (Olszowy-Schlanger),explicit,"suftaja of 50 (later 30) dinars drawn on Sahlawaya, 1011"
-P276,Sedaqa b. Amram (Damascus),business_associate_of,שותף עסקי של,P257,Sahl (Yashar) b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,cashed suftajas and informed the Tustaris
-P201,Menashe ibn al-Qazzaz,father_of,אב של,P032,Adiya b. Menashe (al-Qazzaz),Chapter 3 (Olszowy-Schlanger),explicit,
-P201,Menashe ibn al-Qazzaz,father_of,אב של,P263,Samuel b. Menashe (al-Qazzaz),TS 12.621,explicit,
-P032,Adiya b. Menashe (al-Qazzaz),father_of,אב של,P307,Solomon b. Adiya b. Menashe (al-Qazzaz),Mosseri Ia.2,explicit,
-P263,Samuel b. Menashe (al-Qazzaz),father_of,אב של,P222,Mu'ammala bt. Samuel (al-Qazzaz),TS 12.621,explicit,
-P222,Mu'ammala bt. Samuel (al-Qazzaz),associated_with,קשור אל (קשר מתועד אחר),P260,Sahlawaya b. Hayyim,TS 12.621,explicit,he is mentioned in her Tyre inheritance document (1020s)
-P218,Moses b. Siba'a,father_of,אב של,P298,Siba'a b. Moses,TS 24.7,explicit,
-P298,Siba'a b. Moses,father_of,אב של,P085,Efraim b. Siba'a,TS 24.7,explicit,
-P298,Siba'a b. Moses,father_of,אב של,P200,Menashe b. Siba'a,TS 24.7,explicit,
-P316,Solomon b. Mevasser b. Sahl al-Ani,associated_with,קשור אל (קשר מתועד אחר),P298,Siba'a b. Moses,TS 24.7,explicit,his Bible codex passed to Siba'a b. Moses and his sons after his death (TS K 6.148)
-P235,Nathan b. Nisan ha-Levi (the scholar),father_of,אב של,P212,Mevorakh b. Nathan b. Nisan,CUL Add. 3430,explicit,probable
-P045,Babad ha-Kohen b. David,father_of,אב של,P077,David ha-Kohen b. Babad,TS 12.644,explicit,probable
-P184,Levi ha-Levi bar Jacob,ancestor_of,אב קדמון של (סב ומעלה),P110,Halfon ha-Levi b. Solomon,ENA 4020.38v,explicit,grandfather
-P067,David b. Hasdai (nasi),father_of,אב של,P310,Solomon b. David b. Hasdai (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
-P310,Solomon b. David b. Hasdai (nasi),sibling_of,אח/אחות של,P038,Amaryahu Jehuda (nasi),TS 16.67,explicit,if the identification of the anonymous brother is correct
-P310,Solomon b. David b. Hasdai (nasi),ancestor_of,אב קדמון של (סב ומעלה),P318,Solomon Yedidya (nasi),Chapter 9 (Olszowy-Schlanger),explicit,the 1236 nasi descended from Solomon's branch
-P327,Yedidya (nasi),father_of,אב של,P350,Zakkai b. Yedidya,Brit. Mus. Or. 5532,explicit,Mann's tentative suggestion
-P313,Solomon b. Jehuda (Gaon),corresponded_with,התכתב עם,P084,Efraim b. Shemarya,TS 12.644,explicit,many letters
-P313,Solomon b. Jehuda (Gaon),colleague_of,עמית של,P089,Eli b. Amram (he-haver),Mosseri VII.43 + TS Ar.53.53,explicit,granted him the title he-haver ha-me'ulle; later called him 'the eminent traitor'
-P233,Nathan b. Abraham (Gaon),rival_of,יריב של,P313,Solomon b. Jehuda (Gaon),ENA 4020.38v,explicit,gaonate contest 1038-1042
-P233,Nathan b. Abraham (Gaon),corresponded_with,התכתב עם,P239,Nathana'el ha-Levi b. Rawh,ENA 4020.38v,explicit,sought support of prominent Karaites
-P233,Nathan b. Abraham (Gaon),corresponded_with,התכתב עם,P055,Berakha b. Rawh (Abu'l-Barakat),ENA 4020.38v,explicit,
-P313,Solomon b. Jehuda (Gaon),father_of,אב של,P028,Abraham b. Solomon Gaon,TS 24.13,explicit,
-P089,Eli b. Amram (he-haver),rival_of,יריב של,P023,Abraham b. Isaac b. Furat,Mosseri VII.43 + TS Ar.53.53,explicit,Fustat leadership contest ~1055
-P089,Eli b. Amram (he-haver),rival_of,יריב של,P343,Yehuda ha-Kohen b. Joseph (ha-Rav),Mosseri VII.43 + TS Ar.53.53,explicit,
-P089,Eli b. Amram (he-haver),rival_of,יריב של,P347,Yeshu'a b. Joseph (Alexandria),Mosseri VII.43 + TS Ar.53.53,explicit,
-P064,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),patron_of,פטרון של,P340,Yehoshua b. Jehuda (Abu'l-Faraj Furqan ibn Asad),TS J 3.47v,explicit,commissioned the shorter commentary on Genesis for his son Abu Sa'id Levi
-P340,Yehoshua b. Jehuda (Abu'l-Faraj Furqan ibn Asad),teacher_of,מורה של,P323,Tovya b. Moses,Chapter 3 (Olszowy-Schlanger),explicit,
-P142,Israel b. Simha of Basra,associated_with,קשור אל (קשר מתועד אחר),P125,Hizkiyahu b. Solomon (nasi),Chapter 9 (Olszowy-Schlanger),explicit,entrusted the Aleppo Codex to his care
-P142,Israel b. Simha of Basra,associated_with,קשור אל (קשר מתועד אחר),P177,Josiah b. Solomon (nasi),Chapter 9 (Olszowy-Schlanger),explicit,entrusted the Aleppo Codex to his care
-P130,Husn bt. Jacob b. Joseph,associated_with,קשור אל (קשר מתועד אחר),P309,Solomon b. David (nasi),Chapter 9 (Olszowy-Schlanger),explicit,"donated a codex with blessings for the nesi'im, 1016"
-P090,Eli b. Ephraim,associated_with,קשור אל (קשר מתועד אחר),P112,Hananya b. Elnathan,TS 24.13,explicit,trustee and legatee in the same Rabbanite inheritance case of a deceased Karaite (TS 13 J 1.18)
-P061,David (father of Barakat),father_of,אב של,P050,Barakat b. David,TS 16.109 + TS AS 153.489,derived_from_roles,
-P240,Nisi b. Jacob,father_of,אב של,P228,Na'ama bt. Nisi,TS 16.109 + TS AS 153.489,derived_from_roles,
-P240,Nisi b. Jacob,agent_for,שליח של,P228,Na'ama bt. Nisi,TS 16.109 + TS AS 153.489,derived_from_roles,bride's agent (paqid)
-P125,Hizkiyahu b. Solomon (nasi),agent_for,שליח של,P035,Ama al-Aziz bt. Hizkiyahu,TS 16.50,derived_from_roles,bride's agent (paqid)
-P099,Ezra b. Ishma'el b. Ezra,agent_for,שליח של,P035,Ama al-Aziz bt. Hizkiyahu,TS 16.50,derived_from_roles,bride's agent (paqid)
-P187,Mahfuz (father of Khalaf),father_of,אב של,P182,Khalaf b. Mahfuz,"TS 18 J 5.10a,b + TS 10 J 27.6",derived_from_roles,
-P080,Efraim b. Mansur b. Furat,father_of,אב של,P036,Ama al-Qadar bt. Efraim,"TS 18 J 5.10a,b + TS 10 J 27.6",derived_from_roles,
-P080,Efraim b. Mansur b. Furat,agent_for,שליח של,P036,Ama al-Qadar bt. Efraim,"TS 18 J 5.10a,b + TS 10 J 27.6",derived_from_roles,bride's agent (paqid)
-P030,Abu'l-Fadl,father_of,אב של,P060,Daughter of Abu'l-Fadl,TS J 3.47v,derived_from_roles,
-P030,Abu'l-Fadl,agent_for,שליח של,P060,Daughter of Abu'l-Fadl,TS J 3.47v,derived_from_roles,bride's agent (paqid)
-P044,Azhar (father of Jabir),father_of,אב של,P144,Jabir b. Azhar ha-Kohen,TS AS 145.307r + TS Misc. 29.58a r,derived_from_roles,
-P059,Daniel b. Bundar,father_of,אב של,P109,Halfon ha-Levi b. Daniel,ENA NS 17.24,derived_from_roles,
-P107,Halfon (father of Ama al-Wahid),father_of,אב של,P037,Ama al-Wahid bt. Halfon,ENA NS 17.24,derived_from_roles,
-P121,Hillel (the elder),agent_for,שליח של,P037,Ama al-Wahid bt. Halfon,ENA NS 17.24,derived_from_roles,bride's agent (paqid)
-P039,Amram al-Qirqisani,father_of,אב של,P292,Shela b. Amram al-Qirqisani,Mosseri Ia.2,derived_from_roles,
-P076,David b. Yesha'ya ha-Melammed,father_of,אב של,P326,Yaman bt. David,Mosseri Ia.2,derived_from_roles,
-P317,Solomon b. Musafir,agent_for,שליח של,P326,Yaman bt. David,Mosseri Ia.2,derived_from_roles,bride's agent (paqid)
-P307,Solomon b. Adiya b. Menashe (al-Qazzaz),agent_for,שליח של,P292,Shela b. Amram al-Qirqisani,Mosseri Ia.2,derived_from_roles,groom's agent
-P195,Menahem (father of Mahfuz),father_of,אב של,P188,Mahfuz b. Menahem,A.I.U. VII D 1r,derived_from_roles,
-P026,Abraham b. Musallam,father_of,אב של,P100,Fadla bt. Abraham,A.I.U. VII D 1r,derived_from_roles,
-P145,"Jacob (father of Abraham, OS23)",father_of,אב של,P024,Abraham b. Jacob,TS 12.715 + Bodl. MS Heb. a.3.34,derived_from_roles,
-P256,"Sahl (father of Sara, OS23)",father_of,אב של,P268,Sara bt. Sahl,TS 12.715 + Bodl. MS Heb. a.3.34,derived_from_roles,
-P297,Shemen Tov b. Shemarya,father_of,אב של,P088,El'azar b. Shemen Tov,TS 16.67,derived_from_roles,
-P161,Joseph (father of Rivqa),father_of,אב של,P249,Rivqa bt. Joseph,TS 16.67,derived_from_roles,
-P040,Amram ha-Levi b. Joseph ha-Levi,agent_for,שליח של,P249,Rivqa bt. Joseph,TS 16.67,derived_from_roles,bride's agent (paqid)
-P011,Aaron b. Mordekhai,agent_for,שליח של,P225,"Mubaraka (bride, OS28)",TS 16.236,derived_from_roles,bride's agent (paqid)
-P095,Eli b. Solomon,agent_for,שליח של,P300,"Sitt-al-Ahl (bride, OS29)",TS 20.2,derived_from_roles,bride's agent (paqid)
-P155,Jehuda (father of Farajiyya),father_of,אב של,P103,Farajiyya bt. Jehuda,TS 20.156,derived_from_roles,
-P193,Mansur b. Yehai b. Abu'l-Shahaba,agent_for,שליח של,P103,Farajiyya bt. Jehuda,TS 20.156,derived_from_roles,bride's agent (paqid)
-P204,Mevasser b. Sahl al-Ani,father_of,אב של,P316,Solomon b. Mevasser b. Sahl al-Ani,TS 24.7,derived_from_roles,
-P346,Yesha'ya b. Sahl al-Ani,father_of,אב של,P270,Sara bt. Yesha'ya,TS 24.7,derived_from_roles,
-P328,Yefet (father of Marzuq),father_of,אב של,P194,Marzuq b. Yefet,TS 24.13,derived_from_roles,
-P299,Simha (father of Faras),father_of,אב של,P104,Faras bt. Simha,TS 24.13,derived_from_roles,
-P112,Hananya b. Elnathan,agent_for,שליח של,P104,Faras bt. Simha,TS 24.13,derived_from_roles,bride's agent (paqid)
-P015,Aaron ha-Kohen (father of Menashe),father_of,אב של,P198,"Menashe (groom, OS33)",TS 24.45 + TS NS J 86,derived_from_roles,
-P091,Eli b. Hillel,agent_for,שליח של,P303,Sitt-al-Husn bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,derived_from_roles,bride's agent (paqid)
-P305,"Solomon b. [...] (agent, OS34)",agent_for,שליח של,P302,Sitt-al-Fadl,TS AS 146.34,derived_from_roles,bride's agent (paqid)
-P278,Sedaqa b. Halfon b. Elun,father_of,אב של,P242,Ovadya b. Sedaqa,TS AS 147.120,derived_from_roles,
-P322,Tovya (father of al-Tifrat),father_of,אב של,P033,al-Tifrat bt. Tovya,TS AS 147.120,derived_from_roles,
-P333,Yefet b. Menashe,agent_for,שליח של,P033,al-Tifrat bt. Tovya,TS AS 147.120,derived_from_roles,bride's agent (paqid)
-P147,Jacob (father of Thabit),father_of,אב של,P320,Thabit b. Jacob,"TS NS 320.34a,b",derived_from_roles,
-P165,Joseph b. Abraham (father of Ghaliya),father_of,אב של,P105,Ghaliya bt. Joseph,"TS NS 320.34a,b",derived_from_roles,
-P165,Joseph b. Abraham (father of Ghaliya),agent_for,שליח של,P105,Ghaliya bt. Joseph,"TS NS 320.34a,b",derived_from_roles,bride's agent (paqid)
-P063,David al-Shulhani,father_of,אב של,P149,Jacob b. David al-Shulhani,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",derived_from_roles,
-P325,Wahb al-Arri [?],father_of,אב של,P274,Sayyida bt. Wahb,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",derived_from_roles,
-P197,Menahem b. Job al-Halabi,agent_for,שליח של,P274,Sayyida bt. Wahb,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",derived_from_roles,bride's agent (paqid)
-P053,"Benjamin (father of Hizkiyahu, OS39)",father_of,אב של,P124,Hizkiyahu b. Benjamin,CUL Add. 3430,derived_from_roles,
-P280,Sedaqa b. Jarir,father_of,אב של,P271,Sarwa bt. Sedaqa,CUL Add. 3430,derived_from_roles,
-P167,Joseph b. Abraham ha-Kohen,agent_for,שליח של,P271,Sarwa bt. Sedaqa,CUL Add. 3430,derived_from_roles,bride's agent (paqid)
-P180,"Khalaf (father of Jehuda, OS40)",father_of,אב של,P158,Jehuda b. Khalaf,Bodl. MS Heb. a.3.44,derived_from_roles,
-P304,"Solomon (father of Miriam, OS40)",father_of,אב של,P216,Miriam bt. Solomon,Bodl. MS Heb. a.3.44,derived_from_roles,
-P102,Faraj b. Solomon,agent_for,שליח של,P216,Miriam bt. Solomon,Bodl. MS Heb. a.3.44,derived_from_roles,bride's agent (paqid)
-P160,"Joseph (father of Isaac, OS42)",father_of,אב של,P136,"Isaac b. Joseph (groom, OS42)",Bodl. MS Heb. b.12.31,derived_from_roles,
-P018,Abraham (father of Karima),father_of,אב של,P178,Karima bt. Abraham,Bodl. MS Heb. b.12.31,derived_from_roles,
-P018,Abraham (father of Karima),agent_for,שליח של,P178,Karima bt. Abraham,Bodl. MS Heb. b.12.31,derived_from_roles,bride's agent (paqid)
-P019,"Abraham (physician, father of Yehya)",father_of,אב של,P344,Yehya b. Abraham,Bodl. MS Heb. a.3.42,derived_from_roles,
-P250,Sa'adya b. David (father of Rayyisa),father_of,אב של,P247,Rayyisa bt. Sa'adya,Bodl. MS Heb. a.3.42,derived_from_roles,
-P341,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,agent_for,שליח של,P247,Rayyisa bt. Sa'adya,Bodl. MS Heb. a.3.42,derived_from_roles,bride's agent (paqid)
-P191,"Mansur (father of groom, OS57)",father_of,אב של,P006,"[...] b. Mansur (groom, OS57)",ENA NS 18.37,derived_from_roles,
-P114,Hasan b. Moses,father_of,אב של,P179,Karima bt. Hasan,ENA NS 18.37,derived_from_roles,
-P114,Hasan b. Moses,agent_for,שליח של,P179,Karima bt. Hasan,ENA NS 18.37,derived_from_roles,bride's agent (paqid)
+P120,Hesed (Abu Nasr) b. Sahl al-Tustari,sibling_of,אח/אחות של,P012,Aaron b. Sahl al-Tustari,TS 16.50,explicit,
+P347,Yesha'ya b. Sahl al-Ani,sibling_of,אח/אחות של,P205,Mevasser b. Sahl al-Ani,TS 24.7,explicit,
+P119,Hayyim b. Sahlawaya,sibling_of,אח/אחות של,P095,Eli b. Sahlawaya,TS AS 145.307r + TS Misc. 29.58a r,explicit,
+P240,Nathana'el ha-Levi b. Rawh,sibling_of,אח/אחות של,P056,Berakha b. Rawh (Abu'l-Barakat),ENA 4020.38v,explicit,
+P136,Isaac b. Jehuda ha-Levi,sibling_of,אח/אחות של,P173,Joseph b. Jehuda ha-Levi,ENA NS 18.37,explicit,possible brothers (editor's suggestion)
+P126,Hizkiyahu b. Solomon (nasi),sibling_of,אח/אחות של,P178,Josiah b. Solomon (nasi),Mosseri VII.43 + TS Ar.53.53,explicit,"brothers, sons of Solomon b. David (ch.9)"
+P343,Yehuda b. Tammam,sibling_of,אח/אחות של,P249,Rayyisa bt. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
+P343,Yehuda b. Tammam,sibling_of,אח/אחות של,P245,Rahma bt. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
+P249,Rayyisa bt. Tammam,sibling_of,אח/אחות של,P245,Rahma bt. Tammam,Mosseri VII.43 + TS Ar.53.53,explicit,
+P304,Sitt-al-Husn bt. Moses ha-Kohen,sibling_of,אח/אחות של,P232,Nasiya bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,
+P317,Solomon b. Mevasser b. Sahl al-Ani,first_cousin_of,בן/בת דוד של,P271,Sara bt. Yesha'ya,TS 24.7,explicit,
+P199,"Menashe (groom, OS33)",first_cousin_of,בן/בת דוד של,P304,Sitt-al-Husn bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,explicit,
+P211,Mevorakh b. Israel (heir),first_cousin_of,בן/בת דוד של,P266,Samuel b. Yehuda (the orphan),Mosseri VII.43 + TS Ar.53.53,explicit,parallel cousins
+P012,Aaron b. Sahl al-Tustari,uncle_of,דוד של,P331,Yefet b. Abraham al-Tustari,TS 16.50,explicit,
+P041,Anan b. David,father_of,אב של,P274,Saul b. Anan,Chapter 9 (Olszowy-Schlanger),explicit,
+P274,Saul b. Anan,father_of,אב של,P177,Joshya b. Saul,Chapter 9 (Olszowy-Schlanger),explicit,
+P177,Joshya b. Saul,father_of,אב של,P291,Semah b. Joshya,Chapter 9 (Olszowy-Schlanger),explicit,
+P177,Joshya b. Saul,father_of,אב של,P338,Yehoshafat b. Joshya,Chapter 9 (Olszowy-Schlanger),explicit,
+P291,Semah b. Joshya,sibling_of,אח/אחות של,P338,Yehoshafat b. Joshya,Chapter 9 (Olszowy-Schlanger),explicit,
+P338,Yehoshafat b. Joshya,father_of,אב של,P058,Boaz b. Yehoshafat,Chapter 9 (Olszowy-Schlanger),explicit,
+P058,Boaz b. Yehoshafat,father_of,אב של,P066,David b. Boaz (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
+P066,David b. Boaz (nasi),father_of,אב של,P310,Solomon b. David (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
+P310,Solomon b. David (nasi),father_of,אב של,P126,Hizkiyahu b. Solomon (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
+P310,Solomon b. David (nasi),father_of,אב של,P178,Josiah b. Solomon (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
+P178,Josiah b. Solomon (nasi),father_of,אב של,P072,David b. Josiah,Chapter 9 (Olszowy-Schlanger),explicit,
+P126,Hizkiyahu b. Solomon (nasi),father_of,אב של,P035,Ama al-Aziz bt. Hizkiyahu,TS 16.50,explicit,
+P126,Hizkiyahu b. Solomon (nasi),father_of,אב של,P117,Hasdai b. Hizkiyahu (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
+P117,Hasdai b. Hizkiyahu (nasi),father_of,אב של,P068,David b. Hasdai (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
+P068,David b. Hasdai (nasi),father_of,אב של,P038,Amaryahu Jehuda (nasi),TS 16.67,explicit,
+P268,Sar Shalom (nasi),father_of,אב של,P118,Hasdai Emmanuel (nasi),TS 16.67,explicit,
+P042,"Asa (nasi, father of Semah)",father_of,אב של,P290,Semah b. Asa (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
+P290,Semah b. Asa (nasi),father_of,אב של,P074,David b. Semah (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
+P142,Israel b. Jacob al-Tustari,father_of,אב של,P258,Sahl (Yashar) b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
+P258,Sahl (Yashar) b. Israel al-Tustari,father_of,אב של,P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
+P258,Sahl (Yashar) b. Israel al-Tustari,father_of,אב של,P120,Hesed (Abu Nasr) b. Sahl al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
+P258,Sahl (Yashar) b. Israel al-Tustari,father_of,אב של,P012,Aaron b. Sahl al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
+P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,father_of,אב של,P331,Yefet b. Abraham al-Tustari,TS 16.50,explicit,
+P097,Eli ha-Kohen b. Zita (Abu'l-Surri),father_of,אב של,P335,Yefet ha-Kohen b. Eli b. Zita,TS 12.644,explicit,contextual
+P097,Eli ha-Kohen b. Zita (Abu'l-Surri),father_of,אב של,P340,Yehoshua b. Eli ha-Kohen b. Zita,CUL Add. 3430,explicit,contextual
+P065,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),sibling_of,אח/אחות של,P207,Mevorakh b. Amram,TS J 3.47v,explicit,
+P059,Daniel b. Azarya (Gaon),father_of,אב של,P067,David b. Daniel b. Azarya,TS 24.45 + TS NS J 86,explicit,"PGP: David b. Daniel, Head of the Jews 1082-94"
+P176,Joseph ibn Awkal,father_of,אב של,P123,Hillel b. Awkal,Bodl. MS Heb. b.12.31,explicit,PGP: Hilal b. Yusuf Ibn Awkal
+P123,Hillel b. Awkal,father_of,אב של,P152,Jacob b. Hillel b. Awkal,Bodl. MS Heb. b.12.31,explicit,
+P120,Hesed (Abu Nasr) b. Sahl al-Tustari,son_in_law_of,חתן של,P176,Joseph ibn Awkal,TS 12.621,explicit,Goitein's suggestion; possible
+P142,Israel b. Jacob al-Tustari,father_of,אב של,P171,Joseph b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
+P142,Israel b. Jacob al-Tustari,father_of,אב של,P255,Sa'id b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
+P142,Israel b. Jacob al-Tustari,father_of,אב של,P112,Hana bt. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
+P112,Hana bt. Israel al-Tustari,mother_of,אם של,P322,Tov b. David (Abu'l-Tayyib),Chapter 3 (Olszowy-Schlanger),explicit,
+P258,Sahl (Yashar) b. Israel al-Tustari,sibling_of,אח/אחות של,P171,Joseph b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
+P258,Sahl (Yashar) b. Israel al-Tustari,sibling_of,אח/אחות של,P255,Sa'id b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
+P258,Sahl (Yashar) b. Israel al-Tustari,sibling_of,אח/אחות של,P112,Hana bt. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
+P084,Efraim b. Sa'id b. Malachi,business_associate_of,שותף עסקי של,P017,Abraham (Abu Sa'ad) b. Sahl al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,"agent of the Tustaris in Ahwaz, 1026"
+P084,Efraim b. Sa'id b. Malachi,business_associate_of,שותף עסקי של,P120,Hesed (Abu Nasr) b. Sahl al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,
+P307,Solomon b. Aaron al-Baghdadi,business_associate_of,שותף עסקי של,P258,Sahl (Yashar) b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,"suftaja drawn on the first-generation Tustaris, 1011"
+P307,Solomon b. Aaron al-Baghdadi,business_associate_of,שותף עסקי של,P261,Sahlawaya b. Hayyim,Chapter 3 (Olszowy-Schlanger),explicit,"suftaja of 50 (later 30) dinars drawn on Sahlawaya, 1011"
+P277,Sedaqa b. Amram (Damascus),business_associate_of,שותף עסקי של,P258,Sahl (Yashar) b. Israel al-Tustari,Chapter 3 (Olszowy-Schlanger),explicit,cashed suftajas and informed the Tustaris
+P202,Menashe ibn al-Qazzaz,father_of,אב של,P032,Adiya b. Menashe (al-Qazzaz),Chapter 3 (Olszowy-Schlanger),explicit,
+P202,Menashe ibn al-Qazzaz,father_of,אב של,P264,Samuel b. Menashe (al-Qazzaz),TS 12.621,explicit,
+P032,Adiya b. Menashe (al-Qazzaz),father_of,אב של,P308,Solomon b. Adiya b. Menashe (al-Qazzaz),Mosseri Ia.2,explicit,
+P264,Samuel b. Menashe (al-Qazzaz),father_of,אב של,P223,Mu'ammala bt. Samuel (al-Qazzaz),TS 12.621,explicit,
+P223,Mu'ammala bt. Samuel (al-Qazzaz),associated_with,קשור אל (קשר מתועד אחר),P261,Sahlawaya b. Hayyim,TS 12.621,explicit,he is mentioned in her Tyre inheritance document (1020s)
+P219,Moses b. Siba'a,father_of,אב של,P299,Siba'a b. Moses,TS 24.7,explicit,
+P299,Siba'a b. Moses,father_of,אב של,P086,Efraim b. Siba'a,TS 24.7,explicit,
+P299,Siba'a b. Moses,father_of,אב של,P201,Menashe b. Siba'a,TS 24.7,explicit,
+P317,Solomon b. Mevasser b. Sahl al-Ani,associated_with,קשור אל (קשר מתועד אחר),P299,Siba'a b. Moses,TS 24.7,explicit,his Bible codex passed to Siba'a b. Moses and his sons after his death (TS K 6.148)
+P236,Nathan b. Nisan ha-Levi (the scholar),father_of,אב של,P213,Mevorakh b. Nathan b. Nisan,CUL Add. 3430,explicit,probable
+P045,Babad ha-Kohen b. David,father_of,אב של,P078,David ha-Kohen b. Babad,TS 12.644,explicit,probable
+P185,Levi ha-Levi bar Jacob,ancestor_of,אב קדמון של (סב ומעלה),P111,Halfon ha-Levi b. Solomon,ENA 4020.38v,explicit,grandfather
+P068,David b. Hasdai (nasi),father_of,אב של,P311,Solomon b. David b. Hasdai (nasi),Chapter 9 (Olszowy-Schlanger),explicit,
+P311,Solomon b. David b. Hasdai (nasi),sibling_of,אח/אחות של,P038,Amaryahu Jehuda (nasi),TS 16.67,explicit,if the identification of the anonymous brother is correct
+P311,Solomon b. David b. Hasdai (nasi),ancestor_of,אב קדמון של (סב ומעלה),P319,Solomon Yedidya (nasi),Chapter 9 (Olszowy-Schlanger),explicit,the 1236 nasi descended from Solomon's branch
+P328,Yedidya (nasi),father_of,אב של,P351,Zakkai b. Yedidya,Brit. Mus. Or. 5532,explicit,Mann's tentative suggestion
+P314,Solomon b. Jehuda (Gaon),corresponded_with,התכתב עם,P085,Efraim b. Shemarya,TS 12.644,explicit,many letters
+P314,Solomon b. Jehuda (Gaon),colleague_of,עמית של,P090,Eli b. Amram (he-haver),Mosseri VII.43 + TS Ar.53.53,explicit,granted him the title he-haver ha-me'ulle; later called him 'the eminent traitor'
+P234,Nathan b. Abraham (Gaon),rival_of,יריב של,P314,Solomon b. Jehuda (Gaon),ENA 4020.38v,explicit,gaonate contest 1038-1042
+P234,Nathan b. Abraham (Gaon),corresponded_with,התכתב עם,P240,Nathana'el ha-Levi b. Rawh,ENA 4020.38v,explicit,sought support of prominent Karaites
+P234,Nathan b. Abraham (Gaon),corresponded_with,התכתב עם,P056,Berakha b. Rawh (Abu'l-Barakat),ENA 4020.38v,explicit,
+P314,Solomon b. Jehuda (Gaon),father_of,אב של,P028,Abraham b. Solomon Gaon,TS 24.13,explicit,
+P090,Eli b. Amram (he-haver),rival_of,יריב של,P023,Abraham b. Isaac b. Furat,Mosseri VII.43 + TS Ar.53.53,explicit,Fustat leadership contest ~1055
+P090,Eli b. Amram (he-haver),rival_of,יריב של,P344,Yehuda ha-Kohen b. Joseph (ha-Rav),Mosseri VII.43 + TS Ar.53.53,explicit,
+P090,Eli b. Amram (he-haver),rival_of,יריב של,P348,Yeshu'a b. Joseph (Alexandria),Mosseri VII.43 + TS Ar.53.53,explicit,
+P065,David b. Amram ha-Levi (Abu'l-Hasan Da'ud b. al-Faraj Imran),patron_of,פטרון של,P341,Yehoshua b. Jehuda (Abu'l-Faraj Furqan ibn Asad),TS J 3.47v,explicit,commissioned the shorter commentary on Genesis for his son Abu Sa'id Levi
+P341,Yehoshua b. Jehuda (Abu'l-Faraj Furqan ibn Asad),teacher_of,מורה של,P324,Tovya b. Moses,Chapter 3 (Olszowy-Schlanger),explicit,
+P143,Israel b. Simha of Basra,associated_with,קשור אל (קשר מתועד אחר),P126,Hizkiyahu b. Solomon (nasi),Chapter 9 (Olszowy-Schlanger),explicit,entrusted the Aleppo Codex to his care
+P143,Israel b. Simha of Basra,associated_with,קשור אל (קשר מתועד אחר),P178,Josiah b. Solomon (nasi),Chapter 9 (Olszowy-Schlanger),explicit,entrusted the Aleppo Codex to his care
+P131,Husn bt. Jacob b. Joseph,associated_with,קשור אל (קשר מתועד אחר),P310,Solomon b. David (nasi),Chapter 9 (Olszowy-Schlanger),explicit,"donated a codex with blessings for the nesi'im, 1016"
+P091,Eli b. Ephraim,associated_with,קשור אל (קשר מתועד אחר),P113,Hananya b. Elnathan,TS 24.13,explicit,trustee and legatee in the same Rabbanite inheritance case of a deceased Karaite (TS 13 J 1.18)
+P062,David (father of Barakat),father_of,אב של,P050,Barakat b. David,TS 16.109 + TS AS 153.489,derived_from_roles,
+P241,Nisi b. Jacob,father_of,אב של,P229,Na'ama bt. Nisi,TS 16.109 + TS AS 153.489,derived_from_roles,
+P241,Nisi b. Jacob,agent_for,שליח של,P229,Na'ama bt. Nisi,TS 16.109 + TS AS 153.489,derived_from_roles,bride's agent (paqid)
+P126,Hizkiyahu b. Solomon (nasi),agent_for,שליח של,P035,Ama al-Aziz bt. Hizkiyahu,TS 16.50,derived_from_roles,bride's agent (paqid)
+P100,Ezra b. Ishma'el b. Ezra,agent_for,שליח של,P035,Ama al-Aziz bt. Hizkiyahu,TS 16.50,derived_from_roles,bride's agent (paqid)
+P188,Mahfuz (father of Khalaf),father_of,אב של,P183,Khalaf b. Mahfuz,"TS 18 J 5.10a,b + TS 10 J 27.6",derived_from_roles,
+P081,Efraim b. Mansur b. Furat,father_of,אב של,P036,Ama al-Qadar bt. Efraim,"TS 18 J 5.10a,b + TS 10 J 27.6",derived_from_roles,
+P081,Efraim b. Mansur b. Furat,agent_for,שליח של,P036,Ama al-Qadar bt. Efraim,"TS 18 J 5.10a,b + TS 10 J 27.6",derived_from_roles,bride's agent (paqid)
+P030,Abu'l-Fadl,father_of,אב של,P061,Daughter of Abu'l-Fadl,TS J 3.47v,derived_from_roles,
+P030,Abu'l-Fadl,agent_for,שליח של,P061,Daughter of Abu'l-Fadl,TS J 3.47v,derived_from_roles,bride's agent (paqid)
+P044,Azhar (father of Jabir),father_of,אב של,P145,Jabir b. Azhar ha-Kohen,TS AS 145.307r + TS Misc. 29.58a r,derived_from_roles,
+P060,Daniel b. Bundar,father_of,אב של,P110,Halfon ha-Levi b. Daniel,ENA NS 17.24,derived_from_roles,
+P108,Halfon (father of Ama al-Wahid),father_of,אב של,P037,Ama al-Wahid bt. Halfon,ENA NS 17.24,derived_from_roles,
+P122,Hillel (the elder),agent_for,שליח של,P037,Ama al-Wahid bt. Halfon,ENA NS 17.24,derived_from_roles,bride's agent (paqid)
+P039,Amram al-Qirqisani,father_of,אב של,P293,Shela b. Amram al-Qirqisani,Mosseri Ia.2,derived_from_roles,
+P077,David b. Yesha'ya ha-Melammed,father_of,אב של,P327,Yaman bt. David,Mosseri Ia.2,derived_from_roles,
+P318,Solomon b. Musafir,agent_for,שליח של,P327,Yaman bt. David,Mosseri Ia.2,derived_from_roles,bride's agent (paqid)
+P308,Solomon b. Adiya b. Menashe (al-Qazzaz),agent_for,שליח של,P293,Shela b. Amram al-Qirqisani,Mosseri Ia.2,derived_from_roles,groom's agent
+P196,Menahem (father of Mahfuz),father_of,אב של,P189,Mahfuz b. Menahem,A.I.U. VII D 1r,derived_from_roles,
+P026,Abraham b. Musallam,father_of,אב של,P101,Fadla bt. Abraham,A.I.U. VII D 1r,derived_from_roles,
+P146,"Jacob (father of Abraham, OS23)",father_of,אב של,P024,Abraham b. Jacob,TS 12.715 + Bodl. MS Heb. a.3.34,derived_from_roles,
+P257,"Sahl (father of Sara, OS23)",father_of,אב של,P269,Sara bt. Sahl,TS 12.715 + Bodl. MS Heb. a.3.34,derived_from_roles,
+P298,Shemen Tov b. Shemarya,father_of,אב של,P089,El'azar b. Shemen Tov,TS 16.67,derived_from_roles,
+P162,Joseph (father of Rivqa),father_of,אב של,P250,Rivqa bt. Joseph,TS 16.67,derived_from_roles,
+P040,Amram ha-Levi b. Joseph ha-Levi,agent_for,שליח של,P250,Rivqa bt. Joseph,TS 16.67,derived_from_roles,bride's agent (paqid)
+P011,Aaron b. Mordekhai,agent_for,שליח של,P226,"Mubaraka (bride, OS28)",TS 16.236,derived_from_roles,bride's agent (paqid)
+P096,Eli b. Solomon,agent_for,שליח של,P301,"Sitt-al-Ahl (bride, OS29)",TS 20.2,derived_from_roles,bride's agent (paqid)
+P156,Jehuda (father of Farajiyya),father_of,אב של,P104,Farajiyya bt. Jehuda,TS 20.156,derived_from_roles,
+P194,Mansur b. Yehai b. Abu'l-Shahaba,agent_for,שליח של,P104,Farajiyya bt. Jehuda,TS 20.156,derived_from_roles,bride's agent (paqid)
+P205,Mevasser b. Sahl al-Ani,father_of,אב של,P317,Solomon b. Mevasser b. Sahl al-Ani,TS 24.7,derived_from_roles,
+P347,Yesha'ya b. Sahl al-Ani,father_of,אב של,P271,Sara bt. Yesha'ya,TS 24.7,derived_from_roles,
+P329,Yefet (father of Marzuq),father_of,אב של,P195,Marzuq b. Yefet,TS 24.13,derived_from_roles,
+P300,Simha (father of Faras),father_of,אב של,P105,Faras bt. Simha,TS 24.13,derived_from_roles,
+P113,Hananya b. Elnathan,agent_for,שליח של,P105,Faras bt. Simha,TS 24.13,derived_from_roles,bride's agent (paqid)
+P015,Aaron ha-Kohen (father of Menashe),father_of,אב של,P199,"Menashe (groom, OS33)",TS 24.45 + TS NS J 86,derived_from_roles,
+P092,Eli b. Hillel,agent_for,שליח של,P304,Sitt-al-Husn bt. Moses ha-Kohen,TS 24.45 + TS NS J 86,derived_from_roles,bride's agent (paqid)
+P306,"Solomon b. [...] (agent, OS34)",agent_for,שליח של,P303,Sitt-al-Fadl,TS AS 146.34,derived_from_roles,bride's agent (paqid)
+P279,Sedaqa b. Halfon b. Elun,father_of,אב של,P243,Ovadya b. Sedaqa,TS AS 147.120,derived_from_roles,
+P323,Tovya (father of al-Tifrat),father_of,אב של,P033,al-Tifrat bt. Tovya,TS AS 147.120,derived_from_roles,
+P334,Yefet b. Menashe,agent_for,שליח של,P033,al-Tifrat bt. Tovya,TS AS 147.120,derived_from_roles,bride's agent (paqid)
+P148,Jacob (father of Thabit),father_of,אב של,P321,Thabit b. Jacob,"TS NS 320.34a,b",derived_from_roles,
+P166,Joseph b. Abraham (father of Ghaliya),father_of,אב של,P106,Ghaliya bt. Joseph,"TS NS 320.34a,b",derived_from_roles,
+P166,Joseph b. Abraham (father of Ghaliya),agent_for,שליח של,P106,Ghaliya bt. Joseph,"TS NS 320.34a,b",derived_from_roles,bride's agent (paqid)
+P064,David al-Shulhani,father_of,אב של,P150,Jacob b. David al-Shulhani,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",derived_from_roles,
+P326,Wahb al-Arri [?],father_of,אב של,P275,Sayyida bt. Wahb,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",derived_from_roles,
+P198,Menahem b. Job al-Halabi,agent_for,שליח של,P275,Sayyida bt. Wahb,"TS NS 323.35 + TS NS 320.76a,b + TS 12.535",derived_from_roles,bride's agent (paqid)
+P054,"Benjamin (father of Hizkiyahu, OS39)",father_of,אב של,P125,Hizkiyahu b. Benjamin,CUL Add. 3430,derived_from_roles,
+P281,Sedaqa b. Jarir,father_of,אב של,P272,Sarwa bt. Sedaqa,CUL Add. 3430,derived_from_roles,
+P168,Joseph b. Abraham ha-Kohen,agent_for,שליח של,P272,Sarwa bt. Sedaqa,CUL Add. 3430,derived_from_roles,bride's agent (paqid)
+P181,"Khalaf (father of Jehuda, OS40)",father_of,אב של,P159,Jehuda b. Khalaf,Bodl. MS Heb. a.3.44,derived_from_roles,
+P305,"Solomon (father of Miriam, OS40)",father_of,אב של,P217,Miriam bt. Solomon,Bodl. MS Heb. a.3.44,derived_from_roles,
+P103,Faraj b. Solomon,agent_for,שליח של,P217,Miriam bt. Solomon,Bodl. MS Heb. a.3.44,derived_from_roles,bride's agent (paqid)
+P161,"Joseph (father of Isaac, OS42)",father_of,אב של,P137,"Isaac b. Joseph (groom, OS42)",Bodl. MS Heb. b.12.31,derived_from_roles,
+P018,Abraham (father of Karima),father_of,אב של,P179,Karima bt. Abraham,Bodl. MS Heb. b.12.31,derived_from_roles,
+P018,Abraham (father of Karima),agent_for,שליח של,P179,Karima bt. Abraham,Bodl. MS Heb. b.12.31,derived_from_roles,bride's agent (paqid)
+P019,"Abraham (physician, father of Yehya)",father_of,אב של,P345,Yehya b. Abraham,Bodl. MS Heb. a.3.42,derived_from_roles,
+P251,Sa'adya b. David (father of Rayyisa),father_of,אב של,P248,Rayyisa bt. Sa'adya,Bodl. MS Heb. a.3.42,derived_from_roles,
+P342,Yehoshua ha-Kohen b. Sedaqa ha-Kohen,agent_for,שליח של,P248,Rayyisa bt. Sa'adya,Bodl. MS Heb. a.3.42,derived_from_roles,bride's agent (paqid)
+P192,"Mansur (father of groom, OS57)",father_of,אב של,P006,"[...] b. Mansur (groom, OS57)",ENA NS 18.37,derived_from_roles,
+P115,Hasan b. Moses,father_of,אב של,P180,Karima bt. Hasan,ENA NS 18.37,derived_from_roles,
+P115,Hasan b. Moses,agent_for,שליח של,P180,Karima bt. Hasan,ENA NS 18.37,derived_from_roles,bride's agent (paqid)
