@@ -1,0 +1,1527 @@
+{
+ "corpus": {
+  "rows": 60,
+  "edition_documents": 57,
+  "families": {
+   "deed of betrothal": 14,
+   "ketubba": 34,
+   "formulary": 9,
+   "court record": 1,
+   "secondary source unit": 2
+  },
+  "fragment_split": {
+   "deed of betrothal|complete": 10,
+   "ketubba|complete": 14,
+   "deed of betrothal|fragment": 4,
+   "ketubba|fragment": 20
+  },
+  "documents_naming_someone": 44,
+  "documents_with_no_name": 16,
+  "places": {
+   "Fustat": 24,
+   "Unknown": 17,
+   "Egypt (region)": 6,
+   "Cairo": 3,
+   "Palestine (region)": 1,
+   "Ramle": 3,
+   "Tyre": 1,
+   "Jerusalem": 5
+  }
+ },
+ "networks": {
+  "presence": {
+   "label": "presence",
+   "nodes": 238,
+   "edges": 1026,
+   "components": 31,
+   "giant": 53,
+   "component_sizes": [
+    53,
+    34,
+    22,
+    20,
+    11,
+    9,
+    8,
+    8
+   ],
+   "density": 0.0364,
+   "clustering_whole": 0.911,
+   "clustering_giant": 0.971,
+   "modularity": 0.871,
+   "n_communities": 35,
+   "assortativity_whole": 0.563,
+   "assortativity_giant": 0.146,
+   "cut_vertices_giant": [
+    "Bishr b. Abraham ha-Levi",
+    "David b. Isaac ha-Kohen (the scribe)",
+    "Eli b. Mu'ammar"
+   ],
+   "giant_documents": [
+    "Bodl. MS Heb. a.3.4v",
+    "CUL Add. 3430",
+    "TS 6 Ja 2",
+    "TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+   ]
+  },
+  "presence_plus_nasi": {
+   "label": "presence + nasi clause",
+   "nodes": 242,
+   "edges": 1060,
+   "components": 30,
+   "giant": 59,
+   "component_sizes": [
+    59,
+    53,
+    20,
+    11,
+    9,
+    9,
+    9,
+    8
+   ],
+   "density": 0.0363,
+   "clustering_whole": 0.908,
+   "clustering_giant": 0.938,
+   "modularity": 0.862,
+   "n_communities": 35,
+   "assortativity_whole": 0.391,
+   "assortativity_giant": -0.084,
+   "cut_vertices_giant": [
+    "Alan b. Nahum",
+    "David b. Semah (nasi)",
+    "El'azar b. Samuel b. Sahl ha-Eved",
+    "Nahum b. Nahum"
+   ],
+   "giant_documents": [
+    "Mosseri Ia.2",
+    "Mosseri VII.90.1",
+    "TS 16.109 + TS AS 153.489",
+    "TS 16.50",
+    "TS 18 J 5.10a,b + TS 10 J 27.6",
+    "TS 20.47r",
+    "TS 24.13",
+    "TS AS 146.417r"
+   ]
+  },
+  "attested_only": {
+   "label": "attested only",
+   "nodes": 234,
+   "edges": 1003,
+   "components": 32,
+   "giant": 53,
+   "component_sizes": [
+    53,
+    31,
+    22,
+    20,
+    11,
+    9,
+    8,
+    8
+   ],
+   "density": 0.0368,
+   "clustering_whole": 0.913,
+   "clustering_giant": 0.971,
+   "modularity": 0.869,
+   "n_communities": 36,
+   "assortativity_whole": 0.57,
+   "assortativity_giant": 0.146,
+   "cut_vertices_giant": [
+    "Bishr b. Abraham ha-Levi",
+    "David b. Isaac ha-Kohen (the scribe)",
+    "Eli b. Mu'ammar"
+   ]
+  }
+ },
+ "backbone": {
+  "persons_in_network": 238,
+  "persons_in_one_document": 226,
+  "repeaters": 12,
+  "repeaters_detail": {
+   "Alan b. Nahum": [
+    "TS 18 J 5.10a,b + TS 10 J 27.6",
+    "TS 24.13"
+   ],
+   "Barakat b. David": [
+    "TS 16.109 + TS AS 153.489",
+    "TS 20.47r"
+   ],
+   "Bishr b. Abraham ha-Levi": [
+    "Bodl. MS Heb. a.3.4v",
+    "CUL Add. 3430"
+   ],
+   "David b. Isaac ha-Kohen (the scribe)": [
+    "Bodl. MS Heb. a.3.4v",
+    "TS NS 323.35 + TS NS 320.76a,b + TS 12.535"
+   ],
+   "David b. Semah (nasi)": [
+    "Mosseri Ia.2",
+    "TS 16.50"
+   ],
+   "El'azar b. Samuel b. Sahl ha-Eved": [
+    "TS 16.109 + TS AS 153.489",
+    "TS 24.13"
+   ],
+   "Eli b. Mu'ammar": [
+    "CUL Add. 3430",
+    "TS 6 Ja 2"
+   ],
+   "Jehuda b. Khalaf": [
+    "Bodl. MS Heb. a.3.44",
+    "II Firk. Heb. A. 717r"
+   ],
+   "Na'ama bt. Nisi": [
+    "TS 16.109 + TS AS 153.489",
+    "TS 20.47r"
+   ],
+   "Nahum b. Nahum": [
+    "TS 18 J 5.10a,b + TS 10 J 27.6",
+    "TS AS 146.417r"
+   ],
+   "Nisi b. Jacob": [
+    "TS 16.109 + TS AS 153.489",
+    "TS 20.47r"
+   ],
+   "Yefet ha-Kohen b. Eli b. Zita": [
+    "ENA NS 18.37",
+    "TS 12.644"
+   ]
+  },
+  "repeaters_attested_only": 10,
+  "max_documents_per_person": 2,
+  "edges_total": 1026,
+  "edges_resting_on_two_documents": 3,
+  "edges_detail": [
+   [
+    "Barakat b. David",
+    "Na'ama bt. Nisi",
+    2,
+    [
+     "TS 16.109 + TS AS 153.489",
+     "TS 20.47r"
+    ]
+   ],
+   [
+    "Barakat b. David",
+    "Nisi b. Jacob",
+    2,
+    [
+     "TS 16.109 + TS AS 153.489",
+     "TS 20.47r"
+    ]
+   ],
+   [
+    "Na'ama bt. Nisi",
+    "Nisi b. Jacob",
+    2,
+    [
+     "TS 16.109 + TS AS 153.489",
+     "TS 20.47r"
+    ]
+   ]
+  ],
+  "share_single_document": 95.0
+ },
+ "eligible_pairs": {
+  "documents_naming_someone": 41,
+  "pairs": 820,
+  "eligible": 488,
+  "eligible_sharing": 8,
+  "all_sharing": 10,
+  "rate_percent": 1.6,
+  "naive_rate_percent": 1.2,
+  "rejected_by": {
+   "time": 83,
+   "place": 249
+  }
+ },
+ "eligible_pairs_attested": {
+  "documents_naming_someone": 40,
+  "pairs": 780,
+  "eligible": 453,
+  "eligible_sharing": 6,
+  "all_sharing": 8,
+  "rate_percent": 1.3,
+  "naive_rate_percent": 1.0,
+  "rejected_by": {
+   "time": 78,
+   "place": 249
+  }
+ },
+ "pool": {
+  "whole_corpus": {
+   "observed_repeaters": 12,
+   "cast_sizes": [
+    17,
+    15,
+    14,
+    12,
+    12,
+    11,
+    11,
+    11,
+    11,
+    11,
+    10,
+    9,
+    9,
+    8,
+    8,
+    8,
+    5,
+    5,
+    5,
+    5,
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "documents_used": 38,
+   "curve": [
+    {
+     "N": 100,
+     "expected_repeaters": 71.81
+    },
+    {
+     "N": 150,
+     "expected_repeaters": 74.53
+    },
+    {
+     "N": 200,
+     "expected_repeaters": 70.34
+    },
+    {
+     "N": 300,
+     "expected_repeaters": 59.65
+    },
+    {
+     "N": 400,
+     "expected_repeaters": 50.58
+    },
+    {
+     "N": 500,
+     "expected_repeaters": 43.75
+    },
+    {
+     "N": 650,
+     "expected_repeaters": 35.98
+    },
+    {
+     "N": 800,
+     "expected_repeaters": 30.54
+    },
+    {
+     "N": 1000,
+     "expected_repeaters": 25.12
+    },
+    {
+     "N": 1300,
+     "expected_repeaters": 19.91
+    },
+    {
+     "N": 1600,
+     "expected_repeaters": 16.78
+    },
+    {
+     "N": 2000,
+     "expected_repeaters": 13.44
+    },
+    {
+     "N": 2600,
+     "expected_repeaters": 10.57
+    },
+    {
+     "N": 3200,
+     "expected_repeaters": 8.79
+    },
+    {
+     "N": 4000,
+     "expected_repeaters": 7.1
+    },
+    {
+     "N": 5000,
+     "expected_repeaters": 5.75
+    },
+    {
+     "N": 6500,
+     "expected_repeaters": 4.49
+    },
+    {
+     "N": 8000,
+     "expected_repeaters": 3.44
+    }
+   ],
+   "estimate": 2301
+  },
+  "fustat_1030_1074": {
+   "observed_repeaters": 7,
+   "cast_sizes": [
+    12,
+    12,
+    11,
+    11,
+    11,
+    11,
+    9,
+    9,
+    8,
+    5,
+    5,
+    4,
+    4,
+    4,
+    3,
+    2,
+    2,
+    2
+   ],
+   "documents_used": 18,
+   "curve": [
+    {
+     "N": 100,
+     "expected_repeaters": 36.08
+    },
+    {
+     "N": 150,
+     "expected_repeaters": 30.14
+    },
+    {
+     "N": 200,
+     "expected_repeaters": 25.17
+    },
+    {
+     "N": 300,
+     "expected_repeaters": 19.04
+    },
+    {
+     "N": 400,
+     "expected_repeaters": 15.0
+    },
+    {
+     "N": 500,
+     "expected_repeaters": 12.66
+    },
+    {
+     "N": 650,
+     "expected_repeaters": 9.7
+    },
+    {
+     "N": 800,
+     "expected_repeaters": 8.46
+    },
+    {
+     "N": 1000,
+     "expected_repeaters": 6.66
+    },
+    {
+     "N": 1300,
+     "expected_repeaters": 5.46
+    },
+    {
+     "N": 1600,
+     "expected_repeaters": 4.34
+    },
+    {
+     "N": 2000,
+     "expected_repeaters": 3.48
+    },
+    {
+     "N": 2600,
+     "expected_repeaters": 2.77
+    },
+    {
+     "N": 3200,
+     "expected_repeaters": 2.28
+    },
+    {
+     "N": 4000,
+     "expected_repeaters": 1.78
+    },
+    {
+     "N": 5000,
+     "expected_repeaters": 1.42
+    },
+    {
+     "N": 6500,
+     "expected_repeaters": 1.07
+    },
+    {
+     "N": 8000,
+     "expected_repeaters": 0.95
+    }
+   ],
+   "estimate": 962
+  },
+  "chao_whole_corpus": {
+   "observed": 238,
+   "f1": 226,
+   "f2": 12,
+   "estimate": 2366,
+   "estimate_bias_corrected": 2194
+  },
+  "chao_fustat": {
+   "observed": 118,
+   "f1": 111,
+   "f2": 7,
+   "estimate": 998,
+   "estimate_bias_corrected": 881
+  }
+ },
+ "brokers": {
+  "presence": {
+   "n_with_positive_betweenness": 12,
+   "top": [
+    {
+     "person": "Bishr b. Abraham ha-Levi",
+     "betweenness": 0.0241,
+     "degree": 30,
+     "roles": [
+      "Witness"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Eli b. Mu'ammar",
+     "betweenness": 0.0181,
+     "degree": 27,
+     "roles": [
+      "Witness"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "David b. Isaac ha-Kohen (the scribe)",
+     "betweenness": 0.0138,
+     "degree": 25,
+     "roles": [
+      "Scribe",
+      "Witness",
+      "WitnessOfAgency"
+     ],
+     "formal_office": true
+    },
+    {
+     "person": "El'azar b. Samuel b. Sahl ha-Eved",
+     "betweenness": 0.009,
+     "degree": 20,
+     "roles": [
+      "Witness"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Alan b. Nahum",
+     "betweenness": 0.0087,
+     "degree": 20,
+     "roles": [
+      "Witness"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "David b. Semah (nasi)",
+     "betweenness": 0.0039,
+     "degree": 21,
+     "roles": [
+      "Judge"
+     ],
+     "formal_office": true
+    },
+    {
+     "person": "Yefet ha-Kohen b. Eli b. Zita",
+     "betweenness": 0.0031,
+     "degree": 19,
+     "roles": [
+      "Witness"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Nahum b. Nahum",
+     "betweenness": 0.0011,
+     "degree": 11,
+     "roles": [
+      "Witness",
+      "WitnessOfAgency"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Barakat b. David",
+     "betweenness": 0.0007,
+     "degree": 12,
+     "roles": [
+      "Groom"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Na'ama bt. Nisi",
+     "betweenness": 0.0007,
+     "degree": 12,
+     "roles": [
+      "Bride"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Nisi b. Jacob",
+     "betweenness": 0.0007,
+     "degree": 12,
+     "roles": [
+      "Agent"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Jehuda b. Khalaf",
+     "betweenness": 0.0002,
+     "degree": 5,
+     "roles": [
+      "Groom",
+      "Witness"
+     ],
+     "formal_office": false
+    }
+   ]
+  },
+  "presence_plus_nasi": {
+   "n_with_positive_betweenness": 12,
+   "top": [
+    {
+     "person": "David b. Semah (nasi)",
+     "betweenness": 0.0342,
+     "degree": 35,
+     "roles": [
+      "Judge",
+      "NamedNasi"
+     ],
+     "formal_office": true
+    },
+    {
+     "person": "Alan b. Nahum",
+     "betweenness": 0.0274,
+     "degree": 21,
+     "roles": [
+      "Witness"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Bishr b. Abraham ha-Levi",
+     "betweenness": 0.0233,
+     "degree": 30,
+     "roles": [
+      "Witness"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "El'azar b. Samuel b. Sahl ha-Eved",
+     "betweenness": 0.0191,
+     "degree": 20,
+     "roles": [
+      "Witness"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Eli b. Mu'ammar",
+     "betweenness": 0.0175,
+     "degree": 27,
+     "roles": [
+      "Witness"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "David b. Isaac ha-Kohen (the scribe)",
+     "betweenness": 0.0134,
+     "degree": 25,
+     "roles": [
+      "Scribe",
+      "Witness",
+      "WitnessOfAgency"
+     ],
+     "formal_office": true
+    },
+    {
+     "person": "Yefet ha-Kohen b. Eli b. Zita",
+     "betweenness": 0.003,
+     "degree": 19,
+     "roles": [
+      "Witness"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Nahum b. Nahum",
+     "betweenness": 0.002,
+     "degree": 12,
+     "roles": [
+      "Witness",
+      "WitnessOfAgency"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Barakat b. David",
+     "betweenness": 0.0012,
+     "degree": 12,
+     "roles": [
+      "Groom"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Na'ama bt. Nisi",
+     "betweenness": 0.0012,
+     "degree": 12,
+     "roles": [
+      "Bride"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Nisi b. Jacob",
+     "betweenness": 0.0012,
+     "degree": 12,
+     "roles": [
+      "Agent"
+     ],
+     "formal_office": false
+    },
+    {
+     "person": "Jehuda b. Khalaf",
+     "betweenness": 0.0003,
+     "degree": 6,
+     "roles": [
+      "Groom",
+      "Witness"
+     ],
+     "formal_office": false
+    }
+   ]
+  },
+  "no_office_among_positive": 10
+ },
+ "titles": {
+  "by_role": {
+   "Scribe": {
+    "n": 9,
+    "priestly": 6,
+    "percent": 66.7
+   },
+   "Witness": {
+    "n": 103,
+    "priestly": 37,
+    "percent": 35.9
+   },
+   "WitnessOfAgency": {
+    "n": 40,
+    "priestly": 9,
+    "percent": 22.5
+   },
+   "Agent": {
+    "n": 25,
+    "priestly": 3,
+    "percent": 12.0
+   },
+   "Groom": {
+    "n": 33,
+    "priestly": 3,
+    "percent": 9.1
+   },
+   "Bride": {
+    "n": 35,
+    "priestly": 1,
+    "percent": 2.9
+   },
+   "FamilyMention": {
+    "n": 50,
+    "priestly": 3,
+    "percent": 6.0
+   },
+   "Judge": {
+    "n": 4,
+    "priestly": 0,
+    "percent": 0.0
+   },
+   "NamedNasi": {
+    "n": 11,
+    "priestly": 0,
+    "percent": 0.0
+   }
+  },
+  "all_persons": {
+   "n": 351,
+   "priestly": 63,
+   "percent": 17.9
+  },
+  "documents_with_3plus_attesters": 15,
+  "of_those_with_a_priestly_attester": 14,
+  "exceptions": [
+   "TS 16.50"
+  ]
+ },
+ "attesters_by_region": {
+  "rows": [
+   {
+    "shelfmark": "TS 16.109 + TS AS 153.489",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1063",
+    "n": 8,
+    "fragment": false,
+    "court_copy": true
+   },
+   {
+    "shelfmark": "TS 20.47r",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1064",
+    "n": 2,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 12.644",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1030",
+    "n": 7,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 16.50",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1043",
+    "n": 7,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 18 J 5.10a,b + TS 10 J 27.6",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1045",
+    "n": 8,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS J 3.47v",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1033",
+    "n": 2,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS AS 145.307r + TS Misc. 29.58a r",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1038",
+    "n": 2,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS AS 146.417r",
+    "region": "Unknown",
+    "place": "Unknown",
+    "year": "1045",
+    "n": 2,
+    "fragment": true,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "ENA NS 17.24",
+    "region": "Egypt",
+    "place": "Cairo",
+    "year": "1015",
+    "n": 2,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "Mosseri VII.90.1",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1041",
+    "n": 2,
+    "fragment": true,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "Mosseri Ia.2",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1051",
+    "n": 6,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 6 Ja 2",
+    "region": "Palestine",
+    "place": "Palestine (region)",
+    "year": "1002",
+    "n": 13,
+    "fragment": false,
+    "court_copy": true
+   },
+   {
+    "shelfmark": "TS 12.449",
+    "region": "Unknown",
+    "place": "Unknown",
+    "year": "1020",
+    "n": 2,
+    "fragment": true,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 12.715 + Bodl. MS Heb. a.3.34",
+    "region": "Egypt",
+    "place": "Egypt (region)",
+    "year": "1130",
+    "n": 1,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 16.67",
+    "region": "Egypt",
+    "place": "Cairo",
+    "year": "1201",
+    "n": 5,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 20.2",
+    "region": "Palestine",
+    "place": "Tyre",
+    "year": "1015",
+    "n": 8,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 20.156",
+    "region": "Unknown",
+    "place": "Unknown",
+    "year": "1015",
+    "n": 2,
+    "fragment": true,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 24.13",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1062",
+    "n": 8,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS NS 323.35 + TS NS 320.76a,b + TS 12.535",
+    "region": "Palestine",
+    "place": "Ramle",
+    "year": "1006",
+    "n": 7,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "CUL Add. 3430",
+    "region": "Palestine",
+    "place": "Jerusalem",
+    "year": "1028",
+    "n": 12,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "Bodl. MS Heb. a.3.44",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1037",
+    "n": 1,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "Bodl. MS Heb. a.3.4v",
+    "region": "Palestine",
+    "place": "Ramle",
+    "year": "1015",
+    "n": 15,
+    "fragment": false,
+    "court_copy": true
+   },
+   {
+    "shelfmark": "Bodl. MS Heb. b.12.31",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1050",
+    "n": 1,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "ENA 4020.38v",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1030",
+    "n": 7,
+    "fragment": true,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "II Firk. Heb. A. 717r",
+    "region": "Unknown",
+    "place": "Unknown",
+    "year": "1050",
+    "n": 2,
+    "fragment": true,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "Bodl. MS Heb. a.3.42",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1117",
+    "n": 5,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "ENA NS 18.37",
+    "region": "Egypt",
+    "place": "Fustat",
+    "year": "1035",
+    "n": 9,
+    "fragment": false,
+    "court_copy": false
+   }
+  ],
+  "summary": {
+   "Palestine": {
+    "documents": 5,
+    "median": 12,
+    "max": 15
+   },
+   "Egypt": {
+    "documents": 18,
+    "median": 5.0,
+    "max": 9
+   }
+  },
+  "excluding_court_copies": {
+   "Palestine": {
+    "documents": 3,
+    "median": 8
+   },
+   "Egypt": {
+    "documents": 17,
+    "median": 5
+   }
+  }
+ },
+ "ketubba_vs_betrothal": {
+  "ketubba": {
+   "all": {
+    "documents": 28,
+    "mean_cast": 5.5,
+    "median_cast": 3.0,
+    "mean_witnesses_of_agency": 0.61,
+    "documents_naming_the_nasi": 3,
+    "documents_with_a_judge_acting": 0
+   },
+   "complete_only": {
+    "documents": 14,
+    "mean_cast": 8.21,
+    "median_cast": 8.0,
+    "mean_witnesses_of_agency": 1.07,
+    "documents_naming_the_nasi": 3,
+    "documents_with_a_judge_acting": 0
+   }
+  },
+  "betrothal": {
+   "all": {
+    "documents": 12,
+    "mean_cast": 7.25,
+    "median_cast": 7.0,
+    "mean_witnesses_of_agency": 1.92,
+    "documents_naming_the_nasi": 4,
+    "documents_with_a_judge_acting": 2
+   },
+   "complete_only": {
+    "documents": 10,
+    "mean_cast": 8.2,
+    "median_cast": 10.0,
+    "mean_witnesses_of_agency": 1.9,
+    "documents_naming_the_nasi": 3,
+    "documents_with_a_judge_acting": 2
+   }
+  }
+ },
+ "women": {
+  "women_in_network": 35,
+  "men_in_network": 203,
+  "woman_woman_edges": 0,
+  "documents_by_number_of_women": {
+   "0": 5,
+   "1": 36
+  },
+  "roles": {
+   "Bride": 35,
+   "LegalParty": 1
+  },
+  "women_in_database": 42
+ },
+ "kinship": {
+  "nodes": 204,
+  "edges": 179,
+  "components": 45,
+  "largest_family": 32,
+  "clustering": 0.099,
+  "women": {
+   "n": 36,
+   "positive_betweenness": 29,
+   "mean_betweenness": 0.00058,
+   "mean_degree": 2.39
+  },
+  "men": {
+   "n": 168,
+   "positive_betweenness": 60,
+   "mean_betweenness": 0.00064,
+   "mean_degree": 1.62
+  },
+  "top_betweenness": [
+   {
+    "person": "Hizkiyahu b. Solomon (nasi)",
+    "betweenness": 0.0144,
+    "degree": 4,
+    "gender": "M"
+   },
+   {
+    "person": "Ama al-Aziz bt. Hizkiyahu",
+    "betweenness": 0.0122,
+    "degree": 3,
+    "gender": "F"
+   },
+   {
+    "person": "Yefet b. Abraham al-Tustari",
+    "betweenness": 0.0111,
+    "degree": 3,
+    "gender": "M"
+   },
+   {
+    "person": "Solomon b. David (nasi)",
+    "betweenness": 0.0082,
+    "degree": 3,
+    "gender": "M"
+   },
+   {
+    "person": "David b. Boaz (nasi)",
+    "betweenness": 0.0073,
+    "degree": 2,
+    "gender": "M"
+   },
+   {
+    "person": "Sahl (Yashar) b. Israel al-Tustari",
+    "betweenness": 0.0065,
+    "degree": 7,
+    "gender": "M"
+   },
+   {
+    "person": "Boaz b. Yehoshafat",
+    "betweenness": 0.0063,
+    "degree": 2,
+    "gender": "M"
+   },
+   {
+    "person": "Yehoshafat b. Joshya",
+    "betweenness": 0.0053,
+    "degree": 3,
+    "gender": "M"
+   }
+  ],
+  "largest_family_without_ama_al_aziz": [
+   17,
+   13,
+   1
+  ]
+ },
+ "sects": {
+  "documents_naming_someone": 44,
+  "documents_with_a_present_rabbanite": 10,
+  "documents_with_a_rabbanite_anywhere": 15,
+  "rabbanite_documents": [
+   "Bodl. MS Heb. a.3.42",
+   "Bodl. MS Heb. b.12.31",
+   "CUL Add. 3430",
+   "ENA 4020.38v",
+   "ENA NS 18.37",
+   "Mosseri Ia.2",
+   "Mosseri VII.43 + TS Ar.53.53",
+   "TS 12.449",
+   "TS 16.67",
+   "TS 20.2"
+  ],
+  "edge_pairs": {
+   "K|K": 42,
+   "K|Kp": 170,
+   "K|R": 19,
+   "K|U": 8,
+   "Kp|Kp": 689,
+   "Kp|R": 53,
+   "Kp|U": 15,
+   "R|R": 7,
+   "R|U": 17,
+   "U|U": 6
+  },
+  "cross_sect_edges_explicit": 19,
+  "cross_sect_edges_presumed": 53,
+  "mean_cast_with_rabbanite": 9.0,
+  "mean_cast_without": 4.94,
+  "rabbanites_in_network": 14,
+  "rabbanite_mean_degree": 7.36,
+  "rabbanite_max_betweenness": 0.0,
+  "sect_distribution": {
+   "Karaite (presumed)": 219,
+   "Rabbanite": 27,
+   "unknown": 15,
+   "Karaite": 79,
+   "Karaite (probable)": 6,
+   "Rabbanite (probable)": 5
+  }
+ },
+ "agents": {
+  "appointments": 23,
+  "detail": [
+   {
+    "agent": "Nisi b. Jacob",
+    "for": "Na'ama bt. Nisi",
+    "evidence": "TS 16.109 + TS AS 153.489",
+    "relation": "kin"
+   },
+   {
+    "agent": "Hizkiyahu b. Solomon (nasi)",
+    "for": "Ama al-Aziz bt. Hizkiyahu",
+    "evidence": "TS 16.50",
+    "relation": "kin"
+   },
+   {
+    "agent": "Ezra b. Ishma'el b. Ezra",
+    "for": "Ama al-Aziz bt. Hizkiyahu",
+    "evidence": "TS 16.50",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Efraim b. Mansur b. Furat",
+    "for": "Ama al-Qadar bt. Efraim",
+    "evidence": "TS 18 J 5.10a,b + TS 10 J 27.6",
+    "relation": "kin"
+   },
+   {
+    "agent": "Abu'l-Fadl",
+    "for": "Daughter of Abu'l-Fadl",
+    "evidence": "TS J 3.47v",
+    "relation": "kin"
+   },
+   {
+    "agent": "Hillel (the elder)",
+    "for": "Ama al-Wahid bt. Halfon",
+    "evidence": "ENA NS 17.24",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Solomon b. Musafir",
+    "for": "Yaman bt. David",
+    "evidence": "Mosseri Ia.2",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Solomon b. Adiya b. Menashe (al-Qazzaz)",
+    "for": "Shela b. Amram al-Qirqisani",
+    "evidence": "Mosseri Ia.2",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Amram ha-Levi b. Joseph ha-Levi",
+    "for": "Rivqa bt. Joseph",
+    "evidence": "TS 16.67",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Aaron b. Mordekhai",
+    "for": "Mubaraka (bride, OS28)",
+    "evidence": "TS 16.236",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Eli b. Solomon",
+    "for": "Sitt-al-Ahl (bride, OS29)",
+    "evidence": "TS 20.2",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Mansur b. Yehai b. Abu'l-Shahaba",
+    "for": "Farajiyya bt. Jehuda",
+    "evidence": "TS 20.156",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Hananya b. Elnathan",
+    "for": "Faras bt. Simha",
+    "evidence": "TS 24.13",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Eli b. Hillel",
+    "for": "Sitt-al-Husn bt. Moses ha-Kohen",
+    "evidence": "TS 24.45 + TS NS J 86",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Solomon b. [...] (agent, OS34)",
+    "for": "Sitt-al-Fadl",
+    "evidence": "TS AS 146.34",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Yefet b. Menashe",
+    "for": "al-Tifrat bt. Tovya",
+    "evidence": "TS AS 147.120",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Joseph b. Abraham (father of Ghaliya)",
+    "for": "Ghaliya bt. Joseph",
+    "evidence": "TS NS 320.34a,b",
+    "relation": "kin"
+   },
+   {
+    "agent": "Menahem b. Job al-Halabi",
+    "for": "Sayyida bt. Wahb",
+    "evidence": "TS NS 323.35 + TS NS 320.76a,b + TS 12.535",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Joseph b. Abraham ha-Kohen",
+    "for": "Sarwa bt. Sedaqa",
+    "evidence": "CUL Add. 3430",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Faraj b. Solomon",
+    "for": "Miriam bt. Solomon",
+    "evidence": "Bodl. MS Heb. a.3.44",
+    "relation": "sibling (patronymic)"
+   },
+   {
+    "agent": "Abraham (father of Karima)",
+    "for": "Karima bt. Abraham",
+    "evidence": "Bodl. MS Heb. b.12.31",
+    "relation": "kin"
+   },
+   {
+    "agent": "Yehoshua ha-Kohen b. Sedaqa ha-Kohen",
+    "for": "Rayyisa bt. Sa'adya",
+    "evidence": "Bodl. MS Heb. a.3.42",
+    "relation": "not a known relative"
+   },
+   {
+    "agent": "Hasan b. Moses",
+    "for": "Karima bt. Hasan",
+    "evidence": "ENA NS 18.37",
+    "relation": "kin"
+   }
+  ],
+  "by_relation": {
+   "kin": 7,
+   "not a known relative": 15,
+   "sibling (patronymic)": 1
+  },
+  "agents_serving_twice": {}
+ },
+ "outside_corpus": {
+  "persons": 16,
+  "detail": [
+   {
+    "person": "Abraham (Abu Sa'ad) b. Sahl al-Tustari",
+    "where": "1026-1047",
+    "evidence": "TS 13 J 25.18, Ahwaz 1026 (ed. Gil 1981 no. 3, pp. 76-79; Olszowy-Schlanger 1998, p. 43 n. 14)"
+   },
+   {
+    "person": "Alan b. Nahum",
+    "where": "1045-1062",
+    "evidence": "Karaite deed of release TS 16.131 (Olszowy-Schlanger 1998, notes to no. 5)"
+   },
+   {
+    "person": "Ben Solomon of Amwal (Tabaristan)",
+    "where": "1011",
+    "evidence": "MS Meunier, Aleppo 1011 (ed. Ben-Zevi 1937-38, pp. 179-182; Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"
+   },
+   {
+    "person": "Efraim b. Sa'id b. Malachi",
+    "where": "1026",
+    "evidence": "TS 13 J 25.18, Ahwaz 1026 (ed. Gil 1981 no. 3, pp. 76-79; Olszowy-Schlanger 1998, p. 43 n. 14)"
+   },
+   {
+    "person": "Hesed (Abu Nasr) b. Sahl al-Tustari",
+    "where": "1026-1048",
+    "evidence": "TS 13 J 25.18, Ahwaz 1026 (ed. Gil 1981 no. 3, pp. 76-79; Olszowy-Schlanger 1998, p. 43 n. 14)"
+   },
+   {
+    "person": "Joseph b. Israel al-Tustari",
+    "where": "1011",
+    "evidence": "MS Meunier, Aleppo 1011 (ed. Ben-Zevi 1937-38, pp. 179-182; Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"
+   },
+   {
+    "person": "Sa'id b. Israel al-Tustari",
+    "where": "1011",
+    "evidence": "MS Meunier, Aleppo 1011 (ed. Ben-Zevi 1937-38, pp. 179-182; Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"
+   },
+   {
+    "person": "Sahl (Yashar) b. Israel al-Tustari",
+    "where": "1011",
+    "evidence": "MS Meunier, Aleppo 1011 (ed. Ben-Zevi 1937-38, pp. 179-182; Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"
+   },
+   {
+    "person": "Sahl b. Sa'adya al-Baghdadi",
+    "where": "1030",
+    "evidence": "deed of release CUL Or. 1080 J 262 (Olszowy-Schlanger 1998, notes to the witness list)"
+   },
+   {
+    "person": "Sahlawaya b. Hayyim",
+    "where": "1011-1035",
+    "evidence": "MS Meunier, Aleppo 1011 (ed. Ben-Zevi 1937-38, pp. 179-182; Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"
+   },
+   {
+    "person": "Samuel b. Sahl",
+    "where": "1042",
+    "evidence": "deed of the Rabbanite court of Efraim b. Shemarya, Fustat c. 1042, signed with other Karaites (Olszowy-Schlanger 1998, notes to no. 1)"
+   },
+   {
+    "person": "Samuel bar Rabbi Moses he-haver",
+    "where": "1029-1051",
+    "evidence": "letter of the Rabbanite court of Tyre to Aleppo, 1029 (Olszowy-Schlanger 1998, notes to no. 13)"
+   },
+   {
+    "person": "Sedaqa b. Amram (Damascus)",
+    "where": "1011",
+    "evidence": "MS Meunier, Aleppo 1011 (ed. Ben-Zevi 1937-38, pp. 179-182; Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"
+   },
+   {
+    "person": "Sedaqa b. Nahum ha-Kohen",
+    "where": "1029-1035",
+    "evidence": "Karaite bill of divorce TS 10 J 2.4, Fustat 1029 (Olszowy-Schlanger 1998, notes to no. 57)"
+   },
+   {
+    "person": "Solomon b. Aaron al-Baghdadi",
+    "where": "1011",
+    "evidence": "MS Meunier, Aleppo 1011 (ed. Ben-Zevi 1937-38, pp. 179-182; Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"
+   },
+   {
+    "person": "Yefet ha-Kohen b. Eli b. Zita",
+    "where": "1030-1035",
+    "evidence": "Karaite bill of divorce TS 12.70 (Olszowy-Schlanger 1998, notes to no. 3)"
+   }
+  ]
+ },
+ "louvain": {
+  "seed": 42,
+  "communities_at_seed": 35,
+  "counts_over_20_seeds": [
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35,
+   35
+  ],
+  "min": 35,
+  "max": 35,
+  "communities_that_are_one_document": 28
+ },
+ "weighting": {
+  "top10": {
+   "shared_documents": [
+    "Bishr b. Abraham ha-Levi",
+    "Eli b. Mu'ammar",
+    "David b. Isaac ha-Kohen (the scribe)",
+    "El'azar b. Samuel b. Sahl ha-Eved",
+    "Alan b. Nahum",
+    "David b. Semah (nasi)",
+    "Yefet ha-Kohen b. Eli b. Zita",
+    "Nahum b. Nahum",
+    "Barakat b. David",
+    "Na'ama bt. Nisi"
+   ],
+   "newman_1_over_k": [
+    "Bishr b. Abraham ha-Levi",
+    "Eli b. Mu'ammar",
+    "David b. Isaac ha-Kohen (the scribe)",
+    "El'azar b. Samuel b. Sahl ha-Eved",
+    "Alan b. Nahum",
+    "David b. Semah (nasi)",
+    "Yefet ha-Kohen b. Eli b. Zita",
+    "Nahum b. Nahum",
+    "Barakat b. David",
+    "Na'ama bt. Nisi"
+   ],
+   "binary": [
+    "Bishr b. Abraham ha-Levi",
+    "Eli b. Mu'ammar",
+    "David b. Isaac ha-Kohen (the scribe)",
+    "El'azar b. Samuel b. Sahl ha-Eved",
+    "Alan b. Nahum",
+    "David b. Semah (nasi)",
+    "Yefet ha-Kohen b. Eli b. Zita",
+    "Nahum b. Nahum",
+    "Barakat b. David",
+    "Na'ama bt. Nisi"
+   ]
+  },
+  "overlap_A_B": 10,
+  "overlap_A_C": 10
+ }
+}

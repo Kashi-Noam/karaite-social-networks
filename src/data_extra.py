@@ -20,6 +20,19 @@ EXTRA_DOCS = [
 MEUNIER = "MS Meunier, Aleppo 1011 (ed. Ben-Zevi 1937-38, pp. 179-182; Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"
 AHWAZ   = "TS 13 J 25.18, Ahwaz 1026 (ed. Gil 1981 no. 3, pp. 76-79; Olszowy-Schlanger 1998, p. 43 n. 14)"
 
+# Signatories of this corpus who also sign OTHER Karaite or Rabbanite legal
+# documents. The editors give these in passing, in the notes to the witness
+# lists; recording them in a column of their own makes the point machine
+# readable: the recurring signatories of the marriage deeds are the same people
+# who witness Karaite divorces and deeds of release, and in two cases sit in a
+# Rabbanite court. Nothing here is added as a document to the corpus.
+DIVORCE_70   = "Karaite bill of divorce TS 12.70 (Olszowy-Schlanger 1998, notes to no. 3)"
+DIVORCE_1029 = "Karaite bill of divorce TS 10 J 2.4, Fustat 1029 (Olszowy-Schlanger 1998, notes to no. 57)"
+RELEASE_131  = "Karaite deed of release TS 16.131 (Olszowy-Schlanger 1998, notes to no. 5)"
+RELEASE_262  = "deed of release CUL Or. 1080 J 262 (Olszowy-Schlanger 1998, notes to the witness list)"
+EFRAIM_COURT = "deed of the Rabbanite court of Efraim b. Shemarya, Fustat c. 1042, signed with other Karaites (Olszowy-Schlanger 1998, notes to no. 1)"
+TYRE_1029    = "letter of the Rabbanite court of Tyre to Aleppo, 1029 (Olszowy-Schlanger 1998, notes to no. 13)"
+
 PERSON_META = {
  "Sahl (Yashar) b. Israel al-Tustari": (1011, 1011, MEUNIER,
    "addressed as Abu'l-Fadl, senior of the three first-generation brothers, in the 1011 Aleppo letter"),
@@ -41,6 +54,19 @@ PERSON_META = {
    "principal behind the 1026 Ahwaz sale; financial adviser to the mother of Caliph al-Mustansir; died violently in 1047"),
  "Hesed (Abu Nasr) b. Sahl al-Tustari": (1026, 1048, AHWAZ,
    "principal behind the 1026 Ahwaz sale; killed in 1048"),
+ # --- recurring signatories, attested in other legal documents
+ "Yefet ha-Kohen b. Eli b. Zita": (1030, 1035, DIVORCE_70,
+   "also witnesses a Karaite bill of divorce, so his signature is not confined to marriage deeds"),
+ "Alan b. Nahum": (1045, 1062, RELEASE_131,
+   "also witnesses a Karaite deed of release, so his signature is not confined to marriage deeds"),
+ "Sedaqa b. Nahum ha-Kohen": (1029, 1035, DIVORCE_1029,
+   "also witnesses a Karaite bill of divorce drawn in Fustat in 1029"),
+ "Sahl b. Sa'adya al-Baghdadi": (1030, 1030, RELEASE_262,
+   "also named in a deed of release"),
+ "Samuel b. Sahl": (1042, 1042, EFRAIM_COURT,
+   "father of El'azar b. Samuel; signs a deed of the Rabbanite court of Efraim b. Shemarya together with other Karaites"),
+ "Samuel bar Rabbi Moses he-haver": (1029, 1051, TYRE_1029,
+   "the Rabbanite haver who witnesses the deed of attorney at Tyre also signs the Tyre court's letter to Aleppo"),
 }
 
 # MERGES: rename appearance-name -> canonical name (same individual per the editors)

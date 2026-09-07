@@ -358,13 +358,12 @@ A = [
 ("OS41","Habib b. David (Abu Ali)","Witness","attested","witness of copy"),
 
 # ---- OS42: ketubba of Karima & Isaac b. Joseph, mid-11th c., Fustat
-("OS42","Isaac b. Joseph (groom, OS42)","Groom","attested",""),
+("OS42","Isaac b. Joseph (groom, OS42)","Groom","attested","named among those who came for the appointment of the bride's agent; he is a party to the act, not a witness to it"),
 ("OS42","Joseph (father of Isaac, OS42)","GroomFather","attested",""),
 ("OS42","Karima bt. Abraham","Bride","attested",""),
 ("OS42","Abraham (father of Karima)","BrideFather","attested","also her agent; received the mohar"),
 ("OS42","Abraham (father of Karima)","Agent","attested",""),
 ("OS42","Jacob b. Hillel b. Awkal","WitnessOfAgency","attested","descendant of the great RABBANITE merchant Joseph ibn Awkal"),
-("OS42","Isaac b. Joseph (groom, OS42)","WitnessOfAgency","attested","the groom named among those who came for the appointment"),
 
 # ---- OS43: ketubba fragment of groom Sedaqa, 1020s-30s (before 1044), Fustat
 ("OS43","Sedaqa (groom, OS43)","Groom","attested","other names lost"),

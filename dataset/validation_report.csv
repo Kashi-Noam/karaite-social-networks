@@ -1,12 +1,12 @@
 ﻿check,result
 persons,351
-appearances,391
+appearances,390
 documents (incl. 2 secondary source units),60
 relations,212
 coappearance edges,1358
 princeton people matches,25
 sect distribution,"{'Karaite (presumed)': 219, 'Rabbanite': 27, 'unknown': 15, 'Karaite': 79, 'Karaite (probable)': 6, 'Rabbanite (probable)': 5}"
-action distribution,"{'Groom': 33, 'FamilyMention': 50, 'Bride': 35, 'Agent': 25, 'WitnessOfAgency': 41, 'Witness': 103, 'ScholarlyMention': 56, 'Scribe': 9, 'NamedNasi': 11, 'Judge': 4, 'DocumentMention': 15, 'Declarant': 2, 'LegalParty': 3, 'Guarantor': 1, 'Trustee': 3}"
+action distribution,"{'Groom': 33, 'FamilyMention': 50, 'Bride': 35, 'Agent': 25, 'WitnessOfAgency': 40, 'Witness': 103, 'ScholarlyMention': 56, 'Scribe': 9, 'NamedNasi': 11, 'Judge': 4, 'DocumentMention': 15, 'Declarant': 2, 'LegalParty': 3, 'Guarantor': 1, 'Trustee': 3}"
 place distribution (documents),"{'Fustat': 24, 'Unknown': 17, 'Egypt (region)': 6, 'Cairo': 3, 'Palestine (region)': 1, 'Ramle': 3, 'Tyre': 1, 'Jerusalem': 5}"
 roles outside closed list,[]
 documents with unmapped place strings,"['OS49', 'SRC_CH3', 'SRC_CH9']"

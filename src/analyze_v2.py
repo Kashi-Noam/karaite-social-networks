@@ -20,10 +20,42 @@ os.makedirs(OUT, exist_ok=True)
 
 def read(f): return list(csv.DictReader(open(f"{DS}/{f}", encoding="utf-8-sig")))
 persons = {p["canonical_name"]: p for p in read("persons.csv")}
+apps    = read("appearances.csv")
 docs    = {d["shelfmark"]: d for d in read("documents.csv")}
 apps    = read("appearances.csv")
 rels    = read("relations.csv")
 coapp   = read("edges_coappearance.csv")
+actions_tbl = {a["action_en"]: a for a in read("actions.csv")}
+
+# THE ONE FILTER RULE (see src/backbone.py for the full statement).
+# An edge means "these two people were present at the same legal act", so an
+# appearance counts only if its action is not in the Reference class: the nasi
+# named in the dating clause, a father named in a genealogy, and the editors'
+# commentary are all ways of being *named* without having been in the room.
+def is_presence(a):
+    return actions_tbl[a["action_en"]]["action_class"] != "Reference"
+
+def presence_edges(rows):
+    import itertools as _it
+    from collections import defaultdict as _dd
+    dp = _dd(set)
+    for a in rows:
+        dp[a["shelfmark"]].add(a["person"])
+    E = {}
+    for doc, pp in dp.items():
+        for u, v in _it.combinations(sorted(pp), 2):
+            k = (u, v)
+            if k in E:
+                E[k]["weight"] += 1; E[k]["docs"] += "; " + doc
+            else:
+                E[k] = {"weight": 1, "docs": doc}
+    return [{"source": u, "target": v, "weight": e["weight"], "docs": e["docs"]}
+            for (u, v), e in E.items()]
+
+PRESENCE      = [a for a in apps if is_presence(a)]
+PRESENCE_NASI = [a for a in apps if is_presence(a) or a["action_en"] == "NamedNasi"]
+coapp         = presence_edges(PRESENCE)
+coapp_nasi    = presence_edges(PRESENCE_NASI)
 
 def sect(p):  return persons.get(p, {}).get("sect", "unknown")
 def group(p):
@@ -35,6 +67,9 @@ plt.rcParams.update({"font.family":"DejaVu Sans","font.size":11,
                      "axes.edgecolor":"none","savefig.facecolor":"white"})
 def col(p): return COL.get(sect(p), "#9e9e9e")
 def pid(p):  return persons.get(p, {}).get("person_id", "")
+# Node keys are canonical names because that is what reads on a figure; every
+# metrics file carries person_id in its first column, so a rename in
+# persons.csv never silently breaks the join.
 def short(p):
     """short display label"""
     p = p.replace(" ha-Kohen","").replace(" ha-Levi","").replace(" (nasi)"," [N]").replace(" (he-haver)","")
@@ -51,7 +86,7 @@ def analyze(G):
          "pagerank":nx.pagerank(G, weight="weight")}
     try: r["eigenvector"] = nx.eigenvector_centrality(G, max_iter=3000, weight="weight")
     except Exception: r["eigenvector"] = {n:0 for n in G}
-    c = nx.community.louvain_communities(G, weight="weight", seed=42)
+    c = nx.community.louvain_communities(G, weight="weight", seed=LOUVAIN_SEED)
     r["communities"] = c
     r["modularity"] = nx.community.modularity(G, c, weight="weight")
     comps = sorted(nx.connected_components(G), key=len, reverse=True)
@@ -451,7 +486,8 @@ def html(G, name, title, r=None, n2c=None, extra=None):
     net.heading = title
     net.write_html(f"{OUT}/{name}.html", notebook=False)
 
-REPORT = {}
+LOUVAIN_SEED = 42
+REPORT = {"louvain_seed": LOUVAIN_SEED}
 
 # =============================================================== N1 co-appearance
 G1 = nx.Graph()
@@ -474,7 +510,7 @@ REPORT["N1"].update(n_communities=len(r1["communities"]),
 # =============================================================== N2 bipartite
 G2 = nx.Graph()
 for a in apps:
-    if a["action_en"] in ("DocumentMention","ScholarlyMention","FamilyMention"): continue
+    if not is_presence(a): continue
     d = a["shelfmark"]
     G2.add_node(d, kind="doc", color="#2e8b57")
     G2.add_node(a["person"], kind="person", color=col(a["person"]))
@@ -513,16 +549,24 @@ REPORT["N3"].update(component_sizes=[len(c) for c in comp3[:8]],
     top_betweenness=top(r3["betweenness"]), top_degree=top(r3["degree"]))
 
 # =============================================================== N4 cross-sect
+# Two evidence regimes, kept apart on purpose. G4 is the documented one: an
+# edge is a co-appearance in a legal act, exactly as in N1. G4ctx adds the ties
+# the editors reconstruct in their commentary (rivalry, correspondence,
+# patronage) and is reported separately, because a claim resting on it is a
+# claim about the historiography, not about the documents.
 G4 = nx.Graph()
 for e in coapp:
     a,b = e["source"], e["target"]
     if "R" in (group(a), group(b)):
-        G4.add_edge(a,b,weight=int(e["weight"]),docs=e["docs"])
+        G4.add_edge(a,b,weight=int(e["weight"]),docs=e["docs"],evidence="co-appearance")
+G4ctx = G4.copy()
 for r in rels:
     if group(r["source"])=="R" or group(r["target"])=="R":
-        if not G4.has_edge(r["source"], r["target"]):
-            G4.add_edge(r["source"], r["target"], weight=1, label=r["relation"], docs=r["evidence"])
+        if not G4ctx.has_edge(r["source"], r["target"]):
+            G4ctx.add_edge(r["source"], r["target"], weight=1, label=r["relation"],
+                           docs=r["evidence"], evidence="editorial commentary")
 r4 = analyze(G4); n4 = write_metrics(G4, r4, "N4_cross_sect")
+r4c = analyze(G4ctx); write_metrics(G4ctx, r4c, "N4_cross_sect_with_commentary")
 fig(G4,"fig4_cross_sect","Figure 4. Karaite–Rabbanite contact network\n(red = Rabbanite, blue = Karaite, grey = unknown)",r4,size=(18,12.5),label_n=18)
 html(G4,"N4_cross_sect","N4. Karaite–Rabbanite contact network",r4,n4)
 kr = [(u,v) for u,v in G4.edges() if {group(u),group(v)} == {"K","R"}]
@@ -536,7 +580,7 @@ REPORT["N4"].update(direct_KR_edges=len(kr), docs_with_rabbanites=docs_R,
 ATT = {"Witness","WitnessOfAgency","Scribe","Declarant"}
 dw = defaultdict(set)
 for a in apps:
-    if a["action_en"] in ATT and a["certainty"] != "contextual":
+    if a["action_en"] in ATT and is_presence(a):
         dw[a["shelfmark"]].add(a["person"])
 pair = defaultdict(set)
 for d, pp in dw.items():
@@ -561,7 +605,7 @@ BET = {d for d,v in docs.items() if "betrothal" in v["doc_type"] and "formular" 
 def subnet(doclist, name):
     dp = defaultdict(set)
     for a in apps:
-        if a["shelfmark"] in doclist and a["action_en"] not in ("DocumentMention","ScholarlyMention"):
+        if a["shelfmark"] in doclist and is_presence(a):
             dp[a["shelfmark"]].add(a["person"])
     pr_ = defaultdict(set)
     for d, pp in dp.items():
@@ -634,7 +678,7 @@ if in_n1:
 doc_size = {d: len(pp) for d, pp in doc_people.items()} if "doc_people" in dir() else {}
 dp2 = defaultdict(set)
 for a in apps:
-    if a["action_en"] not in ("DocumentMention","ScholarlyMention") and a["certainty"]!="contextual":
+    if is_presence(a):
         dp2[a["shelfmark"]].add(a["person"])
 GA, GB, GC = nx.Graph(), nx.Graph(), nx.Graph()
 wB = defaultdict(float); wA = defaultdict(int)
@@ -662,7 +706,7 @@ REPORT["weighting"] = {
 # two documents are linked if they share at least one person; weight = number of shared persons
 person_docs = defaultdict(set)
 for a in apps:
-    if a["action_en"] not in ("DocumentMention","ScholarlyMention") and a["certainty"]!="contextual":
+    if is_presence(a):
         person_docs[a["person"]].add(a["shelfmark"])
 dd = defaultdict(set)
 for p, ds in person_docs.items():
@@ -692,7 +736,7 @@ import statistics as _st
 def _build(exclude=()):
     dp = defaultdict(set)
     for a in apps:
-        if a["action_en"] in ("DocumentMention","ScholarlyMention","FamilyMention"): continue
+        if not is_presence(a): continue
         if a["action_en"] in exclude: continue
         if a["certainty"]=="contextual": continue
         dp[a["shelfmark"]].add(a["person"])
@@ -790,7 +834,7 @@ _giant = G1.subgraph(max(nx.connected_components(G1), key=len)).copy()
 _comms = nx.community.louvain_communities(_giant, weight="weight", seed=42)
 _pdocs = defaultdict(set)
 for a in apps:
-    if a["certainty"]!="contextual": _pdocs[a["person"]].add(a["shelfmark"])
+    if is_presence(a): _pdocs[a["person"]].add(a["shelfmark"])
 _out=[]
 for i,c in enumerate(_comms):
     ds=set()

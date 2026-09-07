@@ -1105,7 +1105,7 @@ kgp:P034 a kg:Person ;
     kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
     kg:activeFrom "1045"^^xsd:gYear ;
     kg:activeTo "1062"^^xsd:gYear ;
-    rdfs:comment "also witness TS 24.13 and Karaite deed of release TS 16.131 | here with honorific for the dead"@en .
+    rdfs:comment "also witness TS 24.13 and Karaite deed of release TS 16.131 | also witnesses a Karaite deed of release, so his signature is not confined to marriage deeds | here with honorific for the dead"@en .
 kgp:P035 a kg:Person ;
     foaf:name "Ama al-Aziz bt. Hizkiyahu" ;
     dcterms:identifier "P035" ;
@@ -2027,7 +2027,7 @@ kgp:P137 a kg:Person ;
     kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
     kg:activeFrom "1050"^^xsd:gYear ;
     kg:activeTo "1050"^^xsd:gYear ;
-    rdfs:comment "the groom named among those who came for the appointment"@en .
+    rdfs:comment "named among those who came for the appointment of the bride's agent; he is a party to the act, not a witness to it"@en .
 kgp:P138 a kg:Person ;
     foaf:name "Isaac b. Samuel al-Fara" ;
     dcterms:identifier "P138" ;
@@ -3108,7 +3108,7 @@ kgp:P260 a kg:Person ;
     kg:originPlace kgl:PL10 ;
     kg:activeFrom "1043"^^xsd:gYear ;
     kg:activeTo "1043"^^xsd:gYear ;
-    rdfs:comment "also in deed of release CUL Or 1080 J 262"@en .
+    rdfs:comment "also in deed of release CUL Or 1080 J 262 | also named in a deed of release"@en .
 kgp:P261 a kg:Person ;
     foaf:name "Sahlawaya b. Hayyim" ;
     dcterms:identifier "P261" ;
@@ -3158,7 +3158,7 @@ kgp:P265 a kg:Person ;
     kg:originPlace kgl:PL18 ;
     kg:activeFrom "1063"^^xsd:gYear ;
     kg:activeTo "1063"^^xsd:gYear ;
-    rdfs:comment "father of El'azar; signed Rabbanite court doc of Efraim b. Shemarya ~1042 with other Karaites"@en .
+    rdfs:comment "father of El'azar b. Samuel; signs a deed of the Rabbanite court of Efraim b. Shemarya together with other Karaites | father of El'azar; signed Rabbanite court doc of Efraim b. Shemarya ~1042 with other Karaites"@en .
 kgp:P266 a kg:Person ;
     foaf:name "Samuel b. Yehuda (the orphan)" ;
     dcterms:identifier "P266" ;
@@ -3176,7 +3176,7 @@ kgp:P267 a kg:Person ;
     kg:sectEvidence "haver of the yeshiva; Aramaic 'bar Rabbi' (Mosseri Ia.2)"@en ;
     kg:activeFrom "1051"^^xsd:gYear ;
     kg:activeTo "1051"^^xsd:gYear ;
-    rdfs:comment "RABBANITE haver; witness of attorney in Tyre; also witness of Tyre Rabbanite court letter to Aleppo 1029"@en .
+    rdfs:comment "RABBANITE haver; witness of attorney in Tyre; also witness of Tyre Rabbanite court letter to Aleppo 1029 | the Rabbanite haver who witnesses the deed of attorney at Tyre also signs the Tyre court's letter to Aleppo"@en .
 kgp:P268 a kg:Person ;
     foaf:name "Sar Shalom (nasi)" ;
     dcterms:identifier "P268" ;
@@ -3329,7 +3329,7 @@ kgp:P285 a kg:Person ;
     kg:sectEvidence "witness in Karaite divorce TS 10 J 2.4 (ENA NS 18.37 comments)"@en ;
     kg:activeFrom "1035"^^xsd:gYear ;
     kg:activeTo "1035"^^xsd:gYear ;
-    rdfs:comment "also witness in Karaite bill of divorce TS 10 J 2.4 (Fustat 1029)"@en .
+    rdfs:comment "also witness in Karaite bill of divorce TS 10 J 2.4 (Fustat 1029) | also witnesses a Karaite bill of divorce drawn in Fustat in 1029"@en .
 kgp:P286 a kg:Person ;
     foaf:name "Sedaqa b. Sa'adya" ;
     dcterms:identifier "P286" ;
@@ -3768,7 +3768,7 @@ kgp:P335 a kg:Person ;
     kg:sectEvidence "of the Karaite ben Zita family (TS 12.644, ENA NS 18.37)"@en ;
     kg:activeFrom "1030"^^xsd:gYear ;
     kg:activeTo "1035"^^xsd:gYear ;
-    rdfs:comment "also witness TS 12.644 | also witness in ENA NS 18.37 and in Karaite divorce TS 12.70; brother of Yehoshua (CUL Add. 3430)"@en .
+    rdfs:comment "also witness TS 12.644 | also witness in ENA NS 18.37 and in Karaite divorce TS 12.70; brother of Yehoshua (CUL Add. 3430) | also witnesses a Karaite bill of divorce, so his signature is not confined to marriage deeds"@en .
 kgp:P336 a kg:Person ;
     foaf:name "Yehai b. Eli ha-Kohen" ;
     dcterms:identifier "P336" ;
@@ -5755,7 +5755,8 @@ app:P137_Bodl_MS_Heb_b_12_31_ACT01_af697dc3 a kg:Appearance ;
     kg:byPerson kgp:P137 ;
     kg:inDocument doc:Bodl_MS_Heb_b_12_31 ;
     kg:performedAction act:ACT01 ;
-    kg:certainty "attested" .
+    kg:certainty "attested" ;
+    rdfs:comment "named among those who came for the appointment of the bride's agent; he is a party to the act, not a witness to it"@en .
 kgp:P137 kg:hasAppearance app:P137_Bodl_MS_Heb_b_12_31_ACT01_af697dc3 .
 app:P161_Bodl_MS_Heb_b_12_31_ACT13_7c6f3fb7 a kg:Appearance ;
     kg:byPerson kgp:P161 ;
@@ -5789,13 +5790,6 @@ app:P152_Bodl_MS_Heb_b_12_31_ACT06_721b08a2 a kg:Appearance ;
     kg:certainty "attested" ;
     rdfs:comment "descendant of the great RABBANITE merchant Joseph ibn Awkal"@en .
 kgp:P152 kg:hasAppearance app:P152_Bodl_MS_Heb_b_12_31_ACT06_721b08a2 .
-app:P137_Bodl_MS_Heb_b_12_31_ACT06_1795bf38 a kg:Appearance ;
-    kg:byPerson kgp:P137 ;
-    kg:inDocument doc:Bodl_MS_Heb_b_12_31 ;
-    kg:performedAction act:ACT06 ;
-    kg:certainty "attested" ;
-    rdfs:comment "the groom named among those who came for the appointment"@en .
-kgp:P137 kg:hasAppearance app:P137_Bodl_MS_Heb_b_12_31_ACT06_1795bf38 .
 app:P276_ENA_4020_38v_ACT01_73759301 a kg:Appearance ;
     kg:byPerson kgp:P276 ;
     kg:inDocument doc:ENA_4020_38v ;
