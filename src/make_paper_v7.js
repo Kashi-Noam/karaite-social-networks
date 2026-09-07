@@ -449,8 +449,15 @@ const doc = new Document({
   sections: [{ properties: NORMAL_PAGE, footers: { default: makeFooter() }, children }]
 });
 
+const OUT = "../docs/מי החזיק את הקהילה הקראית יחד - v7.docx";
+
 Packer.toBuffer(doc).then(b => {
-  fs.writeFileSync("../docs/מי החזיק את הקהילה הקראית יחד - v7.docx", b);
+  fs.writeFileSync(OUT, b);
   console.log("written:", b.length, "bytes");
+  // docx-js writes two things Word refuses to open: every drawing carries
+  // wp:docPr id="1", and the whole PAGE field sits in a single run.  See
+  // fix_docx.py.  LibreOffice reads both, so a PDF proof will not catch them.
+  require("child_process").execFileSync("python3", ["fix_docx.py", OUT],
+                                        { stdio: "inherit" });
 });
 

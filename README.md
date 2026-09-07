@@ -78,8 +78,6 @@ an account of what the manual check caught. The sources are:
 
 **`docs/מי החזיק את הקהילה הקראית יחד - v7.docx`** — *מי החזיק את הקהילה הקראית יחד? ניתוח רשתות חברתיות של
 מסמכים משפטיים קראיים מגניזת קהיר* — the seminar paper (Hebrew, RTL).
-Earlier revisions are kept beside it; an English version of the fifth revision is
-`docs/Karaite_SNA_Paper.docx`.
 Centrality measures: degree, betweenness, closeness, eigenvector and PageRank, plus
 Louvain communities (seeded, so the partition is reproducible).
 
@@ -163,6 +161,7 @@ src/build_dataset2.py            builds dataset/ (CSVs + Excel workbook + valida
         └──► src/backbone.py     EVERY number the paper cites -> networks/paper_numbers.json
              src/figures.py      EVERY figure the paper prints -> figures/
              src/make_paper_v7.js  builds the paper from those two, and nothing else
+                                   (and calls src/fix_docx.py on the result)
 ```
 
 Run:
@@ -178,6 +177,12 @@ python3 figures.py            # figures/                     — every figure in
 npm install docx
 node make_paper_v7.js         # docs/מי החזיק את הקהילה הקראית יחד - v7.docx
 ```
+
+`make_paper_v7.js` finishes by running `fix_docx.py` on the file it wrote. docx-js
+produces two constructs Word refuses to open: every image carries the same drawing id,
+and the page-number field is packed into a single run instead of one run per field
+character. LibreOffice reads both, so converting to PDF does not catch them; Word
+answers with "Word found unreadable content". The script repairs both in place.
 
 ## Networks
 

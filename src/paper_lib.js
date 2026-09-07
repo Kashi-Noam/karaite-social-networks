@@ -75,6 +75,8 @@ const REF = c => new Paragraph({
   children: Array.isArray(c) ? c : [c], bidirectional: false, alignment: AlignmentType.LEFT,
   spacing: { after: 70, line: 300 }, indent: { left: 420, hanging: 420 }
 });
+// The page-number field docx-js builds here is packed into one run, which Word
+// rejects; src/fix_docx.py splits it after the file is written.
 const makeFooter = () => new Footer({
   children: [new Paragraph({
     alignment: AlignmentType.CENTER,
