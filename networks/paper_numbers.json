@@ -226,27 +226,133 @@
  "eligible_pairs": {
   "documents_naming_someone": 41,
   "pairs": 820,
-  "eligible": 488,
+  "eligible": 477,
   "eligible_sharing": 8,
   "all_sharing": 10,
-  "rate_percent": 1.6,
+  "rate_percent": 1.7,
   "naive_rate_percent": 1.2,
   "rejected_by": {
-   "time": 83,
+   "time": 94,
    "place": 249
   }
  },
  "eligible_pairs_attested": {
   "documents_naming_someone": 40,
   "pairs": 780,
-  "eligible": 453,
+  "eligible": 443,
   "eligible_sharing": 6,
   "all_sharing": 8,
-  "rate_percent": 1.3,
+  "rate_percent": 1.4,
   "naive_rate_percent": 1.0,
   "rejected_by": {
-   "time": 78,
+   "time": 88,
    "place": 249
+  }
+ },
+ "pair_test_sensitivity": {
+  "all": {
+   "documents_naming_someone": 41,
+   "pairs": 820,
+   "eligible": 477,
+   "eligible_sharing": 8,
+   "all_sharing": 10,
+   "rate_percent": 1.7,
+   "naive_rate_percent": 1.2,
+   "rejected_by": {
+    "time": 94,
+    "place": 249
+   }
+  },
+  "dated_only": {
+   "documents_naming_someone": 27,
+   "pairs": 351,
+   "eligible": 160,
+   "eligible_sharing": 6,
+   "all_sharing": 8,
+   "rate_percent": 3.8,
+   "naive_rate_percent": 2.3,
+   "rejected_by": {
+    "time": 39,
+    "place": 152
+   }
+  },
+  "certain_place_only": {
+   "documents_naming_someone": 21,
+   "pairs": 210,
+   "eligible": 93,
+   "eligible_sharing": 5,
+   "all_sharing": 6,
+   "rate_percent": 5.4,
+   "naive_rate_percent": 2.9,
+   "rejected_by": {
+    "time": 16,
+    "place": 101
+   }
+  },
+  "by_max_gap": {
+   "25": {
+    "documents_naming_someone": 41,
+    "pairs": 820,
+    "eligible": 346,
+    "eligible_sharing": 8,
+    "all_sharing": 10,
+    "rate_percent": 2.3,
+    "naive_rate_percent": 1.2,
+    "rejected_by": {
+     "time": 225,
+     "place": 249
+    }
+   },
+   "45": {
+    "documents_naming_someone": 41,
+    "pairs": 820,
+    "eligible": 477,
+    "eligible_sharing": 8,
+    "all_sharing": 10,
+    "rate_percent": 1.7,
+    "naive_rate_percent": 1.2,
+    "rejected_by": {
+     "time": 94,
+     "place": 249
+    }
+   },
+   "70": {
+    "documents_naming_someone": 41,
+    "pairs": 820,
+    "eligible": 531,
+    "eligible_sharing": 8,
+    "all_sharing": 10,
+    "rate_percent": 1.5,
+    "naive_rate_percent": 1.2,
+    "rejected_by": {
+     "place": 249,
+     "time": 40
+    }
+   },
+   "10000": {
+    "documents_naming_someone": 41,
+    "pairs": 820,
+    "eligible": 571,
+    "eligible_sharing": 8,
+    "all_sharing": 10,
+    "rate_percent": 1.4,
+    "naive_rate_percent": 1.2,
+    "rejected_by": {
+     "place": 249
+    }
+   }
+  },
+  "metadata_quality": {
+   "place_certain": 21,
+   "place_probable": 10,
+   "place_unknown": 10,
+   "date_from_document": 27,
+   "date_century_only": 14
+  },
+  "mean_cast": {
+   "dated": 7.67,
+   "century_only": 3.07,
+   "place_unknown": 2.5
   }
  },
  "pool": {
@@ -388,66 +494,65 @@
     4,
     3,
     2,
-    2,
     2
    ],
-   "documents_used": 18,
+   "documents_used": 17,
    "curve": [
     {
      "N": 100,
-     "expected_repeaters": 36.08
+     "expected_repeaters": 35.27
     },
     {
      "N": 150,
-     "expected_repeaters": 30.14
+     "expected_repeaters": 29.24
     },
     {
      "N": 200,
-     "expected_repeaters": 25.17
+     "expected_repeaters": 24.77
     },
     {
      "N": 300,
-     "expected_repeaters": 19.04
+     "expected_repeaters": 18.5
     },
     {
      "N": 400,
-     "expected_repeaters": 15.0
+     "expected_repeaters": 14.68
     },
     {
      "N": 500,
-     "expected_repeaters": 12.66
+     "expected_repeaters": 12.15
     },
     {
      "N": 650,
-     "expected_repeaters": 9.7
+     "expected_repeaters": 9.57
     },
     {
      "N": 800,
-     "expected_repeaters": 8.46
+     "expected_repeaters": 7.8
     },
     {
      "N": 1000,
-     "expected_repeaters": 6.66
+     "expected_repeaters": 6.46
     },
     {
      "N": 1300,
-     "expected_repeaters": 5.46
+     "expected_repeaters": 5.18
     },
     {
      "N": 1600,
-     "expected_repeaters": 4.34
+     "expected_repeaters": 4.26
     },
     {
      "N": 2000,
-     "expected_repeaters": 3.48
+     "expected_repeaters": 3.33
     },
     {
      "N": 2600,
-     "expected_repeaters": 2.77
+     "expected_repeaters": 2.71
     },
     {
      "N": 3200,
-     "expected_repeaters": 2.28
+     "expected_repeaters": 2.2
     },
     {
      "N": 4000,
@@ -455,7 +560,7 @@
     },
     {
      "N": 5000,
-     "expected_repeaters": 1.42
+     "expected_repeaters": 1.26
     },
     {
      "N": 6500,
@@ -463,10 +568,10 @@
     },
     {
      "N": 8000,
-     "expected_repeaters": 0.95
+     "expected_repeaters": 0.88
     }
    ],
-   "estimate": 962
+   "estimate": 919
   },
   "chao_whole_corpus": {
    "observed": 238,
@@ -476,11 +581,255 @@
    "estimate_bias_corrected": 2194
   },
   "chao_fustat": {
-   "observed": 118,
-   "f1": 111,
+   "observed": 116,
+   "f1": 109,
    "f2": 7,
-   "estimate": 998,
-   "estimate_bias_corrected": 881
+   "estimate": 965,
+   "estimate_bias_corrected": 852
+  }
+ },
+ "pool_robustness": {
+  "whole_corpus": {
+   "observed_repeaters": 12,
+   "documents_used": 38,
+   "analytic_estimate": 2289,
+   "first_order_estimate": 2446,
+   "subsample": {
+    "keep_75_percent": {
+     "usable_trials": 300,
+     "median_estimate": 2312,
+     "q1": 1873,
+     "q3": 2956
+    },
+    "keep_50_percent": {
+     "usable_trials": 285,
+     "median_estimate": 2600,
+     "q1": 1675,
+     "q3": 3608
+    },
+    "keep_35_percent": {
+     "usable_trials": 217,
+     "median_estimate": 2190,
+     "q1": 1513,
+     "q3": 2988
+    }
+   },
+   "preference": {
+    "alpha_0.0": {
+     "curve": [
+      {
+       "pool": 1500,
+       "expected_repeaters": 18.0
+      },
+      {
+       "pool": 2300,
+       "expected_repeaters": 11.8
+      },
+      {
+       "pool": 3500,
+       "expected_repeaters": 8.6
+      },
+      {
+       "pool": 5000,
+       "expected_repeaters": 5.5
+      },
+      {
+       "pool": 8000,
+       "expected_repeaters": 3.5
+      },
+      {
+       "pool": 12000,
+       "expected_repeaters": 2.5
+      }
+     ],
+     "crossing": [
+      1500,
+      2300
+     ]
+    },
+    "alpha_0.3": {
+     "curve": [
+      {
+       "pool": 1500,
+       "expected_repeaters": 19.7
+      },
+      {
+       "pool": 2300,
+       "expected_repeaters": 13.5
+      },
+      {
+       "pool": 3500,
+       "expected_repeaters": 9.4
+      },
+      {
+       "pool": 5000,
+       "expected_repeaters": 6.7
+      },
+      {
+       "pool": 8000,
+       "expected_repeaters": 4.4
+      },
+      {
+       "pool": 12000,
+       "expected_repeaters": 3.0
+      }
+     ],
+     "crossing": [
+      2300,
+      3500
+     ]
+    },
+    "alpha_0.6": {
+     "curve": [
+      {
+       "pool": 1500,
+       "expected_repeaters": 27.4
+      },
+      {
+       "pool": 2300,
+       "expected_repeaters": 21.9
+      },
+      {
+       "pool": 3500,
+       "expected_repeaters": 17.1
+      },
+      {
+       "pool": 5000,
+       "expected_repeaters": 14.2
+      },
+      {
+       "pool": 8000,
+       "expected_repeaters": 10.9
+      },
+      {
+       "pool": 12000,
+       "expected_repeaters": 8.3
+      }
+     ],
+     "crossing": [
+      5000,
+      8000
+     ]
+    }
+   }
+  },
+  "fustat_1030_1074": {
+   "observed_repeaters": 7,
+   "documents_used": 17,
+   "analytic_estimate": 928,
+   "first_order_estimate": 1001,
+   "subsample": {
+    "keep_75_percent": {
+     "usable_trials": 297,
+     "median_estimate": 797,
+     "q1": 669,
+     "q3": 1502
+    },
+    "keep_50_percent": {
+     "usable_trials": 206,
+     "median_estimate": 989,
+     "q1": 447,
+     "q3": 1436
+    },
+    "keep_35_percent": {
+     "usable_trials": 130,
+     "median_estimate": 752,
+     "q1": 430,
+     "q3": 1022
+    }
+   },
+   "preference": {
+    "alpha_0.0": {
+     "curve": [
+      {
+       "pool": 1500,
+       "expected_repeaters": 4.8
+      },
+      {
+       "pool": 2300,
+       "expected_repeaters": 3.7
+      },
+      {
+       "pool": 3500,
+       "expected_repeaters": 2.1
+      },
+      {
+       "pool": 5000,
+       "expected_repeaters": 1.4
+      },
+      {
+       "pool": 8000,
+       "expected_repeaters": 0.8
+      },
+      {
+       "pool": 12000,
+       "expected_repeaters": 0.4
+      }
+     ],
+     "crossing": null
+    },
+    "alpha_0.3": {
+     "curve": [
+      {
+       "pool": 1500,
+       "expected_repeaters": 5.5
+      },
+      {
+       "pool": 2300,
+       "expected_repeaters": 4.1
+      },
+      {
+       "pool": 3500,
+       "expected_repeaters": 2.4
+      },
+      {
+       "pool": 5000,
+       "expected_repeaters": 1.6
+      },
+      {
+       "pool": 8000,
+       "expected_repeaters": 0.9
+      },
+      {
+       "pool": 12000,
+       "expected_repeaters": 0.7
+      }
+     ],
+     "crossing": null
+    },
+    "alpha_0.6": {
+     "curve": [
+      {
+       "pool": 1500,
+       "expected_repeaters": 9.9
+      },
+      {
+       "pool": 2300,
+       "expected_repeaters": 7.3
+      },
+      {
+       "pool": 3500,
+       "expected_repeaters": 5.6
+      },
+      {
+       "pool": 5000,
+       "expected_repeaters": 4.7
+      },
+      {
+       "pool": 8000,
+       "expected_repeaters": 3.1
+      },
+      {
+       "pool": 12000,
+       "expected_repeaters": 2.5
+      }
+     ],
+     "crossing": [
+      2300,
+      3500
+     ]
+    }
+   }
   }
  },
  "brokers": {
@@ -930,7 +1279,7 @@
     "shelfmark": "TS 20.156",
     "region": "Unknown",
     "place": "Unknown",
-    "year": "1015",
+    "year": "1000",
     "n": 2,
     "fragment": true,
     "court_copy": false
@@ -1094,6 +1443,27 @@
   "documents_by_number_of_women": {
    "0": 5,
    "1": 36
+  },
+  "documents_by_number_of_women_mentions": {
+   "1": 35,
+   "2": 2,
+   "4": 1
+  },
+  "documents_naming_two_or_more_women": {
+   "TS 12.621": [
+    "Mu'ammala bt. Samuel (al-Qazzaz)",
+    "Sara bt. Sahlawaya"
+   ],
+   "TS 24.45 + TS NS J 86": [
+    "Nasiya bt. Moses ha-Kohen",
+    "Sitt-al-Husn bt. Moses ha-Kohen"
+   ],
+   "Mosseri VII.43 + TS Ar.53.53": [
+    "Bahiyya bt. Solomon b. Sa'adya",
+    "Rahma bt. Tammam",
+    "Rayyisa bt. Tammam",
+    "Umm Samuel bt. Aaron"
+   ]
   },
   "roles": {
    "Bride": 35,

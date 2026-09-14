@@ -483,11 +483,12 @@ doc:TS_13_J_37_11 a kg:Document ;
     dcterms:identifier "TS 13 J 37.11" ;
     rdfs:label "TS 13 J 37.11" ;
     kg:documentType "ketubba (fragment)" ;
-    dcterms:date "11th c. [?]" ;
+    dcterms:date "first half of the 11th c. [?]" ;
     dcterms:source "Olszowy-Schlanger 1998, no. 25" ;
-    kg:yearEstimate "1040"^^xsd:gYear ;
+    kg:yearEstimate "1025"^^xsd:gYear ;
     kg:writtenAt kgl:PL01 ;
-    kg:placeCertainty "probable" .
+    kg:placeCertainty "probable" ;
+    rdfs:comment "date refined to the first half of the 11th c. per Princeton Geniza Project, PGPID 8105"@en .
 doc:TS_16_67 a kg:Document ;
     dcterms:identifier "TS 16.67" ;
     rdfs:label "TS 16.67" ;
@@ -529,10 +530,10 @@ doc:TS_20_156 a kg:Document ;
     dcterms:identifier "TS 20.156" ;
     rdfs:label "TS 20.156" ;
     kg:documentType "ketubba (fragment)" ;
-    dcterms:date "early 11th c. [?]" ;
+    dcterms:date "ca. 1000" ;
     dcterms:source "Olszowy-Schlanger 1998, no. 30" ;
-    kg:yearEstimate "1015"^^xsd:gYear ;
-    rdfs:comment "al-Azizi coins suggest early date"@en .
+    kg:yearEstimate "1000"^^xsd:gYear ;
+    rdfs:comment "al-Azizi coins suggest early date; date refined to ca. 1000 per Princeton Geniza Project, PGPID 3546"@en .
 doc:TS_24_7 a kg:Document ;
     dcterms:identifier "TS 24.7" ;
     rdfs:label "TS 24.7" ;
@@ -1727,8 +1728,8 @@ kgp:P104 a kg:Person ;
     kg:hasSect sect:Karaite_presumed ;
     foaf:gender "female" ;
     kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
-    kg:activeFrom "1015"^^xsd:gYear ;
-    kg:activeTo "1015"^^xsd:gYear .
+    kg:activeFrom "1000"^^xsd:gYear ;
+    kg:activeTo "1000"^^xsd:gYear .
 kgp:P105 a kg:Person ;
     foaf:name "Faras bt. Simha" ;
     dcterms:identifier "P105" ;
@@ -1816,8 +1817,8 @@ kgp:P114 a kg:Person ;
     foaf:gender "male" ;
     skos:altLabel "Arabic Hasan = Hebrew Yefet (written above the line, TS 20.156)"@en ;
     kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
-    kg:activeFrom "1015"^^xsd:gYear ;
-    kg:activeTo "1015"^^xsd:gYear ;
+    kg:activeFrom "1000"^^xsd:gYear ;
+    kg:activeTo "1000"^^xsd:gYear ;
     rdfs:comment "Hebrew translation Yefet written above"@en .
 kgp:P115 a kg:Person ;
     foaf:name "Hasan b. Moses" ;
@@ -2179,8 +2180,8 @@ kgp:P155 a kg:Person ;
     kg:hasSect sect:Karaite_presumed ;
     foaf:gender "male" ;
     kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
-    kg:activeFrom "1040"^^xsd:gYear ;
-    kg:activeTo "1040"^^xsd:gYear ;
+    kg:activeFrom "1025"^^xsd:gYear ;
+    kg:activeTo "1025"^^xsd:gYear ;
     rdfs:comment "bride's agent"@en .
 kgp:P156 a kg:Person ;
     foaf:name "Jehuda (father of Farajiyya)" ;
@@ -2188,8 +2189,8 @@ kgp:P156 a kg:Person ;
     kg:hasSect sect:Karaite_presumed ;
     foaf:gender "male" ;
     kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
-    kg:activeFrom "1015"^^xsd:gYear ;
-    kg:activeTo "1015"^^xsd:gYear .
+    kg:activeFrom "1000"^^xsd:gYear ;
+    kg:activeTo "1000"^^xsd:gYear .
 kgp:P157 a kg:Person ;
     foaf:name "Jehuda (groom, OS34)" ;
     dcterms:identifier "P157" ;
@@ -2520,8 +2521,8 @@ kgp:P194 a kg:Person ;
     kg:hasSect sect:Karaite_presumed ;
     foaf:gender "male" ;
     kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
-    kg:activeFrom "1015"^^xsd:gYear ;
-    kg:activeTo "1015"^^xsd:gYear ;
+    kg:activeFrom "1000"^^xsd:gYear ;
+    kg:activeTo "1000"^^xsd:gYear ;
     rdfs:comment "bride's agent"@en .
 kgp:P195 a kg:Person ;
     foaf:name "Marzuq b. Yefet" ;
@@ -2598,8 +2599,8 @@ kgp:P203 a kg:Person ;
     kg:hasSect sect:Karaite_presumed ;
     foaf:gender "male" ;
     kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
-    kg:activeFrom "1040"^^xsd:gYear ;
-    kg:activeTo "1040"^^xsd:gYear ;
+    kg:activeFrom "1025"^^xsd:gYear ;
+    kg:activeTo "1025"^^xsd:gYear ;
     rdfs:comment "only name preserved"@en .
 kgp:P204 a kg:Person ;
     foaf:name "Mevasser b. Abraham" ;
@@ -3600,8 +3601,8 @@ kgp:P316 a kg:Person ;
     kg:hasSect sect:Karaite_presumed ;
     foaf:gender "male" ;
     kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
-    kg:activeFrom "1015"^^xsd:gYear ;
-    kg:activeTo "1015"^^xsd:gYear .
+    kg:activeFrom "1000"^^xsd:gYear ;
+    kg:activeTo "1000"^^xsd:gYear .
 kgp:P317 a kg:Person ;
     foaf:name "Solomon b. Mevasser b. Sahl al-Ani" ;
     dcterms:identifier "P317" ;
@@ -3862,8 +3863,8 @@ kgp:P346 a kg:Person ;
     kg:hasSect sect:Karaite_presumed ;
     foaf:gender "male" ;
     kg:sectEvidence "participant in a Karaite legal document; no contrary evidence"@en ;
-    kg:activeFrom "1015"^^xsd:gYear ;
-    kg:activeTo "1015"^^xsd:gYear .
+    kg:activeFrom "1000"^^xsd:gYear ;
+    kg:activeTo "1000"^^xsd:gYear .
 kgp:P347 a kg:Person ;
     foaf:name "Yesha'ya b. Sahl al-Ani" ;
     dcterms:identifier "P347" ;

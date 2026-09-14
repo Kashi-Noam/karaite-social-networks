@@ -20,31 +20,31 @@
     0.2918552036199095
    ],
    [
-    "Mevorakh b. David",
+    "Efraim b. Jehuda",
     0.0
    ],
    [
-    "Khalaf [...] (OS38)",
+    "Menahem b. Job al-Halabi",
     0.0
    ],
    [
-    "Solomon b. Amram (OS41)",
+    "Isaac b. [...] (OS41)",
     0.0
    ],
    [
-    "Mahbub [?] (OS41)",
+    "David b. Solomon",
     0.0
    ],
    [
-    "Sa'adya b. Joseph",
+    "Solomon b. David ha-Kohen (the scholar)",
     0.0
    ],
    [
-    "Omar b. Yehoshua",
+    "Sarwa bt. Sedaqa",
     0.0
    ],
    [
-    "Menahem b. Isaac",
+    "Jacob b. Fadlan",
     0.0
    ]
   ],
@@ -59,35 +59,35 @@
    ],
    [
     "David b. Isaac ha-Kohen (the scribe)",
-    0.03283542304536359
-   ],
-   [
-    "Solomon b. Amram (OS41)",
-    0.019201230833322806
-   ],
-   [
-    "Mahbub [?] (OS41)",
-    0.019201230833322806
-   ],
-   [
-    "Menahem b. Isaac",
-    0.019201230833322806
-   ],
-   [
-    "Parhon b. Mevorakh ha-Levi",
-    0.019201230833322806
-   ],
-   [
-    "Yeshu'a b. Thabit ha-Levi ha-Shulhani",
-    0.019201230833322806
-   ],
-   [
-    "Husn bt. David (OS41)",
-    0.019201230833322806
+    0.03283542304536358
    ],
    [
     "Isaac b. [...] (OS41)",
-    0.019201230833322806
+    0.019201230833322803
+   ],
+   [
+    "Mahbub [?] (OS41)",
+    0.019201230833322803
+   ],
+   [
+    "Mevorakh b. Nathan",
+    0.019201230833322803
+   ],
+   [
+    "Efraim b. Moses",
+    0.019201230833322803
+   ],
+   [
+    "Eli b. Isma'il al-Bairuti (the scholar)",
+    0.019201230833322803
+   ],
+   [
+    "Parhon b. Mevorakh ha-Levi",
+    0.019201230833322803
+   ],
+   [
+    "Jehuda [?] (OS41)",
+    0.019201230833322803
    ]
   ],
   "top_closeness": [
@@ -104,19 +104,7 @@
     0.5652173913043478
    ],
    [
-    "Mevorakh b. David",
-    0.5252525252525253
-   ],
-   [
-    "Omar b. Yehoshua",
-    0.5252525252525253
-   ],
-   [
-    "Nathan ha-Kohen bar Yehai",
-    0.5252525252525253
-   ],
-   [
-    "Nathan b. Nisan ha-Levi (the scholar)",
+    "Solomon b. David ha-Kohen (the scholar)",
     0.5252525252525253
    ],
    [
@@ -124,11 +112,23 @@
     0.5252525252525253
    ],
    [
-    "Hizkiyahu b. Benjamin",
+    "Jacob b. Fadlan",
     0.5252525252525253
    ],
    [
-    "Solomon b. David ha-Kohen (the scholar)",
+    "Yehoshua b. Eli ha-Kohen b. Zita",
+    0.5252525252525253
+   ],
+   [
+    "Joseph b. Samuel",
+    0.5252525252525253
+   ],
+   [
+    "Mevorakh b. David",
+    0.5252525252525253
+   ],
+   [
+    "Yehoshua b. Adiya ha-Kohen",
     0.5252525252525253
    ]
   ],
@@ -146,7 +146,7 @@
     25
    ],
    [
-    "Solomon b. Amram (OS41)",
+    "Isaac b. [...] (OS41)",
     16
    ],
    [
@@ -154,7 +154,15 @@
     16
    ],
    [
-    "Menahem b. Isaac",
+    "Mevorakh b. Nathan",
+    16
+   ],
+   [
+    "Efraim b. Moses",
+    16
+   ],
+   [
+    "Eli b. Isma'il al-Bairuti (the scholar)",
     16
    ],
    [
@@ -162,15 +170,7 @@
     16
    ],
    [
-    "Yeshu'a b. Thabit ha-Levi ha-Shulhani",
-    16
-   ],
-   [
-    "Husn bt. David (OS41)",
-    16
-   ],
-   [
-    "Isaac b. [...] (OS41)",
+    "Jehuda [?] (OS41)",
     16
    ]
   ],
@@ -181,38 +181,38 @@
    ],
    [
     "David b. Isaac ha-Kohen (the scribe)",
-    0.23370643138741215
-   ],
-   [
-    "Solomon b. Amram (OS41)",
-    0.2193344014173492
-   ],
-   [
-    "Mahbub [?] (OS41)",
-    0.2193344014173492
-   ],
-   [
-    "Menahem b. Isaac",
-    0.2193344014173492
-   ],
-   [
-    "Parhon b. Mevorakh ha-Levi",
-    0.2193344014173492
-   ],
-   [
-    "Yeshu'a b. Thabit ha-Levi ha-Shulhani",
-    0.2193344014173492
-   ],
-   [
-    "Husn bt. David (OS41)",
-    0.2193344014173492
+    0.23370643138741218
    ],
    [
     "Isaac b. [...] (OS41)",
-    0.2193344014173492
+    0.21933440141734922
    ],
    [
-    "Habib b. David (Abu Ali)",
+    "Mahbub [?] (OS41)",
+    0.21933440141734922
+   ],
+   [
+    "Mevorakh b. Nathan",
+    0.21933440141734922
+   ],
+   [
+    "Efraim b. Moses",
+    0.21933440141734922
+   ],
+   [
+    "Eli b. Isma'il al-Bairuti (the scholar)",
+    0.21933440141734922
+   ],
+   [
+    "Parhon b. Mevorakh ha-Levi",
+    0.21933440141734922
+   ],
+   [
+    "Jehuda [?] (OS41)",
+    0.21933440141734922
+   ],
+   [
+    "Yeshu'a b. Khatim",
     0.2193344014173492
    ]
   ]
@@ -1722,11 +1722,11 @@
      0.2918552036199095
     ],
     [
-     "Mevorakh b. David",
+     "Efraim b. Jehuda",
      0.0
     ],
     [
-     "Khalaf [...] (OS38)",
+     "Menahem b. Job al-Halabi",
      0.0
     ]
    ]
@@ -1778,11 +1778,11 @@
      0.2918552036199095
     ],
     [
-     "Mevorakh b. David",
+     "Efraim b. Jehuda",
      0.0
     ],
     [
-     "Khalaf [...] (OS38)",
+     "Menahem b. Job al-Halabi",
      0.0
     ]
    ]
@@ -1812,18 +1812,6 @@
  "communities_vs_document_type": [
   {
    "community": 0,
-   "people": 14,
-   "documents": 2,
-   "types": {
-    "ketubba": 2
-   },
-   "places": {
-    "Jerusalem": 1,
-    "Ramle": 1
-   }
-  },
-  {
-   "community": 1,
    "people": 9,
    "documents": 1,
    "types": {
@@ -1834,7 +1822,7 @@
    }
   },
   {
-   "community": 2,
+   "community": 1,
    "people": 16,
    "documents": 2,
    "types": {
@@ -1842,6 +1830,18 @@
    },
    "places": {
     "Ramle": 2
+   }
+  },
+  {
+   "community": 2,
+   "people": 14,
+   "documents": 2,
+   "types": {
+    "ketubba": 2
+   },
+   "places": {
+    "Ramle": 1,
+    "Jerusalem": 1
    }
   },
   {

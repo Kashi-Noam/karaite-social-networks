@@ -28,7 +28,7 @@ Two derived networks are reported alongside it:
   * ATTESTED ONLY - presence restricted to certainty == "attested", i.e.
     dropping the editors' reconstructions of damaged witness lists.
 """
-import csv, json, math, os, random, itertools
+import csv, heapq, json, math, os, random, itertools
 from collections import defaultdict, Counter
 
 import networkx as nx
@@ -233,6 +233,57 @@ R["eligible_pairs"] = eligible_pairs(PRESENCE)
 R["eligible_pairs_attested"] = eligible_pairs(ATTESTED)
 
 
+# The pair test runs on the date and place columns, and those are not equally
+# solid across the corpus.  Fourteen documents carry no date of their own and
+# were given the midpoint of the century the editor assigns them; ten have no
+# place at all, and an unknown place never rejects a pair.  Rerunning the test
+# on the subsets whose metadata is real says which way that biases the answer.
+CENTURY_ONLY = {
+    "Bodl. MS Heb. b.12.31", "ENA NS 17.24", "ENA NS 3.23 + ENA NS 3.27",
+    "II Firk. Heb. A. 717r", "TS 12.449", "TS 12.658", "TS 13 J 37.11",
+    "TS 16.236", "TS 16.80", "TS 20.2", "TS 8.152", "TS AS 146.34",
+    "TS AS 146.417r", "TS NS 320.34a,b",
+}
+
+
+def pair_test_sensitivity(rows):
+    cs = cast(rows)
+    named = sorted(cs)
+    sizes = lambda ss: round(sum(len(cs[s]) for s in ss) / len(ss), 2)
+
+    def subset(keep):
+        sub = [r for r in rows if r["shelfmark"] in keep]
+        return eligible_pairs(sub)
+
+    dated = {s for s in named if s not in CENTURY_ONLY}
+    certain = {s for s in named if docs[s]["place_certainty"] == "certain"}
+    return {
+        "all": eligible_pairs(rows),
+        "dated_only": subset(dated),
+        "certain_place_only": subset(certain),
+        "by_max_gap": {str(g): eligible_pairs(rows, max_gap=g) for g in
+                       (25, 45, 70, 10000)},
+        "metadata_quality": {
+            "place_certain": len(certain),
+            "place_probable": sum(1 for s in named
+                                  if docs[s]["place_certainty"] == "probable"),
+            "place_unknown": sum(1 for s in named
+                                 if docs[s]["place_certainty"] == "unknown"),
+            "date_from_document": len(dated),
+            "date_century_only": len(named) - len(dated),
+        },
+        "mean_cast": {
+            "dated": sizes(dated),
+            "century_only": sizes([s for s in named if s in CENTURY_ONLY]),
+            "place_unknown": sizes([s for s in named
+                                    if docs[s]["place"] == "Unknown"]),
+        },
+    }
+
+
+R["pair_test_sensitivity"] = pair_test_sensitivity(PRESENCE)
+
+
 # ==================================================== 5. how big was the pool?
 def simulate_pool(rows, trials=400, seed=SEED):
     """Draw the observed cast sizes at random from a pool of N adult men and
@@ -293,6 +344,113 @@ R["pool"] = {"whole_corpus": simulate_pool(PRESENCE),
              "fustat_1030_1074": simulate_pool(FUSTAT),
              "chao_whole_corpus": chao1(PRESENCE),
              "chao_fustat": chao1(FUSTAT)}
+
+
+# ------------------------------------------------ is the pool estimate sound?
+# Three questions a reader is entitled to ask, each answered by a computation
+# rather than by an assurance:
+#   1. does the Monte-Carlo agree with the expectation worked out on paper?
+#   2. does losing documents - the Geniza's defining property - bias it?
+#   3. what happens if witnesses were not drawn with equal probability?
+def expected_repeaters(pool, sizes):
+    """E[#people in >1 document] when each document draws its cast at random
+    from a pool of `pool` men.  Person-by-person: with p_i = k_i / pool, the
+    chance of appearing never is prod(1-p_i) and exactly once is
+    sum_i p_i/(1-p_i) * prod(1-p_i)."""
+    p = [k / pool for k in sizes]
+    none = math.prod(1 - x for x in p)
+    once = sum(x / (1 - x) for x in p) * none
+    return pool * (1 - none - once)
+
+
+def solve_pool(sizes, observed):
+    """The pool size at which the expectation above equals what we observed."""
+    if not sizes or observed <= 0:
+        return None
+    lo, hi = max(sizes) + 1, 200_000
+    if expected_repeaters(lo, sizes) < observed:
+        return None
+    for _ in range(70):
+        mid = (lo + hi) / 2
+        if expected_repeaters(mid, sizes) > observed:
+            lo = mid
+        else:
+            hi = mid
+    return int(round(lo))
+
+
+def weighted_sample(pool, k, weights, rng):
+    """k distinct indices drawn with probability proportional to `weights`
+    (Efraimidis-Spirakis: take the k largest u**(1/w))."""
+    keys = ((rng.random() ** (1.0 / weights[i]), i) for i in range(pool))
+    return [i for _, i in heapq.nlargest(k, keys)]
+
+
+def pool_robustness(rows, subsample_trials=300, seed=SEED):
+    cs = {k: v for k, v in cast(rows).items() if len(v) > 1}
+    shelf = sorted(cs)
+    sizes = [len(cs[s]) for s in shelf]
+    observed = len(repeaters(rows))
+
+    def observed_in(subset):
+        c = Counter()
+        for s in subset:
+            for p in cs[s]:
+                c[p] += 1
+        return sum(1 for v in c.values() if v > 1)
+
+    rng = random.Random(seed)
+    subsample = {}
+    for frac in (0.75, 0.5, 0.35):
+        ests = []
+        for _ in range(subsample_trials):
+            sub = rng.sample(shelf, max(3, round(frac * len(shelf))))
+            e = solve_pool([len(cs[s]) for s in sub], observed_in(sub))
+            if e:
+                ests.append(e)
+        ests.sort()
+        subsample[f"keep_{int(frac * 100)}_percent"] = {
+            "usable_trials": len(ests),
+            "median_estimate": ests[len(ests) // 2] if ests else None,
+            "q1": ests[len(ests) // 4] if ests else None,
+            "q3": ests[3 * len(ests) // 4] if ests else None,
+        }
+
+    def under_preference(alpha, trials=60):
+        """Repeat the draw when the chance of being asked to witness falls off
+        as a power law over the pool, and report where the curve now crosses."""
+        r = random.Random(seed)
+        curve = []
+        for pool in (1500, 2300, 3500, 5000, 8000, 12000):
+            w = [1.0 / ((i + 1) ** alpha) for i in range(pool)]
+            tot = 0
+            for _ in range(trials):
+                seen = Counter()
+                for k in sizes:
+                    for who in weighted_sample(pool, k, w, r):
+                        seen[who] += 1
+                tot += sum(1 for v in seen.values() if v > 1)
+            curve.append({"pool": pool, "expected_repeaters": round(tot / trials, 1)})
+        crossing = None
+        for a, b in zip(curve, curve[1:]):
+            if a["expected_repeaters"] >= observed >= b["expected_repeaters"]:
+                crossing = [a["pool"], b["pool"]]
+                break
+        return {"curve": curve, "crossing": crossing}
+
+    pairs = sum(a * b for a, b in itertools.combinations(sizes, 2))
+    return {
+        "observed_repeaters": observed,
+        "documents_used": len(sizes),
+        "analytic_estimate": solve_pool(sizes, observed),
+        "first_order_estimate": int(round(pairs / observed)) if observed else None,
+        "subsample": subsample,
+        "preference": {f"alpha_{a}": under_preference(a) for a in (0.0, 0.3, 0.6)},
+    }
+
+
+R["pool_robustness"] = {"whole_corpus": pool_robustness(PRESENCE),
+                        "fustat_1030_1074": pool_robustness(FUSTAT)}
 
 
 # ===================================================== 6. who holds it together
@@ -442,9 +600,22 @@ def women():
     for sm, pp in DP.items():
         per_doc[sum(1 for x in pp if GENDER.get(x) == "F")] += 1
     roles = Counter(a["action_en"] for a in PRESENCE if GENDER.get(a["person"]) == "F")
+    # The same count over every appearance, mention included.  It is larger:
+    # three documents name two women or more (the 1055 protocol names four),
+    # but in each of them only one woman was actually present, which is why
+    # there is no woman-woman edge anywhere in the network.
+    mention_doc = defaultdict(set)
+    for a in apps:
+        if GENDER.get(a["person"]) == "F":
+            mention_doc[a["shelfmark"]].add(a["person"])
+    per_doc_mentions = Counter(len(v) for v in mention_doc.values())
+    multi = {sm: sorted(v) for sm, v in mention_doc.items() if len(v) > 1}
     return {"women_in_network": len(inG), "men_in_network": G.number_of_nodes() - len(inG),
             "woman_woman_edges": len(ww),
             "documents_by_number_of_women": dict(sorted(per_doc.items())),
+            "documents_by_number_of_women_mentions":
+                dict(sorted(per_doc_mentions.items())),
+            "documents_naming_two_or_more_women": multi,
             "roles": dict(roles),
             "women_in_database": sum(1 for g in GENDER.values() if g == "F")}
 

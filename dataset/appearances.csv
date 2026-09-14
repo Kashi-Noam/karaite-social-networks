@@ -142,8 +142,8 @@ TS 12.715 + Bodl. MS Heb. a.3.34,P146,"Jacob (father of Abraham, OS23)",GroomFat
 TS 12.715 + Bodl. MS Heb. a.3.34,P269,Sara bt. Sahl,Bride,ACT02,Bride,כלה,attested,1130,Egypt (region),ketubba,dowry totalling 3884 dinars
 TS 12.715 + Bodl. MS Heb. a.3.34,P257,"Sahl (father of Sara, OS23)",BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1130,Egypt (region),ketubba,
 TS 12.715 + Bodl. MS Heb. a.3.34,P256,Sa'id ha-Kohen b. Nahum,Witness,ACT07,Witness,עד חותם,attested,1130,Egypt (region),ketubba,reading partly damaged
-TS 13 J 37.11,P203,"Meshullam (groom, OS25)",Groom,ACT01,Groom,חתן,attested,1040,Fustat,ketubba (fragment),only name preserved
-TS 13 J 37.11,P155,Jacob b. Yesha'ya,Agent,ACT05,Agent,שליח (פקיד),attested,1040,Fustat,ketubba (fragment),bride's agent
+TS 13 J 37.11,P203,"Meshullam (groom, OS25)",Groom,ACT01,Groom,חתן,attested,1025,Fustat,ketubba (fragment),only name preserved
+TS 13 J 37.11,P155,Jacob b. Yesha'ya,Agent,ACT05,Agent,שליח (פקיד),attested,1025,Fustat,ketubba (fragment),bride's agent
 TS 16.67,P089,El'azar b. Shemen Tov,Groom,ACT01,Groom,חתן,attested,1201,Cairo,ketubba,
 TS 16.67,P298,Shemen Tov b. Shemarya,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1201,Cairo,ketubba,
 TS 16.67,P297,Shemarya b. Shemen Tov,GroomGrandfather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1201,Cairo,ketubba,
@@ -175,12 +175,12 @@ TS 20.2,P296,Shela ha-Kohen bar Rabbi Mevasser,Witness,ACT07,Witness,עד חות
 TS 20.2,P215,Mevorakh b. Yefet,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,probably = Karaite groom of mixed marriage contract Antonin 637
 TS 20.2,P204,Mevasser b. Abraham,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,
 TS 20.2,P055,Benjamin b. Hasson,Witness,ACT07,Witness,עד חותם,attested,1015,Tyre,ketubba,per name index
-TS 20.156,P346,Yesha'ya b. Isaac,Groom,ACT01,Groom,חתן,attested,1015,Unknown,ketubba (fragment),
-TS 20.156,P104,Farajiyya bt. Jehuda,Bride,ACT02,Bride,כלה,attested,1015,Unknown,ketubba (fragment),
-TS 20.156,P156,Jehuda (father of Farajiyya),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1015,Unknown,ketubba (fragment),
-TS 20.156,P194,Mansur b. Yehai b. Abu'l-Shahaba,Agent,ACT05,Agent,שליח (פקיד),attested,1015,Unknown,ketubba (fragment),bride's agent
-TS 20.156,P114,Hasan (Yefet) b. Amram known as ben Shemun,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Unknown,ketubba (fragment),Hebrew translation Yefet written above
-TS 20.156,P316,Solomon b. Mansur,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1015,Unknown,ketubba (fragment),
+TS 20.156,P346,Yesha'ya b. Isaac,Groom,ACT01,Groom,חתן,attested,1000,Unknown,ketubba (fragment),
+TS 20.156,P104,Farajiyya bt. Jehuda,Bride,ACT02,Bride,כלה,attested,1000,Unknown,ketubba (fragment),
+TS 20.156,P156,Jehuda (father of Farajiyya),BrideFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1000,Unknown,ketubba (fragment),
+TS 20.156,P194,Mansur b. Yehai b. Abu'l-Shahaba,Agent,ACT05,Agent,שליח (פקיד),attested,1000,Unknown,ketubba (fragment),bride's agent
+TS 20.156,P114,Hasan (Yefet) b. Amram known as ben Shemun,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1000,Unknown,ketubba (fragment),Hebrew translation Yefet written above
+TS 20.156,P316,Solomon b. Mansur,WitnessOfAgency,ACT06,WitnessOfAgency,עד מינוי שליח,attested,1000,Unknown,ketubba (fragment),
 TS 24.7,P317,Solomon b. Mevasser b. Sahl al-Ani,Groom,ACT01,Groom,חתן,attested,1004,Cairo,ketubba,prominent Karaite merchant family (from Ana on the Euphrates)
 TS 24.7,P205,Mevasser b. Sahl al-Ani,GroomFather,ACT13,FamilyMention,נזכר כבן משפחה,attested,1004,Cairo,ketubba,
 TS 24.7,P271,Sara bt. Yesha'ya,Bride,ACT02,Bride,כלה,attested,1004,Cairo,ketubba,first cousin of groom
