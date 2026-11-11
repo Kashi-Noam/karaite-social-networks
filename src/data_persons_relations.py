@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # SECT: explicit sect identifications with evidence. Persons NOT listed here get a default:
-#   - participants of OS01-OS57 (Karaite marriage corpus): "Karaite (presumed)"
+#   - participants of OS01-OS57 (Karaite marriage corpus) and LD01-LD12 (other Karaite
+#     legal deeds, data_legal.py): "Karaite (presumed)"
 #   - participants of Z01: "unknown"
 # A child of a person identified explicitly here is identified explicitly too: the
 # corpus records no parent and child of different sects, so descent in a named family

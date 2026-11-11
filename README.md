@@ -26,7 +26,15 @@ an account of what the manual check caught. The sources are:
    *Ginzei Qedem* 13 (2017): 95\*–116\*. The record of a joint court session held on
    13 July 1055 at the majlis of the Karaite nasi Josiah b. Solomon, with the Rabbanite
    judge ʿEli b. ʿAmram — including the persons discussed in the footnotes.
-3. **Princeton Geniza Lab** (https://geniza.princeton.edu) — exports of the people and
+3. **Twelve non-marriage Karaite legal documents** — the bills of divorce, deeds of
+   release, inheritance deeds, the Gaza deposition of 1052 and the Cairo court register
+   that Olszowy-Schlanger (1998) and Zinger (2017, nn. 11–17) list as Karaite but do not
+   edit. Neither publication gives their texts, so their participants come from the
+   Princeton Geniza Project record of each (description and, where PGP hosts one, the
+   transcription by Goitein, Mann, Krakowski or Gil); every document's `source` column
+   names the PGP id. They are in `src/data_legal.py`, which also lists the candidates
+   left out and why.
+4. **Princeton Geniza Lab** (https://geniza.princeton.edu) — exports of the people and
    places lists, used to enrich and cross-identify persons (25 matches) and places
    (15 gazetteer links with coordinates).
 
@@ -38,13 +46,13 @@ an account of what the manual check caught. The sources are:
 
 | table | rows | content |
 |---|---|---|
-| `dataset/documents.csv` | 60 | 58 documents + 2 secondary source units. **Identifier = shelfmark** (e.g. `TS 16.109 + TS AS 153.489`); place as closed-list ID + separate certainty column |
-| `dataset/persons.csv` | 350 | unique `person_id`, canonical name, name variants, sect + written evidence, gender, roles, actions, documents, activity years, origin/nisba place, Princeton match |
-| `dataset/appearances.csv` | 390 | person × role × document — the atomic evidence unit, with `certainty` (attested / reconstructed / contextual) and an `action_id` from the closed action vocabulary |
+| `dataset/documents.csv` | 72 | 57 edition documents + 12 other Karaite legal deeds + the Zinger court record + 2 secondary source units. **Identifier = shelfmark** (e.g. `TS 16.109 + TS AS 153.489`); place as closed-list ID + separate certainty column |
+| `dataset/persons.csv` | 408 | unique `person_id`, canonical name, name variants, sect + written evidence, gender, roles, actions, documents, activity years, origin/nisba place, Princeton match |
+| `dataset/appearances.csv` | 451 | person × role × document — the atomic evidence unit, with `certainty` (attested / reconstructed / contextual) and an `action_id` from the closed action vocabulary |
 | `dataset/actions.csv` | 15 | closed action vocabulary (EN/HE + definitions): Groom, Bride, LegalParty, Guarantor, Agent, WitnessOfAgency, Witness, Scribe, Declarant, Judge, Trustee, NamedNasi, FamilyMention, DocumentMention, ScholarlyMention |
-| `dataset/places.csv` | 25 | closed place list with IDs, Hebrew names, Princeton coordinates/URLs |
-| `dataset/relations.csv` | 212 | typed person–person relations (20-type closed vocabulary: marriage, kinship, agency, business, correspondence, rivalry…) with per-edge evidence |
-| `dataset/edges_coappearance.csv` | 1,358 | weighted person–person edges (joint presence in a legal act) |
+| `dataset/places.csv` | 26 | closed place list with IDs, Hebrew names, Princeton coordinates/URLs |
+| `dataset/relations.csv` | 227 | typed person–person relations (20-type closed vocabulary: marriage, kinship, agency, business, correspondence, rivalry…) with per-edge evidence |
+| `dataset/edges_coappearance.csv` | 1,515 | weighted person–person edges (joint presence in a legal act) |
 | `dataset/princeton_people_matches.csv` | 25 | full Princeton Geniza Lab record for every matched person |
 | `dataset/validation_report.csv` | — | counts, closed-list enforcement, possible-duplicate groups for manual review |
 | `dataset/Karaite_Geniza_Database.xlsx` | — | all of the above as one Excel workbook (11 tabs) |
@@ -76,6 +84,11 @@ an account of what the manual check caught. The sources are:
 
 ## The paper
 
+> **Note (November 2026):** the corpus has since been expanded with twelve non-marriage
+> Karaite legal deeds (see Sources). `networks/paper_numbers.json`, `figures/` and the
+> findings below are rebuilt on the expanded corpus; the text of v7 is not yet revised
+> and still quotes the numbers of the marriage deeds alone.
+
 **`docs/מי החזיק את הקהילה הקראית יחד - v7.docx`** — *מי החזיק את הקהילה הקראית יחד? ניתוח רשתות חברתיות של
 מסמכים משפטיים קראיים מגניזת קהיר* — the seminar paper (Hebrew, RTL).
 Centrality measures: degree, betweenness, closeness, eigenvector and PageRank, plus
@@ -91,44 +104,54 @@ at the top of `src/backbone.py`.
 
 Its findings, in the order the paper makes them:
 
-- The corpus is **far thinner than it looks**. Of the 238 people present at a documented
-  legal act, 226 appear in a single document; 12 appear in two, none in three. Of 1026
+- The corpus is **far thinner than it looks**. Of the 290 people present at a documented
+  legal act, 277 appear in a single document; 11 appear in two and two in three. Of 1183
   edges only 3 rest on more than one document, and all three join the same couple,
   whose wedding was written up twice. There is no repeated tie between two people
   anywhere in the corpus.
+- The two people in three documents, **Alan b. Nahum and Yefet ha-Kohen b. Eli b. Zita**,
+  reach the third through a deed of release and a bill of divorce, and Sedaqa b. Nahum
+  ha-Kohen becomes a repeater only through a divorce of 1029: the recurring signatories
+  of the marriage deeds are the recurring signatories of Karaite legal life in general.
 - That thinness is a **sampling result, not a social one**. Drawing the observed cast
   sizes at random from a pool of N adult men reproduces the observed number of repeaters
-  at N ≈ 2,301 for the whole corpus and N ≈ 962 for Fustat 1030–1074; Chao1 agrees.
+  at N ≈ 3,222 for the whole corpus (49 documents) and N ≈ 1,256 for Fustat 1030–1074
+  (22 documents); Chao1 gives the same order of magnitude. Adding the twelve legal deeds
+  raised both estimates (from ≈ 2,300 and ≈ 920 for the marriage deeds alone): the new
+  documents add many new names and few repeats.
 - The largest component that **co-presence** holds together is Palestinian (53 people,
   4 documents) and rests on three men: two signing witnesses and one scribe. Restore the
-  formulaic dating clause and the largest component becomes Egyptian (59 people, 8
-  Fustat deeds that share no participant at all) with the nasi as its top broker. The
-  "giant component" of the Egyptian corpus is an artefact of a dating formula.
-- The recurring signatories are not men without standing: **35.9% of signing witnesses
-  and 66.7% of scribes are a ha-Kohen or a ha-Levi**, against 17.9% of everyone in the
-  database and 9.1% of grooms. In 14 of the 15 documents with three or more attesters at
+  formulaic dating clause and the largest component becomes Egyptian (64 people, 9
+  Fustat documents) with the nasi among its cut vertices. The "giant component" of the
+  Egyptian corpus is an artefact of a dating formula.
+- The recurring signatories are not men without standing: **35.3% of signing witnesses
+  and 60.0% of scribes are a ha-Kohen or a ha-Levi**, against 16.2% of everyone in the
+  database and 9.1% of grooms. In 16 of the 18 documents with three or more attesters at
   least one carries the title.
-- The **number of attesters is regional**: median 12 in the five Palestinian documents
-  against 5.0 in the eighteen Egyptian ones, which qualifies the usual explanation of the
-  many signatures by Anan's requirement of "ten of the people of the place".
+- The **number of attesters is regional, and in Egypt it is a feature of marriage**:
+  median 12 in the five Palestinian marriage deeds against 5 in the eighteen Egyptian
+  ones. Outside marriage the Egyptian deeds carry the legal minimum (median 2 in five
+  divorces, releases and court records), while the one Palestinian non-marriage deed,
+  the Gaza deposition of 1052, carries eleven. This qualifies the usual explanation of
+  the many signatures by Anan's requirement of "ten of the people of the place".
 - Ketubbot and deeds of betrothal differ in **composition, not in size**: the apparent
   size gap disappears once fragments are excluded (8.21 vs 8.2 named per undamaged
   document), while the gap in witnesses of the agency survives (1.07 vs 1.9) and both
   acting judges in the corpus sit in deeds of betrothal.
 - Karaite–Rabbanite contact is **routine and internal**: a Rabbanite is present in 10 of
-  the 44 documents that name anyone, those documents are the ones that preserve the most
-  names (9.0 names on average against 4.94), and no Rabbanite bridges two Karaite clusters.
-  The stronger evidence is elsewhere in the data: the same recurring signatories also
-  sign Karaite divorces and deeds of release, and two sit in a Rabbanite court
-  (`attested_outside_corpus` in `dataset/persons.csv`).
-- Women are a **property of the genre**: 35 women in the network, all brides bar one
-  legal party, 0 woman-to-woman edges out of 1026, and 36 of the documents name exactly
-  one woman. In the kinship network the picture inverts — 29 of 36 women carry positive
-  betweenness against 60 of 168 men.
+  the 55 documents that name anyone, those documents are the ones that preserve the most
+  names (9.0 names on average against 4.96), and no Rabbanite bridges two Karaite clusters.
+  The stronger evidence is elsewhere in the data: two recurring signatories also sit in
+  a Rabbanite court (`attested_outside_corpus` in `dataset/persons.csv`).
+- Women are a **property of the genre**: 41 women in the network, 35 brides and 7 legal
+  parties (divorcees, a releasing party, a guardian, a complainant), 0 woman-to-woman
+  edges out of 1183, and 42 of the documents name exactly one woman present. In the
+  kinship network the picture inverts — 31 of 42 women carry positive betweenness
+  against 61 of 182 men.
 
 ## RDF
 
-`rdf/karaite_geniza.ttl` (+ RDF/XML) — **17,725 triples**, validated with rdflib.
+`rdf/karaite_geniza.ttl` (+ RDF/XML) — **19,978 triples**, validated with rdflib.
 The model follows the event/role pattern of factoid prosopography: an **Appearance** is a
 first-class resource linking a Person, a Document and an Action from the closed vocabulary,
 and carrying its evidential certainty, so that historical uncertainty stays machine-readable.
@@ -151,6 +174,7 @@ extraction/extract_texts.py      pdftotext + split the edition into per-document
 src/data_docs.py                 ┐
 src/data_appearances.py          │  hand-curated harvest layers (the actual data entry,
 src/data_persons_relations.py    │  with per-row evidence notes)
+src/data_legal.py                │  the non-marriage Karaite legal deeds (from PGP)
 src/data_extra.py                │
 src/data_places_actions.py       ┘  closed vocabularies: places, actions, relation types
         ▼
@@ -188,11 +212,11 @@ answers with "Word found unreadable content". The script repairs both in place.
 
 | network | nodes | edges | what it shows |
 |---|---|---|---|
-| presence (the paper's N1) | 238 | 1026 | 31 components; largest is Palestinian (53 people, 4 documents) |
-| presence + the nasi clause | 242 | 1060 | largest becomes Egyptian (59 people, 8 Fustat deeds sharing no participant) |
-| attested only | 234 | 1003 | the same, with the editors' reconstructions dropped: unchanged conclusions |
-| kinship / marriage / agency | 204 | 179 | 45 families; largest (32) = nesi'im × Tustari via one betrothal |
-| attestation (witnesses, scribes) | 136 | 525 | the recurring signatories and the two regional blocks |
+| presence (the paper's N1) | 290 | 1183 | 39 components; largest is Palestinian (53 people, 4 documents) |
+| presence + the nasi clause | 294 | 1217 | largest becomes Egyptian (64 people, 9 Fustat documents) |
+| attested only | 286 | 1155 | the same, with the editors' reconstructions dropped: unchanged conclusions |
+| kinship / marriage / agency | 224 | 193 | 52 families; largest (32) = nesi'im × Tustari via one betrothal |
+| attestation (witnesses, scribes, declarants) | 159 | 599 | the recurring signatories and the two regional blocks |
 | Karaite–Rabbanite contact | 88 | 96 | 72 cross-sect ties, every one internal to a single document |
 
 `src/analyze_v2.py` also writes `N4_cross_sect_with_commentary`, which adds the ties the
@@ -210,8 +234,9 @@ paper, so nothing in the images is set in Hebrew.
 labelled, for reading on screen; `networks/*.html` holds the interactive versions with
 per-node metrics on hover.
 
-To add a new Geniza fragment: add one row in `data_docs.py`, its appearances in
-`data_appearances.py` (and relations/sect entries if relevant), then rebuild.
+To add a new Geniza fragment: add one row in `data_docs.py` (or, for a non-marriage
+deed, `data_legal.py`), its appearances in `data_appearances.py` (and relations/sect
+entries if relevant), then rebuild.
 
 ## Repository layout
 
@@ -220,7 +245,7 @@ extraction/     PDF-to-text extraction code (step 1)
 src/            curated data layers + build, RDF, analysis and paper scripts
 data/external/  Princeton Geniza Lab exports (people, places)
 dataset/        the built database (CSVs + Excel) — shelfmark identifiers
-rdf/            karaite_geniza.ttl / .rdf — 17,725 triples
+rdf/            karaite_geniza.ttl / .rdf — 19,978 triples
 networks/       figures (PNG), interactive views (HTML), per-node metrics, summary JSON
 networks/full/  the same networks whole, at plate size, every node named (see its README)
 docs/           the seminar paper + the earlier work plan & report (docx)
@@ -240,9 +265,12 @@ docs/           the seminar paper + the earlier work plan & report (docx)
       reproducible in one run
 - [x] `attested_outside_corpus`: signatories tracked into Karaite divorces, deeds of
       release and a Rabbanite court
+- [x] Corpus expansion, first step: the twelve non-marriage Karaite legal documents
+      listed by Olszowy-Schlanger and Zinger (`src/data_legal.py`)
 - [ ] Corpus expansion: further mixed contracts (TS 8.223, TS 24.1, TS Misc. 35.13,
-      Antonin 637), the Karaite divorce deeds and deeds of release already referenced in
-      `attested_outside_corpus`, Rabbanite court records involving Karaites
+      Antonin 637, TS 13 J 6.33), the marriage documents Zinger (2017, n. 11) adds to
+      the edition (BL Or. 10653.16, T-S NS 320.93a+b, L-G Glass 40v, T-S 12.712),
+      Rabbanite court records involving Karaites
 - [ ] Comparative Rabbanite baseline corpus — the one test that would show whether the
       share of Kohanim and Levites among signatories is Karaite or simply Genizan
 

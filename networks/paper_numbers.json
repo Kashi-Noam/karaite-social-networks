@@ -1,12 +1,15 @@
 {
  "corpus": {
-  "rows": 60,
+  "rows": 72,
   "edition_documents": 57,
+  "other_legal_documents": 12,
   "families": {
    "deed of betrothal": 14,
    "ketubba": 34,
    "formulary": 9,
    "court record": 1,
+   "bill of divorce": 4,
+   "other legal deed": 8,
    "secondary source unit": 2
   },
   "fragment_split": {
@@ -15,42 +18,43 @@
    "deed of betrothal|fragment": 4,
    "ketubba|fragment": 20
   },
-  "documents_naming_someone": 44,
-  "documents_with_no_name": 16,
+  "documents_naming_someone": 55,
+  "documents_with_no_name": 17,
   "places": {
-   "Fustat": 24,
-   "Unknown": 17,
+   "Fustat": 32,
+   "Unknown": 19,
    "Egypt (region)": 6,
-   "Cairo": 3,
+   "Cairo": 4,
    "Palestine (region)": 1,
    "Ramle": 3,
    "Tyre": 1,
-   "Jerusalem": 5
+   "Jerusalem": 5,
+   "Gaza": 1
   }
  },
  "networks": {
   "presence": {
    "label": "presence",
-   "nodes": 238,
-   "edges": 1026,
-   "components": 31,
+   "nodes": 290,
+   "edges": 1183,
+   "components": 39,
    "giant": 53,
    "component_sizes": [
     53,
-    34,
+    39,
+    25,
     22,
-    20,
+    11,
     11,
     9,
-    8,
-    8
+    9
    ],
-   "density": 0.0364,
+   "density": 0.0282,
    "clustering_whole": 0.911,
    "clustering_giant": 0.971,
-   "modularity": 0.871,
-   "n_communities": 35,
-   "assortativity_whole": 0.563,
+   "modularity": 0.89,
+   "n_communities": 43,
+   "assortativity_whole": 0.536,
    "assortativity_giant": 0.146,
    "cut_vertices_giant": [
     "Bishr b. Abraham ha-Levi",
@@ -66,27 +70,27 @@
   },
   "presence_plus_nasi": {
    "label": "presence + nasi clause",
-   "nodes": 242,
-   "edges": 1060,
-   "components": 30,
-   "giant": 59,
+   "nodes": 294,
+   "edges": 1217,
+   "components": 38,
+   "giant": 64,
    "component_sizes": [
-    59,
+    64,
     53,
-    20,
+    25,
+    11,
     11,
     9,
     9,
-    9,
-    8
+    9
    ],
-   "density": 0.0363,
-   "clustering_whole": 0.908,
-   "clustering_giant": 0.938,
-   "modularity": 0.862,
-   "n_communities": 35,
-   "assortativity_whole": 0.391,
-   "assortativity_giant": -0.084,
+   "density": 0.0283,
+   "clustering_whole": 0.909,
+   "clustering_giant": 0.94,
+   "modularity": 0.883,
+   "n_communities": 43,
+   "assortativity_whole": 0.397,
+   "assortativity_giant": -0.069,
    "cut_vertices_giant": [
     "Alan b. Nahum",
     "David b. Semah (nasi)",
@@ -97,6 +101,7 @@
     "Mosseri Ia.2",
     "Mosseri VII.90.1",
     "TS 16.109 + TS AS 153.489",
+    "TS 16.131",
     "TS 16.50",
     "TS 18 J 5.10a,b + TS 10 J 27.6",
     "TS 20.47r",
@@ -106,26 +111,26 @@
   },
   "attested_only": {
    "label": "attested only",
-   "nodes": 234,
-   "edges": 1003,
-   "components": 32,
+   "nodes": 286,
+   "edges": 1155,
+   "components": 41,
    "giant": 53,
    "component_sizes": [
     53,
     31,
+    25,
     22,
-    20,
+    11,
     11,
     9,
-    8,
-    8
+    9
    ],
-   "density": 0.0368,
+   "density": 0.0283,
    "clustering_whole": 0.913,
    "clustering_giant": 0.971,
-   "modularity": 0.869,
-   "n_communities": 36,
-   "assortativity_whole": 0.57,
+   "modularity": 0.891,
+   "n_communities": 44,
+   "assortativity_whole": 0.591,
    "assortativity_giant": 0.146,
    "cut_vertices_giant": [
     "Bishr b. Abraham ha-Levi",
@@ -135,11 +140,12 @@
   }
  },
  "backbone": {
-  "persons_in_network": 238,
-  "persons_in_one_document": 226,
-  "repeaters": 12,
+  "persons_in_network": 290,
+  "persons_in_one_document": 277,
+  "repeaters": 13,
   "repeaters_detail": {
    "Alan b. Nahum": [
+    "TS 16.131",
     "TS 18 J 5.10a,b + TS 10 J 27.6",
     "TS 24.13"
    ],
@@ -183,14 +189,19 @@
     "TS 16.109 + TS AS 153.489",
     "TS 20.47r"
    ],
+   "Sedaqa b. Nahum ha-Kohen": [
+    "ENA NS 18.37",
+    "TS 10 J 2.4"
+   ],
    "Yefet ha-Kohen b. Eli b. Zita": [
     "ENA NS 18.37",
-    "TS 12.644"
+    "TS 12.644",
+    "TS 12.70"
    ]
   },
-  "repeaters_attested_only": 10,
-  "max_documents_per_person": 2,
-  "edges_total": 1026,
+  "repeaters_attested_only": 11,
+  "max_documents_per_person": 3,
+  "edges_total": 1183,
   "edges_resting_on_two_documents": 3,
   "edges_detail": [
    [
@@ -221,143 +232,143 @@
     ]
    ]
   ],
-  "share_single_document": 95.0
+  "share_single_document": 95.5
  },
  "eligible_pairs": {
-  "documents_naming_someone": 41,
-  "pairs": 820,
-  "eligible": 477,
-  "eligible_sharing": 8,
-  "all_sharing": 10,
+  "documents_naming_someone": 52,
+  "pairs": 1326,
+  "eligible": 779,
+  "eligible_sharing": 13,
+  "all_sharing": 15,
   "rate_percent": 1.7,
-  "naive_rate_percent": 1.2,
+  "naive_rate_percent": 1.1,
   "rejected_by": {
-   "time": 94,
-   "place": 249
+   "time": 142,
+   "place": 405
   }
  },
  "eligible_pairs_attested": {
-  "documents_naming_someone": 40,
-  "pairs": 780,
-  "eligible": 443,
-  "eligible_sharing": 6,
-  "all_sharing": 8,
-  "rate_percent": 1.4,
-  "naive_rate_percent": 1.0,
+  "documents_naming_someone": 51,
+  "pairs": 1275,
+  "eligible": 736,
+  "eligible_sharing": 9,
+  "all_sharing": 11,
+  "rate_percent": 1.2,
+  "naive_rate_percent": 0.9,
   "rejected_by": {
-   "time": 88,
-   "place": 249
+   "time": 134,
+   "place": 405
   }
  },
  "pair_test_sensitivity": {
   "all": {
-   "documents_naming_someone": 41,
-   "pairs": 820,
-   "eligible": 477,
-   "eligible_sharing": 8,
-   "all_sharing": 10,
+   "documents_naming_someone": 52,
+   "pairs": 1326,
+   "eligible": 779,
+   "eligible_sharing": 13,
+   "all_sharing": 15,
    "rate_percent": 1.7,
-   "naive_rate_percent": 1.2,
+   "naive_rate_percent": 1.1,
    "rejected_by": {
-    "time": 94,
-    "place": 249
+    "time": 142,
+    "place": 405
    }
   },
   "dated_only": {
-   "documents_naming_someone": 27,
-   "pairs": 351,
-   "eligible": 160,
-   "eligible_sharing": 6,
-   "all_sharing": 8,
-   "rate_percent": 3.8,
-   "naive_rate_percent": 2.3,
+   "documents_naming_someone": 38,
+   "pairs": 703,
+   "eligible": 357,
+   "eligible_sharing": 11,
+   "all_sharing": 13,
+   "rate_percent": 3.1,
+   "naive_rate_percent": 1.8,
    "rejected_by": {
-    "time": 39,
-    "place": 152
+    "time": 71,
+    "place": 275
    }
   },
   "certain_place_only": {
-   "documents_naming_someone": 21,
-   "pairs": 210,
-   "eligible": 93,
+   "documents_naming_someone": 27,
+   "pairs": 351,
+   "eligible": 157,
    "eligible_sharing": 5,
    "all_sharing": 6,
-   "rate_percent": 5.4,
-   "naive_rate_percent": 2.9,
+   "rate_percent": 3.2,
+   "naive_rate_percent": 1.7,
    "rejected_by": {
-    "time": 16,
-    "place": 101
+    "time": 21,
+    "place": 173
    }
   },
   "by_max_gap": {
    "25": {
-    "documents_naming_someone": 41,
-    "pairs": 820,
-    "eligible": 346,
-    "eligible_sharing": 8,
-    "all_sharing": 10,
-    "rate_percent": 2.3,
-    "naive_rate_percent": 1.2,
+    "documents_naming_someone": 52,
+    "pairs": 1326,
+    "eligible": 590,
+    "eligible_sharing": 13,
+    "all_sharing": 15,
+    "rate_percent": 2.2,
+    "naive_rate_percent": 1.1,
     "rejected_by": {
-     "time": 225,
-     "place": 249
+     "time": 331,
+     "place": 405
     }
    },
    "45": {
-    "documents_naming_someone": 41,
-    "pairs": 820,
-    "eligible": 477,
-    "eligible_sharing": 8,
-    "all_sharing": 10,
+    "documents_naming_someone": 52,
+    "pairs": 1326,
+    "eligible": 779,
+    "eligible_sharing": 13,
+    "all_sharing": 15,
     "rate_percent": 1.7,
-    "naive_rate_percent": 1.2,
+    "naive_rate_percent": 1.1,
     "rejected_by": {
-     "time": 94,
-     "place": 249
+     "time": 142,
+     "place": 405
     }
    },
    "70": {
-    "documents_naming_someone": 41,
-    "pairs": 820,
-    "eligible": 531,
-    "eligible_sharing": 8,
-    "all_sharing": 10,
+    "documents_naming_someone": 52,
+    "pairs": 1326,
+    "eligible": 858,
+    "eligible_sharing": 13,
+    "all_sharing": 15,
     "rate_percent": 1.5,
-    "naive_rate_percent": 1.2,
+    "naive_rate_percent": 1.1,
     "rejected_by": {
-     "place": 249,
-     "time": 40
+     "place": 405,
+     "time": 63
     }
    },
    "10000": {
-    "documents_naming_someone": 41,
-    "pairs": 820,
-    "eligible": 571,
-    "eligible_sharing": 8,
-    "all_sharing": 10,
+    "documents_naming_someone": 52,
+    "pairs": 1326,
+    "eligible": 921,
+    "eligible_sharing": 13,
+    "all_sharing": 15,
     "rate_percent": 1.4,
-    "naive_rate_percent": 1.2,
+    "naive_rate_percent": 1.1,
     "rejected_by": {
-     "place": 249
+     "place": 405
     }
    }
   },
   "metadata_quality": {
-   "place_certain": 21,
-   "place_probable": 10,
-   "place_unknown": 10,
-   "date_from_document": 27,
+   "place_certain": 27,
+   "place_probable": 14,
+   "place_unknown": 11,
+   "date_from_document": 38,
    "date_century_only": 14
   },
   "mean_cast": {
-   "dated": 7.67,
+   "dated": 6.89,
    "century_only": 3.07,
-   "place_unknown": 2.5
+   "place_unknown": 2.55
   }
  },
  "pool": {
   "whole_corpus": {
-   "observed_repeaters": 12,
+   "observed_repeaters": 13,
    "cast_sizes": [
     17,
     15,
@@ -369,12 +380,16 @@
     11,
     11,
     11,
+    11,
     10,
     9,
     9,
+    9,
     8,
     8,
     8,
+    8,
+    6,
     5,
     5,
     5,
@@ -382,6 +397,8 @@
     4,
     4,
     4,
+    4,
+    4,
     3,
     3,
     3,
@@ -390,6 +407,11 @@
     3,
     3,
     3,
+    3,
+    3,
+    3,
+    2,
+    2,
     2,
     2,
     2,
@@ -398,82 +420,82 @@
     2,
     2
    ],
-   "documents_used": 38,
+   "documents_used": 49,
    "curve": [
     {
      "N": 100,
-     "expected_repeaters": 71.81
+     "expected_repeaters": 81.93
     },
     {
      "N": 150,
-     "expected_repeaters": 74.53
+     "expected_repeaters": 90.83
     },
     {
      "N": 200,
-     "expected_repeaters": 70.34
+     "expected_repeaters": 89.63
     },
     {
      "N": 300,
-     "expected_repeaters": 59.65
+     "expected_repeaters": 79.78
     },
     {
      "N": 400,
-     "expected_repeaters": 50.58
+     "expected_repeaters": 69.84
     },
     {
      "N": 500,
-     "expected_repeaters": 43.75
+     "expected_repeaters": 61.1
     },
     {
      "N": 650,
-     "expected_repeaters": 35.98
+     "expected_repeaters": 51.2
     },
     {
      "N": 800,
-     "expected_repeaters": 30.54
+     "expected_repeaters": 43.98
     },
     {
      "N": 1000,
-     "expected_repeaters": 25.12
+     "expected_repeaters": 36.68
     },
     {
      "N": 1300,
-     "expected_repeaters": 19.91
+     "expected_repeaters": 29.53
     },
     {
      "N": 1600,
-     "expected_repeaters": 16.78
+     "expected_repeaters": 24.73
     },
     {
      "N": 2000,
-     "expected_repeaters": 13.44
+     "expected_repeaters": 20.38
     },
     {
      "N": 2600,
-     "expected_repeaters": 10.57
+     "expected_repeaters": 15.79
     },
     {
      "N": 3200,
-     "expected_repeaters": 8.79
+     "expected_repeaters": 13.08
     },
     {
      "N": 4000,
-     "expected_repeaters": 7.1
+     "expected_repeaters": 10.15
     },
     {
      "N": 5000,
-     "expected_repeaters": 5.75
+     "expected_repeaters": 8.45
     },
     {
      "N": 6500,
-     "expected_repeaters": 4.49
+     "expected_repeaters": 6.76
     },
     {
      "N": 8000,
-     "expected_repeaters": 3.44
+     "expected_repeaters": 5.32
     }
    ],
-   "estimate": 2301
+   "estimate": 3222
   },
   "fustat_1030_1074": {
    "observed_repeaters": 7,
@@ -487,131 +509,136 @@
     9,
     9,
     8,
+    6,
     5,
     5,
+    4,
     4,
     4,
     4,
     3,
+    3,
+    3,
+    2,
     2,
     2
    ],
-   "documents_used": 17,
+   "documents_used": 22,
    "curve": [
     {
      "N": 100,
-     "expected_repeaters": 35.27
+     "expected_repeaters": 41.81
     },
     {
      "N": 150,
-     "expected_repeaters": 29.24
+     "expected_repeaters": 35.94
     },
     {
      "N": 200,
-     "expected_repeaters": 24.77
+     "expected_repeaters": 31.01
     },
     {
      "N": 300,
-     "expected_repeaters": 18.5
+     "expected_repeaters": 23.75
     },
     {
      "N": 400,
-     "expected_repeaters": 14.68
+     "expected_repeaters": 19.0
     },
     {
      "N": 500,
-     "expected_repeaters": 12.15
+     "expected_repeaters": 16.02
     },
     {
      "N": 650,
-     "expected_repeaters": 9.57
+     "expected_repeaters": 12.72
     },
     {
      "N": 800,
-     "expected_repeaters": 7.8
+     "expected_repeaters": 10.64
     },
     {
      "N": 1000,
-     "expected_repeaters": 6.46
+     "expected_repeaters": 8.64
     },
     {
      "N": 1300,
-     "expected_repeaters": 5.18
+     "expected_repeaters": 6.72
     },
     {
      "N": 1600,
-     "expected_repeaters": 4.26
+     "expected_repeaters": 5.72
     },
     {
      "N": 2000,
-     "expected_repeaters": 3.33
+     "expected_repeaters": 4.55
     },
     {
      "N": 2600,
-     "expected_repeaters": 2.71
+     "expected_repeaters": 3.54
     },
     {
      "N": 3200,
-     "expected_repeaters": 2.2
+     "expected_repeaters": 2.83
     },
     {
      "N": 4000,
-     "expected_repeaters": 1.78
+     "expected_repeaters": 2.33
     },
     {
      "N": 5000,
-     "expected_repeaters": 1.26
+     "expected_repeaters": 1.9
     },
     {
      "N": 6500,
-     "expected_repeaters": 1.07
+     "expected_repeaters": 1.37
     },
     {
      "N": 8000,
-     "expected_repeaters": 0.88
+     "expected_repeaters": 1.23
     }
    ],
-   "estimate": 919
+   "estimate": 1256
   },
   "chao_whole_corpus": {
-   "observed": 238,
-   "f1": 226,
-   "f2": 12,
-   "estimate": 2366,
-   "estimate_bias_corrected": 2194
+   "observed": 290,
+   "f1": 277,
+   "f2": 11,
+   "estimate": 3778,
+   "estimate_bias_corrected": 3476
   },
   "chao_fustat": {
-   "observed": 116,
-   "f1": 109,
-   "f2": 7,
-   "estimate": 965,
-   "estimate_bias_corrected": 852
+   "observed": 132,
+   "f1": 125,
+   "f2": 5,
+   "estimate": 1694,
+   "estimate_bias_corrected": 1424
   }
  },
  "pool_robustness": {
   "whole_corpus": {
-   "observed_repeaters": 12,
-   "documents_used": 38,
-   "analytic_estimate": 2289,
-   "first_order_estimate": 2446,
+   "observed_repeaters": 13,
+   "documents_used": 49,
+   "analytic_estimate": 3210,
+   "first_order_estimate": 3405,
    "subsample": {
     "keep_75_percent": {
      "usable_trials": 300,
-     "median_estimate": 2312,
-     "q1": 1873,
-     "q3": 2956
+     "median_estimate": 2949,
+     "q1": 2468,
+     "q3": 3515
     },
     "keep_50_percent": {
-     "usable_trials": 285,
-     "median_estimate": 2600,
-     "q1": 1675,
-     "q3": 3608
+     "usable_trials": 290,
+     "median_estimate": 3058,
+     "q1": 2213,
+     "q3": 4455
     },
     "keep_35_percent": {
-     "usable_trials": 217,
-     "median_estimate": 2190,
-     "q1": 1513,
-     "q3": 2988
+     "usable_trials": 243,
+     "median_estimate": 2624,
+     "q1": 1814,
+     "q3": 3987
     }
    },
    "preference": {
@@ -619,59 +646,59 @@
      "curve": [
       {
        "pool": 1500,
-       "expected_repeaters": 18.0
+       "expected_repeaters": 25.5
       },
       {
        "pool": 2300,
-       "expected_repeaters": 11.8
+       "expected_repeaters": 17.6
       },
       {
        "pool": 3500,
-       "expected_repeaters": 8.6
+       "expected_repeaters": 10.9
       },
       {
        "pool": 5000,
-       "expected_repeaters": 5.5
+       "expected_repeaters": 7.9
       },
       {
        "pool": 8000,
-       "expected_repeaters": 3.5
+       "expected_repeaters": 5.5
       },
       {
        "pool": 12000,
-       "expected_repeaters": 2.5
+       "expected_repeaters": 3.4
       }
      ],
      "crossing": [
-      1500,
-      2300
+      2300,
+      3500
      ]
     },
     "alpha_0.3": {
      "curve": [
       {
        "pool": 1500,
-       "expected_repeaters": 19.7
+       "expected_repeaters": 28.2
       },
       {
        "pool": 2300,
-       "expected_repeaters": 13.5
+       "expected_repeaters": 20.2
       },
       {
        "pool": 3500,
-       "expected_repeaters": 9.4
+       "expected_repeaters": 12.8
       },
       {
        "pool": 5000,
-       "expected_repeaters": 6.7
+       "expected_repeaters": 9.9
       },
       {
        "pool": 8000,
-       "expected_repeaters": 4.4
+       "expected_repeaters": 6.3
       },
       {
        "pool": 12000,
-       "expected_repeaters": 3.0
+       "expected_repeaters": 4.2
       }
      ],
      "crossing": [
@@ -683,59 +710,59 @@
      "curve": [
       {
        "pool": 1500,
-       "expected_repeaters": 27.4
+       "expected_repeaters": 37.5
       },
       {
        "pool": 2300,
-       "expected_repeaters": 21.9
+       "expected_repeaters": 30.6
       },
       {
        "pool": 3500,
-       "expected_repeaters": 17.1
+       "expected_repeaters": 24.2
       },
       {
        "pool": 5000,
-       "expected_repeaters": 14.2
+       "expected_repeaters": 20.0
       },
       {
        "pool": 8000,
-       "expected_repeaters": 10.9
+       "expected_repeaters": 15.3
       },
       {
        "pool": 12000,
-       "expected_repeaters": 8.3
+       "expected_repeaters": 11.5
       }
      ],
      "crossing": [
-      5000,
-      8000
+      8000,
+      12000
      ]
     }
    }
   },
   "fustat_1030_1074": {
    "observed_repeaters": 7,
-   "documents_used": 17,
-   "analytic_estimate": 928,
-   "first_order_estimate": 1001,
+   "documents_used": 22,
+   "analytic_estimate": 1250,
+   "first_order_estimate": 1335,
    "subsample": {
     "keep_75_percent": {
-     "usable_trials": 297,
-     "median_estimate": 797,
-     "q1": 669,
-     "q3": 1502
+     "usable_trials": 300,
+     "median_estimate": 1228,
+     "q1": 801,
+     "q3": 1756
     },
     "keep_50_percent": {
-     "usable_trials": 206,
-     "median_estimate": 989,
-     "q1": 447,
-     "q3": 1436
+     "usable_trials": 280,
+     "median_estimate": 1075,
+     "q1": 631,
+     "q3": 1646
     },
     "keep_35_percent": {
-     "usable_trials": 130,
-     "median_estimate": 752,
-     "q1": 430,
-     "q3": 1022
+     "usable_trials": 200,
+     "median_estimate": 927,
+     "q1": 633,
+     "q3": 1153
     }
    },
    "preference": {
@@ -743,7 +770,7 @@
      "curve": [
       {
        "pool": 1500,
-       "expected_repeaters": 4.8
+       "expected_repeaters": 6.3
       },
       {
        "pool": 2300,
@@ -751,44 +778,15 @@
       },
       {
        "pool": 3500,
+       "expected_repeaters": 2.5
+      },
+      {
+       "pool": 5000,
        "expected_repeaters": 2.1
       },
       {
-       "pool": 5000,
+       "pool": 8000,
        "expected_repeaters": 1.4
-      },
-      {
-       "pool": 8000,
-       "expected_repeaters": 0.8
-      },
-      {
-       "pool": 12000,
-       "expected_repeaters": 0.4
-      }
-     ],
-     "crossing": null
-    },
-    "alpha_0.3": {
-     "curve": [
-      {
-       "pool": 1500,
-       "expected_repeaters": 5.5
-      },
-      {
-       "pool": 2300,
-       "expected_repeaters": 4.1
-      },
-      {
-       "pool": 3500,
-       "expected_repeaters": 2.4
-      },
-      {
-       "pool": 5000,
-       "expected_repeaters": 1.6
-      },
-      {
-       "pool": 8000,
-       "expected_repeaters": 0.9
       },
       {
        "pool": 12000,
@@ -797,36 +795,68 @@
      ],
      "crossing": null
     },
+    "alpha_0.3": {
+     "curve": [
+      {
+       "pool": 1500,
+       "expected_repeaters": 7.2
+      },
+      {
+       "pool": 2300,
+       "expected_repeaters": 4.6
+      },
+      {
+       "pool": 3500,
+       "expected_repeaters": 3.2
+      },
+      {
+       "pool": 5000,
+       "expected_repeaters": 2.3
+      },
+      {
+       "pool": 8000,
+       "expected_repeaters": 1.7
+      },
+      {
+       "pool": 12000,
+       "expected_repeaters": 0.9
+      }
+     ],
+     "crossing": [
+      1500,
+      2300
+     ]
+    },
     "alpha_0.6": {
      "curve": [
       {
        "pool": 1500,
-       "expected_repeaters": 9.9
+       "expected_repeaters": 12.0
       },
       {
        "pool": 2300,
-       "expected_repeaters": 7.3
+       "expected_repeaters": 9.3
       },
       {
        "pool": 3500,
-       "expected_repeaters": 5.6
+       "expected_repeaters": 7.1
       },
       {
        "pool": 5000,
-       "expected_repeaters": 4.7
+       "expected_repeaters": 5.6
       },
       {
        "pool": 8000,
-       "expected_repeaters": 3.1
+       "expected_repeaters": 4.1
       },
       {
        "pool": 12000,
-       "expected_repeaters": 2.5
+       "expected_repeaters": 3.4
       }
      ],
      "crossing": [
-      2300,
-      3500
+      3500,
+      5000
      ]
     }
    }
@@ -834,11 +864,11 @@
  },
  "brokers": {
   "presence": {
-   "n_with_positive_betweenness": 12,
+   "n_with_positive_betweenness": 13,
    "top": [
     {
      "person": "Bishr b. Abraham ha-Levi",
-     "betweenness": 0.0241,
+     "betweenness": 0.0162,
      "degree": 30,
      "roles": [
       "Witness"
@@ -847,7 +877,7 @@
     },
     {
      "person": "Eli b. Mu'ammar",
-     "betweenness": 0.0181,
+     "betweenness": 0.0122,
      "degree": 27,
      "roles": [
       "Witness"
@@ -855,8 +885,17 @@
      "formal_office": false
     },
     {
+     "person": "Alan b. Nahum",
+     "betweenness": 0.0098,
+     "degree": 25,
+     "roles": [
+      "Witness"
+     ],
+     "formal_office": false
+    },
+    {
      "person": "David b. Isaac ha-Kohen (the scribe)",
-     "betweenness": 0.0138,
+     "betweenness": 0.0093,
      "degree": 25,
      "roles": [
       "Scribe",
@@ -867,7 +906,7 @@
     },
     {
      "person": "El'azar b. Samuel b. Sahl ha-Eved",
-     "betweenness": 0.009,
+     "betweenness": 0.0075,
      "degree": 20,
      "roles": [
       "Witness"
@@ -875,9 +914,9 @@
      "formal_office": false
     },
     {
-     "person": "Alan b. Nahum",
-     "betweenness": 0.0087,
-     "degree": 20,
+     "person": "Yefet ha-Kohen b. Eli b. Zita",
+     "betweenness": 0.0037,
+     "degree": 21,
      "roles": [
       "Witness"
      ],
@@ -885,7 +924,7 @@
     },
     {
      "person": "David b. Semah (nasi)",
-     "betweenness": 0.0039,
+     "betweenness": 0.0026,
      "degree": 21,
      "roles": [
       "Judge"
@@ -893,17 +932,18 @@
      "formal_office": true
     },
     {
-     "person": "Yefet ha-Kohen b. Eli b. Zita",
-     "betweenness": 0.0031,
-     "degree": 19,
+     "person": "Sedaqa b. Nahum ha-Kohen",
+     "betweenness": 0.0015,
+     "degree": 14,
      "roles": [
-      "Witness"
+      "Witness",
+      "WitnessOfAgency"
      ],
      "formal_office": false
     },
     {
      "person": "Nahum b. Nahum",
-     "betweenness": 0.0011,
+     "betweenness": 0.0009,
      "degree": 11,
      "roles": [
       "Witness",
@@ -913,7 +953,7 @@
     },
     {
      "person": "Barakat b. David",
-     "betweenness": 0.0007,
+     "betweenness": 0.0005,
      "degree": 12,
      "roles": [
       "Groom"
@@ -922,7 +962,7 @@
     },
     {
      "person": "Na'ama bt. Nisi",
-     "betweenness": 0.0007,
+     "betweenness": 0.0005,
      "degree": 12,
      "roles": [
       "Bride"
@@ -931,31 +971,21 @@
     },
     {
      "person": "Nisi b. Jacob",
-     "betweenness": 0.0007,
+     "betweenness": 0.0005,
      "degree": 12,
      "roles": [
       "Agent"
-     ],
-     "formal_office": false
-    },
-    {
-     "person": "Jehuda b. Khalaf",
-     "betweenness": 0.0002,
-     "degree": 5,
-     "roles": [
-      "Groom",
-      "Witness"
      ],
      "formal_office": false
     }
    ]
   },
   "presence_plus_nasi": {
-   "n_with_positive_betweenness": 12,
+   "n_with_positive_betweenness": 13,
    "top": [
     {
      "person": "David b. Semah (nasi)",
-     "betweenness": 0.0342,
+     "betweenness": 0.0259,
      "degree": 35,
      "roles": [
       "Judge",
@@ -965,8 +995,8 @@
     },
     {
      "person": "Alan b. Nahum",
-     "betweenness": 0.0274,
-     "degree": 21,
+     "betweenness": 0.0253,
+     "degree": 26,
      "roles": [
       "Witness"
      ],
@@ -974,7 +1004,7 @@
     },
     {
      "person": "Bishr b. Abraham ha-Levi",
-     "betweenness": 0.0233,
+     "betweenness": 0.0158,
      "degree": 30,
      "roles": [
       "Witness"
@@ -983,7 +1013,7 @@
     },
     {
      "person": "El'azar b. Samuel b. Sahl ha-Eved",
-     "betweenness": 0.0191,
+     "betweenness": 0.0143,
      "degree": 20,
      "roles": [
       "Witness"
@@ -992,7 +1022,7 @@
     },
     {
      "person": "Eli b. Mu'ammar",
-     "betweenness": 0.0175,
+     "betweenness": 0.0119,
      "degree": 27,
      "roles": [
       "Witness"
@@ -1001,7 +1031,7 @@
     },
     {
      "person": "David b. Isaac ha-Kohen (the scribe)",
-     "betweenness": 0.0134,
+     "betweenness": 0.009,
      "degree": 25,
      "roles": [
       "Scribe",
@@ -1012,16 +1042,26 @@
     },
     {
      "person": "Yefet ha-Kohen b. Eli b. Zita",
-     "betweenness": 0.003,
-     "degree": 19,
+     "betweenness": 0.0036,
+     "degree": 21,
      "roles": [
       "Witness"
      ],
      "formal_office": false
     },
     {
+     "person": "Sedaqa b. Nahum ha-Kohen",
+     "betweenness": 0.0015,
+     "degree": 14,
+     "roles": [
+      "Witness",
+      "WitnessOfAgency"
+     ],
+     "formal_office": false
+    },
+    {
      "person": "Nahum b. Nahum",
-     "betweenness": 0.002,
+     "betweenness": 0.0014,
      "degree": 12,
      "roles": [
       "Witness",
@@ -1031,7 +1071,7 @@
     },
     {
      "person": "Barakat b. David",
-     "betweenness": 0.0012,
+     "betweenness": 0.0009,
      "degree": 12,
      "roles": [
       "Groom"
@@ -1040,7 +1080,7 @@
     },
     {
      "person": "Na'ama bt. Nisi",
-     "betweenness": 0.0012,
+     "betweenness": 0.0009,
      "degree": 12,
      "roles": [
       "Bride"
@@ -1049,20 +1089,10 @@
     },
     {
      "person": "Nisi b. Jacob",
-     "betweenness": 0.0012,
+     "betweenness": 0.0009,
      "degree": 12,
      "roles": [
       "Agent"
-     ],
-     "formal_office": false
-    },
-    {
-     "person": "Jehuda b. Khalaf",
-     "betweenness": 0.0003,
-     "degree": 6,
-     "roles": [
-      "Groom",
-      "Witness"
      ],
      "formal_office": false
     }
@@ -1073,14 +1103,14 @@
  "titles": {
   "by_role": {
    "Scribe": {
-    "n": 9,
+    "n": 10,
     "priestly": 6,
-    "percent": 66.7
+    "percent": 60.0
    },
    "Witness": {
-    "n": 103,
-    "priestly": 37,
-    "percent": 35.9
+    "n": 116,
+    "priestly": 41,
+    "percent": 35.3
    },
    "WitnessOfAgency": {
     "n": 40,
@@ -1088,9 +1118,9 @@
     "percent": 22.5
    },
    "Agent": {
-    "n": 25,
+    "n": 26,
     "priestly": 3,
-    "percent": 12.0
+    "percent": 11.5
    },
    "Groom": {
     "n": 33,
@@ -1108,7 +1138,7 @@
     "percent": 6.0
    },
    "Judge": {
-    "n": 4,
+    "n": 5,
     "priestly": 0,
     "percent": 0.0
    },
@@ -1119,14 +1149,15 @@
    }
   },
   "all_persons": {
-   "n": 351,
-   "priestly": 63,
-   "percent": 17.9
+   "n": 408,
+   "priestly": 66,
+   "percent": 16.2
   },
-  "documents_with_3plus_attesters": 15,
-  "of_those_with_a_priestly_attester": 14,
+  "documents_with_3plus_attesters": 18,
+  "of_those_with_a_priestly_attester": 16,
   "exceptions": [
-   "TS 16.50"
+   "TS 16.50",
+   "TS 16.131"
   ]
  },
  "attesters_by_region": {
@@ -1135,6 +1166,7 @@
     "shelfmark": "TS 16.109 + TS AS 153.489",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1063",
     "n": 8,
     "fragment": false,
@@ -1144,6 +1176,7 @@
     "shelfmark": "TS 20.47r",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1064",
     "n": 2,
     "fragment": false,
@@ -1153,6 +1186,7 @@
     "shelfmark": "TS 12.644",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1030",
     "n": 7,
     "fragment": false,
@@ -1162,6 +1196,7 @@
     "shelfmark": "TS 16.50",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1043",
     "n": 7,
     "fragment": false,
@@ -1171,6 +1206,7 @@
     "shelfmark": "TS 18 J 5.10a,b + TS 10 J 27.6",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1045",
     "n": 8,
     "fragment": false,
@@ -1180,6 +1216,7 @@
     "shelfmark": "TS J 3.47v",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1033",
     "n": 2,
     "fragment": false,
@@ -1189,6 +1226,7 @@
     "shelfmark": "TS AS 145.307r + TS Misc. 29.58a r",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1038",
     "n": 2,
     "fragment": false,
@@ -1198,6 +1236,7 @@
     "shelfmark": "TS AS 146.417r",
     "region": "Unknown",
     "place": "Unknown",
+    "genre": "marriage",
     "year": "1045",
     "n": 2,
     "fragment": true,
@@ -1207,6 +1246,7 @@
     "shelfmark": "ENA NS 17.24",
     "region": "Egypt",
     "place": "Cairo",
+    "genre": "marriage",
     "year": "1015",
     "n": 2,
     "fragment": false,
@@ -1216,6 +1256,7 @@
     "shelfmark": "Mosseri VII.90.1",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1041",
     "n": 2,
     "fragment": true,
@@ -1225,6 +1266,7 @@
     "shelfmark": "Mosseri Ia.2",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1051",
     "n": 6,
     "fragment": false,
@@ -1234,6 +1276,7 @@
     "shelfmark": "TS 6 Ja 2",
     "region": "Palestine",
     "place": "Palestine (region)",
+    "genre": "marriage",
     "year": "1002",
     "n": 13,
     "fragment": false,
@@ -1243,6 +1286,7 @@
     "shelfmark": "TS 12.449",
     "region": "Unknown",
     "place": "Unknown",
+    "genre": "marriage",
     "year": "1020",
     "n": 2,
     "fragment": true,
@@ -1252,6 +1296,7 @@
     "shelfmark": "TS 12.715 + Bodl. MS Heb. a.3.34",
     "region": "Egypt",
     "place": "Egypt (region)",
+    "genre": "marriage",
     "year": "1130",
     "n": 1,
     "fragment": false,
@@ -1261,6 +1306,7 @@
     "shelfmark": "TS 16.67",
     "region": "Egypt",
     "place": "Cairo",
+    "genre": "marriage",
     "year": "1201",
     "n": 5,
     "fragment": false,
@@ -1270,6 +1316,7 @@
     "shelfmark": "TS 20.2",
     "region": "Palestine",
     "place": "Tyre",
+    "genre": "marriage",
     "year": "1015",
     "n": 8,
     "fragment": false,
@@ -1279,6 +1326,7 @@
     "shelfmark": "TS 20.156",
     "region": "Unknown",
     "place": "Unknown",
+    "genre": "marriage",
     "year": "1000",
     "n": 2,
     "fragment": true,
@@ -1288,6 +1336,7 @@
     "shelfmark": "TS 24.13",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1062",
     "n": 8,
     "fragment": false,
@@ -1297,6 +1346,7 @@
     "shelfmark": "TS NS 323.35 + TS NS 320.76a,b + TS 12.535",
     "region": "Palestine",
     "place": "Ramle",
+    "genre": "marriage",
     "year": "1006",
     "n": 7,
     "fragment": false,
@@ -1306,6 +1356,7 @@
     "shelfmark": "CUL Add. 3430",
     "region": "Palestine",
     "place": "Jerusalem",
+    "genre": "marriage",
     "year": "1028",
     "n": 12,
     "fragment": false,
@@ -1315,6 +1366,7 @@
     "shelfmark": "Bodl. MS Heb. a.3.44",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1037",
     "n": 1,
     "fragment": false,
@@ -1324,6 +1376,7 @@
     "shelfmark": "Bodl. MS Heb. a.3.4v",
     "region": "Palestine",
     "place": "Ramle",
+    "genre": "marriage",
     "year": "1015",
     "n": 15,
     "fragment": false,
@@ -1333,6 +1386,7 @@
     "shelfmark": "Bodl. MS Heb. b.12.31",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1050",
     "n": 1,
     "fragment": false,
@@ -1342,6 +1396,7 @@
     "shelfmark": "ENA 4020.38v",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1030",
     "n": 7,
     "fragment": true,
@@ -1351,6 +1406,7 @@
     "shelfmark": "II Firk. Heb. A. 717r",
     "region": "Unknown",
     "place": "Unknown",
+    "genre": "marriage",
     "year": "1050",
     "n": 2,
     "fragment": true,
@@ -1360,6 +1416,7 @@
     "shelfmark": "Bodl. MS Heb. a.3.42",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1117",
     "n": 5,
     "fragment": false,
@@ -1369,32 +1426,115 @@
     "shelfmark": "ENA NS 18.37",
     "region": "Egypt",
     "place": "Fustat",
+    "genre": "marriage",
     "year": "1035",
     "n": 9,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 10 J 2.4",
+    "region": "Egypt",
+    "place": "Fustat",
+    "genre": "other legal",
+    "year": "1029",
+    "n": 2,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 12.70",
+    "region": "Egypt",
+    "place": "Fustat",
+    "genre": "other legal",
+    "year": "1032",
+    "n": 2,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 16.131",
+    "region": "Egypt",
+    "place": "Fustat",
+    "genre": "other legal",
+    "year": "1055",
+    "n": 4,
+    "fragment": true,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 8.137",
+    "region": "Egypt",
+    "place": "Fustat",
+    "genre": "other legal",
+    "year": "1060",
+    "n": 2,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "TS 12.147",
+    "region": "Palestine",
+    "place": "Gaza",
+    "genre": "other legal",
+    "year": "1052",
+    "n": 11,
+    "fragment": false,
+    "court_copy": false
+   },
+   {
+    "shelfmark": "Yevr.-Arab. I 1701",
+    "region": "Egypt",
+    "place": "Cairo",
+    "genre": "other legal",
+    "year": "1200",
+    "n": 5,
     "fragment": false,
     "court_copy": false
    }
   ],
   "summary": {
    "Palestine": {
-    "documents": 5,
-    "median": 12,
+    "documents": 6,
+    "median": 11.5,
     "max": 15
    },
    "Egypt": {
-    "documents": 18,
-    "median": 5.0,
+    "documents": 23,
+    "median": 4,
     "max": 9
    }
   },
   "excluding_court_copies": {
    "Palestine": {
-    "documents": 3,
-    "median": 8
+    "documents": 4,
+    "median": 9.5
    },
    "Egypt": {
-    "documents": 17,
-    "median": 5
+    "documents": 22,
+    "median": 3.0
+   }
+  },
+  "by_genre": {
+   "marriage": {
+    "documents": 27,
+    "median": 5,
+    "max": 15
+   },
+   "other legal": {
+    "documents": 6,
+    "median": 3.0,
+    "max": 11
+   }
+  },
+  "marriage_only_by_region": {
+   "Palestine": {
+    "documents": 5,
+    "median": 12
+   },
+   "Egypt": {
+    "documents": 18,
+    "median": 5.0
    }
   }
  },
@@ -1437,16 +1577,16 @@
   }
  },
  "women": {
-  "women_in_network": 35,
-  "men_in_network": 203,
+  "women_in_network": 41,
+  "men_in_network": 249,
   "woman_woman_edges": 0,
   "documents_by_number_of_women": {
-   "0": 5,
-   "1": 36
+   "0": 10,
+   "1": 42
   },
   "documents_by_number_of_women_mentions": {
-   "1": 35,
-   "2": 2,
+   "1": 40,
+   "2": 3,
    "4": 1
   },
   "documents_naming_two_or_more_women": {
@@ -1463,78 +1603,82 @@
     "Rahma bt. Tammam",
     "Rayyisa bt. Tammam",
     "Umm Samuel bt. Aaron"
+   ],
+   "Halper 334 + CAJS RAR MS 82.313.33": [
+    "Ghaniyya bt. Amram",
+    "Rida bt. Benjamin"
    ]
   },
   "roles": {
    "Bride": 35,
-   "LegalParty": 1
+   "LegalParty": 7
   },
-  "women_in_database": 42
+  "women_in_database": 49
  },
  "kinship": {
-  "nodes": 204,
-  "edges": 179,
-  "components": 45,
+  "nodes": 224,
+  "edges": 193,
+  "components": 52,
   "largest_family": 32,
-  "clustering": 0.099,
+  "clustering": 0.1,
   "women": {
-   "n": 36,
-   "positive_betweenness": 29,
-   "mean_betweenness": 0.00058,
-   "mean_degree": 2.39
+   "n": 42,
+   "positive_betweenness": 31,
+   "mean_betweenness": 0.00041,
+   "mean_degree": 2.29
   },
   "men": {
-   "n": 168,
-   "positive_betweenness": 60,
-   "mean_betweenness": 0.00064,
-   "mean_degree": 1.62
+   "n": 182,
+   "positive_betweenness": 61,
+   "mean_betweenness": 0.00049,
+   "mean_degree": 1.59
   },
   "top_betweenness": [
    {
     "person": "Hizkiyahu b. Solomon (nasi)",
-    "betweenness": 0.0144,
+    "betweenness": 0.0119,
     "degree": 4,
     "gender": "M"
    },
    {
     "person": "Ama al-Aziz bt. Hizkiyahu",
-    "betweenness": 0.0122,
+    "betweenness": 0.0101,
     "degree": 3,
     "gender": "F"
    },
    {
     "person": "Yefet b. Abraham al-Tustari",
-    "betweenness": 0.0111,
+    "betweenness": 0.0092,
     "degree": 3,
     "gender": "M"
    },
    {
     "person": "Solomon b. David (nasi)",
-    "betweenness": 0.0082,
+    "betweenness": 0.0068,
     "degree": 3,
     "gender": "M"
    },
    {
     "person": "David b. Boaz (nasi)",
-    "betweenness": 0.0073,
+    "betweenness": 0.0061,
     "degree": 2,
     "gender": "M"
    },
    {
     "person": "Sahl (Yashar) b. Israel al-Tustari",
-    "betweenness": 0.0065,
+    "betweenness": 0.0054,
     "degree": 7,
     "gender": "M"
    },
    {
     "person": "Boaz b. Yehoshafat",
-    "betweenness": 0.0063,
+    "betweenness": 0.0053,
     "degree": 2,
     "gender": "M"
    },
    {
     "person": "Yehoshafat b. Joshya",
-    "betweenness": 0.0053,
+    "betweenness": 0.0044,
     "degree": 3,
     "gender": "M"
    }
@@ -1546,7 +1690,7 @@
   ]
  },
  "sects": {
-  "documents_naming_someone": 44,
+  "documents_naming_someone": 55,
   "documents_with_a_present_rabbanite": 10,
   "documents_with_a_rabbanite_anywhere": 15,
   "rabbanite_documents": [
@@ -1563,10 +1707,10 @@
   ],
   "edge_pairs": {
    "K|K": 42,
-   "K|Kp": 170,
+   "K|Kp": 184,
    "K|R": 19,
    "K|U": 8,
-   "Kp|Kp": 689,
+   "Kp|Kp": 832,
    "Kp|R": 53,
    "Kp|U": 15,
    "R|R": 7,
@@ -1576,22 +1720,28 @@
   "cross_sect_edges_explicit": 19,
   "cross_sect_edges_presumed": 53,
   "mean_cast_with_rabbanite": 9.0,
-  "mean_cast_without": 4.94,
+  "mean_cast_without": 4.96,
   "rabbanites_in_network": 14,
   "rabbanite_mean_degree": 7.36,
   "rabbanite_max_betweenness": 0.0,
   "sect_distribution": {
-   "Karaite (presumed)": 219,
+   "Karaite (presumed)": 273,
    "Rabbanite": 27,
-   "unknown": 15,
-   "Karaite": 79,
+   "unknown": 17,
+   "Karaite": 80,
    "Karaite (probable)": 6,
    "Rabbanite (probable)": 5
   }
  },
  "agents": {
-  "appointments": 23,
+  "appointments": 24,
   "detail": [
+   {
+    "agent": "Ya'ish b. Mevorakh",
+    "for": "Benjamin b. Jacob al-Basri",
+    "evidence": "TS J 3.47r",
+    "relation": "not a known relative"
+   },
    {
     "agent": "Nisi b. Jacob",
     "for": "Na'ama bt. Nisi",
@@ -1732,24 +1882,19 @@
    }
   ],
   "by_relation": {
+   "not a known relative": 16,
    "kin": 7,
-   "not a known relative": 15,
    "sibling (patronymic)": 1
   },
   "agents_serving_twice": {}
  },
  "outside_corpus": {
-  "persons": 16,
+  "persons": 13,
   "detail": [
    {
     "person": "Abraham (Abu Sa'ad) b. Sahl al-Tustari",
     "where": "1026-1047",
     "evidence": "TS 13 J 25.18, Ahwaz 1026 (ed. Gil 1981 no. 3, pp. 76-79; Olszowy-Schlanger 1998, p. 43 n. 14)"
-   },
-   {
-    "person": "Alan b. Nahum",
-    "where": "1045-1062",
-    "evidence": "Karaite deed of release TS 16.131 (Olszowy-Schlanger 1998, notes to no. 5)"
    },
    {
     "person": "Ben Solomon of Amwal (Tabaristan)",
@@ -1807,88 +1952,78 @@
     "evidence": "MS Meunier, Aleppo 1011 (ed. Ben-Zevi 1937-38, pp. 179-182; Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"
    },
    {
-    "person": "Sedaqa b. Nahum ha-Kohen",
-    "where": "1029-1035",
-    "evidence": "Karaite bill of divorce TS 10 J 2.4, Fustat 1029 (Olszowy-Schlanger 1998, notes to no. 57)"
-   },
-   {
     "person": "Solomon b. Aaron al-Baghdadi",
     "where": "1011",
     "evidence": "MS Meunier, Aleppo 1011 (ed. Ben-Zevi 1937-38, pp. 179-182; Olszowy-Schlanger 1998, pp. 43-44 nn. 15-18)"
-   },
-   {
-    "person": "Yefet ha-Kohen b. Eli b. Zita",
-    "where": "1030-1035",
-    "evidence": "Karaite bill of divorce TS 12.70 (Olszowy-Schlanger 1998, notes to no. 3)"
    }
   ]
  },
  "louvain": {
   "seed": 42,
-  "communities_at_seed": 35,
+  "communities_at_seed": 43,
   "counts_over_20_seeds": [
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35,
-   35
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43
   ],
-  "min": 35,
-  "max": 35,
-  "communities_that_are_one_document": 28
+  "min": 43,
+  "max": 43,
+  "communities_that_are_one_document": 36
  },
  "weighting": {
   "top10": {
    "shared_documents": [
     "Bishr b. Abraham ha-Levi",
     "Eli b. Mu'ammar",
+    "Alan b. Nahum",
     "David b. Isaac ha-Kohen (the scribe)",
     "El'azar b. Samuel b. Sahl ha-Eved",
-    "Alan b. Nahum",
-    "David b. Semah (nasi)",
     "Yefet ha-Kohen b. Eli b. Zita",
+    "David b. Semah (nasi)",
+    "Sedaqa b. Nahum ha-Kohen",
     "Nahum b. Nahum",
-    "Barakat b. David",
-    "Na'ama bt. Nisi"
+    "Barakat b. David"
    ],
    "newman_1_over_k": [
     "Bishr b. Abraham ha-Levi",
     "Eli b. Mu'ammar",
+    "Alan b. Nahum",
     "David b. Isaac ha-Kohen (the scribe)",
     "El'azar b. Samuel b. Sahl ha-Eved",
-    "Alan b. Nahum",
-    "David b. Semah (nasi)",
     "Yefet ha-Kohen b. Eli b. Zita",
+    "David b. Semah (nasi)",
+    "Sedaqa b. Nahum ha-Kohen",
     "Nahum b. Nahum",
-    "Barakat b. David",
-    "Na'ama bt. Nisi"
+    "Barakat b. David"
    ],
    "binary": [
     "Bishr b. Abraham ha-Levi",
     "Eli b. Mu'ammar",
+    "Alan b. Nahum",
     "David b. Isaac ha-Kohen (the scribe)",
     "El'azar b. Samuel b. Sahl ha-Eved",
-    "Alan b. Nahum",
-    "David b. Semah (nasi)",
     "Yefet ha-Kohen b. Eli b. Zita",
+    "David b. Semah (nasi)",
+    "Sedaqa b. Nahum ha-Kohen",
     "Nahum b. Nahum",
-    "Barakat b. David",
-    "Na'ama bt. Nisi"
+    "Barakat b. David"
    ]
   },
   "overlap_A_B": 10,

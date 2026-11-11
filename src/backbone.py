@@ -122,6 +122,10 @@ def corpus():
             return "secondary source unit"
         if "court session" in t:
             return "court record"
+        if "divorce" in t:
+            return "bill of divorce"
+        if any(k in t for k in ("release", "inheritance", "will", "deposition", "register")):
+            return "other legal deed"
         if "betrothal" in t:
             return "deed of betrothal"
         if "ketubba" in t:
@@ -137,7 +141,9 @@ def corpus():
             frag[(f, "fragment" if "fragment" in d["doc_type"].lower() else "complete")] += 1
     return {
         "rows": len(docs),
-        "edition_documents": sum(1 for d in docs.values() if "Olszowy" in d["source"]),
+        "edition_documents": sum(1 for d in docs.values()
+                                 if d["source"].startswith("Olszowy-Schlanger 1998, no.")),
+        "other_legal_documents": sum(1 for d in docs.values() if d["source"].startswith("PGP")),
         "families": dict(fam),
         "fragment_split": {f"{k[0]}|{k[1]}": v for k, v in frag.items()},
         "documents_naming_someone": len(named),
@@ -516,7 +522,13 @@ R["titles"]["exceptions"] = [k for k, v in big.items()
 # ================================== 8. how many attest, Palestine vs Egypt (new)
 REGION = {"Fustat": "Egypt", "Cairo": "Egypt", "Egypt (region)": "Egypt",
           "Jerusalem": "Palestine", "Ramle": "Palestine", "Tyre": "Palestine",
-          "Palestine (region)": "Palestine"}
+          "Palestine (region)": "Palestine", "Gaza": "Palestine"}
+
+
+def genre(d):
+    """marriage deed (ketubba, betrothal) vs every other legal act"""
+    t = d["doc_type"].lower()
+    return "marriage" if ("ketubba" in t or "betrothal" in t) else "other legal"
 
 
 def attester_counts():
@@ -524,7 +536,7 @@ def attester_counts():
     for sm, pp in att_docs.items():
         d = docs[sm]
         reg = REGION.get(d["place"], "Unknown")
-        rows.append({"shelfmark": sm, "region": reg, "place": d["place"],
+        rows.append({"shelfmark": sm, "region": reg, "place": d["place"], "genre": genre(d),
                      "year": d["year_est"], "n": len(pp),
                      "fragment": "fragment" in d["doc_type"].lower(),
                      "court_copy": "court copy" in d["doc_type"].lower()})
@@ -548,6 +560,16 @@ R["attesters_by_region"] = {
     "excluding_court_copies": {
         reg: {"documents": len([r for r in AT if r["region"] == reg and not r["court_copy"]]),
               "median": med([r["n"] for r in AT if r["region"] == reg and not r["court_copy"]])}
+        for reg in ("Palestine", "Egypt")},
+    # Is the large number of signatories a feature of marriage deeds or of
+    # Karaite legal deeds in general? Same count, split by genre.
+    "by_genre": {g: {"documents": len([r for r in AT if r["genre"] == g]),
+                     "median": med([r["n"] for r in AT if r["genre"] == g]),
+                     "max": max([r["n"] for r in AT if r["genre"] == g], default=None)}
+                 for g in ("marriage", "other legal")},
+    "marriage_only_by_region": {
+        reg: {"documents": len([r for r in AT if r["region"] == reg and r["genre"] == "marriage"]),
+              "median": med([r["n"] for r in AT if r["region"] == reg and r["genre"] == "marriage"])}
         for reg in ("Palestine", "Egypt")},
 }
 

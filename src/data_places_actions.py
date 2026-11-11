@@ -30,6 +30,7 @@ PLACES = {
  "PL22": ("Ana (Euphrates)","ענה","gazetteer",None),
  "PL23": ("Alexandria","אלכסנדריה","gazetteer","Alexandria"),
  "PL24": ("Beirut","ביירות","gazetteer",None),
+ "PL25": ("Gaza","עזה","document_place","Gaza"),
 }
 
 # raw document place string -> (place_id, certainty, place_id2, note)
@@ -46,6 +47,7 @@ DOC_PLACE = {
  "Egypt":        ("PL06","certain",None,"country only"),
  "Egypt [?]":    ("PL06","probable",None,""),
  "Palestine [?]":("PL07","probable",None,""),
+ "Gaza":         ("PL25","certain",None,""),
  "n.p.":         ("PL00","unknown",None,"place not preserved"),
  "":             ("PL00","unknown",None,""),
 }

@@ -1,7 +1,7 @@
 ﻿place_id,name_en,name_he,category,num_documents,princeton_name,coordinates,princeton_url,princeton_name_variants
-PL00,Unknown,לא ידוע,document_place,17,,,,
-PL01,Fustat,פוסטאט,document_place,24,Fustat,"30° 0′ 17″ N, 31° 14′ 15″ E",https://geniza.princeton.edu/places/fustat/,"Fusṭāṭ, Miṣr al-Qadīma, פסטאט, فسطاط"
-PL02,Cairo,קהיר,document_place,3,Cairo,"30° 3′ 6″ N, 31° 15′ 41″ E",https://geniza.princeton.edu/places/cairo/,"New Cairo, al-Muʿizziyya, al-Qāhira"
+PL00,Unknown,לא ידוע,document_place,19,,,,
+PL01,Fustat,פוסטאט,document_place,32,Fustat,"30° 0′ 17″ N, 31° 14′ 15″ E",https://geniza.princeton.edu/places/fustat/,"Fusṭāṭ, Miṣr al-Qadīma, פסטאט, فسطاط"
+PL02,Cairo,קהיר,document_place,4,Cairo,"30° 3′ 6″ N, 31° 15′ 41″ E",https://geniza.princeton.edu/places/cairo/,"New Cairo, al-Muʿizziyya, al-Qāhira"
 PL03,Jerusalem,ירושלים,document_place,5,Jerusalem,"31° 46′ 36″ N, 35° 14′ 3″ E",https://geniza.princeton.edu/places/jerusalem/,
 PL04,Ramle,רמלה,document_place,3,al-Ramla,"31° 55′ 38″ N, 34° 51′ 44″ E",https://geniza.princeton.edu/places/al-ramla/,
 PL05,Tyre,צור,document_place,1,Tyre,"33° 16′ 13″ N, 35° 13′ 50″ E",https://geniza.princeton.edu/places/tyre/,"צור, صور"
@@ -24,3 +24,4 @@ PL21,Zoar,צוער,gazetteer,0,,,,
 PL22,Ana (Euphrates),ענה,gazetteer,0,,,,
 PL23,Alexandria,אלכסנדריה,gazetteer,0,Alexandria,"31° 12′ 16″ N, 29° 52′ 48″ E",https://geniza.princeton.edu/places/alexandria/,"אלאסכנדריה, נא אמון, الإسكندرية"
 PL24,Beirut,ביירות,gazetteer,0,,,,
+PL25,Gaza,עזה,document_place,1,Gaza,"31° 30′ 11″ N, 34° 28′ 4″ E",https://geniza.princeton.edu/places/gaza/,

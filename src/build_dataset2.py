@@ -8,6 +8,8 @@ from data_appearances import A as BASE_A
 from data_persons_relations import SECT as BASE_SECT, RELATIONS as BASE_RELATIONS
 from data_extra import EXTRA_DOCS, EXTRA_APPEARANCES, EXTRA_SECT, EXTRA_RELATIONS, MERGES, VARIANTS, PRINCETON_MATCHES, PERSON_META
 from data_places_actions import PLACES, DOC_PLACE, PERSON_ORIGIN, ACTIONS, ROLE2ACTION, RELATION_TYPES
+from data_legal import LEGAL_DOCS, LEGAL_APPEARANCES, LEGAL_SECT, LEGAL_RELATIONS, LEGAL_SOURCE, LEGAL_ORIGIN
+PERSON_ORIGIN = {**PERSON_ORIGIN, **LEGAL_ORIGIN}
 
 MNT = "../data/external"
 OUT = "../dataset"
@@ -18,7 +20,7 @@ def canon(name):
     if name in MERGES: return MERGES[name][0]
     return name
 
-DOCS = list(DOCUMENTS) + [d[:7] for d in EXTRA_DOCS]
+DOCS = list(DOCUMENTS) + list(LEGAL_DOCS) + [d[:7] for d in EXTRA_DOCS]
 docmeta = {d[0]: d for d in DOCS}
 
 # ---- shelfmark as primary document identifier ----
@@ -33,14 +35,14 @@ for _d in DOCS:
 SHELF["CH3"] = "Chapter 3 (Olszowy-Schlanger)"
 SHELF["CH9"] = "Chapter 9 (Olszowy-Schlanger)"
 import re as _re
-_docpat = _re.compile(r"\b(OS\d{2}|Z01|SRC_CH3|SRC_CH9|CH3|CH9)\b")
+_docpat = _re.compile(r"\b(OS\d{2}|LD\d{2}|Z01|SRC_CH3|SRC_CH9|CH3|CH9)\b")
 def ref(x):
     """replace doc ids with shelfmarks inside any string"""
     return _docpat.sub(lambda m: SHELF.get(m.group(1), m.group(1)), str(x))
 
 
 APPS = []
-for (doc,p,role,cert,note) in list(BASE_A)+list(EXTRA_APPEARANCES):
+for (doc,p,role,cert,note) in list(BASE_A)+list(LEGAL_APPEARANCES)+list(EXTRA_APPEARANCES):
     p2 = canon(p)
     if p != p2:
         note = (note+" | " if note else "") + f"merged from '{p}' ({MERGES[p][1]}: {MERGES[p][2]})"
@@ -49,13 +51,13 @@ for (doc,p,role,cert,note) in list(BASE_A)+list(EXTRA_APPEARANCES):
 
 RELS = []
 seen_rel=set()
-for (s,rel,t,ev,note) in list(BASE_RELATIONS)+list(EXTRA_RELATIONS):
+for (s,rel,t,ev,note) in list(BASE_RELATIONS)+list(LEGAL_RELATIONS)+list(EXTRA_RELATIONS):
     s2,t2 = canon(s), canon(t)
     if (s2,rel,t2) in seen_rel: continue
     seen_rel.add((s2,rel,t2))
     RELS.append([s2,rel,t2,ev,"explicit",note])
 
-SECT = dict(BASE_SECT); SECT.update(EXTRA_SECT)
+SECT = dict(BASE_SECT); SECT.update(LEGAL_SECT); SECT.update(EXTRA_SECT)
 SECT = {canon(k):v for k,v in SECT.items()}
 
 # derived relations from same-doc roles
@@ -96,7 +98,7 @@ pid_of = {name: f"P{i+1:03d}" for i,name in enumerate(sorted(persons, key=lambda
 def sect_of(name):
     if name in SECT: return SECT[name]
     docs = persons[name]["docs"]
-    if any(d.startswith("OS") for d in docs):
+    if any(d.startswith(("OS","LD")) for d in docs):
         return ("Karaite (presumed)","participant in a Karaite legal document; no contrary evidence")
     return ("unknown","")
 
@@ -150,7 +152,7 @@ doc_rows=[]
 for d in DOCS:
     doc_id=d[0]; raw_place=d[5] if len(d)>5 else ""
     pid,certn,pid2,pnote = DOC_PLACE.get(raw_place,("PL00","unknown",None,""))
-    src = ("Olszowy-Schlanger 1998, no. %d"%int(doc_id[2:])) if doc_id.startswith("OS") else ("Zinger 2017" if doc_id=="Z01" else "secondary source unit")
+    src = ("Olszowy-Schlanger 1998, no. %d"%int(doc_id[2:])) if doc_id.startswith("OS") else (LEGAL_SOURCE[doc_id] if doc_id in LEGAL_SOURCE else ("Zinger 2017" if doc_id=="Z01" else "secondary source unit"))
     doc_rows.append([SHELF[doc_id],src,d[2],d[3],d[4] if len(d)>4 and d[4] else "",
                      pid,PLACES[pid][0],certn,PLACES[pid2][0] if pid2 else "",pnote or "", ref(d[6]) if len(d)>6 else ""])
 documents_table = wcsv("documents.csv",

@@ -1,23 +1,28 @@
 ﻿check,result
-persons,351
-appearances,390
-documents (incl. 2 secondary source units),60
-relations,212
-coappearance edges,1358
+persons,408
+appearances,451
+documents (incl. 2 secondary source units),72
+relations,227
+coappearance edges,1515
 princeton people matches,25
-sect distribution,"{'Karaite (presumed)': 219, 'Rabbanite': 27, 'unknown': 15, 'Karaite': 79, 'Karaite (probable)': 6, 'Rabbanite (probable)': 5}"
-action distribution,"{'Groom': 33, 'FamilyMention': 50, 'Bride': 35, 'Agent': 25, 'WitnessOfAgency': 40, 'Witness': 103, 'ScholarlyMention': 56, 'Scribe': 9, 'NamedNasi': 11, 'Judge': 4, 'DocumentMention': 15, 'Declarant': 2, 'LegalParty': 3, 'Guarantor': 1, 'Trustee': 3}"
-place distribution (documents),"{'Fustat': 24, 'Unknown': 17, 'Egypt (region)': 6, 'Cairo': 3, 'Palestine (region)': 1, 'Ramle': 3, 'Tyre': 1, 'Jerusalem': 5}"
+sect distribution,"{'Karaite (presumed)': 273, 'Rabbanite': 27, 'unknown': 17, 'Karaite': 80, 'Karaite (probable)': 6, 'Rabbanite (probable)': 5}"
+action distribution,"{'Groom': 33, 'FamilyMention': 50, 'Bride': 35, 'Agent': 26, 'WitnessOfAgency': 40, 'Witness': 116, 'ScholarlyMention': 56, 'Scribe': 10, 'NamedNasi': 11, 'Judge': 5, 'DocumentMention': 21, 'Declarant': 14, 'LegalParty': 27, 'Guarantor': 1, 'Trustee': 6}"
+place distribution (documents),"{'Fustat': 32, 'Unknown': 19, 'Egypt (region)': 6, 'Cairo': 4, 'Palestine (region)': 1, 'Ramle': 3, 'Tyre': 1, 'Jerusalem': 5, 'Gaza': 1}"
 roles outside closed list,[]
 documents with unmapped place strings,"['OS49', 'SRC_CH3', 'SRC_CH9']"
 possible-duplicate groups (manual review; NOT merged - editors give no identification),
 
 possible duplicate name-groups (same given name + patronym; review manually)
-P022 Abraham b. Isaac; P023 Abraham b. Isaac b. Furat
-P027 Abraham b. Solomon (Abu Kathir); P028 Abraham b. Solomon Gaon
-P069 David b. Isaac b. Moses ha-Levi; P070 David b. Isaac ha-Kohen (the scribe); P071 David b. Isaac ha-Levi (Abu Nasr)
-P166 Joseph b. Abraham (father of Ghaliya); P167 Joseph b. Abraham b. al-Fara; P168 Joseph b. Abraham ha-Kohen
-P172 Joseph b. Jacob; P175 Joseph ha-Kohen b. Jacob
-P212 Mevorakh b. Nathan; P213 Mevorakh b. Nathan b. Nisan
-P310 Solomon b. David (nasi); P311 Solomon b. David b. Hasdai (nasi); P312 Solomon b. David ha-Kohen (the scholar)
-P331 Yefet b. Abraham al-Tustari; P332 Yefet b. Abraham ha-Levi
+P013 Aaron b. Sahl (heir of Sahl b. Joseph); P014 Aaron b. Sahl al-Tustari
+P026 Abraham b. Isaac; P027 Abraham b. Isaac b. Furat
+P031 Abraham b. Solomon (Abu Kathir); P032 Abraham b. Solomon Gaon
+P036 Abu al-Ma'ali b. Tamar; P074 Daughter of Abu al-Ma'ali b. Tamar
+P083 David b. Isaac b. Moses ha-Levi; P084 David b. Isaac ha-Kohen (the scribe); P085 David b. Isaac ha-Levi (Abu Nasr)
+P152 Husn bt. Ya'qub; P153 Husn bt. Ya'qub b. Joseph b. Khushnam
+P155 Isaac b. [...] (OS41); P156 Isaac b. [...] (TS 16.131)
+P191 Joseph b. Abraham (father of Ghaliya); P192 Joseph b. Abraham b. al-Fara; P193 Joseph b. Abraham ha-Kohen
+P194 Joseph b. Azarya; P195 Joseph b. Azarya (TS 16.131)
+P198 Joseph b. Jacob; P204 Joseph ha-Kohen b. Jacob
+P245 Mevorakh b. Nathan; P246 Mevorakh b. Nathan b. Nisan
+P359 Solomon b. David (nasi); P360 Solomon b. David b. Hasdai (nasi); P361 Solomon b. David ha-Kohen (the scholar)
+P384 Yefet b. Abraham al-Tustari; P385 Yefet b. Abraham ha-Levi

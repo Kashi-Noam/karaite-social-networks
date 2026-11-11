@@ -250,9 +250,10 @@ def fig_backbone():
 # ================================================= 3. how big was the pool
 def fig_pool():
     fig, ax = plt.subplots(figsize=(7.4, 4.2))
-    for key, col, lab in [("whole_corpus", BLUE, "whole corpus, 38 documents"),
-                          ("fustat_1030_1074", ORANGE, "Fustat 1030–1074, 18 documents")]:
+    for key, col, lab in [("whole_corpus", BLUE, "whole corpus, {} documents"),
+                          ("fustat_1030_1074", ORANGE, "Fustat 1030–1074, {} documents")]:
         d = NUM["pool"][key]
+        lab = lab.format(d["documents_used"])
         xs = [c["N"] for c in d["curve"]]
         ys = [c["expected_repeaters"] for c in d["curve"]]
         ax.plot(xs, ys, color=col, lw=2.0, zorder=3, solid_capstyle="round")
@@ -476,40 +477,52 @@ def fig_titles():
 
 # ============================== 9. how many attest, by region (new)
 def fig_attesters():
+    """Attesters per document, by region and by genre: marriage deeds against
+    the other Karaite legal deeds (divorces, releases, the Gaza deposition)."""
     rows = [r for r in NUM["attesters_by_region"]["rows"] if r["region"] != "Unknown"]
-    fig, ax = plt.subplots(figsize=(7.6, 4.0))
-    for i, (reg, col) in enumerate([("Palestine", ORANGE), ("Egypt", BLUE)]):
-        sel = sorted([r for r in rows if r["region"] == reg], key=lambda r: r["n"])
+    cols_ = [("Palestine", "marriage", ORANGE), ("Palestine", "other legal", ORANGE),
+             ("Egypt", "marriage", BLUE), ("Egypt", "other legal", BLUE)]
+    fig, ax = plt.subplots(figsize=(8.4, 4.2))
+    for i, (reg, gen, col) in enumerate(cols_):
+        sel = sorted([r for r in rows if r["region"] == reg and r["genre"] == gen],
+                     key=lambda r: r["n"])
+        if not sel:
+            continue
         xs = []
         for v in sorted({r["n"] for r in sel}):
             k = sum(1 for r in sel if r["n"] == v)
-            xs += list(np.linspace(-0.085 * (k - 1), 0.085 * (k - 1), k))
+            xs += list(np.linspace(-0.07 * (k - 1), 0.07 * (k - 1), k))
+        hollow = gen != "marriage"
         for r, dx in zip(sel, xs):
-            ax.scatter(i + dx, r["n"], s=118 if r["court_copy"] else 82,
-                       color=col, edgecolor=SURFACE, lw=1.5, zorder=3,
+            ax.scatter(i + dx, r["n"], s=110 if r["court_copy"] else 76,
+                       facecolor=SURFACE if hollow else col, edgecolor=col,
+                       lw=1.8 if hollow else 1.2, zorder=3,
                        marker="s" if r["court_copy"] else "o")
         m = float(np.median([r["n"] for r in sel]))
-        ax.hlines(m, i - 0.3, i + 0.3, color=INK, lw=2.0, zorder=5)
-        t = ax.text(i - 0.34, m, f"median {m:.0f}", va="center", ha="right",
-                    fontsize=9.2, color=INK, fontweight="bold")
+        ax.hlines(m, i - 0.28, i + 0.28, color=INK, lw=2.0, zorder=5)
+        t = ax.text(i + 0.31, m, f"median {m:g}", va="center", ha="left",
+                    fontsize=8.6, color=INK, fontweight="bold")
         halo(t)
         if reg == "Palestine":
             for r, dx in zip(sel, xs):
-                t = ax.text(i + dx + 0.09, r["n"] + 0.42,
-                            f"{r['place']} {int(float(r['year']))}", fontsize=8.4,
-                            color=INK2, va="bottom", ha="left")
+                t = ax.text(i + dx - 0.33, r["n"], f"{r['place']} {int(float(r['year']))}",
+                            fontsize=7.8, color=INK2, va="center", ha="right")
                 halo(t)
-    ax.set_xticks([0, 1])
+    ax.set_xticks(range(len(cols_)))
     ax.set_xticklabels([
-        f"Palestine\n{sum(1 for r in rows if r['region']=='Palestine')} documents",
-        f"Egypt\n{sum(1 for r in rows if r['region']=='Egypt')} documents"], fontsize=10)
+        f"{reg}\n{'marriage deeds' if gen == 'marriage' else 'other legal deeds'}\n"
+        f"{(k := sum(1 for r in rows if r['region'] == reg and r['genre'] == gen))} document{'s' if k != 1 else ''}"
+        for reg, gen, _ in cols_], fontsize=9)
     ax.set_ylabel("people named as attesting the document")
-    ax.set_ylim(0, 18.6); ax.set_xlim(-0.95, 1.75)
+    ax.set_ylim(0, 18.6); ax.set_xlim(-1.25, 3.75)
     ax.set_yticks([0, 4, 8, 12, 16])
     ax.grid(axis="y", color=GRID, lw=0.8); ax.set_axisbelow(True)
     ax.legend(handles=[Line2D([0], [0], marker="s", color="w", markerfacecolor=MUTED,
-                              markersize=8, label="court copy")],
-              loc="upper right", frameon=False, fontsize=8.8, handletextpad=0.4)
+                              markersize=8, label="court copy"),
+                       Line2D([0], [0], marker="o", color="w", markerfacecolor=SURFACE,
+                              markeredgecolor=MUTED, markeredgewidth=1.6, markersize=8,
+                              label="divorce, release, deposition, court record")],
+              loc="upper right", frameon=False, fontsize=8.4, handletextpad=0.4)
     save(fig, "fig_attesters.png")
 
 
